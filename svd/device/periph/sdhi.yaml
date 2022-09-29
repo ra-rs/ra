@@ -1,0 +1,7 @@
+"SDHI*":
+  SD_CMD:
+    CMDIDX:
+      _replace_enum:
+        CMD6:   [0x06, CMD6]
+        CMD18:  [0x12, CMD18]
+        ACMD13: [0x0D, ACMD13]

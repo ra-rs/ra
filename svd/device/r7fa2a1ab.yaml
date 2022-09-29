@@ -1,0 +1,17 @@
+_svd: "../patch/r7fa2a1ab.svd"
+
+PFS:
+  P407PFS:
+    _modify:
+      DSCR1:
+        bitOffset: 10
+        bitWidth: 2
+    _delete:
+      DSCR
+  P407PFS_HA:
+    _modify:
+      DSCR1:
+        bitOffset: 10
+        bitWidth: 2
+    _delete:
+      DSCR

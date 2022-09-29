@@ -1,0 +1,4 @@
+_svd: "../patch/r7fa4m3af.svd"
+
+_include: 
+  - "periph/sdhi.yaml"
