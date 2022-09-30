@@ -1,1 +1,336 @@
 _svd: "../patch/r7fa2e1a9.svd"
+
+ADC120:
+  _delete:
+    ADDR*
+  _add:
+    ADDR0:
+      description: "A/D Data Registers 0"
+      addressOffset: "0x020"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR1:
+      description: "A/D Data Registers 1"
+      addressOffset: "0x022"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR2:
+      description: "A/D Data Registers 2"
+      addressOffset: "0x024"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR3:
+      description: "A/D Data Registers 3"
+      addressOffset: "0x026"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR4:
+      description: "A/D Data Registers 4"
+      addressOffset: "0x028"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR5:
+      description: "A/D Data Registers 5"
+      addressOffset: "0x02A"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR6:
+      description: "A/D Data Registers 6"
+      addressOffset: "0x02C"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR7:
+      description: "A/D Data Registers 7"
+      addressOffset: "0x02E"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR8:
+      description: "A/D Data Registers 8"
+      addressOffset: "0x030"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR9:
+      description: "A/D Data Registers 9"
+      addressOffset: "0x032"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR10:
+      description: "A/D Data Registers 10"
+      addressOffset: "0x034"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR17:
+      description: "A/D Data Registers 17"
+      addressOffset: "0x042"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR18:
+      description: "A/D Data Registers 18"
+      addressOffset: "0x044"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR19:
+      description: "A/D Data Registers 19"
+      addressOffset: "0x046"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR20:
+      description: "A/D Data Registers 20"
+      addressOffset: "0x048"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR21:
+      description: "A/D Data Registers 21"
+      addressOffset: "0x04A"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+    ADDR22:
+      description: "A/D Data Registers 22"
+      addressOffset: "0x04C"
+      size: "16"
+      access: "read-only"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ADDRn:
+        description: "Converted Value 15 to 0"
+        bitOffset: 0
+        bitWidth: 15
+        access: "read-only"
+
+ELC:
+  _delete:
+    "ELSR*"
+  _add:
+    "ELSR0":
+      description: "Event Link Setting Register 0"
+      addressOffset: "0x10"
+      size: 16
+      access: "read-write"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ELS:
+        description: "Event Link Select"
+        bitOffset: 0
+        bitWidth: 7
+        access: "read-write"
+    "ELSR1":
+      description: "Event Link Setting Register 1"
+      addressOffset: "0x14"
+      size: 16
+      access: "read-write"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ELS:
+        description: "Event Link Select"
+        bitOffset: 0
+        bitWidth: 7
+        access: "read-write"
+    "ELSR2":
+      description: "Event Link Setting Register 2"
+      addressOffset: "0x18"
+      size: 16
+      access: "read-write"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ELS:
+        description: "Event Link Select"
+        bitOffset: 0
+        bitWidth: 7
+        access: "read-write"
+    "ELSR3":
+      description: "Event Link Setting Register 3"
+      addressOffset: "0x1C"
+      size: 16
+      access: "read-write"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ELS:
+        description: "Event Link Select"
+        bitOffset: 0
+        bitWidth: 7
+        access: "read-write"
+    "ELSR8":
+      description: "Event Link Setting Register 8"
+      addressOffset: "0x30"
+      size: 16
+      access: "read-write"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ELS:
+        description: "Event Link Select"
+        bitOffset: 0
+        bitWidth: 7
+        access: "read-write"
+    "ELSR9":
+      description: "Event Link Setting Register 9"
+      addressOffset: "0x34"
+      size: 16
+      access: "read-write"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ELS:
+        description: "Event Link Select"
+        bitOffset: 0
+        bitWidth: 7
+        access: "read-write"
+    "ELSR12":
+      description: "Event Link Setting Register 12"
+      addressOffset: "0x40"
+      size: 16
+      access: "read-write"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ELS:
+        description: "Event Link Select"
+        bitOffset: 0
+        bitWidth: 7
+        access: "read-write"
+    "ELSR14":
+      description: "Event Link Setting Register 14"
+      addressOffset: "0x48"
+      size: 16
+      access: "read-write"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ELS:
+        description: "Event Link Select"
+        bitOffset: 0
+        bitWidth: 7
+        access: "read-write"
+    "ELSR15":
+      description: "Event Link Setting Register 15"
+      addressOffset: "0x4C"
+      size: 16
+      access: "read-write"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ELS:
+        description: "Event Link Select"
+        bitOffset: 0
+        bitWidth: 7
+        access: "read-write"
+    "ELSR18":
+      description: "Event Link Setting Register 18"
+      addressOffset: "0x58"
+      size: 16
+      access: "read-write"
+      resetValue: "0x0000"
+      resetMask: "0xffff"
+      ELS:
+        description: "Event Link Select"
+        bitOffset: 0
+        bitWidth: 7
+        access: "read-write"
+
