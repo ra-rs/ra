@@ -7,3 +7,12 @@ CANFD_B:
         "zero": [0x0, "0 messages"]
         "three": [0x2, "3 messages"]
         "four": [0x3, "4 messages"]
+
+ADC_B:
+  ADCLKCR:
+    CLKSEL:
+      _replace_enum:
+        PCLKC: [0x0, "Peripheral Module Clock C"]
+        GPTCLK: [0x1, "GPT clock"]
+        PCLKA: [0x2, "Peripheral Module Clock A"]
+        INVALID: [0x3, "Setting prohibited"]

@@ -2,3 +2,12 @@ _svd: "../patch/r7fa6m5bh.svd"
 
 _include: 
   - "periph/sdhi.yaml"
+
+USBHS:
+  DCPCTR:
+    PID:
+      _replace_enum:
+        NAK: [0x0, "NAK response"]
+        BUF: [0x1, "BUF response"]
+        STALL2: [0x2, "STALL response"]
+        STALL3: [0x3, "STALL response"]

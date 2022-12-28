@@ -4,6 +4,7 @@ deps=$'
 [dependencies]
 cortex-m = \"0.7\"
 vcell = \"0.1.2\"
+portable-atomic = \"0.3\"
 
 [dependencies.cortex-m-rt]
 optional = true
@@ -40,7 +41,7 @@ for s in $svds; do
         mkdir ${pac}
     fi
     echo "Found device family ${name_upper}"
-    svd2rust --nightly -i $s -o $pac
+    svd2rust --atomics -i $s -o $pac
     if [ $? != 0 ]
     then
         rm -Rf ${pac}
@@ -63,8 +64,10 @@ edition = \"2021\"
 '
     echo "${manifest}${deps}" | sed s/@name@/${name}/ | sed s/@NAME@/${name_upper}/ | sed s/@version@/${1}/ > ${pac}/Cargo.toml
     echo "Peripheral access API for ${name_upper} microcontrollers (generated using svd2rust)" > ${pac}/README.md
-    cargo +nightly fmt --manifest-path "${pac}/Cargo.toml"
-    rustfmt +nightly "${pac}/build.rs"
+    cargo fmt --manifest-path "${pac}/Cargo.toml"
+    rustfmt "${pac}/build.rs"
+    cargo build --manifest-path "${pac}/Cargo.toml"
+    echo # Add blank line to separate status outputs
 done
 
 # Clean up
