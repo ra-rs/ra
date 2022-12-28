@@ -37,7 +37,7 @@ impl From<crate::W<GTUPSR_SPEC>> for W {
 #[doc = "Field `USGTRGAR` reader - GTETRGA Pin Rising Input Source Counter Count Up Enable"]
 pub type USGTRGAR_R = crate::BitReader<USGTRGAR_A>;
 #[doc = "GTETRGA Pin Rising Input Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USGTRGAR_A {
     #[doc = "0: Counter count up disabled on the rising edge of GTETRGA input"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> USGTRGAR_W<'a, O> {
 #[doc = "Field `USGTRGAF` reader - GTETRGA Pin Falling Input Source Counter Count Up Enable"]
 pub type USGTRGAF_R = crate::BitReader<USGTRGAF_A>;
 #[doc = "GTETRGA Pin Falling Input Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USGTRGAF_A {
     #[doc = "0: Counter count up disabled on the falling edge of GTETRGA input"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> USGTRGAF_W<'a, O> {
 #[doc = "Field `USGTRGBR` reader - GTETRGB Pin Rising Input Source Counter Count Up Enable"]
 pub type USGTRGBR_R = crate::BitReader<USGTRGBR_A>;
 #[doc = "GTETRGB Pin Rising Input Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USGTRGBR_A {
     #[doc = "0: Counter count up disabled on the rising edge of GTETRGB input"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> USGTRGBR_W<'a, O> {
 #[doc = "Field `USGTRGBF` reader - GTETRGB Pin Falling Input Source Counter Count Up Enable"]
 pub type USGTRGBF_R = crate::BitReader<USGTRGBF_A>;
 #[doc = "GTETRGB Pin Falling Input Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USGTRGBF_A {
     #[doc = "0: Counter count up disabled on the falling edge of GTETRGB input"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> USGTRGBF_W<'a, O> {
 #[doc = "Field `USCARBL` reader - GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Count Up Enable"]
 pub type USCARBL_R = crate::BitReader<USCARBL_A>;
 #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USCARBL_A {
     #[doc = "0: Counter count up disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> USCARBL_W<'a, O> {
 #[doc = "Field `USCARBH` reader - GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Count Up Enable"]
 pub type USCARBH_R = crate::BitReader<USCARBH_A>;
 #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USCARBH_A {
     #[doc = "0: Counter count up disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> USCARBH_W<'a, O> {
 #[doc = "Field `USCAFBL` reader - GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Count Up Enable"]
 pub type USCAFBL_R = crate::BitReader<USCAFBL_A>;
 #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USCAFBL_A {
     #[doc = "0: Counter count up disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> USCAFBL_W<'a, O> {
 #[doc = "Field `USCAFBH` reader - GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Count Up Enable"]
 pub type USCAFBH_R = crate::BitReader<USCAFBH_A>;
 #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USCAFBH_A {
     #[doc = "0: Counter count up disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> USCAFBH_W<'a, O> {
 #[doc = "Field `USCBRAL` reader - GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Count Up Enable"]
 pub type USCBRAL_R = crate::BitReader<USCBRAL_A>;
 #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USCBRAL_A {
     #[doc = "0: Counter count up disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> USCBRAL_W<'a, O> {
 #[doc = "Field `USCBRAH` reader - GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Count Up Enable"]
 pub type USCBRAH_R = crate::BitReader<USCBRAH_A>;
 #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USCBRAH_A {
     #[doc = "0: Counter count up disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
     _0 = 0,
@@ -537,7 +537,7 @@ impl<'a, const O: u8> USCBRAH_W<'a, O> {
 #[doc = "Field `USCBFAL` reader - GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Count Up Enable"]
 pub type USCBFAL_R = crate::BitReader<USCBFAL_A>;
 #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USCBFAL_A {
     #[doc = "0: Counter count up disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
     _0 = 0,
@@ -587,7 +587,7 @@ impl<'a, const O: u8> USCBFAL_W<'a, O> {
 #[doc = "Field `USCBFAH` reader - GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Count Up Enable"]
 pub type USCBFAH_R = crate::BitReader<USCBFAH_A>;
 #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USCBFAH_A {
     #[doc = "0: Counter count up disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
     _0 = 0,
@@ -637,7 +637,7 @@ impl<'a, const O: u8> USCBFAH_W<'a, O> {
 #[doc = "Field `USELCA` reader - ELC_GPTA Event Source Counter Count Up Enable"]
 pub type USELCA_R = crate::BitReader<USELCA_A>;
 #[doc = "ELC_GPTA Event Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USELCA_A {
     #[doc = "0: Counter count up disabled at the ELC_GPTA input"]
     _0 = 0,
@@ -687,7 +687,7 @@ impl<'a, const O: u8> USELCA_W<'a, O> {
 #[doc = "Field `USELCB` reader - ELC_GPTB Event Source Counter Count Up Enable"]
 pub type USELCB_R = crate::BitReader<USELCB_A>;
 #[doc = "ELC_GPTB Event Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USELCB_A {
     #[doc = "0: Counter count up disabled at the ELC_GPTB input"]
     _0 = 0,
@@ -737,7 +737,7 @@ impl<'a, const O: u8> USELCB_W<'a, O> {
 #[doc = "Field `USELCC` reader - ELC_GPTC Event Source Counter Count Up Enable"]
 pub type USELCC_R = crate::BitReader<USELCC_A>;
 #[doc = "ELC_GPTC Event Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USELCC_A {
     #[doc = "0: Counter count up disabled at the ELC_GPTC input"]
     _0 = 0,
@@ -787,7 +787,7 @@ impl<'a, const O: u8> USELCC_W<'a, O> {
 #[doc = "Field `USELCD` reader - ELC_GPTD Event Source Counter Count Up Enable"]
 pub type USELCD_R = crate::BitReader<USELCD_A>;
 #[doc = "ELC_GPTD Event Source Counter Count Up Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USELCD_A {
     #[doc = "0: Counter count up disabled at the ELC_GPTD input"]
     _0 = 0,
@@ -919,81 +919,97 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GTETRGA Pin Rising Input Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn usgtrgar(&mut self) -> USGTRGAR_W<0> {
         USGTRGAR_W::new(self)
     }
     #[doc = "Bit 1 - GTETRGA Pin Falling Input Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn usgtrgaf(&mut self) -> USGTRGAF_W<1> {
         USGTRGAF_W::new(self)
     }
     #[doc = "Bit 2 - GTETRGB Pin Rising Input Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn usgtrgbr(&mut self) -> USGTRGBR_W<2> {
         USGTRGBR_W::new(self)
     }
     #[doc = "Bit 3 - GTETRGB Pin Falling Input Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn usgtrgbf(&mut self) -> USGTRGBF_W<3> {
         USGTRGBF_W::new(self)
     }
     #[doc = "Bit 8 - GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uscarbl(&mut self) -> USCARBL_W<8> {
         USCARBL_W::new(self)
     }
     #[doc = "Bit 9 - GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uscarbh(&mut self) -> USCARBH_W<9> {
         USCARBH_W::new(self)
     }
     #[doc = "Bit 10 - GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uscafbl(&mut self) -> USCAFBL_W<10> {
         USCAFBL_W::new(self)
     }
     #[doc = "Bit 11 - GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uscafbh(&mut self) -> USCAFBH_W<11> {
         USCAFBH_W::new(self)
     }
     #[doc = "Bit 12 - GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uscbral(&mut self) -> USCBRAL_W<12> {
         USCBRAL_W::new(self)
     }
     #[doc = "Bit 13 - GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uscbrah(&mut self) -> USCBRAH_W<13> {
         USCBRAH_W::new(self)
     }
     #[doc = "Bit 14 - GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uscbfal(&mut self) -> USCBFAL_W<14> {
         USCBFAL_W::new(self)
     }
     #[doc = "Bit 15 - GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uscbfah(&mut self) -> USCBFAH_W<15> {
         USCBFAH_W::new(self)
     }
     #[doc = "Bit 16 - ELC_GPTA Event Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uselca(&mut self) -> USELCA_W<16> {
         USELCA_W::new(self)
     }
     #[doc = "Bit 17 - ELC_GPTB Event Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uselcb(&mut self) -> USELCB_W<17> {
         USELCB_W::new(self)
     }
     #[doc = "Bit 18 - ELC_GPTC Event Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uselcc(&mut self) -> USELCC_W<18> {
         USELCC_W::new(self)
     }
     #[doc = "Bit 19 - ELC_GPTD Event Source Counter Count Up Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uselcd(&mut self) -> USELCD_W<19> {
         USELCD_W::new(self)
     }
@@ -1016,11 +1032,10 @@ impl crate::Readable for GTUPSR_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtupsr::W](W) writer structure"]
 impl crate::Writable for GTUPSR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTUPSR to value 0"]
 impl crate::Resettable for GTUPSR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

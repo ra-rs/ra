@@ -16,7 +16,7 @@ impl From<crate::R<NMISR_SPEC>> for R {
 #[doc = "Field `IWDTST` reader - IWDT Underflow/Refresh Error Status Flag"]
 pub type IWDTST_R = crate::BitReader<IWDTST_A>;
 #[doc = "IWDT Underflow/Refresh Error Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum IWDTST_A {
     #[doc = "0: Interrupt not requested"]
     _0 = 0,
@@ -52,7 +52,7 @@ impl IWDTST_R {
 #[doc = "Field `WDTST` reader - WDT Underflow/Refresh Error Status Flag"]
 pub type WDTST_R = crate::BitReader<WDTST_A>;
 #[doc = "WDT Underflow/Refresh Error Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WDTST_A {
     #[doc = "0: Interrupt not requested"]
     _0 = 0,
@@ -88,7 +88,7 @@ impl WDTST_R {
 #[doc = "Field `LVD1ST` reader - Voltage Monitor 1 Interrupt Status Flag"]
 pub type LVD1ST_R = crate::BitReader<LVD1ST_A>;
 #[doc = "Voltage Monitor 1 Interrupt Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LVD1ST_A {
     #[doc = "0: Interrupt not requested"]
     _0 = 0,
@@ -124,7 +124,7 @@ impl LVD1ST_R {
 #[doc = "Field `LVD2ST` reader - Voltage Monitor 2 Interrupt Status Flag"]
 pub type LVD2ST_R = crate::BitReader<LVD2ST_A>;
 #[doc = "Voltage Monitor 2 Interrupt Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LVD2ST_A {
     #[doc = "0: Interrupt not requested"]
     _0 = 0,
@@ -160,7 +160,7 @@ impl LVD2ST_R {
 #[doc = "Field `OSTST` reader - Oscillation Stop Detection Interrupt Status Flag"]
 pub type OSTST_R = crate::BitReader<OSTST_A>;
 #[doc = "Oscillation Stop Detection Interrupt Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OSTST_A {
     #[doc = "0: Interrupt not requested for main oscillation stop"]
     _0 = 0,
@@ -196,7 +196,7 @@ impl OSTST_R {
 #[doc = "Field `NMIST` reader - NMI Status Flag"]
 pub type NMIST_R = crate::BitReader<NMIST_A>;
 #[doc = "NMI Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NMIST_A {
     #[doc = "0: Interrupt not requested"]
     _0 = 0,
@@ -232,7 +232,7 @@ impl NMIST_R {
 #[doc = "Field `RPEST` reader - SRAM Parity Error Interrupt Status Flag"]
 pub type RPEST_R = crate::BitReader<RPEST_A>;
 #[doc = "SRAM Parity Error Interrupt Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum RPEST_A {
     #[doc = "0: Interrupt not requested"]
     _0 = 0,
@@ -268,7 +268,7 @@ impl RPEST_R {
 #[doc = "Field `BUSSST` reader - MPU Bus Slave Error Interrupt Status Flag"]
 pub type BUSSST_R = crate::BitReader<BUSSST_A>;
 #[doc = "MPU Bus Slave Error Interrupt Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BUSSST_A {
     #[doc = "0: Interrupt not requested"]
     _0 = 0,
@@ -304,7 +304,7 @@ impl BUSSST_R {
 #[doc = "Field `BUSMST` reader - MPU Bus Master Error Interrupt Status Flag"]
 pub type BUSMST_R = crate::BitReader<BUSMST_A>;
 #[doc = "MPU Bus Master Error Interrupt Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BUSMST_A {
     #[doc = "0: Interrupt not requested"]
     _0 = 0,
@@ -340,7 +340,7 @@ impl BUSMST_R {
 #[doc = "Field `SPEST` reader - CPU Stack Pointer Monitor Interrupt Status Flag"]
 pub type SPEST_R = crate::BitReader<SPEST_A>;
 #[doc = "CPU Stack Pointer Monitor Interrupt Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SPEST_A {
     #[doc = "0: Interrupt not requested"]
     _0 = 0,
@@ -436,8 +436,5 @@ impl crate::Readable for NMISR_SPEC {
 }
 #[doc = "`reset()` method sets NMISR to value 0"]
 impl crate::Resettable for NMISR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,7 +37,7 @@ impl From<crate::W<GTSTR_SPEC>> for W {
 #[doc = "Field `CSTRT0` reader - Channel n GTCNT Count Start (n : the same as bit position value)"]
 pub type CSTRT0_R = crate::BitReader<CSTRT0_A>;
 #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTRT0_A {
     #[doc = "0: GTCNT counter not start"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> CSTRT0_W<'a, O> {
 #[doc = "Field `CSTRT1` reader - Channel n GTCNT Count Start (n : the same as bit position value)"]
 pub type CSTRT1_R = crate::BitReader<CSTRT1_A>;
 #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTRT1_A {
     #[doc = "0: GTCNT counter not start"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> CSTRT1_W<'a, O> {
 #[doc = "Field `CSTRT2` reader - Channel n GTCNT Count Start (n : the same as bit position value)"]
 pub type CSTRT2_R = crate::BitReader<CSTRT2_A>;
 #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTRT2_A {
     #[doc = "0: GTCNT counter not start"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> CSTRT2_W<'a, O> {
 #[doc = "Field `CSTRT3` reader - Channel n GTCNT Count Start (n : the same as bit position value)"]
 pub type CSTRT3_R = crate::BitReader<CSTRT3_A>;
 #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTRT3_A {
     #[doc = "0: GTCNT counter not start"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> CSTRT3_W<'a, O> {
 #[doc = "Field `CSTRT4` reader - Channel n GTCNT Count Start (n : the same as bit position value)"]
 pub type CSTRT4_R = crate::BitReader<CSTRT4_A>;
 #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTRT4_A {
     #[doc = "0: GTCNT counter not start"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> CSTRT4_W<'a, O> {
 #[doc = "Field `CSTRT5` reader - Channel n GTCNT Count Start (n : the same as bit position value)"]
 pub type CSTRT5_R = crate::BitReader<CSTRT5_A>;
 #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTRT5_A {
     #[doc = "0: GTCNT counter not start"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> CSTRT5_W<'a, O> {
 #[doc = "Field `CSTRT6` reader - Channel n GTCNT Count Start (n : the same as bit position value)"]
 pub type CSTRT6_R = crate::BitReader<CSTRT6_A>;
 #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTRT6_A {
     #[doc = "0: GTCNT counter not start"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> CSTRT6_W<'a, O> {
 #[doc = "Field `CSTRT7` reader - Channel n GTCNT Count Start (n : the same as bit position value)"]
 pub type CSTRT7_R = crate::BitReader<CSTRT7_A>;
 #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTRT7_A {
     #[doc = "0: GTCNT counter not start"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> CSTRT7_W<'a, O> {
 #[doc = "Field `CSTRT8` reader - Channel n GTCNT Count Start (n : the same as bit position value)"]
 pub type CSTRT8_R = crate::BitReader<CSTRT8_A>;
 #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTRT8_A {
     #[doc = "0: GTCNT counter not start"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> CSTRT8_W<'a, O> {
 #[doc = "Field `CSTRT9` reader - Channel n GTCNT Count Start (n : the same as bit position value)"]
 pub type CSTRT9_R = crate::BitReader<CSTRT9_A>;
 #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTRT9_A {
     #[doc = "0: GTCNT counter not start"]
     _0 = 0,
@@ -589,51 +589,61 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Channel n GTCNT Count Start (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstrt0(&mut self) -> CSTRT0_W<0> {
         CSTRT0_W::new(self)
     }
     #[doc = "Bit 1 - Channel n GTCNT Count Start (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstrt1(&mut self) -> CSTRT1_W<1> {
         CSTRT1_W::new(self)
     }
     #[doc = "Bit 2 - Channel n GTCNT Count Start (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstrt2(&mut self) -> CSTRT2_W<2> {
         CSTRT2_W::new(self)
     }
     #[doc = "Bit 3 - Channel n GTCNT Count Start (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstrt3(&mut self) -> CSTRT3_W<3> {
         CSTRT3_W::new(self)
     }
     #[doc = "Bit 4 - Channel n GTCNT Count Start (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstrt4(&mut self) -> CSTRT4_W<4> {
         CSTRT4_W::new(self)
     }
     #[doc = "Bit 5 - Channel n GTCNT Count Start (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstrt5(&mut self) -> CSTRT5_W<5> {
         CSTRT5_W::new(self)
     }
     #[doc = "Bit 6 - Channel n GTCNT Count Start (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstrt6(&mut self) -> CSTRT6_W<6> {
         CSTRT6_W::new(self)
     }
     #[doc = "Bit 7 - Channel n GTCNT Count Start (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstrt7(&mut self) -> CSTRT7_W<7> {
         CSTRT7_W::new(self)
     }
     #[doc = "Bit 8 - Channel n GTCNT Count Start (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstrt8(&mut self) -> CSTRT8_W<8> {
         CSTRT8_W::new(self)
     }
     #[doc = "Bit 9 - Channel n GTCNT Count Start (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstrt9(&mut self) -> CSTRT9_W<9> {
         CSTRT9_W::new(self)
     }
@@ -656,11 +666,10 @@ impl crate::Readable for GTSTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtstr::W](W) writer structure"]
 impl crate::Writable for GTSTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTSTR to value 0"]
 impl crate::Resettable for GTSTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - The coefficient of variation for the 7.5 kΩ reference load resistance is stored."]
     #[inline(always)]
+    #[must_use]
     pub fn tresult0(&mut self) -> TRESULT0_W<0> {
         TRESULT0_W::new(self)
     }
     #[doc = "Bits 8:15 - The coefficient of variation for the 15 kΩ reference load resistance is stored."]
     #[inline(always)]
+    #[must_use]
     pub fn tresult1(&mut self) -> TRESULT1_W<8> {
         TRESULT1_W::new(self)
     }
     #[doc = "Bits 16:23 - The coefficient of variation for the 30 kΩ reference load resistance is stored."]
     #[inline(always)]
+    #[must_use]
     pub fn tresult2(&mut self) -> TRESULT2_W<16> {
         TRESULT2_W::new(self)
     }
     #[doc = "Bits 24:31 - The coefficient of variation for the 60 kΩ reference load resistance is stored."]
     #[inline(always)]
+    #[must_use]
     pub fn tresult3(&mut self) -> TRESULT3_W<24> {
         TRESULT3_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for CTSUTRIMB_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctsutrimb::W](W) writer structure"]
 impl crate::Writable for CTSUTRIMB_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTSUTRIMB to value 0"]
 impl crate::Resettable for CTSUTRIMB_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

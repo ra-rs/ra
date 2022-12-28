@@ -37,7 +37,7 @@ impl From<crate::W<IELEN_SPEC>> for W {
 #[doc = "Field `RTCINTEN` reader - RTCALM and RTCPRD Interrupts Enable (when LPOPTEN bit = 1)"]
 pub type RTCINTEN_R = crate::BitReader<RTCINTEN_A>;
 #[doc = "RTCALM and RTCPRD Interrupts Enable (when LPOPTEN bit = 1)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum RTCINTEN_A {
     #[doc = "0: Disable"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> RTCINTEN_W<'a, O> {
 #[doc = "Field `IELEN` reader - Parts Asynchronous Interrupts Enable except RTC (when LPOPTEN bit = 1)"]
 pub type IELEN_R = crate::BitReader<IELEN_A>;
 #[doc = "Parts Asynchronous Interrupts Enable except RTC (when LPOPTEN bit = 1)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum IELEN_A {
     #[doc = "0: Disable"]
     _0 = 0,
@@ -149,11 +149,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RTCALM and RTCPRD Interrupts Enable (when LPOPTEN bit = 1)"]
     #[inline(always)]
+    #[must_use]
     pub fn rtcinten(&mut self) -> RTCINTEN_W<0> {
         RTCINTEN_W::new(self)
     }
     #[doc = "Bit 1 - Parts Asynchronous Interrupts Enable except RTC (when LPOPTEN bit = 1)"]
     #[inline(always)]
+    #[must_use]
     pub fn ielen(&mut self) -> IELEN_W<1> {
         IELEN_W::new(self)
     }
@@ -176,11 +178,10 @@ impl crate::Readable for IELEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [ielen::W](W) writer structure"]
 impl crate::Writable for IELEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IELEN to value 0"]
 impl crate::Resettable for IELEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

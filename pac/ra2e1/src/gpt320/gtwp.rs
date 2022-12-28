@@ -37,7 +37,7 @@ impl From<crate::W<GTWP_SPEC>> for W {
 #[doc = "Field `WP` reader - Register Write Disable"]
 pub type WP_R = crate::BitReader<WP_A>;
 #[doc = "Register Write Disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WP_A {
     #[doc = "0: Write to the register enabled"]
     _0 = 0,
@@ -96,11 +96,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Register Write Disable"]
     #[inline(always)]
+    #[must_use]
     pub fn wp(&mut self) -> WP_W<0> {
         WP_W::new(self)
     }
     #[doc = "Bits 8:15 - GTWP Key Code"]
     #[inline(always)]
+    #[must_use]
     pub fn prkey(&mut self) -> PRKEY_W<8> {
         PRKEY_W::new(self)
     }
@@ -123,11 +125,10 @@ impl crate::Readable for GTWP_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtwp::W](W) writer structure"]
 impl crate::Writable for GTWP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTWP to value 0"]
 impl crate::Resettable for GTWP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

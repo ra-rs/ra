@@ -37,7 +37,7 @@ impl From<crate::W<ADHVREFCNT_SPEC>> for W {
 #[doc = "Field `HVSEL` reader - High-Potential Reference Voltage Select"]
 pub type HVSEL_R = crate::FieldReader<u8, HVSEL_A>;
 #[doc = "High-Potential Reference Voltage Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum HVSEL_A {
     #[doc = "0: AVCC0 is selected as the high-potential reference voltage"]
@@ -116,7 +116,7 @@ impl<'a, const O: u8> HVSEL_W<'a, O> {
 #[doc = "Field `LVSEL` reader - Low-Potential Reference Voltage Select"]
 pub type LVSEL_R = crate::BitReader<LVSEL_A>;
 #[doc = "Low-Potential Reference Voltage Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LVSEL_A {
     #[doc = "0: AVSS0 is selected as the low-potential reference voltage."]
     _0 = 0,
@@ -166,7 +166,7 @@ impl<'a, const O: u8> LVSEL_W<'a, O> {
 #[doc = "Field `ADSLP` reader - Sleep"]
 pub type ADSLP_R = crate::BitReader<ADSLP_A>;
 #[doc = "Sleep\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ADSLP_A {
     #[doc = "0: Normal operation"]
     _0 = 0,
@@ -217,7 +217,7 @@ impl R {
     #[doc = "Bits 0:1 - High-Potential Reference Voltage Select"]
     #[inline(always)]
     pub fn hvsel(&self) -> HVSEL_R {
-        HVSEL_R::new((self.bits & 3) as u8)
+        HVSEL_R::new(self.bits & 3)
     }
     #[doc = "Bit 4 - Low-Potential Reference Voltage Select"]
     #[inline(always)]
@@ -233,16 +233,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - High-Potential Reference Voltage Select"]
     #[inline(always)]
+    #[must_use]
     pub fn hvsel(&mut self) -> HVSEL_W<0> {
         HVSEL_W::new(self)
     }
     #[doc = "Bit 4 - Low-Potential Reference Voltage Select"]
     #[inline(always)]
+    #[must_use]
     pub fn lvsel(&mut self) -> LVSEL_W<4> {
         LVSEL_W::new(self)
     }
     #[doc = "Bit 7 - Sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn adslp(&mut self) -> ADSLP_W<7> {
         ADSLP_W::new(self)
     }
@@ -265,11 +268,10 @@ impl crate::Readable for ADHVREFCNT_SPEC {
 #[doc = "`write(|w| ..)` method takes [adhvrefcnt::W](W) writer structure"]
 impl crate::Writable for ADHVREFCNT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADHVREFCNT to value 0"]
 impl crate::Resettable for ADHVREFCNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,7 +37,7 @@ impl From<crate::W<CTSUCHTRCB_SPEC>> for W {
 #[doc = "Field `CHTRC32` reader - CTSU Channel Transmit/Receive Control B"]
 pub type CHTRC32_R = crate::BitReader<CHTRC32_A>;
 #[doc = "CTSU Channel Transmit/Receive Control B\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC32_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> CHTRC32_W<'a, O> {
 #[doc = "Field `CHTRC33` reader - CTSU Channel Transmit/Receive Control B"]
 pub type CHTRC33_R = crate::BitReader<CHTRC33_A>;
 #[doc = "CTSU Channel Transmit/Receive Control B\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC33_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> CHTRC33_W<'a, O> {
 #[doc = "Field `CHTRC34` reader - CTSU Channel Transmit/Receive Control B"]
 pub type CHTRC34_R = crate::BitReader<CHTRC34_A>;
 #[doc = "CTSU Channel Transmit/Receive Control B\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC34_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -204,16 +204,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CTSU Channel Transmit/Receive Control B"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc32(&mut self) -> CHTRC32_W<0> {
         CHTRC32_W::new(self)
     }
     #[doc = "Bit 1 - CTSU Channel Transmit/Receive Control B"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc33(&mut self) -> CHTRC33_W<1> {
         CHTRC33_W::new(self)
     }
     #[doc = "Bit 2 - CTSU Channel Transmit/Receive Control B"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc34(&mut self) -> CHTRC34_W<2> {
         CHTRC34_W::new(self)
     }
@@ -236,11 +239,10 @@ impl crate::Readable for CTSUCHTRCB_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctsuchtrcb::W](W) writer structure"]
 impl crate::Writable for CTSUCHTRCB_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTSUCHTRCB to value 0"]
 impl crate::Resettable for CTSUCHTRCB_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

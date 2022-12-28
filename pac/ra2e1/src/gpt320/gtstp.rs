@@ -37,7 +37,7 @@ impl From<crate::W<GTSTP_SPEC>> for W {
 #[doc = "Field `CSTOP0` reader - Channel n GTCNT Count Stop (n : the same as bit position value)"]
 pub type CSTOP0_R = crate::BitReader<CSTOP0_A>;
 #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP0_A {
     #[doc = "0: GTCNT counter not stop"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> CSTOP0_W<'a, O> {
 #[doc = "Field `CSTOP1` reader - Channel n GTCNT Count Stop (n : the same as bit position value)"]
 pub type CSTOP1_R = crate::BitReader<CSTOP1_A>;
 #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP1_A {
     #[doc = "0: GTCNT counter not stop"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> CSTOP1_W<'a, O> {
 #[doc = "Field `CSTOP2` reader - Channel n GTCNT Count Stop (n : the same as bit position value)"]
 pub type CSTOP2_R = crate::BitReader<CSTOP2_A>;
 #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP2_A {
     #[doc = "0: GTCNT counter not stop"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> CSTOP2_W<'a, O> {
 #[doc = "Field `CSTOP3` reader - Channel n GTCNT Count Stop (n : the same as bit position value)"]
 pub type CSTOP3_R = crate::BitReader<CSTOP3_A>;
 #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP3_A {
     #[doc = "0: GTCNT counter not stop"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> CSTOP3_W<'a, O> {
 #[doc = "Field `CSTOP4` reader - Channel n GTCNT Count Stop (n : the same as bit position value)"]
 pub type CSTOP4_R = crate::BitReader<CSTOP4_A>;
 #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP4_A {
     #[doc = "0: GTCNT counter not stop"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> CSTOP4_W<'a, O> {
 #[doc = "Field `CSTOP5` reader - Channel n GTCNT Count Stop (n : the same as bit position value)"]
 pub type CSTOP5_R = crate::BitReader<CSTOP5_A>;
 #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP5_A {
     #[doc = "0: GTCNT counter not stop"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> CSTOP5_W<'a, O> {
 #[doc = "Field `CSTOP6` reader - Channel n GTCNT Count Stop (n : the same as bit position value)"]
 pub type CSTOP6_R = crate::BitReader<CSTOP6_A>;
 #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP6_A {
     #[doc = "0: GTCNT counter not stop"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> CSTOP6_W<'a, O> {
 #[doc = "Field `CSTOP7` reader - Channel n GTCNT Count Stop (n : the same as bit position value)"]
 pub type CSTOP7_R = crate::BitReader<CSTOP7_A>;
 #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP7_A {
     #[doc = "0: GTCNT counter not stop"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> CSTOP7_W<'a, O> {
 #[doc = "Field `CSTOP8` reader - Channel n GTCNT Count Stop (n : the same as bit position value)"]
 pub type CSTOP8_R = crate::BitReader<CSTOP8_A>;
 #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP8_A {
     #[doc = "0: GTCNT counter not stop"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> CSTOP8_W<'a, O> {
 #[doc = "Field `CSTOP9` reader - Channel n GTCNT Count Stop (n : the same as bit position value)"]
 pub type CSTOP9_R = crate::BitReader<CSTOP9_A>;
 #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP9_A {
     #[doc = "0: GTCNT counter not stop"]
     _0 = 0,
@@ -589,51 +589,61 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Channel n GTCNT Count Stop (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop0(&mut self) -> CSTOP0_W<0> {
         CSTOP0_W::new(self)
     }
     #[doc = "Bit 1 - Channel n GTCNT Count Stop (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop1(&mut self) -> CSTOP1_W<1> {
         CSTOP1_W::new(self)
     }
     #[doc = "Bit 2 - Channel n GTCNT Count Stop (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop2(&mut self) -> CSTOP2_W<2> {
         CSTOP2_W::new(self)
     }
     #[doc = "Bit 3 - Channel n GTCNT Count Stop (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop3(&mut self) -> CSTOP3_W<3> {
         CSTOP3_W::new(self)
     }
     #[doc = "Bit 4 - Channel n GTCNT Count Stop (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop4(&mut self) -> CSTOP4_W<4> {
         CSTOP4_W::new(self)
     }
     #[doc = "Bit 5 - Channel n GTCNT Count Stop (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop5(&mut self) -> CSTOP5_W<5> {
         CSTOP5_W::new(self)
     }
     #[doc = "Bit 6 - Channel n GTCNT Count Stop (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop6(&mut self) -> CSTOP6_W<6> {
         CSTOP6_W::new(self)
     }
     #[doc = "Bit 7 - Channel n GTCNT Count Stop (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop7(&mut self) -> CSTOP7_W<7> {
         CSTOP7_W::new(self)
     }
     #[doc = "Bit 8 - Channel n GTCNT Count Stop (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop8(&mut self) -> CSTOP8_W<8> {
         CSTOP8_W::new(self)
     }
     #[doc = "Bit 9 - Channel n GTCNT Count Stop (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop9(&mut self) -> CSTOP9_W<9> {
         CSTOP9_W::new(self)
     }
@@ -656,11 +666,10 @@ impl crate::Readable for GTSTP_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtstp::W](W) writer structure"]
 impl crate::Writable for GTSTP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTSTP to value 0xffff_ffff"]
 impl crate::Resettable for GTSTP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

@@ -37,7 +37,7 @@ impl From<crate::W<MSTPCRD_SPEC>> for W {
 #[doc = "Field `MSTPD2` reader - Low Power Asynchronous General Purpose Timer 1 Module Stop"]
 pub type MSTPD2_R = crate::BitReader<MSTPD2_A>;
 #[doc = "Low Power Asynchronous General Purpose Timer 1 Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPD2_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> MSTPD2_W<'a, O> {
 #[doc = "Field `MSTPD3` reader - Low Power Asynchronous General Purpose Timer 0 Module Stop"]
 pub type MSTPD3_R = crate::BitReader<MSTPD3_A>;
 #[doc = "Low Power Asynchronous General Purpose Timer 0 Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPD3_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> MSTPD3_W<'a, O> {
 #[doc = "Field `MSTPD5` reader - General PWM Timer 32n Module Stop"]
 pub type MSTPD5_R = crate::BitReader<MSTPD5_A>;
 #[doc = "General PWM Timer 32n Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPD5_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> MSTPD5_W<'a, O> {
 #[doc = "Field `MSTPD6` reader - General PWM Timer 164 to 169 and PWM Delay Generation Circuit Module Stop"]
 pub type MSTPD6_R = crate::BitReader<MSTPD6_A>;
 #[doc = "General PWM Timer 164 to 169 and PWM Delay Generation Circuit Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPD6_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> MSTPD6_W<'a, O> {
 #[doc = "Field `MSTPD14` reader - Port Output Enable for GPT Module Stop"]
 pub type MSTPD14_R = crate::BitReader<MSTPD14_A>;
 #[doc = "Port Output Enable for GPT Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPD14_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> MSTPD14_W<'a, O> {
 #[doc = "Field `MSTPD16` reader - 12-bit A/D Converter Module Stop"]
 pub type MSTPD16_R = crate::BitReader<MSTPD16_A>;
 #[doc = "12-bit A/D Converter Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPD16_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> MSTPD16_W<'a, O> {
 #[doc = "Field `MSTPD29` reader - Low-Power Analog Comparator Module Stop"]
 pub type MSTPD29_R = crate::BitReader<MSTPD29_A>;
 #[doc = "Low-Power Analog Comparator Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPD29_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -424,36 +424,43 @@ impl R {
 impl W {
     #[doc = "Bit 2 - Low Power Asynchronous General Purpose Timer 1 Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpd2(&mut self) -> MSTPD2_W<2> {
         MSTPD2_W::new(self)
     }
     #[doc = "Bit 3 - Low Power Asynchronous General Purpose Timer 0 Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpd3(&mut self) -> MSTPD3_W<3> {
         MSTPD3_W::new(self)
     }
     #[doc = "Bit 5 - General PWM Timer 32n Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpd5(&mut self) -> MSTPD5_W<5> {
         MSTPD5_W::new(self)
     }
     #[doc = "Bit 6 - General PWM Timer 164 to 169 and PWM Delay Generation Circuit Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpd6(&mut self) -> MSTPD6_W<6> {
         MSTPD6_W::new(self)
     }
     #[doc = "Bit 14 - Port Output Enable for GPT Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpd14(&mut self) -> MSTPD14_W<14> {
         MSTPD14_W::new(self)
     }
     #[doc = "Bit 16 - 12-bit A/D Converter Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpd16(&mut self) -> MSTPD16_W<16> {
         MSTPD16_W::new(self)
     }
     #[doc = "Bit 29 - Low-Power Analog Comparator Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpd29(&mut self) -> MSTPD29_W<29> {
         MSTPD29_W::new(self)
     }
@@ -476,11 +483,10 @@ impl crate::Readable for MSTPCRD_SPEC {
 #[doc = "`write(|w| ..)` method takes [mstpcrd::W](W) writer structure"]
 impl crate::Writable for MSTPCRD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MSTPCRD to value 0xffff_ffff"]
 impl crate::Resettable for MSTPCRD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

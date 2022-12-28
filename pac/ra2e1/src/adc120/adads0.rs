@@ -37,7 +37,7 @@ impl From<crate::W<ADADS0_SPEC>> for W {
 #[doc = "Field `ADSn` reader - A/D-Converted Value Addition/Average Channel Select"]
 pub type ADSN_R = crate::FieldReader<u16, ADSN_A>;
 #[doc = "A/D-Converted Value Addition/Average Channel Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum ADSN_A {
     #[doc = "0: Do not select associated input channel."]
@@ -96,6 +96,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - A/D-Converted Value Addition/Average Channel Select"]
     #[inline(always)]
+    #[must_use]
     pub fn adsn(&mut self) -> ADSN_W<0> {
         ADSN_W::new(self)
     }
@@ -118,11 +119,10 @@ impl crate::Readable for ADADS0_SPEC {
 #[doc = "`write(|w| ..)` method takes [adads0::W](W) writer structure"]
 impl crate::Writable for ADADS0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADADS0 to value 0"]
 impl crate::Resettable for ADADS0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -1,0 +1,28 @@
+#[doc = "Register `PCNTR2` reader"]
+pub struct R(crate::R<PCNTR2_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<PCNTR2_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<PCNTR2_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<PCNTR2_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Port Control Register 2\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pcntr2](index.html) module"]
+pub struct PCNTR2_SPEC;
+impl crate::RegisterSpec for PCNTR2_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [pcntr2::R](R) reader structure"]
+impl crate::Readable for PCNTR2_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets PCNTR2 to value 0"]
+impl crate::Resettable for PCNTR2_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}

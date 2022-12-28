@@ -37,7 +37,7 @@ impl From<crate::W<NMICLR_SPEC>> for W {
 #[doc = "Field `IWDTCLR` reader - IWDT Clear"]
 pub type IWDTCLR_R = crate::BitReader<IWDTCLR_A>;
 #[doc = "IWDT Clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum IWDTCLR_A {
     #[doc = "0: No effect"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> IWDTCLR_W<'a, O> {
 #[doc = "Field `WDTCLR` reader - WDT Clear"]
 pub type WDTCLR_R = crate::BitReader<WDTCLR_A>;
 #[doc = "WDT Clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WDTCLR_A {
     #[doc = "0: No effect"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> WDTCLR_W<'a, O> {
 #[doc = "Field `LVD1CLR` reader - LVD1 Clear"]
 pub type LVD1CLR_R = crate::BitReader<LVD1CLR_A>;
 #[doc = "LVD1 Clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LVD1CLR_A {
     #[doc = "0: No effect"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> LVD1CLR_W<'a, O> {
 #[doc = "Field `LVD2CLR` reader - LVD2 Clear"]
 pub type LVD2CLR_R = crate::BitReader<LVD2CLR_A>;
 #[doc = "LVD2 Clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LVD2CLR_A {
     #[doc = "0: No effect"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> LVD2CLR_W<'a, O> {
 #[doc = "Field `OSTCLR` reader - OST Clear"]
 pub type OSTCLR_R = crate::BitReader<OSTCLR_A>;
 #[doc = "OST Clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OSTCLR_A {
     #[doc = "0: No effect"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> OSTCLR_W<'a, O> {
 #[doc = "Field `NMICLR` reader - NMI Clear"]
 pub type NMICLR_R = crate::BitReader<NMICLR_A>;
 #[doc = "NMI Clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NMICLR_A {
     #[doc = "0: No effect"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> NMICLR_W<'a, O> {
 #[doc = "Field `RPECLR` reader - SRAM Parity Error Clear"]
 pub type RPECLR_R = crate::BitReader<RPECLR_A>;
 #[doc = "SRAM Parity Error Clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum RPECLR_A {
     #[doc = "0: No effect"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> RPECLR_W<'a, O> {
 #[doc = "Field `BUSSCLR` reader - Bus Slave Error Clear"]
 pub type BUSSCLR_R = crate::BitReader<BUSSCLR_A>;
 #[doc = "Bus Slave Error Clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BUSSCLR_A {
     #[doc = "0: No effect"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> BUSSCLR_W<'a, O> {
 #[doc = "Field `BUSMCLR` reader - Bus Master Error Clear"]
 pub type BUSMCLR_R = crate::BitReader<BUSMCLR_A>;
 #[doc = "Bus Master Error Clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BUSMCLR_A {
     #[doc = "0: No effect"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> BUSMCLR_W<'a, O> {
 #[doc = "Field `SPECLR` reader - CPU Stack Pointer Monitor Interrupt Clear"]
 pub type SPECLR_R = crate::BitReader<SPECLR_A>;
 #[doc = "CPU Stack Pointer Monitor Interrupt Clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SPECLR_A {
     #[doc = "0: No effect"]
     _0 = 0,
@@ -589,51 +589,61 @@ impl R {
 impl W {
     #[doc = "Bit 0 - IWDT Clear"]
     #[inline(always)]
+    #[must_use]
     pub fn iwdtclr(&mut self) -> IWDTCLR_W<0> {
         IWDTCLR_W::new(self)
     }
     #[doc = "Bit 1 - WDT Clear"]
     #[inline(always)]
+    #[must_use]
     pub fn wdtclr(&mut self) -> WDTCLR_W<1> {
         WDTCLR_W::new(self)
     }
     #[doc = "Bit 2 - LVD1 Clear"]
     #[inline(always)]
+    #[must_use]
     pub fn lvd1clr(&mut self) -> LVD1CLR_W<2> {
         LVD1CLR_W::new(self)
     }
     #[doc = "Bit 3 - LVD2 Clear"]
     #[inline(always)]
+    #[must_use]
     pub fn lvd2clr(&mut self) -> LVD2CLR_W<3> {
         LVD2CLR_W::new(self)
     }
     #[doc = "Bit 6 - OST Clear"]
     #[inline(always)]
+    #[must_use]
     pub fn ostclr(&mut self) -> OSTCLR_W<6> {
         OSTCLR_W::new(self)
     }
     #[doc = "Bit 7 - NMI Clear"]
     #[inline(always)]
+    #[must_use]
     pub fn nmiclr(&mut self) -> NMICLR_W<7> {
         NMICLR_W::new(self)
     }
     #[doc = "Bit 8 - SRAM Parity Error Clear"]
     #[inline(always)]
+    #[must_use]
     pub fn rpeclr(&mut self) -> RPECLR_W<8> {
         RPECLR_W::new(self)
     }
     #[doc = "Bit 10 - Bus Slave Error Clear"]
     #[inline(always)]
+    #[must_use]
     pub fn bussclr(&mut self) -> BUSSCLR_W<10> {
         BUSSCLR_W::new(self)
     }
     #[doc = "Bit 11 - Bus Master Error Clear"]
     #[inline(always)]
+    #[must_use]
     pub fn busmclr(&mut self) -> BUSMCLR_W<11> {
         BUSMCLR_W::new(self)
     }
     #[doc = "Bit 12 - CPU Stack Pointer Monitor Interrupt Clear"]
     #[inline(always)]
+    #[must_use]
     pub fn speclr(&mut self) -> SPECLR_W<12> {
         SPECLR_W::new(self)
     }
@@ -656,11 +666,10 @@ impl crate::Readable for NMICLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [nmiclr::W](W) writer structure"]
 impl crate::Writable for NMICLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NMICLR to value 0"]
 impl crate::Resettable for NMICLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

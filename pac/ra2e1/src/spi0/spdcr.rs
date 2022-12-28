@@ -37,7 +37,7 @@ impl From<crate::W<SPDCR_SPEC>> for W {
 #[doc = "Field `SPRDTD` reader - SPI Receive/Transmit Data Select"]
 pub type SPRDTD_R = crate::BitReader<SPRDTD_A>;
 #[doc = "SPI Receive/Transmit Data Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SPRDTD_A {
     #[doc = "0: Read SPDR/SPDR_HA values from receive buffer"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> SPRDTD_W<'a, O> {
 #[doc = "Field `SPLW` reader - SPI Word Access/Halfword Access Specification"]
 pub type SPLW_R = crate::BitReader<SPLW_A>;
 #[doc = "SPI Word Access/Halfword Access Specification\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SPLW_A {
     #[doc = "0: Set SPDR_HA to valid for halfword access"]
     _0 = 0,
@@ -149,11 +149,13 @@ impl R {
 impl W {
     #[doc = "Bit 4 - SPI Receive/Transmit Data Select"]
     #[inline(always)]
+    #[must_use]
     pub fn sprdtd(&mut self) -> SPRDTD_W<4> {
         SPRDTD_W::new(self)
     }
     #[doc = "Bit 5 - SPI Word Access/Halfword Access Specification"]
     #[inline(always)]
+    #[must_use]
     pub fn splw(&mut self) -> SPLW_W<5> {
         SPLW_W::new(self)
     }
@@ -176,11 +178,10 @@ impl crate::Readable for SPDCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [spdcr::W](W) writer structure"]
 impl crate::Writable for SPDCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPDCR to value 0"]
 impl crate::Resettable for SPDCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

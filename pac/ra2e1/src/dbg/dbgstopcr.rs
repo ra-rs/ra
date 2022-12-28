@@ -37,7 +37,7 @@ impl From<crate::W<DBGSTOPCR_SPEC>> for W {
 #[doc = "Field `DBGSTOP_IWDT` reader - Mask bit for IWDT reset/interrupt"]
 pub type DBGSTOP_IWDT_R = crate::BitReader<DBGSTOP_IWDT_A>;
 #[doc = "Mask bit for IWDT reset/interrupt\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DBGSTOP_IWDT_A {
     #[doc = "0: Enable IWDT reset/interrupt"]
     _0 = 0,
@@ -88,7 +88,7 @@ impl<'a, const O: u8> DBGSTOP_IWDT_W<'a, O> {
 #[doc = "Field `DBGSTOP_WDT` reader - Mask bit for WDT reset/interrupt"]
 pub type DBGSTOP_WDT_R = crate::BitReader<DBGSTOP_WDT_A>;
 #[doc = "Mask bit for WDT reset/interrupt\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DBGSTOP_WDT_A {
     #[doc = "0: Enable WDT reset/interrupt"]
     _0 = 0,
@@ -139,7 +139,7 @@ impl<'a, const O: u8> DBGSTOP_WDT_W<'a, O> {
 #[doc = "Field `DBGSTOP_LVD0` reader - Mask bit for LVD0 reset"]
 pub type DBGSTOP_LVD0_R = crate::BitReader<DBGSTOP_LVD0_A>;
 #[doc = "Mask bit for LVD0 reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DBGSTOP_LVD0_A {
     #[doc = "0: Enable LVD0 reset"]
     _0 = 0,
@@ -190,7 +190,7 @@ impl<'a, const O: u8> DBGSTOP_LVD0_W<'a, O> {
 #[doc = "Field `DBGSTOP_LVD1` reader - Mask bit for LVD1 reset/interrupt"]
 pub type DBGSTOP_LVD1_R = crate::BitReader<DBGSTOP_LVD1_A>;
 #[doc = "Mask bit for LVD1 reset/interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DBGSTOP_LVD1_A {
     #[doc = "0: Enable LVD1 reset/interrupt"]
     _0 = 0,
@@ -241,7 +241,7 @@ impl<'a, const O: u8> DBGSTOP_LVD1_W<'a, O> {
 #[doc = "Field `DBGSTOP_LVD2` reader - Mask bit for LVD2 reset/interrupt"]
 pub type DBGSTOP_LVD2_R = crate::BitReader<DBGSTOP_LVD2_A>;
 #[doc = "Mask bit for LVD2 reset/interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DBGSTOP_LVD2_A {
     #[doc = "0: Enable LVD2 reset/interrupt"]
     _0 = 0,
@@ -292,7 +292,7 @@ impl<'a, const O: u8> DBGSTOP_LVD2_W<'a, O> {
 #[doc = "Field `DBGSTOP_RPER` reader - Mask bit for SRAM parity error reset/interrupt"]
 pub type DBGSTOP_RPER_R = crate::BitReader<DBGSTOP_RPER_A>;
 #[doc = "Mask bit for SRAM parity error reset/interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DBGSTOP_RPER_A {
     #[doc = "0: Enable SRAM parity error reset/interrupt"]
     _0 = 0,
@@ -375,31 +375,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Mask bit for IWDT reset/interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn dbgstop_iwdt(&mut self) -> DBGSTOP_IWDT_W<0> {
         DBGSTOP_IWDT_W::new(self)
     }
     #[doc = "Bit 1 - Mask bit for WDT reset/interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn dbgstop_wdt(&mut self) -> DBGSTOP_WDT_W<1> {
         DBGSTOP_WDT_W::new(self)
     }
     #[doc = "Bit 16 - Mask bit for LVD0 reset"]
     #[inline(always)]
+    #[must_use]
     pub fn dbgstop_lvd0(&mut self) -> DBGSTOP_LVD0_W<16> {
         DBGSTOP_LVD0_W::new(self)
     }
     #[doc = "Bit 17 - Mask bit for LVD1 reset/interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn dbgstop_lvd1(&mut self) -> DBGSTOP_LVD1_W<17> {
         DBGSTOP_LVD1_W::new(self)
     }
     #[doc = "Bit 18 - Mask bit for LVD2 reset/interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn dbgstop_lvd2(&mut self) -> DBGSTOP_LVD2_W<18> {
         DBGSTOP_LVD2_W::new(self)
     }
     #[doc = "Bit 24 - Mask bit for SRAM parity error reset/interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn dbgstop_rper(&mut self) -> DBGSTOP_RPER_W<24> {
         DBGSTOP_RPER_W::new(self)
     }
@@ -422,11 +428,10 @@ impl crate::Readable for DBGSTOPCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [dbgstopcr::W](W) writer structure"]
 impl crate::Writable for DBGSTOPCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DBGSTOPCR to value 0x03"]
 impl crate::Resettable for DBGSTOPCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

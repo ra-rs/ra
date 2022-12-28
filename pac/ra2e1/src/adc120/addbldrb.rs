@@ -33,8 +33,5 @@ impl crate::Readable for ADDBLDRB_SPEC {
 }
 #[doc = "`reset()` method sets ADDBLDRB to value 0"]
 impl crate::Resettable for ADDBLDRB_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

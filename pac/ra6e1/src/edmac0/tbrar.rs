@@ -1,0 +1,28 @@
+#[doc = "Register `TBRAR` reader"]
+pub struct R(crate::R<TBRAR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<TBRAR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<TBRAR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<TBRAR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Transmit Buffer Read Address Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tbrar](index.html) module"]
+pub struct TBRAR_SPEC;
+impl crate::RegisterSpec for TBRAR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [tbrar::R](R) reader structure"]
+impl crate::Readable for TBRAR_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets TBRAR to value 0"]
+impl crate::Resettable for TBRAR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}

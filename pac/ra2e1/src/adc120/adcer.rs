@@ -37,7 +37,7 @@ impl From<crate::W<ADCER_SPEC>> for W {
 #[doc = "Field `ACE` reader - A/D Data Register Automatic Clearing Enable"]
 pub type ACE_R = crate::BitReader<ACE_A>;
 #[doc = "A/D Data Register Automatic Clearing Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ACE_A {
     #[doc = "0: Disable automatic clearing"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> ACE_W<'a, O> {
 #[doc = "Field `DIAGVAL` reader - Self-Diagnosis Conversion Voltage Select"]
 pub type DIAGVAL_R = crate::FieldReader<u8, DIAGVAL_A>;
 #[doc = "Self-Diagnosis Conversion Voltage Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DIAGVAL_A {
     #[doc = "0: Setting prohibited when self-diagnosis is enabled"]
@@ -166,7 +166,7 @@ impl<'a, const O: u8> DIAGVAL_W<'a, O> {
 #[doc = "Field `DIAGLD` reader - Self-Diagnosis Mode Select"]
 pub type DIAGLD_R = crate::BitReader<DIAGLD_A>;
 #[doc = "Self-Diagnosis Mode Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DIAGLD_A {
     #[doc = "0: Select rotation mode for self-diagnosis voltage"]
     _0 = 0,
@@ -216,7 +216,7 @@ impl<'a, const O: u8> DIAGLD_W<'a, O> {
 #[doc = "Field `DIAGM` reader - Self-Diagnosis Enable"]
 pub type DIAGM_R = crate::BitReader<DIAGM_A>;
 #[doc = "Self-Diagnosis Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DIAGM_A {
     #[doc = "0: Disable ADC12 self-diagnosis"]
     _0 = 0,
@@ -266,7 +266,7 @@ impl<'a, const O: u8> DIAGM_W<'a, O> {
 #[doc = "Field `ADRFMT` reader - A/D Data Register Format Select"]
 pub type ADRFMT_R = crate::BitReader<ADRFMT_A>;
 #[doc = "A/D Data Register Format Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ADRFMT_A {
     #[doc = "0: Select right-justified for the A/D data register format"]
     _0 = 0,
@@ -343,26 +343,31 @@ impl R {
 impl W {
     #[doc = "Bit 5 - A/D Data Register Automatic Clearing Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ace(&mut self) -> ACE_W<5> {
         ACE_W::new(self)
     }
     #[doc = "Bits 8:9 - Self-Diagnosis Conversion Voltage Select"]
     #[inline(always)]
+    #[must_use]
     pub fn diagval(&mut self) -> DIAGVAL_W<8> {
         DIAGVAL_W::new(self)
     }
     #[doc = "Bit 10 - Self-Diagnosis Mode Select"]
     #[inline(always)]
+    #[must_use]
     pub fn diagld(&mut self) -> DIAGLD_W<10> {
         DIAGLD_W::new(self)
     }
     #[doc = "Bit 11 - Self-Diagnosis Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn diagm(&mut self) -> DIAGM_W<11> {
         DIAGM_W::new(self)
     }
     #[doc = "Bit 15 - A/D Data Register Format Select"]
     #[inline(always)]
+    #[must_use]
     pub fn adrfmt(&mut self) -> ADRFMT_W<15> {
         ADRFMT_W::new(self)
     }
@@ -385,11 +390,10 @@ impl crate::Readable for ADCER_SPEC {
 #[doc = "`write(|w| ..)` method takes [adcer::W](W) writer structure"]
 impl crate::Writable for ADCER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADCER to value 0"]
 impl crate::Resettable for ADCER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

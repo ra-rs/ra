@@ -29,13 +29,13 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x04 - SPI Data Register"]
     #[inline(always)]
-    pub fn spdr_ha(&self) -> &SPDR_HA {
-        unsafe { &*(((self as *const Self) as *const u8).add(4usize) as *const SPDR_HA) }
+    pub const fn spdr_ha(&self) -> &SPDR_HA {
+        unsafe { &*(self as *const Self).cast::<u8>().add(4usize).cast() }
     }
     #[doc = "0x04 - SPI Data Register"]
     #[inline(always)]
-    pub fn spdr(&self) -> &SPDR {
-        unsafe { &*(((self as *const Self) as *const u8).add(4usize) as *const SPDR) }
+    pub const fn spdr(&self) -> &SPDR {
+        unsafe { &*(self as *const Self).cast::<u8>().add(4usize).cast() }
     }
 }
 #[doc = "SPCR (rw) register accessor: an alias for `Reg<SPCR_SPEC>`"]

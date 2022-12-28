@@ -1,0 +1,167 @@
+#[doc = "Register `ADADC` reader"]
+pub struct R(crate::R<ADADC_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<ADADC_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<ADADC_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<ADADC_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `ADADC` writer"]
+pub struct W(crate::W<ADADC_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<ADADC_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<ADADC_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<ADADC_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `ADC` reader - Count Select"]
+pub type ADC_R = crate::FieldReader<u8, ADC_A>;
+#[doc = "Count Select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum ADC_A {
+    #[doc = "0: 1-time conversion (same as normal conversion)"]
+    _000 = 0,
+    #[doc = "1: 2-time conversion (acquire the average of 2-time conversion)"]
+    _001 = 1,
+    #[doc = "3: 4-time conversion (acquire the average of 4-time conversion)"]
+    _011 = 3,
+    #[doc = "4: 8-time conversion (acquire the average of 8-time conversion)"]
+    _100 = 4,
+    #[doc = "5: 16-time conversion (acquire the average of 16-time conversion)"]
+    _101 = 5,
+}
+impl From<ADC_A> for u8 {
+    #[inline(always)]
+    fn from(variant: ADC_A) -> Self {
+        variant as _
+    }
+}
+impl ADC_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<ADC_A> {
+        match self.bits {
+            0 => Some(ADC_A::_000),
+            1 => Some(ADC_A::_001),
+            3 => Some(ADC_A::_011),
+            4 => Some(ADC_A::_100),
+            5 => Some(ADC_A::_101),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_000`"]
+    #[inline(always)]
+    pub fn is_000(&self) -> bool {
+        *self == ADC_A::_000
+    }
+    #[doc = "Checks if the value of the field is `_001`"]
+    #[inline(always)]
+    pub fn is_001(&self) -> bool {
+        *self == ADC_A::_001
+    }
+    #[doc = "Checks if the value of the field is `_011`"]
+    #[inline(always)]
+    pub fn is_011(&self) -> bool {
+        *self == ADC_A::_011
+    }
+    #[doc = "Checks if the value of the field is `_100`"]
+    #[inline(always)]
+    pub fn is_100(&self) -> bool {
+        *self == ADC_A::_100
+    }
+    #[doc = "Checks if the value of the field is `_101`"]
+    #[inline(always)]
+    pub fn is_101(&self) -> bool {
+        *self == ADC_A::_101
+    }
+}
+#[doc = "Field `ADC` writer - Count Select"]
+pub type ADC_W<'a, const O: u8> = crate::FieldWriter<'a, u8, ADADC_SPEC, u8, ADC_A, 3, O>;
+impl<'a, const O: u8> ADC_W<'a, O> {
+    #[doc = "1-time conversion (same as normal conversion)"]
+    #[inline(always)]
+    pub fn _000(self) -> &'a mut W {
+        self.variant(ADC_A::_000)
+    }
+    #[doc = "2-time conversion (acquire the average of 2-time conversion)"]
+    #[inline(always)]
+    pub fn _001(self) -> &'a mut W {
+        self.variant(ADC_A::_001)
+    }
+    #[doc = "4-time conversion (acquire the average of 4-time conversion)"]
+    #[inline(always)]
+    pub fn _011(self) -> &'a mut W {
+        self.variant(ADC_A::_011)
+    }
+    #[doc = "8-time conversion (acquire the average of 8-time conversion)"]
+    #[inline(always)]
+    pub fn _100(self) -> &'a mut W {
+        self.variant(ADC_A::_100)
+    }
+    #[doc = "16-time conversion (acquire the average of 16-time conversion)"]
+    #[inline(always)]
+    pub fn _101(self) -> &'a mut W {
+        self.variant(ADC_A::_101)
+    }
+}
+impl R {
+    #[doc = "Bits 0:2 - Count Select"]
+    #[inline(always)]
+    pub fn adc(&self) -> ADC_R {
+        ADC_R::new(self.bits & 7)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - Count Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn adc(&mut self) -> ADC_W<0> {
+        ADC_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "A/D-Converted Value Average Count Select Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [adadc](index.html) module"]
+pub struct ADADC_SPEC;
+impl crate::RegisterSpec for ADADC_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [adadc::R](R) reader structure"]
+impl crate::Readable for ADADC_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [adadc::W](W) writer structure"]
+impl crate::Writable for ADADC_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets ADADC to value 0"]
+impl crate::Resettable for ADADC_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}

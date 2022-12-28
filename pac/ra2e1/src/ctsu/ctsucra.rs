@@ -37,7 +37,7 @@ impl From<crate::W<CTSUCRA_SPEC>> for W {
 #[doc = "Field `STRT` reader - CTSU Measurement Operation Start"]
 pub type STRT_R = crate::BitReader<STRT_A>;
 #[doc = "CTSU Measurement Operation Start\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum STRT_A {
     #[doc = "0: Stop measurement operation"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> STRT_W<'a, O> {
 #[doc = "Field `CAP` reader - CTSU Measurement Operation Start Trigger Select"]
 pub type CAP_R = crate::BitReader<CAP_A>;
 #[doc = "CTSU Measurement Operation Start Trigger Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CAP_A {
     #[doc = "0: Software trigger"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> CAP_W<'a, O> {
 #[doc = "Field `SNZ` reader - CTSU Wait State Power-Saving Enable"]
 pub type SNZ_R = crate::BitReader<SNZ_A>;
 #[doc = "CTSU Wait State Power-Saving Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SNZ_A {
     #[doc = "0: Disable power-saving function during wait state"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> SNZ_W<'a, O> {
 #[doc = "Field `CFCON` reader - CTSU CFC Power On Control"]
 pub type CFCON_R = crate::BitReader<CFCON_A>;
 #[doc = "CTSU CFC Power On Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CFCON_A {
     #[doc = "0: CFC power off"]
     _0 = 0,
@@ -239,7 +239,7 @@ pub type INIT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTSUCRA_SPEC, bool,
 #[doc = "Field `PUMPON` reader - CTSU Boost Circuit Control"]
 pub type PUMPON_R = crate::BitReader<PUMPON_A>;
 #[doc = "CTSU Boost Circuit Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PUMPON_A {
     #[doc = "0: Boost circuit off"]
     _0 = 0,
@@ -289,7 +289,7 @@ impl<'a, const O: u8> PUMPON_W<'a, O> {
 #[doc = "Field `TXVSEL` reader - CTSU Transmission Power Supply Selection"]
 pub type TXVSEL_R = crate::FieldReader<u8, TXVSEL_A>;
 #[doc = "CTSU Transmission Power Supply Selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TXVSEL_A {
     #[doc = "0: Selecting VCC as the power supply for the transmit pins of mutual capacitance method."]
@@ -368,7 +368,7 @@ impl<'a, const O: u8> TXVSEL_W<'a, O> {
 #[doc = "Field `PON` reader - CTSU Power On Control"]
 pub type PON_R = crate::BitReader<PON_A>;
 #[doc = "CTSU Power On Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PON_A {
     #[doc = "0: Power off the CTSU"]
     _0 = 0,
@@ -418,7 +418,7 @@ impl<'a, const O: u8> PON_W<'a, O> {
 #[doc = "Field `CSW` reader - TSCAP Pin Enable"]
 pub type CSW_R = crate::BitReader<CSW_A>;
 #[doc = "TSCAP Pin Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSW_A {
     #[doc = "0: Disable"]
     _0 = 0,
@@ -468,7 +468,7 @@ impl<'a, const O: u8> CSW_W<'a, O> {
 #[doc = "Field `ATUNE0` reader - CTSU Power Supply Operating Mode Setting"]
 pub type ATUNE0_R = crate::BitReader<ATUNE0_A>;
 #[doc = "CTSU Power Supply Operating Mode Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ATUNE0_A {
     #[doc = "0: VCC ≥ 2.4 V: Normal voltage operating mode VCC < 2.4 V: Setting prohibited"]
     _0 = 0,
@@ -518,7 +518,7 @@ impl<'a, const O: u8> ATUNE0_W<'a, O> {
 #[doc = "Field `ATUNE1` reader - CTSU Current Range Adjustment"]
 pub type ATUNE1_R = crate::BitReader<ATUNE1_A>;
 #[doc = "CTSU Current Range Adjustment\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ATUNE1_A {
     #[doc = "0: 80 µA when CTSUATUNE2 = 0 20 µA when CTSUATUNE2 = 1"]
     _0 = 0,
@@ -568,7 +568,7 @@ impl<'a, const O: u8> ATUNE1_W<'a, O> {
 #[doc = "Field `CLK` reader - CTSU Operating Clock Select"]
 pub type CLK_R = crate::FieldReader<u8, CLK_A>;
 #[doc = "CTSU Operating Clock Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CLK_A {
     #[doc = "0: PCLKB"]
@@ -646,7 +646,7 @@ impl<'a, const O: u8> CLK_W<'a, O> {
 #[doc = "Field `MD0` reader - CTSU Measurement Mode Select 0"]
 pub type MD0_R = crate::BitReader<MD0_A>;
 #[doc = "CTSU Measurement Mode Select 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MD0_A {
     #[doc = "0: Single scan mode"]
     _0 = 0,
@@ -696,7 +696,7 @@ impl<'a, const O: u8> MD0_W<'a, O> {
 #[doc = "Field `MD1` reader - CTSU Measurement Mode Select 1"]
 pub type MD1_R = crate::BitReader<MD1_A>;
 #[doc = "CTSU Measurement Mode Select 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MD1_A {
     #[doc = "0: One-time measurement (self-capacitance method)"]
     _0 = 0,
@@ -746,7 +746,7 @@ impl<'a, const O: u8> MD1_W<'a, O> {
 #[doc = "Field `MD2` reader - CTSU Measurement Mode Select 2"]
 pub type MD2_R = crate::BitReader<MD2_A>;
 #[doc = "CTSU Measurement Mode Select 2\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MD2_A {
     #[doc = "0: Measure the switched capacitor current and the DC current"]
     _0 = 0,
@@ -796,7 +796,7 @@ impl<'a, const O: u8> MD2_W<'a, O> {
 #[doc = "Field `ATUNE2` reader - CTSU Current Range Adjustment"]
 pub type ATUNE2_R = crate::BitReader<ATUNE2_A>;
 #[doc = "CTSU Current Range Adjustment\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ATUNE2_A {
     #[doc = "0: 80 µA when CTSUATUNE1 = 0 40 µA when CTSUATUNE1 = 1"]
     _0 = 0,
@@ -846,7 +846,7 @@ impl<'a, const O: u8> ATUNE2_W<'a, O> {
 #[doc = "Field `LOAD` reader - CTSU Load Control During Measurement"]
 pub type LOAD_R = crate::FieldReader<u8, LOAD_A>;
 #[doc = "CTSU Load Control During Measurement\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum LOAD_A {
     #[doc = "0: 2.5 µA constant current load"]
@@ -926,7 +926,7 @@ bits to resistance load for calibration, set these bits to 10b before they are s
 #[doc = "Field `POSEL` reader - CTSU Non-Measured Channel Output Select"]
 pub type POSEL_R = crate::FieldReader<u8, POSEL_A>;
 #[doc = "CTSU Non-Measured Channel Output Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum POSEL_A {
     #[doc = "0: Output low"]
@@ -1005,7 +1005,7 @@ impl<'a, const O: u8> POSEL_W<'a, O> {
 #[doc = "Field `SDPSEL` reader - CTSU Sensor Drive Pulse Select"]
 pub type SDPSEL_R = crate::BitReader<SDPSEL_A>;
 #[doc = "CTSU Sensor Drive Pulse Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SDPSEL_A {
     #[doc = "0: Random pulse"]
     _0 = 0,
@@ -1055,7 +1055,7 @@ impl<'a, const O: u8> SDPSEL_W<'a, O> {
 #[doc = "Field `PCSEL` reader - CTSU Boost Circuit Clock Select"]
 pub type PCSEL_R = crate::BitReader<PCSEL_A>;
 #[doc = "CTSU Boost Circuit Clock Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PCSEL_A {
     #[doc = "0: Sensor drive pulse divided by 2"]
     _0 = 0,
@@ -1109,7 +1109,7 @@ pub type STCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTSUCRA_SPEC, u8
 #[doc = "Field `DCMODE` reader - CTSU Current Measurement Mode Select"]
 pub type DCMODE_R = crate::BitReader<DCMODE_A>;
 #[doc = "CTSU Current Measurement Mode Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DCMODE_A {
     #[doc = "0: Electrostatic capacitance measurement mode"]
     _0 = 0,
@@ -1159,7 +1159,7 @@ impl<'a, const O: u8> DCMODE_W<'a, O> {
 #[doc = "Field `DCBACK` reader - CTSU Current Measurement Feedback Select"]
 pub type DCBACK_R = crate::BitReader<DCBACK_A>;
 #[doc = "CTSU Current Measurement Feedback Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DCBACK_A {
     #[doc = "0: TSCAP pin is selected"]
     _0 = 0,
@@ -1321,116 +1321,139 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CTSU Measurement Operation Start"]
     #[inline(always)]
+    #[must_use]
     pub fn strt(&mut self) -> STRT_W<0> {
         STRT_W::new(self)
     }
     #[doc = "Bit 1 - CTSU Measurement Operation Start Trigger Select"]
     #[inline(always)]
+    #[must_use]
     pub fn cap(&mut self) -> CAP_W<1> {
         CAP_W::new(self)
     }
     #[doc = "Bit 2 - CTSU Wait State Power-Saving Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn snz(&mut self) -> SNZ_W<2> {
         SNZ_W::new(self)
     }
     #[doc = "Bit 3 - CTSU CFC Power On Control"]
     #[inline(always)]
+    #[must_use]
     pub fn cfcon(&mut self) -> CFCON_W<3> {
         CFCON_W::new(self)
     }
     #[doc = "Bit 4 - CTSU Control Block Initialization"]
     #[inline(always)]
+    #[must_use]
     pub fn init(&mut self) -> INIT_W<4> {
         INIT_W::new(self)
     }
     #[doc = "Bit 5 - CTSU Boost Circuit Control"]
     #[inline(always)]
+    #[must_use]
     pub fn pumpon(&mut self) -> PUMPON_W<5> {
         PUMPON_W::new(self)
     }
     #[doc = "Bits 6:7 - CTSU Transmission Power Supply Selection"]
     #[inline(always)]
+    #[must_use]
     pub fn txvsel(&mut self) -> TXVSEL_W<6> {
         TXVSEL_W::new(self)
     }
     #[doc = "Bit 8 - CTSU Power On Control"]
     #[inline(always)]
+    #[must_use]
     pub fn pon(&mut self) -> PON_W<8> {
         PON_W::new(self)
     }
     #[doc = "Bit 9 - TSCAP Pin Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn csw(&mut self) -> CSW_W<9> {
         CSW_W::new(self)
     }
     #[doc = "Bit 10 - CTSU Power Supply Operating Mode Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn atune0(&mut self) -> ATUNE0_W<10> {
         ATUNE0_W::new(self)
     }
     #[doc = "Bit 11 - CTSU Current Range Adjustment"]
     #[inline(always)]
+    #[must_use]
     pub fn atune1(&mut self) -> ATUNE1_W<11> {
         ATUNE1_W::new(self)
     }
     #[doc = "Bits 12:13 - CTSU Operating Clock Select"]
     #[inline(always)]
+    #[must_use]
     pub fn clk(&mut self) -> CLK_W<12> {
         CLK_W::new(self)
     }
     #[doc = "Bit 14 - CTSU Measurement Mode Select 0"]
     #[inline(always)]
+    #[must_use]
     pub fn md0(&mut self) -> MD0_W<14> {
         MD0_W::new(self)
     }
     #[doc = "Bit 15 - CTSU Measurement Mode Select 1"]
     #[inline(always)]
+    #[must_use]
     pub fn md1(&mut self) -> MD1_W<15> {
         MD1_W::new(self)
     }
     #[doc = "Bit 16 - CTSU Measurement Mode Select 2"]
     #[inline(always)]
+    #[must_use]
     pub fn md2(&mut self) -> MD2_W<16> {
         MD2_W::new(self)
     }
     #[doc = "Bit 17 - CTSU Current Range Adjustment"]
     #[inline(always)]
+    #[must_use]
     pub fn atune2(&mut self) -> ATUNE2_W<17> {
         ATUNE2_W::new(self)
     }
     #[doc = "Bits 18:19 - CTSU Load Control During Measurement"]
     #[inline(always)]
+    #[must_use]
     pub fn load(&mut self) -> LOAD_W<18> {
         LOAD_W::new(self)
     }
     #[doc = "Bits 20:21 - CTSU Non-Measured Channel Output Select"]
     #[inline(always)]
+    #[must_use]
     pub fn posel(&mut self) -> POSEL_W<20> {
         POSEL_W::new(self)
     }
     #[doc = "Bit 22 - CTSU Sensor Drive Pulse Select"]
     #[inline(always)]
+    #[must_use]
     pub fn sdpsel(&mut self) -> SDPSEL_W<22> {
         SDPSEL_W::new(self)
     }
     #[doc = "Bit 23 - CTSU Boost Circuit Clock Select"]
     #[inline(always)]
+    #[must_use]
     pub fn pcsel(&mut self) -> PCSEL_W<23> {
         PCSEL_W::new(self)
     }
     #[doc = "Bits 24:29 - CTSU STCLK Select"]
     #[inline(always)]
+    #[must_use]
     pub fn stclk(&mut self) -> STCLK_W<24> {
         STCLK_W::new(self)
     }
     #[doc = "Bit 30 - CTSU Current Measurement Mode Select"]
     #[inline(always)]
+    #[must_use]
     pub fn dcmode(&mut self) -> DCMODE_W<30> {
         DCMODE_W::new(self)
     }
     #[doc = "Bit 31 - CTSU Current Measurement Feedback Select"]
     #[inline(always)]
+    #[must_use]
     pub fn dcback(&mut self) -> DCBACK_W<31> {
         DCBACK_W::new(self)
     }
@@ -1453,11 +1476,10 @@ impl crate::Readable for CTSUCRA_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctsucra::W](W) writer structure"]
 impl crate::Writable for CTSUCRA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTSUCRA to value 0"]
 impl crate::Resettable for CTSUCRA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

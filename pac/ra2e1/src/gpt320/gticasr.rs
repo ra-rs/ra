@@ -37,7 +37,7 @@ impl From<crate::W<GTICASR_SPEC>> for W {
 #[doc = "Field `ASGTRGAR` reader - GTETRGA Pin Rising Input Source GTCCRA Input Capture Enable"]
 pub type ASGTRGAR_R = crate::BitReader<ASGTRGAR_A>;
 #[doc = "GTETRGA Pin Rising Input Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASGTRGAR_A {
     #[doc = "0: GTCCRA input capture disabled on the rising edge of GTETRGA input"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> ASGTRGAR_W<'a, O> {
 #[doc = "Field `ASGTRGAF` reader - GTETRGA Pin Falling Input Source GTCCRA Input Capture Enable"]
 pub type ASGTRGAF_R = crate::BitReader<ASGTRGAF_A>;
 #[doc = "GTETRGA Pin Falling Input Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASGTRGAF_A {
     #[doc = "0: GTCCRA input capture disabled on the falling edge of GTETRGA input"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> ASGTRGAF_W<'a, O> {
 #[doc = "Field `ASGTRGBR` reader - GTETRGB Pin Rising Input Source GTCCRA Input Capture Enable"]
 pub type ASGTRGBR_R = crate::BitReader<ASGTRGBR_A>;
 #[doc = "GTETRGB Pin Rising Input Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASGTRGBR_A {
     #[doc = "0: GTCCRA input capture disabled on the rising edge of GTETRGB input"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> ASGTRGBR_W<'a, O> {
 #[doc = "Field `ASGTRGBF` reader - GTETRGB Pin Falling Input Source GTCCRA Input Capture Enable"]
 pub type ASGTRGBF_R = crate::BitReader<ASGTRGBF_A>;
 #[doc = "GTETRGB Pin Falling Input Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASGTRGBF_A {
     #[doc = "0: GTCCRA input capture disabled on the falling edge of GTETRGB input"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> ASGTRGBF_W<'a, O> {
 #[doc = "Field `ASCARBL` reader - GTIOCnA Pin Rising Input during GTIOCnB Value Low Source GTCCRA Input Capture Enable"]
 pub type ASCARBL_R = crate::BitReader<ASCARBL_A>;
 #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASCARBL_A {
     #[doc = "0: GTCCRA input capture disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> ASCARBL_W<'a, O> {
 #[doc = "Field `ASCARBH` reader - GTIOCnA Pin Rising Input during GTIOCnB Value High Source GTCCRA Input Capture Enable"]
 pub type ASCARBH_R = crate::BitReader<ASCARBH_A>;
 #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASCARBH_A {
     #[doc = "0: GTCCRA input capture disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> ASCARBH_W<'a, O> {
 #[doc = "Field `ASCAFBL` reader - GTIOCnA Pin Falling Input during GTIOCnB Value Low Source GTCCRA Input Capture Enable"]
 pub type ASCAFBL_R = crate::BitReader<ASCAFBL_A>;
 #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASCAFBL_A {
     #[doc = "0: GTCCRA input capture disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> ASCAFBL_W<'a, O> {
 #[doc = "Field `ASCAFBH` reader - GTIOCnA Pin Falling Input during GTIOCnB Value High Source GTCCRA Input Capture Enable"]
 pub type ASCAFBH_R = crate::BitReader<ASCAFBH_A>;
 #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASCAFBH_A {
     #[doc = "0: GTCCRA input capture disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> ASCAFBH_W<'a, O> {
 #[doc = "Field `ASCBRAL` reader - GTIOCnB Pin Rising Input during GTIOCnA Value Low Source GTCCRA Input Capture Enable"]
 pub type ASCBRAL_R = crate::BitReader<ASCBRAL_A>;
 #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASCBRAL_A {
     #[doc = "0: GTCCRA input capture disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> ASCBRAL_W<'a, O> {
 #[doc = "Field `ASCBRAH` reader - GTIOCnB Pin Rising Input during GTIOCnA Value High Source GTCCRA Input Capture Enable"]
 pub type ASCBRAH_R = crate::BitReader<ASCBRAH_A>;
 #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASCBRAH_A {
     #[doc = "0: GTCCRA input capture disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
     _0 = 0,
@@ -537,7 +537,7 @@ impl<'a, const O: u8> ASCBRAH_W<'a, O> {
 #[doc = "Field `ASCBFAL` reader - GTIOCnB Pin Falling Input during GTIOCnA Value Low Source GTCCRA Input Capture Enable"]
 pub type ASCBFAL_R = crate::BitReader<ASCBFAL_A>;
 #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASCBFAL_A {
     #[doc = "0: GTCCRA input capture disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
     _0 = 0,
@@ -587,7 +587,7 @@ impl<'a, const O: u8> ASCBFAL_W<'a, O> {
 #[doc = "Field `ASCBFAH` reader - GTIOCnB Pin Falling Input during GTIOCnA Value High Source GTCCRA Input Capture Enable"]
 pub type ASCBFAH_R = crate::BitReader<ASCBFAH_A>;
 #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASCBFAH_A {
     #[doc = "0: GTCCRA input capture disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
     _0 = 0,
@@ -637,7 +637,7 @@ impl<'a, const O: u8> ASCBFAH_W<'a, O> {
 #[doc = "Field `ASELCA` reader - ELC_GPTA Event Source GTCCRA Input Capture Enable"]
 pub type ASELCA_R = crate::BitReader<ASELCA_A>;
 #[doc = "ELC_GPTA Event Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASELCA_A {
     #[doc = "0: GTCCRA input capture disabled at the ELC_GPTA input"]
     _0 = 0,
@@ -687,7 +687,7 @@ impl<'a, const O: u8> ASELCA_W<'a, O> {
 #[doc = "Field `ASELCB` reader - ELC_GPTB Event Source GTCCRA Input Capture Enable"]
 pub type ASELCB_R = crate::BitReader<ASELCB_A>;
 #[doc = "ELC_GPTB Event Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASELCB_A {
     #[doc = "0: GTCCRA input capture disabled at the ELC_GPTB input"]
     _0 = 0,
@@ -737,7 +737,7 @@ impl<'a, const O: u8> ASELCB_W<'a, O> {
 #[doc = "Field `ASELCC` reader - ELC_GPTC Event Source GTCCRA Input Capture Enable"]
 pub type ASELCC_R = crate::BitReader<ASELCC_A>;
 #[doc = "ELC_GPTC Event Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASELCC_A {
     #[doc = "0: GTCCRA input capture disabled at the ELC_GPTC input"]
     _0 = 0,
@@ -787,7 +787,7 @@ impl<'a, const O: u8> ASELCC_W<'a, O> {
 #[doc = "Field `ASELCD` reader - ELC_GPTD Event Source GTCCRA Input Capture Enable"]
 pub type ASELCD_R = crate::BitReader<ASELCD_A>;
 #[doc = "ELC_GPTD Event Source GTCCRA Input Capture Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASELCD_A {
     #[doc = "0: GTCCRA input capture disabled at the ELC_GPTD input"]
     _0 = 0,
@@ -919,81 +919,97 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GTETRGA Pin Rising Input Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn asgtrgar(&mut self) -> ASGTRGAR_W<0> {
         ASGTRGAR_W::new(self)
     }
     #[doc = "Bit 1 - GTETRGA Pin Falling Input Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn asgtrgaf(&mut self) -> ASGTRGAF_W<1> {
         ASGTRGAF_W::new(self)
     }
     #[doc = "Bit 2 - GTETRGB Pin Rising Input Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn asgtrgbr(&mut self) -> ASGTRGBR_W<2> {
         ASGTRGBR_W::new(self)
     }
     #[doc = "Bit 3 - GTETRGB Pin Falling Input Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn asgtrgbf(&mut self) -> ASGTRGBF_W<3> {
         ASGTRGBF_W::new(self)
     }
     #[doc = "Bit 8 - GTIOCnA Pin Rising Input during GTIOCnB Value Low Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ascarbl(&mut self) -> ASCARBL_W<8> {
         ASCARBL_W::new(self)
     }
     #[doc = "Bit 9 - GTIOCnA Pin Rising Input during GTIOCnB Value High Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ascarbh(&mut self) -> ASCARBH_W<9> {
         ASCARBH_W::new(self)
     }
     #[doc = "Bit 10 - GTIOCnA Pin Falling Input during GTIOCnB Value Low Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ascafbl(&mut self) -> ASCAFBL_W<10> {
         ASCAFBL_W::new(self)
     }
     #[doc = "Bit 11 - GTIOCnA Pin Falling Input during GTIOCnB Value High Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ascafbh(&mut self) -> ASCAFBH_W<11> {
         ASCAFBH_W::new(self)
     }
     #[doc = "Bit 12 - GTIOCnB Pin Rising Input during GTIOCnA Value Low Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ascbral(&mut self) -> ASCBRAL_W<12> {
         ASCBRAL_W::new(self)
     }
     #[doc = "Bit 13 - GTIOCnB Pin Rising Input during GTIOCnA Value High Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ascbrah(&mut self) -> ASCBRAH_W<13> {
         ASCBRAH_W::new(self)
     }
     #[doc = "Bit 14 - GTIOCnB Pin Falling Input during GTIOCnA Value Low Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ascbfal(&mut self) -> ASCBFAL_W<14> {
         ASCBFAL_W::new(self)
     }
     #[doc = "Bit 15 - GTIOCnB Pin Falling Input during GTIOCnA Value High Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ascbfah(&mut self) -> ASCBFAH_W<15> {
         ASCBFAH_W::new(self)
     }
     #[doc = "Bit 16 - ELC_GPTA Event Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn aselca(&mut self) -> ASELCA_W<16> {
         ASELCA_W::new(self)
     }
     #[doc = "Bit 17 - ELC_GPTB Event Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn aselcb(&mut self) -> ASELCB_W<17> {
         ASELCB_W::new(self)
     }
     #[doc = "Bit 18 - ELC_GPTC Event Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn aselcc(&mut self) -> ASELCC_W<18> {
         ASELCC_W::new(self)
     }
     #[doc = "Bit 19 - ELC_GPTD Event Source GTCCRA Input Capture Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn aselcd(&mut self) -> ASELCD_W<19> {
         ASELCD_W::new(self)
     }
@@ -1016,11 +1032,10 @@ impl crate::Readable for GTICASR_SPEC {
 #[doc = "`write(|w| ..)` method takes [gticasr::W](W) writer structure"]
 impl crate::Writable for GTICASR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTICASR to value 0"]
 impl crate::Resettable for GTICASR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

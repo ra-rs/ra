@@ -37,7 +37,7 @@ impl From<crate::W<ADDISCR_SPEC>> for W {
 #[doc = "Field `ADNDIS` reader - Disconnection Detection Assist Setting"]
 pub type ADNDIS_R = crate::FieldReader<u8, ADNDIS_A>;
 #[doc = "Disconnection Detection Assist Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum ADNDIS_A {
     #[doc = "0: The disconnection detection assist function is disabled"]
@@ -89,7 +89,7 @@ impl<'a, const O: u8> ADNDIS_W<'a, O> {
 #[doc = "Field `PCHG` reader - Precharge/discharge select"]
 pub type PCHG_R = crate::BitReader<PCHG_A>;
 #[doc = "Precharge/discharge select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PCHG_A {
     #[doc = "0: Discharge"]
     _0 = 0,
@@ -140,7 +140,7 @@ impl R {
     #[doc = "Bits 0:3 - Disconnection Detection Assist Setting"]
     #[inline(always)]
     pub fn adndis(&self) -> ADNDIS_R {
-        ADNDIS_R::new((self.bits & 0x0f) as u8)
+        ADNDIS_R::new(self.bits & 0x0f)
     }
     #[doc = "Bit 4 - Precharge/discharge select"]
     #[inline(always)]
@@ -151,11 +151,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Disconnection Detection Assist Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn adndis(&mut self) -> ADNDIS_W<0> {
         ADNDIS_W::new(self)
     }
     #[doc = "Bit 4 - Precharge/discharge select"]
     #[inline(always)]
+    #[must_use]
     pub fn pchg(&mut self) -> PCHG_W<4> {
         PCHG_W::new(self)
     }
@@ -178,11 +180,10 @@ impl crate::Readable for ADDISCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [addiscr::W](W) writer structure"]
 impl crate::Writable for ADDISCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADDISCR to value 0"]
 impl crate::Resettable for ADDISCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,7 +37,7 @@ impl From<crate::W<NMIER_SPEC>> for W {
 #[doc = "Field `IWDTEN` reader - IWDT Underflow/Refresh Error Interrupt Enable"]
 pub type IWDTEN_R = crate::BitReader<IWDTEN_A>;
 #[doc = "IWDT Underflow/Refresh Error Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum IWDTEN_A {
     #[doc = "0: Disabled"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> IWDTEN_W<'a, O> {
 #[doc = "Field `WDTEN` reader - WDT Underflow/Refresh Error Interrupt Enable"]
 pub type WDTEN_R = crate::BitReader<WDTEN_A>;
 #[doc = "WDT Underflow/Refresh Error Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WDTEN_A {
     #[doc = "0: Disabled"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> WDTEN_W<'a, O> {
 #[doc = "Field `LVD1EN` reader - Voltage monitor 1 Interrupt Enable"]
 pub type LVD1EN_R = crate::BitReader<LVD1EN_A>;
 #[doc = "Voltage monitor 1 Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LVD1EN_A {
     #[doc = "0: Disabled"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> LVD1EN_W<'a, O> {
 #[doc = "Field `LVD2EN` reader - Voltage monitor 2 Interrupt Enable"]
 pub type LVD2EN_R = crate::BitReader<LVD2EN_A>;
 #[doc = "Voltage monitor 2 Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LVD2EN_A {
     #[doc = "0: Disabled"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> LVD2EN_W<'a, O> {
 #[doc = "Field `OSTEN` reader - Oscillation Stop Detection Interrupt Enable"]
 pub type OSTEN_R = crate::BitReader<OSTEN_A>;
 #[doc = "Oscillation Stop Detection Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OSTEN_A {
     #[doc = "0: Disabled"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> OSTEN_W<'a, O> {
 #[doc = "Field `NMIEN` reader - NMI Pin Interrupt Enable"]
 pub type NMIEN_R = crate::BitReader<NMIEN_A>;
 #[doc = "NMI Pin Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NMIEN_A {
     #[doc = "0: Disabled"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> NMIEN_W<'a, O> {
 #[doc = "Field `RPEEN` reader - SRAM Parity Error Interrupt Enable"]
 pub type RPEEN_R = crate::BitReader<RPEEN_A>;
 #[doc = "SRAM Parity Error Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum RPEEN_A {
     #[doc = "0: Disabled"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> RPEEN_W<'a, O> {
 #[doc = "Field `BUSSEN` reader - MPU Bus Slave Error Interrupt Enable"]
 pub type BUSSEN_R = crate::BitReader<BUSSEN_A>;
 #[doc = "MPU Bus Slave Error Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BUSSEN_A {
     #[doc = "0: Disabled"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> BUSSEN_W<'a, O> {
 #[doc = "Field `BUSMEN` reader - MPU Bus Master Error Interrupt Enable"]
 pub type BUSMEN_R = crate::BitReader<BUSMEN_A>;
 #[doc = "MPU Bus Master Error Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BUSMEN_A {
     #[doc = "0: Disabled"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> BUSMEN_W<'a, O> {
 #[doc = "Field `SPEEN` reader - CPU Stack Pointer Monitor Interrupt Enable"]
 pub type SPEEN_R = crate::BitReader<SPEEN_A>;
 #[doc = "CPU Stack Pointer Monitor Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SPEEN_A {
     #[doc = "0: Disabled"]
     _0 = 0,
@@ -589,51 +589,61 @@ impl R {
 impl W {
     #[doc = "Bit 0 - IWDT Underflow/Refresh Error Interrupt Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn iwdten(&mut self) -> IWDTEN_W<0> {
         IWDTEN_W::new(self)
     }
     #[doc = "Bit 1 - WDT Underflow/Refresh Error Interrupt Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn wdten(&mut self) -> WDTEN_W<1> {
         WDTEN_W::new(self)
     }
     #[doc = "Bit 2 - Voltage monitor 1 Interrupt Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn lvd1en(&mut self) -> LVD1EN_W<2> {
         LVD1EN_W::new(self)
     }
     #[doc = "Bit 3 - Voltage monitor 2 Interrupt Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn lvd2en(&mut self) -> LVD2EN_W<3> {
         LVD2EN_W::new(self)
     }
     #[doc = "Bit 6 - Oscillation Stop Detection Interrupt Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn osten(&mut self) -> OSTEN_W<6> {
         OSTEN_W::new(self)
     }
     #[doc = "Bit 7 - NMI Pin Interrupt Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn nmien(&mut self) -> NMIEN_W<7> {
         NMIEN_W::new(self)
     }
     #[doc = "Bit 8 - SRAM Parity Error Interrupt Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn rpeen(&mut self) -> RPEEN_W<8> {
         RPEEN_W::new(self)
     }
     #[doc = "Bit 10 - MPU Bus Slave Error Interrupt Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn bussen(&mut self) -> BUSSEN_W<10> {
         BUSSEN_W::new(self)
     }
     #[doc = "Bit 11 - MPU Bus Master Error Interrupt Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn busmen(&mut self) -> BUSMEN_W<11> {
         BUSMEN_W::new(self)
     }
     #[doc = "Bit 12 - CPU Stack Pointer Monitor Interrupt Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn speen(&mut self) -> SPEEN_W<12> {
         SPEEN_W::new(self)
     }
@@ -656,11 +666,10 @@ impl crate::Readable for NMIER_SPEC {
 #[doc = "`write(|w| ..)` method takes [nmier::W](W) writer structure"]
 impl crate::Writable for NMIER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NMIER to value 0"]
 impl crate::Resettable for NMIER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

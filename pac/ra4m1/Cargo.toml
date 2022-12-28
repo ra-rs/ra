@@ -1,0 +1,24 @@
+[package]
+name = "ra4m1"
+description = "Peripheral access API for ra4m1 microcontrollers (generated using svd2rust)"
+version = "0.2.0"
+authors = ["Nathan Larsen <n8tlarsen@gmail.com>"]
+keywords = ["no-std", "arm", "cortex-m"]
+categories = ["embedded", "hardware-support", "no-std"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ra-rs/ra"
+readme = "README.md"
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.7"
+vcell = "0.1.2"
+portable-atomic = "0.3"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.6.13"
+
+[features]
+rt = ["cortex-m-rt/device"]
+

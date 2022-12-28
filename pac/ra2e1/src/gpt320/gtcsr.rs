@@ -37,7 +37,7 @@ impl From<crate::W<GTCSR_SPEC>> for W {
 #[doc = "Field `CSGTRGAR` reader - GTETRGA Pin Rising Input Source Counter Clear Enable"]
 pub type CSGTRGAR_R = crate::BitReader<CSGTRGAR_A>;
 #[doc = "GTETRGA Pin Rising Input Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSGTRGAR_A {
     #[doc = "0: Counter clear disabled on the rising edge of GTETRGA input"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> CSGTRGAR_W<'a, O> {
 #[doc = "Field `CSGTRGAF` reader - GTETRGA Pin Falling Input Source Counter Clear Enable"]
 pub type CSGTRGAF_R = crate::BitReader<CSGTRGAF_A>;
 #[doc = "GTETRGA Pin Falling Input Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSGTRGAF_A {
     #[doc = "0: Counter clear disabled on the falling edge of GTETRGA input"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> CSGTRGAF_W<'a, O> {
 #[doc = "Field `CSGTRGBR` reader - GTETRGB Pin Rising Input Source Counter Clear Enable"]
 pub type CSGTRGBR_R = crate::BitReader<CSGTRGBR_A>;
 #[doc = "GTETRGB Pin Rising Input Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSGTRGBR_A {
     #[doc = "0: Disable counter clear on the rising edge of GTETRGB input"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> CSGTRGBR_W<'a, O> {
 #[doc = "Field `CSGTRGBF` reader - GTETRGB Pin Falling Input Source Counter Clear Enable"]
 pub type CSGTRGBF_R = crate::BitReader<CSGTRGBF_A>;
 #[doc = "GTETRGB Pin Falling Input Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSGTRGBF_A {
     #[doc = "0: Counter clear disabled on the falling edge of GTETRGB input"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> CSGTRGBF_W<'a, O> {
 #[doc = "Field `CSCARBL` reader - GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Clear Enable"]
 pub type CSCARBL_R = crate::BitReader<CSCARBL_A>;
 #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSCARBL_A {
     #[doc = "0: Counter clear disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> CSCARBL_W<'a, O> {
 #[doc = "Field `CSCARBH` reader - GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Clear Enable"]
 pub type CSCARBH_R = crate::BitReader<CSCARBH_A>;
 #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSCARBH_A {
     #[doc = "0: Counter clear disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> CSCARBH_W<'a, O> {
 #[doc = "Field `CSCAFBL` reader - GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Clear Enable"]
 pub type CSCAFBL_R = crate::BitReader<CSCAFBL_A>;
 #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSCAFBL_A {
     #[doc = "0: Counter clear disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> CSCAFBL_W<'a, O> {
 #[doc = "Field `CSCAFBH` reader - GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Clear Enable"]
 pub type CSCAFBH_R = crate::BitReader<CSCAFBH_A>;
 #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSCAFBH_A {
     #[doc = "0: Counter clear disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> CSCAFBH_W<'a, O> {
 #[doc = "Field `CSCBRAL` reader - GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Clear Enable"]
 pub type CSCBRAL_R = crate::BitReader<CSCBRAL_A>;
 #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSCBRAL_A {
     #[doc = "0: Counter clear disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> CSCBRAL_W<'a, O> {
 #[doc = "Field `CSCBRAH` reader - GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Clear Enable"]
 pub type CSCBRAH_R = crate::BitReader<CSCBRAH_A>;
 #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSCBRAH_A {
     #[doc = "0: Counter clear disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
     _0 = 0,
@@ -537,7 +537,7 @@ impl<'a, const O: u8> CSCBRAH_W<'a, O> {
 #[doc = "Field `CSCBFAL` reader - GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Clear Enable"]
 pub type CSCBFAL_R = crate::BitReader<CSCBFAL_A>;
 #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSCBFAL_A {
     #[doc = "0: Counter clear disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
     _0 = 0,
@@ -587,7 +587,7 @@ impl<'a, const O: u8> CSCBFAL_W<'a, O> {
 #[doc = "Field `CSCBFAH` reader - GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Clear Enable"]
 pub type CSCBFAH_R = crate::BitReader<CSCBFAH_A>;
 #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSCBFAH_A {
     #[doc = "0: Counter clear disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
     _0 = 0,
@@ -637,7 +637,7 @@ impl<'a, const O: u8> CSCBFAH_W<'a, O> {
 #[doc = "Field `CSELCA` reader - ELC_GPTA Event Source Counter Clear Enable"]
 pub type CSELCA_R = crate::BitReader<CSELCA_A>;
 #[doc = "ELC_GPTA Event Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSELCA_A {
     #[doc = "0: Counter clear disabled at the ELC_GPTA input"]
     _0 = 0,
@@ -687,7 +687,7 @@ impl<'a, const O: u8> CSELCA_W<'a, O> {
 #[doc = "Field `CSELCB` reader - ELC_GPTB Event Source Counter Clear Enable"]
 pub type CSELCB_R = crate::BitReader<CSELCB_A>;
 #[doc = "ELC_GPTB Event Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSELCB_A {
     #[doc = "0: Counter clear disabled at the ELC_GPTB input"]
     _0 = 0,
@@ -737,7 +737,7 @@ impl<'a, const O: u8> CSELCB_W<'a, O> {
 #[doc = "Field `CSELCC` reader - ELC_GPTC Event Source Counter Clear Enable"]
 pub type CSELCC_R = crate::BitReader<CSELCC_A>;
 #[doc = "ELC_GPTC Event Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSELCC_A {
     #[doc = "0: Counter clear disabled at the ELC_GPTC input"]
     _0 = 0,
@@ -787,7 +787,7 @@ impl<'a, const O: u8> CSELCC_W<'a, O> {
 #[doc = "Field `CSELCD` reader - ELC_GPTD Event Source Counter Clear Enable"]
 pub type CSELCD_R = crate::BitReader<CSELCD_A>;
 #[doc = "ELC_GPTD Event Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSELCD_A {
     #[doc = "0: Counter clear disabled at the ELC_GPTD input"]
     _0 = 0,
@@ -837,7 +837,7 @@ impl<'a, const O: u8> CSELCD_W<'a, O> {
 #[doc = "Field `CCLR` reader - Software Source Counter Clear Enable"]
 pub type CCLR_R = crate::BitReader<CCLR_A>;
 #[doc = "Software Source Counter Clear Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR_A {
     #[doc = "0: Counter clear disabled by the GTCLR register"]
     _0 = 0,
@@ -974,86 +974,103 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GTETRGA Pin Rising Input Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn csgtrgar(&mut self) -> CSGTRGAR_W<0> {
         CSGTRGAR_W::new(self)
     }
     #[doc = "Bit 1 - GTETRGA Pin Falling Input Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn csgtrgaf(&mut self) -> CSGTRGAF_W<1> {
         CSGTRGAF_W::new(self)
     }
     #[doc = "Bit 2 - GTETRGB Pin Rising Input Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn csgtrgbr(&mut self) -> CSGTRGBR_W<2> {
         CSGTRGBR_W::new(self)
     }
     #[doc = "Bit 3 - GTETRGB Pin Falling Input Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn csgtrgbf(&mut self) -> CSGTRGBF_W<3> {
         CSGTRGBF_W::new(self)
     }
     #[doc = "Bit 8 - GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cscarbl(&mut self) -> CSCARBL_W<8> {
         CSCARBL_W::new(self)
     }
     #[doc = "Bit 9 - GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cscarbh(&mut self) -> CSCARBH_W<9> {
         CSCARBH_W::new(self)
     }
     #[doc = "Bit 10 - GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cscafbl(&mut self) -> CSCAFBL_W<10> {
         CSCAFBL_W::new(self)
     }
     #[doc = "Bit 11 - GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cscafbh(&mut self) -> CSCAFBH_W<11> {
         CSCAFBH_W::new(self)
     }
     #[doc = "Bit 12 - GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cscbral(&mut self) -> CSCBRAL_W<12> {
         CSCBRAL_W::new(self)
     }
     #[doc = "Bit 13 - GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cscbrah(&mut self) -> CSCBRAH_W<13> {
         CSCBRAH_W::new(self)
     }
     #[doc = "Bit 14 - GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cscbfal(&mut self) -> CSCBFAL_W<14> {
         CSCBFAL_W::new(self)
     }
     #[doc = "Bit 15 - GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cscbfah(&mut self) -> CSCBFAH_W<15> {
         CSCBFAH_W::new(self)
     }
     #[doc = "Bit 16 - ELC_GPTA Event Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cselca(&mut self) -> CSELCA_W<16> {
         CSELCA_W::new(self)
     }
     #[doc = "Bit 17 - ELC_GPTB Event Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cselcb(&mut self) -> CSELCB_W<17> {
         CSELCB_W::new(self)
     }
     #[doc = "Bit 18 - ELC_GPTC Event Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cselcc(&mut self) -> CSELCC_W<18> {
         CSELCC_W::new(self)
     }
     #[doc = "Bit 19 - ELC_GPTD Event Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cselcd(&mut self) -> CSELCD_W<19> {
         CSELCD_W::new(self)
     }
     #[doc = "Bit 31 - Software Source Counter Clear Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr(&mut self) -> CCLR_W<31> {
         CCLR_W::new(self)
     }
@@ -1076,11 +1093,10 @@ impl crate::Readable for GTCSR_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtcsr::W](W) writer structure"]
 impl crate::Writable for GTCSR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTCSR to value 0"]
 impl crate::Resettable for GTCSR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

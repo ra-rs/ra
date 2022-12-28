@@ -37,7 +37,7 @@ impl From<crate::W<MSTPCRB_SPEC>> for W {
 #[doc = "Field `MSTPB9` reader - I2C Bus Interface 0 Module Stop"]
 pub type MSTPB9_R = crate::BitReader<MSTPB9_A>;
 #[doc = "I2C Bus Interface 0 Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPB9_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> MSTPB9_W<'a, O> {
 #[doc = "Field `MSTPB19` reader - Serial Peripheral Interface 0 Module Stop"]
 pub type MSTPB19_R = crate::BitReader<MSTPB19_A>;
 #[doc = "Serial Peripheral Interface 0 Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPB19_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> MSTPB19_W<'a, O> {
 #[doc = "Field `MSTPB22` reader - Serial Communication Interface 9 Module Stop"]
 pub type MSTPB22_R = crate::BitReader<MSTPB22_A>;
 #[doc = "Serial Communication Interface 9 Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPB22_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> MSTPB22_W<'a, O> {
 #[doc = "Field `MSTPB29` reader - Serial Communication Interface 2 Module Stop"]
 pub type MSTPB29_R = crate::BitReader<MSTPB29_A>;
 #[doc = "Serial Communication Interface 2 Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPB29_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> MSTPB29_W<'a, O> {
 #[doc = "Field `MSTPB30` reader - Serial Communication Interface 1 Module Stop"]
 pub type MSTPB30_R = crate::BitReader<MSTPB30_A>;
 #[doc = "Serial Communication Interface 1 Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPB30_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> MSTPB30_W<'a, O> {
 #[doc = "Field `MSTPB31` reader - Serial Communication Interface 0 Module Stop"]
 pub type MSTPB31_R = crate::BitReader<MSTPB31_A>;
 #[doc = "Serial Communication Interface 0 Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPB31_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -369,31 +369,37 @@ impl R {
 impl W {
     #[doc = "Bit 9 - I2C Bus Interface 0 Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpb9(&mut self) -> MSTPB9_W<9> {
         MSTPB9_W::new(self)
     }
     #[doc = "Bit 19 - Serial Peripheral Interface 0 Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpb19(&mut self) -> MSTPB19_W<19> {
         MSTPB19_W::new(self)
     }
     #[doc = "Bit 22 - Serial Communication Interface 9 Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpb22(&mut self) -> MSTPB22_W<22> {
         MSTPB22_W::new(self)
     }
     #[doc = "Bit 29 - Serial Communication Interface 2 Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpb29(&mut self) -> MSTPB29_W<29> {
         MSTPB29_W::new(self)
     }
     #[doc = "Bit 30 - Serial Communication Interface 1 Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpb30(&mut self) -> MSTPB30_W<30> {
         MSTPB30_W::new(self)
     }
     #[doc = "Bit 31 - Serial Communication Interface 0 Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpb31(&mut self) -> MSTPB31_W<31> {
         MSTPB31_W::new(self)
     }
@@ -416,11 +422,10 @@ impl crate::Readable for MSTPCRB_SPEC {
 #[doc = "`write(|w| ..)` method takes [mstpcrb::W](W) writer structure"]
 impl crate::Writable for MSTPCRB_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MSTPCRB to value 0xffff_ffff"]
 impl crate::Resettable for MSTPCRB_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

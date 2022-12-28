@@ -37,7 +37,7 @@ impl From<crate::W<MSTPCRC_SPEC>> for W {
 #[doc = "Field `MSTPC0` reader - Clock Frequency Accuracy Measurement Circuit Module Stop"]
 pub type MSTPC0_R = crate::BitReader<MSTPC0_A>;
 #[doc = "Clock Frequency Accuracy Measurement Circuit Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPC0_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> MSTPC0_W<'a, O> {
 #[doc = "Field `MSTPC1` reader - Cyclic Redundancy Check Calculator Module Stop"]
 pub type MSTPC1_R = crate::BitReader<MSTPC1_A>;
 #[doc = "Cyclic Redundancy Check Calculator Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPC1_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> MSTPC1_W<'a, O> {
 #[doc = "Field `MSTPC3` reader - Capacitive Sensing Unit 2 Module Stop"]
 pub type MSTPC3_R = crate::BitReader<MSTPC3_A>;
 #[doc = "Capacitive Sensing Unit 2 Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPC3_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> MSTPC3_W<'a, O> {
 #[doc = "Field `MSTPC13` reader - Data Operation Circuit Module Stop"]
 pub type MSTPC13_R = crate::BitReader<MSTPC13_A>;
 #[doc = "Data Operation Circuit Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPC13_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> MSTPC13_W<'a, O> {
 #[doc = "Field `MSTPC14` reader - Event Link Controller Module Stop"]
 pub type MSTPC14_R = crate::BitReader<MSTPC14_A>;
 #[doc = "Event Link Controller Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPC14_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> MSTPC14_W<'a, O> {
 #[doc = "Field `MSTPC28` reader - Random Number Generator Module Stop"]
 pub type MSTPC28_R = crate::BitReader<MSTPC28_A>;
 #[doc = "Random Number Generator Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPC28_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> MSTPC28_W<'a, O> {
 #[doc = "Field `MSTPC31` reader - AES Module Stop"]
 pub type MSTPC31_R = crate::BitReader<MSTPC31_A>;
 #[doc = "AES Module Stop\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSTPC31_A {
     #[doc = "0: Cancel the module-stop state"]
     _0 = 0,
@@ -424,36 +424,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Clock Frequency Accuracy Measurement Circuit Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpc0(&mut self) -> MSTPC0_W<0> {
         MSTPC0_W::new(self)
     }
     #[doc = "Bit 1 - Cyclic Redundancy Check Calculator Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpc1(&mut self) -> MSTPC1_W<1> {
         MSTPC1_W::new(self)
     }
     #[doc = "Bit 3 - Capacitive Sensing Unit 2 Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpc3(&mut self) -> MSTPC3_W<3> {
         MSTPC3_W::new(self)
     }
     #[doc = "Bit 13 - Data Operation Circuit Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpc13(&mut self) -> MSTPC13_W<13> {
         MSTPC13_W::new(self)
     }
     #[doc = "Bit 14 - Event Link Controller Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpc14(&mut self) -> MSTPC14_W<14> {
         MSTPC14_W::new(self)
     }
     #[doc = "Bit 28 - Random Number Generator Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpc28(&mut self) -> MSTPC28_W<28> {
         MSTPC28_W::new(self)
     }
     #[doc = "Bit 31 - AES Module Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn mstpc31(&mut self) -> MSTPC31_W<31> {
         MSTPC31_W::new(self)
     }
@@ -476,11 +483,10 @@ impl crate::Readable for MSTPCRC_SPEC {
 #[doc = "`write(|w| ..)` method takes [mstpcrc::W](W) writer structure"]
 impl crate::Writable for MSTPCRC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MSTPCRC to value 0xffff_ffff"]
 impl crate::Resettable for MSTPCRC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

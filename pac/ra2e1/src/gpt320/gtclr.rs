@@ -20,7 +20,7 @@ impl From<crate::W<GTCLR_SPEC>> for W {
     }
 }
 #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR0_AW {
     #[doc = "0: GTCNT counter is not cleared"]
     _0 = 0,
@@ -48,7 +48,7 @@ impl<'a, const O: u8> CCLR0_W<'a, O> {
     }
 }
 #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR1_AW {
     #[doc = "0: GTCNT counter is not cleared"]
     _0 = 0,
@@ -76,7 +76,7 @@ impl<'a, const O: u8> CCLR1_W<'a, O> {
     }
 }
 #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR2_AW {
     #[doc = "0: GTCNT counter is not cleared"]
     _0 = 0,
@@ -104,7 +104,7 @@ impl<'a, const O: u8> CCLR2_W<'a, O> {
     }
 }
 #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR3_AW {
     #[doc = "0: GTCNT counter is not cleared"]
     _0 = 0,
@@ -132,7 +132,7 @@ impl<'a, const O: u8> CCLR3_W<'a, O> {
     }
 }
 #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR4_AW {
     #[doc = "0: GTCNT counter is not cleared"]
     _0 = 0,
@@ -160,7 +160,7 @@ impl<'a, const O: u8> CCLR4_W<'a, O> {
     }
 }
 #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR5_AW {
     #[doc = "0: GTCNT counter is not cleared"]
     _0 = 0,
@@ -188,7 +188,7 @@ impl<'a, const O: u8> CCLR5_W<'a, O> {
     }
 }
 #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR6_AW {
     #[doc = "0: GTCNT counter is not cleared"]
     _0 = 0,
@@ -216,7 +216,7 @@ impl<'a, const O: u8> CCLR6_W<'a, O> {
     }
 }
 #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR7_AW {
     #[doc = "0: GTCNT counter is not cleared"]
     _0 = 0,
@@ -244,7 +244,7 @@ impl<'a, const O: u8> CCLR7_W<'a, O> {
     }
 }
 #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR8_AW {
     #[doc = "0: GTCNT counter is not cleared"]
     _0 = 0,
@@ -272,7 +272,7 @@ impl<'a, const O: u8> CCLR8_W<'a, O> {
     }
 }
 #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCLR9_AW {
     #[doc = "0: GTCNT counter is not cleared"]
     _0 = 0,
@@ -302,51 +302,61 @@ impl<'a, const O: u8> CCLR9_W<'a, O> {
 impl W {
     #[doc = "Bit 0 - Channel n GTCNT Count Clear (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr0(&mut self) -> CCLR0_W<0> {
         CCLR0_W::new(self)
     }
     #[doc = "Bit 1 - Channel n GTCNT Count Clear (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr1(&mut self) -> CCLR1_W<1> {
         CCLR1_W::new(self)
     }
     #[doc = "Bit 2 - Channel n GTCNT Count Clear (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr2(&mut self) -> CCLR2_W<2> {
         CCLR2_W::new(self)
     }
     #[doc = "Bit 3 - Channel n GTCNT Count Clear (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr3(&mut self) -> CCLR3_W<3> {
         CCLR3_W::new(self)
     }
     #[doc = "Bit 4 - Channel n GTCNT Count Clear (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr4(&mut self) -> CCLR4_W<4> {
         CCLR4_W::new(self)
     }
     #[doc = "Bit 5 - Channel n GTCNT Count Clear (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr5(&mut self) -> CCLR5_W<5> {
         CCLR5_W::new(self)
     }
     #[doc = "Bit 6 - Channel n GTCNT Count Clear (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr6(&mut self) -> CCLR6_W<6> {
         CCLR6_W::new(self)
     }
     #[doc = "Bit 7 - Channel n GTCNT Count Clear (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr7(&mut self) -> CCLR7_W<7> {
         CCLR7_W::new(self)
     }
     #[doc = "Bit 8 - Channel n GTCNT Count Clear (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr8(&mut self) -> CCLR8_W<8> {
         CCLR8_W::new(self)
     }
     #[doc = "Bit 9 - Channel n GTCNT Count Clear (n : the same as bit position value)"]
     #[inline(always)]
+    #[must_use]
     pub fn cclr9(&mut self) -> CCLR9_W<9> {
         CCLR9_W::new(self)
     }
@@ -365,11 +375,10 @@ impl crate::RegisterSpec for GTCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtclr::W](W) writer structure"]
 impl crate::Writable for GTCLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTCLR to value 0"]
 impl crate::Resettable for GTCLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

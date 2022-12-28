@@ -16,7 +16,7 @@ impl From<crate::R<PIDR_SPEC>> for R {
 #[doc = "Field `PIDR00` reader - Pmn State"]
 pub type PIDR00_R = crate::BitReader<PIDR00_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR00_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -52,7 +52,7 @@ impl PIDR00_R {
 #[doc = "Field `PIDR01` reader - Pmn State"]
 pub type PIDR01_R = crate::BitReader<PIDR01_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR01_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -88,7 +88,7 @@ impl PIDR01_R {
 #[doc = "Field `PIDR02` reader - Pmn State"]
 pub type PIDR02_R = crate::BitReader<PIDR02_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR02_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -124,7 +124,7 @@ impl PIDR02_R {
 #[doc = "Field `PIDR03` reader - Pmn State"]
 pub type PIDR03_R = crate::BitReader<PIDR03_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR03_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -160,7 +160,7 @@ impl PIDR03_R {
 #[doc = "Field `PIDR04` reader - Pmn State"]
 pub type PIDR04_R = crate::BitReader<PIDR04_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR04_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -196,7 +196,7 @@ impl PIDR04_R {
 #[doc = "Field `PIDR05` reader - Pmn State"]
 pub type PIDR05_R = crate::BitReader<PIDR05_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR05_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -232,7 +232,7 @@ impl PIDR05_R {
 #[doc = "Field `PIDR06` reader - Pmn State"]
 pub type PIDR06_R = crate::BitReader<PIDR06_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR06_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -268,7 +268,7 @@ impl PIDR06_R {
 #[doc = "Field `PIDR07` reader - Pmn State"]
 pub type PIDR07_R = crate::BitReader<PIDR07_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR07_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -304,7 +304,7 @@ impl PIDR07_R {
 #[doc = "Field `PIDR08` reader - Pmn State"]
 pub type PIDR08_R = crate::BitReader<PIDR08_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR08_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -340,7 +340,7 @@ impl PIDR08_R {
 #[doc = "Field `PIDR09` reader - Pmn State"]
 pub type PIDR09_R = crate::BitReader<PIDR09_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR09_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -376,7 +376,7 @@ impl PIDR09_R {
 #[doc = "Field `PIDR10` reader - Pmn State"]
 pub type PIDR10_R = crate::BitReader<PIDR10_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR10_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -412,7 +412,7 @@ impl PIDR10_R {
 #[doc = "Field `PIDR11` reader - Pmn State"]
 pub type PIDR11_R = crate::BitReader<PIDR11_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR11_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -448,7 +448,7 @@ impl PIDR11_R {
 #[doc = "Field `PIDR12` reader - Pmn State"]
 pub type PIDR12_R = crate::BitReader<PIDR12_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR12_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -484,7 +484,7 @@ impl PIDR12_R {
 #[doc = "Field `PIDR13` reader - Pmn State"]
 pub type PIDR13_R = crate::BitReader<PIDR13_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR13_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -520,7 +520,7 @@ impl PIDR13_R {
 #[doc = "Field `PIDR14` reader - Pmn State"]
 pub type PIDR14_R = crate::BitReader<PIDR14_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR14_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -556,7 +556,7 @@ impl PIDR14_R {
 #[doc = "Field `PIDR15` reader - Pmn State"]
 pub type PIDR15_R = crate::BitReader<PIDR15_A>;
 #[doc = "Pmn State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR15_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -682,8 +682,5 @@ impl crate::Readable for PIDR_SPEC {
 }
 #[doc = "`reset()` method sets PIDR to value 0"]
 impl crate::Resettable for PIDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

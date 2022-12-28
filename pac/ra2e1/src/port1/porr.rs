@@ -20,7 +20,7 @@ impl From<crate::W<PORR_SPEC>> for W {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR00_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -48,7 +48,7 @@ impl<'a, const O: u8> PORR00_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR01_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -76,7 +76,7 @@ impl<'a, const O: u8> PORR01_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR02_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -104,7 +104,7 @@ impl<'a, const O: u8> PORR02_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR03_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -132,7 +132,7 @@ impl<'a, const O: u8> PORR03_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR04_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -160,7 +160,7 @@ impl<'a, const O: u8> PORR04_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR05_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -188,7 +188,7 @@ impl<'a, const O: u8> PORR05_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR06_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -216,7 +216,7 @@ impl<'a, const O: u8> PORR06_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR07_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -244,7 +244,7 @@ impl<'a, const O: u8> PORR07_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR08_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -272,7 +272,7 @@ impl<'a, const O: u8> PORR08_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR09_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -300,7 +300,7 @@ impl<'a, const O: u8> PORR09_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR10_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -328,7 +328,7 @@ impl<'a, const O: u8> PORR10_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR11_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -356,7 +356,7 @@ impl<'a, const O: u8> PORR11_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR12_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -384,7 +384,7 @@ impl<'a, const O: u8> PORR12_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR13_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -412,7 +412,7 @@ impl<'a, const O: u8> PORR13_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR14_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -440,7 +440,7 @@ impl<'a, const O: u8> PORR14_W<'a, O> {
     }
 }
 #[doc = "Pmn Output Reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PORR15_AW {
     #[doc = "0: No effect on output"]
     _0 = 0,
@@ -470,81 +470,97 @@ impl<'a, const O: u8> PORR15_W<'a, O> {
 impl W {
     #[doc = "Bit 0 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr00(&mut self) -> PORR00_W<0> {
         PORR00_W::new(self)
     }
     #[doc = "Bit 1 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr01(&mut self) -> PORR01_W<1> {
         PORR01_W::new(self)
     }
     #[doc = "Bit 2 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr02(&mut self) -> PORR02_W<2> {
         PORR02_W::new(self)
     }
     #[doc = "Bit 3 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr03(&mut self) -> PORR03_W<3> {
         PORR03_W::new(self)
     }
     #[doc = "Bit 4 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr04(&mut self) -> PORR04_W<4> {
         PORR04_W::new(self)
     }
     #[doc = "Bit 5 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr05(&mut self) -> PORR05_W<5> {
         PORR05_W::new(self)
     }
     #[doc = "Bit 6 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr06(&mut self) -> PORR06_W<6> {
         PORR06_W::new(self)
     }
     #[doc = "Bit 7 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr07(&mut self) -> PORR07_W<7> {
         PORR07_W::new(self)
     }
     #[doc = "Bit 8 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr08(&mut self) -> PORR08_W<8> {
         PORR08_W::new(self)
     }
     #[doc = "Bit 9 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr09(&mut self) -> PORR09_W<9> {
         PORR09_W::new(self)
     }
     #[doc = "Bit 10 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr10(&mut self) -> PORR10_W<10> {
         PORR10_W::new(self)
     }
     #[doc = "Bit 11 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr11(&mut self) -> PORR11_W<11> {
         PORR11_W::new(self)
     }
     #[doc = "Bit 12 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr12(&mut self) -> PORR12_W<12> {
         PORR12_W::new(self)
     }
     #[doc = "Bit 13 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr13(&mut self) -> PORR13_W<13> {
         PORR13_W::new(self)
     }
     #[doc = "Bit 14 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr14(&mut self) -> PORR14_W<14> {
         PORR14_W::new(self)
     }
     #[doc = "Bit 15 - Pmn Output Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn porr15(&mut self) -> PORR15_W<15> {
         PORR15_W::new(self)
     }
@@ -563,11 +579,10 @@ impl crate::RegisterSpec for PORR_SPEC {
 #[doc = "`write(|w| ..)` method takes [porr::W](W) writer structure"]
 impl crate::Writable for PORR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PORR to value 0"]
 impl crate::Resettable for PORR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

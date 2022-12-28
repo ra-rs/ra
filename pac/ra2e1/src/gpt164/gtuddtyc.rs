@@ -37,7 +37,7 @@ impl From<crate::W<GTUDDTYC_SPEC>> for W {
 #[doc = "Field `UD` reader - Count Direction Setting"]
 pub type UD_R = crate::BitReader<UD_A>;
 #[doc = "Count Direction Setting\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum UD_A {
     #[doc = "0: GTCNT counts down"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> UD_W<'a, O> {
 #[doc = "Field `UDF` reader - Forcible Count Direction Setting"]
 pub type UDF_R = crate::BitReader<UDF_A>;
 #[doc = "Forcible Count Direction Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum UDF_A {
     #[doc = "0: Not forcibly set"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> UDF_W<'a, O> {
 #[doc = "Field `OADTY` reader - GTIOCnA Output Duty Setting"]
 pub type OADTY_R = crate::FieldReader<u8, OADTY_A>;
 #[doc = "GTIOCnA Output Duty Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum OADTY_A {
     #[doc = "0: GTIOCnA pin duty depends on the compare match"]
@@ -216,7 +216,7 @@ impl<'a, const O: u8> OADTY_W<'a, O> {
 #[doc = "Field `OADTYF` reader - Forcible GTIOCnA Output Duty Setting"]
 pub type OADTYF_R = crate::BitReader<OADTYF_A>;
 #[doc = "Forcible GTIOCnA Output Duty Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OADTYF_A {
     #[doc = "0: Not forcibly set"]
     _0 = 0,
@@ -266,7 +266,7 @@ impl<'a, const O: u8> OADTYF_W<'a, O> {
 #[doc = "Field `OADTYR` reader - GTIOCnA Output Value Selecting after Releasing 0%/100% Duty Setting"]
 pub type OADTYR_R = crate::BitReader<OADTYR_A>;
 #[doc = "GTIOCnA Output Value Selecting after Releasing 0%/100% Duty Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OADTYR_A {
     #[doc = "0: Apply output value set in 0%/100% duty to GTIOA\\[3:2\\]
 function after releasing 0%/100% duty setting"]
@@ -320,7 +320,7 @@ function after releasing 0%/100% duty setting"]
 #[doc = "Field `OBDTY` reader - GTIOCnB Output Duty Setting"]
 pub type OBDTY_R = crate::FieldReader<u8, OBDTY_A>;
 #[doc = "GTIOCnB Output Duty Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum OBDTY_A {
     #[doc = "0: GTIOCnB pin duty depends on the compare match"]
@@ -399,7 +399,7 @@ impl<'a, const O: u8> OBDTY_W<'a, O> {
 #[doc = "Field `OBDTYF` reader - Forcible GTIOCnB Output Duty Setting"]
 pub type OBDTYF_R = crate::BitReader<OBDTYF_A>;
 #[doc = "Forcible GTIOCnB Output Duty Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OBDTYF_A {
     #[doc = "0: Not forcibly set"]
     _0 = 0,
@@ -449,7 +449,7 @@ impl<'a, const O: u8> OBDTYF_W<'a, O> {
 #[doc = "Field `OBDTYR` reader - GTIOCnB Output Value Selecting after Releasing 0%/100% Duty Setting"]
 pub type OBDTYR_R = crate::BitReader<OBDTYR_A>;
 #[doc = "GTIOCnB Output Value Selecting after Releasing 0%/100% Duty Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OBDTYR_A {
     #[doc = "0: Apply output value set in 0%/100% duty to GTIOB\\[3:2\\]
 function after releasing 0%/100% duty setting"]
@@ -545,41 +545,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Count Direction Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn ud(&mut self) -> UD_W<0> {
         UD_W::new(self)
     }
     #[doc = "Bit 1 - Forcible Count Direction Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn udf(&mut self) -> UDF_W<1> {
         UDF_W::new(self)
     }
     #[doc = "Bits 16:17 - GTIOCnA Output Duty Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn oadty(&mut self) -> OADTY_W<16> {
         OADTY_W::new(self)
     }
     #[doc = "Bit 18 - Forcible GTIOCnA Output Duty Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn oadtyf(&mut self) -> OADTYF_W<18> {
         OADTYF_W::new(self)
     }
     #[doc = "Bit 19 - GTIOCnA Output Value Selecting after Releasing 0%/100% Duty Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn oadtyr(&mut self) -> OADTYR_W<19> {
         OADTYR_W::new(self)
     }
     #[doc = "Bits 24:25 - GTIOCnB Output Duty Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn obdty(&mut self) -> OBDTY_W<24> {
         OBDTY_W::new(self)
     }
     #[doc = "Bit 26 - Forcible GTIOCnB Output Duty Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn obdtyf(&mut self) -> OBDTYF_W<26> {
         OBDTYF_W::new(self)
     }
     #[doc = "Bit 27 - GTIOCnB Output Value Selecting after Releasing 0%/100% Duty Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn obdtyr(&mut self) -> OBDTYR_W<27> {
         OBDTYR_W::new(self)
     }
@@ -602,11 +610,10 @@ impl crate::Readable for GTUDDTYC_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtuddtyc::W](W) writer structure"]
 impl crate::Writable for GTUDDTYC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTUDDTYC to value 0x01"]
 impl crate::Resettable for GTUDDTYC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

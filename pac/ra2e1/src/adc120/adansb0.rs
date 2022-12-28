@@ -37,7 +37,7 @@ impl From<crate::W<ADANSB0_SPEC>> for W {
 #[doc = "Field `ANSBn` reader - A/D Conversion Channels Select"]
 pub type ANSBN_R = crate::FieldReader<u16, ANSBN_A>;
 #[doc = "A/D Conversion Channels Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum ANSBN_A {
     #[doc = "0: Do not select associated input channel."]
@@ -96,6 +96,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - A/D Conversion Channels Select"]
     #[inline(always)]
+    #[must_use]
     pub fn ansbn(&mut self) -> ANSBN_W<0> {
         ANSBN_W::new(self)
     }
@@ -118,11 +119,10 @@ impl crate::Readable for ADANSB0_SPEC {
 #[doc = "`write(|w| ..)` method takes [adansb0::W](W) writer structure"]
 impl crate::Writable for ADANSB0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADANSB0 to value 0"]
 impl crate::Resettable for ADANSB0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

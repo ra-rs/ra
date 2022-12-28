@@ -37,7 +37,7 @@ impl From<crate::W<P9PFS_HA_SPEC>> for W {
 #[doc = "Field `PODR` reader - Port Output Data"]
 pub type PODR_R = crate::BitReader<PODR_A>;
 #[doc = "Port Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR_A {
     #[doc = "0: Output low"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> PODR_W<'a, O> {
 #[doc = "Field `PIDR` reader - Port State"]
 pub type PIDR_R = crate::BitReader<PIDR_A>;
 #[doc = "Port State\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PIDR_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -123,7 +123,7 @@ impl PIDR_R {
 #[doc = "Field `PDR` reader - Port Direction"]
 pub type PDR_R = crate::BitReader<PDR_A>;
 #[doc = "Port Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -173,7 +173,7 @@ impl<'a, const O: u8> PDR_W<'a, O> {
 #[doc = "Field `PCR` reader - Pull-up Control"]
 pub type PCR_R = crate::BitReader<PCR_A>;
 #[doc = "Pull-up Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PCR_A {
     #[doc = "0: Disable input pull-up"]
     _0 = 0,
@@ -223,7 +223,7 @@ impl<'a, const O: u8> PCR_W<'a, O> {
 #[doc = "Field `NCODR` reader - N-Channel Open-Drain Control"]
 pub type NCODR_R = crate::BitReader<NCODR_A>;
 #[doc = "N-Channel Open-Drain Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NCODR_A {
     #[doc = "0: Output CMOS"]
     _0 = 0,
@@ -273,7 +273,7 @@ impl<'a, const O: u8> NCODR_W<'a, O> {
 #[doc = "Field `ISEL` reader - IRQ Input Enable"]
 pub type ISEL_R = crate::BitReader<ISEL_A>;
 #[doc = "IRQ Input Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ISEL_A {
     #[doc = "0: Do not use as IRQn input pin"]
     _0 = 0,
@@ -323,7 +323,7 @@ impl<'a, const O: u8> ISEL_W<'a, O> {
 #[doc = "Field `ASEL` reader - Analog Input Enable"]
 pub type ASEL_R = crate::BitReader<ASEL_A>;
 #[doc = "Analog Input Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ASEL_A {
     #[doc = "0: Do not use as analog pin"]
     _0 = 0,
@@ -410,31 +410,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Port Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr(&mut self) -> PODR_W<0> {
         PODR_W::new(self)
     }
     #[doc = "Bit 2 - Port Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr(&mut self) -> PDR_W<2> {
         PDR_W::new(self)
     }
     #[doc = "Bit 4 - Pull-up Control"]
     #[inline(always)]
+    #[must_use]
     pub fn pcr(&mut self) -> PCR_W<4> {
         PCR_W::new(self)
     }
     #[doc = "Bit 6 - N-Channel Open-Drain Control"]
     #[inline(always)]
+    #[must_use]
     pub fn ncodr(&mut self) -> NCODR_W<6> {
         NCODR_W::new(self)
     }
     #[doc = "Bit 14 - IRQ Input Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn isel(&mut self) -> ISEL_W<14> {
         ISEL_W::new(self)
     }
     #[doc = "Bit 15 - Analog Input Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn asel(&mut self) -> ASEL_W<15> {
         ASEL_W::new(self)
     }
@@ -457,11 +463,10 @@ impl crate::Readable for P9PFS_HA_SPEC {
 #[doc = "`write(|w| ..)` method takes [p9pfs_ha::W](W) writer structure"]
 impl crate::Writable for P9PFS_HA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets P9%sPFS_HA to value 0"]
 impl crate::Resettable for P9PFS_HA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

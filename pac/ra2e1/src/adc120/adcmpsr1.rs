@@ -37,7 +37,7 @@ impl From<crate::W<ADCMPSR1_SPEC>> for W {
 #[doc = "Field `CMPSTCHAn` reader - Compare Window A Flag"]
 pub type CMPSTCHAN_R = crate::FieldReader<u16, CMPSTCHAN_A>;
 #[doc = "Compare Window A Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum CMPSTCHAN_A {
     #[doc = "0: Comparison conditions are not met."]
@@ -97,6 +97,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Compare Window A Flag"]
     #[inline(always)]
+    #[must_use]
     pub fn cmpstchan(&mut self) -> CMPSTCHAN_W<0> {
         CMPSTCHAN_W::new(self)
     }
@@ -119,11 +120,10 @@ impl crate::Readable for ADCMPSR1_SPEC {
 #[doc = "`write(|w| ..)` method takes [adcmpsr1::W](W) writer structure"]
 impl crate::Writable for ADCMPSR1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADCMPSR1 to value 0"]
 impl crate::Resettable for ADCMPSR1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

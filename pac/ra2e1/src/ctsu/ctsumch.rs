@@ -37,7 +37,7 @@ impl From<crate::W<CTSUMCH_SPEC>> for W {
 #[doc = "Field `MCH0` reader - CTSU Measurement Channel 0"]
 pub type MCH0_R = crate::FieldReader<u8, MCH0_A>;
 #[doc = "CTSU Measurement Channel 0\n\nValue on reset: 63"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MCH0_A {
     #[doc = "0: TS00"]
@@ -466,7 +466,7 @@ impl<'a, const O: u8> MCH0_W<'a, O> {
 #[doc = "Field `MCH1` reader - CTSU Measurement Channel 1"]
 pub type MCH1_R = crate::FieldReader<u8, MCH1_A>;
 #[doc = "CTSU Measurement Channel 1\n\nValue on reset: 63"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MCH1_A {
     #[doc = "0: TS00"]
@@ -895,7 +895,7 @@ impl<'a, const O: u8> MCH1_W<'a, O> {
 #[doc = "Field `MCA0` reader - Multiple Clocks Control"]
 pub type MCA0_R = crate::BitReader<MCA0_A>;
 #[doc = "Multiple Clocks Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MCA0_A {
     #[doc = "0: Disable"]
     _0 = 0,
@@ -945,7 +945,7 @@ impl<'a, const O: u8> MCA0_W<'a, O> {
 #[doc = "Field `MCA1` reader - Multiple Clocks Control"]
 pub type MCA1_R = crate::BitReader<MCA1_A>;
 #[doc = "Multiple Clocks Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MCA1_A {
     #[doc = "0: Disable"]
     _0 = 0,
@@ -995,7 +995,7 @@ impl<'a, const O: u8> MCA1_W<'a, O> {
 #[doc = "Field `MCA2` reader - Multiple Clocks Control"]
 pub type MCA2_R = crate::BitReader<MCA2_A>;
 #[doc = "Multiple Clocks Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MCA2_A {
     #[doc = "0: Disable"]
     _0 = 0,
@@ -1045,7 +1045,7 @@ impl<'a, const O: u8> MCA2_W<'a, O> {
 #[doc = "Field `MCA3` reader - Multiple Clocks Control"]
 pub type MCA3_R = crate::BitReader<MCA3_A>;
 #[doc = "Multiple Clocks Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MCA3_A {
     #[doc = "0: Disable"]
     _0 = 0,
@@ -1127,31 +1127,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - CTSU Measurement Channel 0"]
     #[inline(always)]
+    #[must_use]
     pub fn mch0(&mut self) -> MCH0_W<0> {
         MCH0_W::new(self)
     }
     #[doc = "Bits 8:13 - CTSU Measurement Channel 1"]
     #[inline(always)]
+    #[must_use]
     pub fn mch1(&mut self) -> MCH1_W<8> {
         MCH1_W::new(self)
     }
     #[doc = "Bit 16 - Multiple Clocks Control"]
     #[inline(always)]
+    #[must_use]
     pub fn mca0(&mut self) -> MCA0_W<16> {
         MCA0_W::new(self)
     }
     #[doc = "Bit 17 - Multiple Clocks Control"]
     #[inline(always)]
+    #[must_use]
     pub fn mca1(&mut self) -> MCA1_W<17> {
         MCA1_W::new(self)
     }
     #[doc = "Bit 18 - Multiple Clocks Control"]
     #[inline(always)]
+    #[must_use]
     pub fn mca2(&mut self) -> MCA2_W<18> {
         MCA2_W::new(self)
     }
     #[doc = "Bit 19 - Multiple Clocks Control"]
     #[inline(always)]
+    #[must_use]
     pub fn mca3(&mut self) -> MCA3_W<19> {
         MCA3_W::new(self)
     }
@@ -1174,11 +1180,10 @@ impl crate::Readable for CTSUMCH_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctsumch::W](W) writer structure"]
 impl crate::Writable for CTSUMCH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTSUMCH to value 0x3f3f"]
 impl crate::Resettable for CTSUMCH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3f3f
-    }
+    const RESET_VALUE: Self::Ux = 0x3f3f;
 }

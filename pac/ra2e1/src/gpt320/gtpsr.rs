@@ -37,7 +37,7 @@ impl From<crate::W<GTPSR_SPEC>> for W {
 #[doc = "Field `PSGTRGAR` reader - GTETRGA Pin Rising Input Source Counter Stop Enable"]
 pub type PSGTRGAR_R = crate::BitReader<PSGTRGAR_A>;
 #[doc = "GTETRGA Pin Rising Input Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSGTRGAR_A {
     #[doc = "0: Counter stop disabled on the rising edge of GTETRGA input"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> PSGTRGAR_W<'a, O> {
 #[doc = "Field `PSGTRGAF` reader - GTETRGA Pin Falling Input Source Counter Stop Enable"]
 pub type PSGTRGAF_R = crate::BitReader<PSGTRGAF_A>;
 #[doc = "GTETRGA Pin Falling Input Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSGTRGAF_A {
     #[doc = "0: Counter stop disabled on the falling edge of GTETRGA input"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> PSGTRGAF_W<'a, O> {
 #[doc = "Field `PSGTRGBR` reader - GTETRGB Pin Rising Input Source Counter Stop Enable"]
 pub type PSGTRGBR_R = crate::BitReader<PSGTRGBR_A>;
 #[doc = "GTETRGB Pin Rising Input Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSGTRGBR_A {
     #[doc = "0: Counter stop disabled on the rising edge of GTETRGB input"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> PSGTRGBR_W<'a, O> {
 #[doc = "Field `PSGTRGBF` reader - GTETRGB Pin Falling Input Source Counter Stop Enable"]
 pub type PSGTRGBF_R = crate::BitReader<PSGTRGBF_A>;
 #[doc = "GTETRGB Pin Falling Input Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSGTRGBF_A {
     #[doc = "0: Counter stop disabled on the falling edge of GTETRGB input"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> PSGTRGBF_W<'a, O> {
 #[doc = "Field `PSCARBL` reader - GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Stop Enable"]
 pub type PSCARBL_R = crate::BitReader<PSCARBL_A>;
 #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSCARBL_A {
     #[doc = "0: Counter stop disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> PSCARBL_W<'a, O> {
 #[doc = "Field `PSCARBH` reader - GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Stop Enable"]
 pub type PSCARBH_R = crate::BitReader<PSCARBH_A>;
 #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSCARBH_A {
     #[doc = "0: Counter stop disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> PSCARBH_W<'a, O> {
 #[doc = "Field `PSCAFBL` reader - GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Stop Enable"]
 pub type PSCAFBL_R = crate::BitReader<PSCAFBL_A>;
 #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSCAFBL_A {
     #[doc = "0: Counter stop disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> PSCAFBL_W<'a, O> {
 #[doc = "Field `PSCAFBH` reader - GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Stop Enable"]
 pub type PSCAFBH_R = crate::BitReader<PSCAFBH_A>;
 #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSCAFBH_A {
     #[doc = "0: Counter stop disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> PSCAFBH_W<'a, O> {
 #[doc = "Field `PSCBRAL` reader - GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Stop Enable"]
 pub type PSCBRAL_R = crate::BitReader<PSCBRAL_A>;
 #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSCBRAL_A {
     #[doc = "0: Counter stop disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> PSCBRAL_W<'a, O> {
 #[doc = "Field `PSCBRAH` reader - GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Stop Enable"]
 pub type PSCBRAH_R = crate::BitReader<PSCBRAH_A>;
 #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSCBRAH_A {
     #[doc = "0: Counter stop disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
     _0 = 0,
@@ -537,7 +537,7 @@ impl<'a, const O: u8> PSCBRAH_W<'a, O> {
 #[doc = "Field `PSCBFAL` reader - GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Stop Enable"]
 pub type PSCBFAL_R = crate::BitReader<PSCBFAL_A>;
 #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSCBFAL_A {
     #[doc = "0: Counter stop disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
     _0 = 0,
@@ -587,7 +587,7 @@ impl<'a, const O: u8> PSCBFAL_W<'a, O> {
 #[doc = "Field `PSCBFAH` reader - GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Stop Enable"]
 pub type PSCBFAH_R = crate::BitReader<PSCBFAH_A>;
 #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSCBFAH_A {
     #[doc = "0: Counter stop disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
     _0 = 0,
@@ -637,7 +637,7 @@ impl<'a, const O: u8> PSCBFAH_W<'a, O> {
 #[doc = "Field `PSELCA` reader - ELC_GPTA Event Source Counter Stop Enable"]
 pub type PSELCA_R = crate::BitReader<PSELCA_A>;
 #[doc = "ELC_GPTA Event Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSELCA_A {
     #[doc = "0: Counter stop disabled at the ELC_GPTA input"]
     _0 = 0,
@@ -687,7 +687,7 @@ impl<'a, const O: u8> PSELCA_W<'a, O> {
 #[doc = "Field `PSELCB` reader - ELC_GPTB Event Source Counter Stop Enable"]
 pub type PSELCB_R = crate::BitReader<PSELCB_A>;
 #[doc = "ELC_GPTB Event Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSELCB_A {
     #[doc = "0: Counter stop disabled at the ELC_GPTB input"]
     _0 = 0,
@@ -737,7 +737,7 @@ impl<'a, const O: u8> PSELCB_W<'a, O> {
 #[doc = "Field `PSELCC` reader - ELC_GPTC Event Source Counter Stop Enable"]
 pub type PSELCC_R = crate::BitReader<PSELCC_A>;
 #[doc = "ELC_GPTC Event Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSELCC_A {
     #[doc = "0: Counter stop disabled at the ELC_GPTC input"]
     _0 = 0,
@@ -787,7 +787,7 @@ impl<'a, const O: u8> PSELCC_W<'a, O> {
 #[doc = "Field `PSELCD` reader - ELC_GPTD Event Source Counter Stop Enable"]
 pub type PSELCD_R = crate::BitReader<PSELCD_A>;
 #[doc = "ELC_GPTD Event Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PSELCD_A {
     #[doc = "0: Counter stop disabled at the ELC_GPTD input"]
     _0 = 0,
@@ -837,7 +837,7 @@ impl<'a, const O: u8> PSELCD_W<'a, O> {
 #[doc = "Field `CSTOP` reader - Software Source Counter Stop Enable"]
 pub type CSTOP_R = crate::BitReader<CSTOP_A>;
 #[doc = "Software Source Counter Stop Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CSTOP_A {
     #[doc = "0: Counter stop disabled by the GTSTP register"]
     _0 = 0,
@@ -974,86 +974,103 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GTETRGA Pin Rising Input Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn psgtrgar(&mut self) -> PSGTRGAR_W<0> {
         PSGTRGAR_W::new(self)
     }
     #[doc = "Bit 1 - GTETRGA Pin Falling Input Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn psgtrgaf(&mut self) -> PSGTRGAF_W<1> {
         PSGTRGAF_W::new(self)
     }
     #[doc = "Bit 2 - GTETRGB Pin Rising Input Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn psgtrgbr(&mut self) -> PSGTRGBR_W<2> {
         PSGTRGBR_W::new(self)
     }
     #[doc = "Bit 3 - GTETRGB Pin Falling Input Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn psgtrgbf(&mut self) -> PSGTRGBF_W<3> {
         PSGTRGBF_W::new(self)
     }
     #[doc = "Bit 8 - GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pscarbl(&mut self) -> PSCARBL_W<8> {
         PSCARBL_W::new(self)
     }
     #[doc = "Bit 9 - GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pscarbh(&mut self) -> PSCARBH_W<9> {
         PSCARBH_W::new(self)
     }
     #[doc = "Bit 10 - GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pscafbl(&mut self) -> PSCAFBL_W<10> {
         PSCAFBL_W::new(self)
     }
     #[doc = "Bit 11 - GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pscafbh(&mut self) -> PSCAFBH_W<11> {
         PSCAFBH_W::new(self)
     }
     #[doc = "Bit 12 - GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pscbral(&mut self) -> PSCBRAL_W<12> {
         PSCBRAL_W::new(self)
     }
     #[doc = "Bit 13 - GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pscbrah(&mut self) -> PSCBRAH_W<13> {
         PSCBRAH_W::new(self)
     }
     #[doc = "Bit 14 - GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pscbfal(&mut self) -> PSCBFAL_W<14> {
         PSCBFAL_W::new(self)
     }
     #[doc = "Bit 15 - GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pscbfah(&mut self) -> PSCBFAH_W<15> {
         PSCBFAH_W::new(self)
     }
     #[doc = "Bit 16 - ELC_GPTA Event Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pselca(&mut self) -> PSELCA_W<16> {
         PSELCA_W::new(self)
     }
     #[doc = "Bit 17 - ELC_GPTB Event Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pselcb(&mut self) -> PSELCB_W<17> {
         PSELCB_W::new(self)
     }
     #[doc = "Bit 18 - ELC_GPTC Event Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pselcc(&mut self) -> PSELCC_W<18> {
         PSELCC_W::new(self)
     }
     #[doc = "Bit 19 - ELC_GPTD Event Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pselcd(&mut self) -> PSELCD_W<19> {
         PSELCD_W::new(self)
     }
     #[doc = "Bit 31 - Software Source Counter Stop Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cstop(&mut self) -> CSTOP_W<31> {
         CSTOP_W::new(self)
     }
@@ -1076,11 +1093,10 @@ impl crate::Readable for GTPSR_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtpsr::W](W) writer structure"]
 impl crate::Writable for GTPSR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTPSR to value 0"]
 impl crate::Resettable for GTPSR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

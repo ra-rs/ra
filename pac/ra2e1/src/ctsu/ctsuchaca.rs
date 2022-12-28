@@ -37,7 +37,7 @@ impl From<crate::W<CTSUCHACA_SPEC>> for W {
 #[doc = "Field `CHAC00` reader - CTSU Channel Enable Control A"]
 pub type CHAC00_R = crate::BitReader<CHAC00_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC00_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> CHAC00_W<'a, O> {
 #[doc = "Field `CHAC02` reader - CTSU Channel Enable Control A"]
 pub type CHAC02_R = crate::BitReader<CHAC02_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC02_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> CHAC02_W<'a, O> {
 #[doc = "Field `CHAC04` reader - CTSU Channel Enable Control A"]
 pub type CHAC04_R = crate::BitReader<CHAC04_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC04_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> CHAC04_W<'a, O> {
 #[doc = "Field `CHAC05` reader - CTSU Channel Enable Control A"]
 pub type CHAC05_R = crate::BitReader<CHAC05_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC05_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> CHAC05_W<'a, O> {
 #[doc = "Field `CHAC06` reader - CTSU Channel Enable Control A"]
 pub type CHAC06_R = crate::BitReader<CHAC06_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC06_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> CHAC06_W<'a, O> {
 #[doc = "Field `CHAC07` reader - CTSU Channel Enable Control A"]
 pub type CHAC07_R = crate::BitReader<CHAC07_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC07_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> CHAC07_W<'a, O> {
 #[doc = "Field `CHAC08` reader - CTSU Channel Enable Control A"]
 pub type CHAC08_R = crate::BitReader<CHAC08_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC08_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> CHAC08_W<'a, O> {
 #[doc = "Field `CHAC09` reader - CTSU Channel Enable Control A"]
 pub type CHAC09_R = crate::BitReader<CHAC09_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC09_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> CHAC09_W<'a, O> {
 #[doc = "Field `CHAC10` reader - CTSU Channel Enable Control A"]
 pub type CHAC10_R = crate::BitReader<CHAC10_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC10_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> CHAC10_W<'a, O> {
 #[doc = "Field `CHAC11` reader - CTSU Channel Enable Control A"]
 pub type CHAC11_R = crate::BitReader<CHAC11_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC11_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -537,7 +537,7 @@ impl<'a, const O: u8> CHAC11_W<'a, O> {
 #[doc = "Field `CHAC12` reader - CTSU Channel Enable Control A"]
 pub type CHAC12_R = crate::BitReader<CHAC12_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC12_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -587,7 +587,7 @@ impl<'a, const O: u8> CHAC12_W<'a, O> {
 #[doc = "Field `CHAC13` reader - CTSU Channel Enable Control A"]
 pub type CHAC13_R = crate::BitReader<CHAC13_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC13_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -637,7 +637,7 @@ impl<'a, const O: u8> CHAC13_W<'a, O> {
 #[doc = "Field `CHAC14` reader - CTSU Channel Enable Control A"]
 pub type CHAC14_R = crate::BitReader<CHAC14_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC14_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -687,7 +687,7 @@ impl<'a, const O: u8> CHAC14_W<'a, O> {
 #[doc = "Field `CHAC15` reader - CTSU Channel Enable Control A"]
 pub type CHAC15_R = crate::BitReader<CHAC15_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC15_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -737,7 +737,7 @@ impl<'a, const O: u8> CHAC15_W<'a, O> {
 #[doc = "Field `CHAC16` reader - CTSU Channel Enable Control A"]
 pub type CHAC16_R = crate::BitReader<CHAC16_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC16_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -787,7 +787,7 @@ impl<'a, const O: u8> CHAC16_W<'a, O> {
 #[doc = "Field `CHAC17` reader - CTSU Channel Enable Control A"]
 pub type CHAC17_R = crate::BitReader<CHAC17_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC17_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -837,7 +837,7 @@ impl<'a, const O: u8> CHAC17_W<'a, O> {
 #[doc = "Field `CHAC18` reader - CTSU Channel Enable Control A"]
 pub type CHAC18_R = crate::BitReader<CHAC18_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC18_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -887,7 +887,7 @@ impl<'a, const O: u8> CHAC18_W<'a, O> {
 #[doc = "Field `CHAC21` reader - CTSU Channel Enable Control A"]
 pub type CHAC21_R = crate::BitReader<CHAC21_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC21_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -937,7 +937,7 @@ impl<'a, const O: u8> CHAC21_W<'a, O> {
 #[doc = "Field `CHAC22` reader - CTSU Channel Enable Control A"]
 pub type CHAC22_R = crate::BitReader<CHAC22_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC22_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -987,7 +987,7 @@ impl<'a, const O: u8> CHAC22_W<'a, O> {
 #[doc = "Field `CHAC23` reader - CTSU Channel Enable Control A"]
 pub type CHAC23_R = crate::BitReader<CHAC23_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC23_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -1037,7 +1037,7 @@ impl<'a, const O: u8> CHAC23_W<'a, O> {
 #[doc = "Field `CHAC24` reader - CTSU Channel Enable Control A"]
 pub type CHAC24_R = crate::BitReader<CHAC24_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC24_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -1087,7 +1087,7 @@ impl<'a, const O: u8> CHAC24_W<'a, O> {
 #[doc = "Field `CHAC25` reader - CTSU Channel Enable Control A"]
 pub type CHAC25_R = crate::BitReader<CHAC25_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC25_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -1137,7 +1137,7 @@ impl<'a, const O: u8> CHAC25_W<'a, O> {
 #[doc = "Field `CHAC26` reader - CTSU Channel Enable Control A"]
 pub type CHAC26_R = crate::BitReader<CHAC26_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC26_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -1187,7 +1187,7 @@ impl<'a, const O: u8> CHAC26_W<'a, O> {
 #[doc = "Field `CHAC27` reader - CTSU Channel Enable Control A"]
 pub type CHAC27_R = crate::BitReader<CHAC27_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC27_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -1237,7 +1237,7 @@ impl<'a, const O: u8> CHAC27_W<'a, O> {
 #[doc = "Field `CHAC28` reader - CTSU Channel Enable Control A"]
 pub type CHAC28_R = crate::BitReader<CHAC28_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC28_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -1287,7 +1287,7 @@ impl<'a, const O: u8> CHAC28_W<'a, O> {
 #[doc = "Field `CHAC30` reader - CTSU Channel Enable Control A"]
 pub type CHAC30_R = crate::BitReader<CHAC30_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC30_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -1337,7 +1337,7 @@ impl<'a, const O: u8> CHAC30_W<'a, O> {
 #[doc = "Field `CHAC31` reader - CTSU Channel Enable Control A"]
 pub type CHAC31_R = crate::BitReader<CHAC31_A>;
 #[doc = "CTSU Channel Enable Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC31_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -1524,136 +1524,163 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac00(&mut self) -> CHAC00_W<0> {
         CHAC00_W::new(self)
     }
     #[doc = "Bit 2 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac02(&mut self) -> CHAC02_W<2> {
         CHAC02_W::new(self)
     }
     #[doc = "Bit 4 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac04(&mut self) -> CHAC04_W<4> {
         CHAC04_W::new(self)
     }
     #[doc = "Bit 5 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac05(&mut self) -> CHAC05_W<5> {
         CHAC05_W::new(self)
     }
     #[doc = "Bit 6 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac06(&mut self) -> CHAC06_W<6> {
         CHAC06_W::new(self)
     }
     #[doc = "Bit 7 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac07(&mut self) -> CHAC07_W<7> {
         CHAC07_W::new(self)
     }
     #[doc = "Bit 8 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac08(&mut self) -> CHAC08_W<8> {
         CHAC08_W::new(self)
     }
     #[doc = "Bit 9 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac09(&mut self) -> CHAC09_W<9> {
         CHAC09_W::new(self)
     }
     #[doc = "Bit 10 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac10(&mut self) -> CHAC10_W<10> {
         CHAC10_W::new(self)
     }
     #[doc = "Bit 11 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac11(&mut self) -> CHAC11_W<11> {
         CHAC11_W::new(self)
     }
     #[doc = "Bit 12 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac12(&mut self) -> CHAC12_W<12> {
         CHAC12_W::new(self)
     }
     #[doc = "Bit 13 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac13(&mut self) -> CHAC13_W<13> {
         CHAC13_W::new(self)
     }
     #[doc = "Bit 14 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac14(&mut self) -> CHAC14_W<14> {
         CHAC14_W::new(self)
     }
     #[doc = "Bit 15 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac15(&mut self) -> CHAC15_W<15> {
         CHAC15_W::new(self)
     }
     #[doc = "Bit 16 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac16(&mut self) -> CHAC16_W<16> {
         CHAC16_W::new(self)
     }
     #[doc = "Bit 17 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac17(&mut self) -> CHAC17_W<17> {
         CHAC17_W::new(self)
     }
     #[doc = "Bit 18 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac18(&mut self) -> CHAC18_W<18> {
         CHAC18_W::new(self)
     }
     #[doc = "Bit 21 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac21(&mut self) -> CHAC21_W<21> {
         CHAC21_W::new(self)
     }
     #[doc = "Bit 22 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac22(&mut self) -> CHAC22_W<22> {
         CHAC22_W::new(self)
     }
     #[doc = "Bit 23 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac23(&mut self) -> CHAC23_W<23> {
         CHAC23_W::new(self)
     }
     #[doc = "Bit 24 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac24(&mut self) -> CHAC24_W<24> {
         CHAC24_W::new(self)
     }
     #[doc = "Bit 25 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac25(&mut self) -> CHAC25_W<25> {
         CHAC25_W::new(self)
     }
     #[doc = "Bit 26 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac26(&mut self) -> CHAC26_W<26> {
         CHAC26_W::new(self)
     }
     #[doc = "Bit 27 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac27(&mut self) -> CHAC27_W<27> {
         CHAC27_W::new(self)
     }
     #[doc = "Bit 28 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac28(&mut self) -> CHAC28_W<28> {
         CHAC28_W::new(self)
     }
     #[doc = "Bit 30 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac30(&mut self) -> CHAC30_W<30> {
         CHAC30_W::new(self)
     }
     #[doc = "Bit 31 - CTSU Channel Enable Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chac31(&mut self) -> CHAC31_W<31> {
         CHAC31_W::new(self)
     }
@@ -1676,11 +1703,10 @@ impl crate::Readable for CTSUCHACA_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctsuchaca::W](W) writer structure"]
 impl crate::Writable for CTSUCHACA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTSUCHACA to value 0"]
 impl crate::Resettable for CTSUCHACA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

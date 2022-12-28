@@ -37,7 +37,7 @@ impl From<crate::W<CTSUSR_SPEC>> for W {
 #[doc = "Field `MFC` reader - CTSU Multi-clock Counter"]
 pub type MFC_R = crate::FieldReader<u8, MFC_A>;
 #[doc = "CTSU Multi-clock Counter\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MFC_A {
     #[doc = "0: Multi-clock 0"]
@@ -117,7 +117,7 @@ pub type ICOMPRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTSUSR_SPEC, bo
 #[doc = "Field `ICOMP1` reader - CTSU Sense Current Error Monitor"]
 pub type ICOMP1_R = crate::BitReader<ICOMP1_A>;
 #[doc = "CTSU Sense Current Error Monitor\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ICOMP1_A {
     #[doc = "0: Normal sensor current"]
     _0 = 0,
@@ -153,7 +153,7 @@ impl ICOMP1_R {
 #[doc = "Field `ICOMP0` reader - TSCAP Voltage Error Monitor"]
 pub type ICOMP0_R = crate::BitReader<ICOMP0_A>;
 #[doc = "TSCAP Voltage Error Monitor\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ICOMP0_A {
     #[doc = "0: Normal TSCAP voltage"]
     _0 = 0,
@@ -189,7 +189,7 @@ impl ICOMP0_R {
 #[doc = "Field `STC` reader - CTSU Measurement Status Counter"]
 pub type STC_R = crate::FieldReader<u8, STC_A>;
 #[doc = "CTSU Measurement Status Counter\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum STC_A {
     #[doc = "0: Status 0"]
@@ -259,7 +259,7 @@ impl STC_R {
 #[doc = "Field `DTSR` reader - CTSU Data Transfer Status Flag"]
 pub type DTSR_R = crate::BitReader<DTSR_A>;
 #[doc = "CTSU Data Transfer Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DTSR_A {
     #[doc = "0: Read"]
     _0 = 0,
@@ -295,7 +295,7 @@ impl DTSR_R {
 #[doc = "Field `SENSOVF` reader - CTSU Sensor Counter Overflow Flag"]
 pub type SENSOVF_R = crate::BitReader<SENSOVF_A>;
 #[doc = "CTSU Sensor Counter Overflow Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SENSOVF_A {
     #[doc = "0: No overflow occurred"]
     _0 = 0,
@@ -345,7 +345,7 @@ impl<'a, const O: u8> SENSOVF_W<'a, O> {
 #[doc = "Field `SUOVF` reader - CTSU SUCLK Counter Overflow Flag"]
 pub type SUOVF_R = crate::BitReader<SUOVF_A>;
 #[doc = "CTSU SUCLK Counter Overflow Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SUOVF_A {
     #[doc = "0: No overflow occurred"]
     _0 = 0,
@@ -395,7 +395,7 @@ impl<'a, const O: u8> SUOVF_W<'a, O> {
 #[doc = "Field `PS` reader - CTSU Mutual Capacitance Status Flag"]
 pub type PS_R = crate::BitReader<PS_A>;
 #[doc = "CTSU Mutual Capacitance Status Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PS_A {
     #[doc = "0: First measurement"]
     _0 = 0,
@@ -431,7 +431,7 @@ impl PS_R {
 #[doc = "Field `CFCRDCH` reader - CTSU CFC Read Channel Select"]
 pub type CFCRDCH_R = crate::FieldReader<u8, CFCRDCH_A>;
 #[doc = "CTSU CFC Read Channel Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CFCRDCH_A {
     #[doc = "0: TS00"]
@@ -894,26 +894,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - CTSU Multi-clock Counter"]
     #[inline(always)]
+    #[must_use]
     pub fn mfc(&mut self) -> MFC_W<0> {
         MFC_W::new(self)
     }
     #[doc = "Bit 5 - CTSU CTSUICOMP1 Flag Reset"]
     #[inline(always)]
+    #[must_use]
     pub fn icomprst(&mut self) -> ICOMPRST_W<5> {
         ICOMPRST_W::new(self)
     }
     #[doc = "Bit 13 - CTSU Sensor Counter Overflow Flag"]
     #[inline(always)]
+    #[must_use]
     pub fn sensovf(&mut self) -> SENSOVF_W<13> {
         SENSOVF_W::new(self)
     }
     #[doc = "Bit 14 - CTSU SUCLK Counter Overflow Flag"]
     #[inline(always)]
+    #[must_use]
     pub fn suovf(&mut self) -> SUOVF_W<14> {
         SUOVF_W::new(self)
     }
     #[doc = "Bits 16:21 - CTSU CFC Read Channel Select"]
     #[inline(always)]
+    #[must_use]
     pub fn cfcrdch(&mut self) -> CFCRDCH_W<16> {
         CFCRDCH_W::new(self)
     }
@@ -936,11 +941,10 @@ impl crate::Readable for CTSUSR_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctsusr::W](W) writer structure"]
 impl crate::Writable for CTSUSR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTSUSR to value 0"]
 impl crate::Resettable for CTSUSR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

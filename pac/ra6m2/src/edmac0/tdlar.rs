@@ -1,0 +1,84 @@
+#[doc = "Register `TDLAR` reader"]
+pub struct R(crate::R<TDLAR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<TDLAR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<TDLAR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<TDLAR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `TDLAR` writer"]
+pub struct W(crate::W<TDLAR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<TDLAR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<TDLAR_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<TDLAR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `TDLAR` reader - The start address of the transmit descriptor list is set. Set the start address according to the descriptor length selected by the EDMR.DL\\[1:0\\]
+bits.16-byte boundary: Lower 4 bits = 0000b32-byte boundary: Lower 5 bits = 00000b64-byte boundary: Lower 6 bits = 000000b"]
+pub type TDLAR_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `TDLAR` writer - The start address of the transmit descriptor list is set. Set the start address according to the descriptor length selected by the EDMR.DL\\[1:0\\]
+bits.16-byte boundary: Lower 4 bits = 0000b32-byte boundary: Lower 5 bits = 00000b64-byte boundary: Lower 6 bits = 000000b"]
+pub type TDLAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TDLAR_SPEC, u32, u32, 32, O>;
+impl R {
+    #[doc = "Bits 0:31 - The start address of the transmit descriptor list is set. Set the start address according to the descriptor length selected by the EDMR.DL\\[1:0\\]
+bits.16-byte boundary: Lower 4 bits = 0000b32-byte boundary: Lower 5 bits = 00000b64-byte boundary: Lower 6 bits = 000000b"]
+    #[inline(always)]
+    pub fn tdlar(&self) -> TDLAR_R {
+        TDLAR_R::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - The start address of the transmit descriptor list is set. Set the start address according to the descriptor length selected by the EDMR.DL\\[1:0\\]
+bits.16-byte boundary: Lower 4 bits = 0000b32-byte boundary: Lower 5 bits = 00000b64-byte boundary: Lower 6 bits = 000000b"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tdlar(&mut self) -> TDLAR_W<0> {
+        TDLAR_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Transmit Descriptor List Start Address Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tdlar](index.html) module"]
+pub struct TDLAR_SPEC;
+impl crate::RegisterSpec for TDLAR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [tdlar::R](R) reader structure"]
+impl crate::Readable for TDLAR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [tdlar::W](W) writer structure"]
+impl crate::Writable for TDLAR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets TDLAR to value 0"]
+impl crate::Resettable for TDLAR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
+}

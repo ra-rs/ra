@@ -37,7 +37,7 @@ impl From<crate::W<ADCMPANSR1_SPEC>> for W {
 #[doc = "Field `CMPCHAn` reader - Compare Window A Channel Select"]
 pub type CMPCHAN_R = crate::FieldReader<u16, CMPCHAN_A>;
 #[doc = "Compare Window A Channel Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum CMPCHAN_A {
     #[doc = "0: Disable compare function for associated input channel"]
@@ -97,6 +97,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Compare Window A Channel Select"]
     #[inline(always)]
+    #[must_use]
     pub fn cmpchan(&mut self) -> CMPCHAN_W<0> {
         CMPCHAN_W::new(self)
     }
@@ -119,11 +120,10 @@ impl crate::Readable for ADCMPANSR1_SPEC {
 #[doc = "`write(|w| ..)` method takes [adcmpansr1::W](W) writer structure"]
 impl crate::Writable for ADCMPANSR1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADCMPANSR1 to value 0"]
 impl crate::Resettable for ADCMPANSR1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

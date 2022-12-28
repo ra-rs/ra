@@ -37,7 +37,7 @@ impl From<crate::W<PODR_SPEC>> for W {
 #[doc = "Field `PODR00` reader - Pmn Output Data"]
 pub type PODR00_R = crate::BitReader<PODR00_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR00_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> PODR00_W<'a, O> {
 #[doc = "Field `PODR01` reader - Pmn Output Data"]
 pub type PODR01_R = crate::BitReader<PODR01_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR01_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> PODR01_W<'a, O> {
 #[doc = "Field `PODR02` reader - Pmn Output Data"]
 pub type PODR02_R = crate::BitReader<PODR02_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR02_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> PODR02_W<'a, O> {
 #[doc = "Field `PODR03` reader - Pmn Output Data"]
 pub type PODR03_R = crate::BitReader<PODR03_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR03_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> PODR03_W<'a, O> {
 #[doc = "Field `PODR04` reader - Pmn Output Data"]
 pub type PODR04_R = crate::BitReader<PODR04_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR04_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> PODR04_W<'a, O> {
 #[doc = "Field `PODR05` reader - Pmn Output Data"]
 pub type PODR05_R = crate::BitReader<PODR05_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR05_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> PODR05_W<'a, O> {
 #[doc = "Field `PODR06` reader - Pmn Output Data"]
 pub type PODR06_R = crate::BitReader<PODR06_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR06_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> PODR06_W<'a, O> {
 #[doc = "Field `PODR07` reader - Pmn Output Data"]
 pub type PODR07_R = crate::BitReader<PODR07_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR07_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> PODR07_W<'a, O> {
 #[doc = "Field `PODR08` reader - Pmn Output Data"]
 pub type PODR08_R = crate::BitReader<PODR08_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR08_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> PODR08_W<'a, O> {
 #[doc = "Field `PODR09` reader - Pmn Output Data"]
 pub type PODR09_R = crate::BitReader<PODR09_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR09_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -537,7 +537,7 @@ impl<'a, const O: u8> PODR09_W<'a, O> {
 #[doc = "Field `PODR10` reader - Pmn Output Data"]
 pub type PODR10_R = crate::BitReader<PODR10_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR10_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -587,7 +587,7 @@ impl<'a, const O: u8> PODR10_W<'a, O> {
 #[doc = "Field `PODR11` reader - Pmn Output Data"]
 pub type PODR11_R = crate::BitReader<PODR11_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR11_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -637,7 +637,7 @@ impl<'a, const O: u8> PODR11_W<'a, O> {
 #[doc = "Field `PODR12` reader - Pmn Output Data"]
 pub type PODR12_R = crate::BitReader<PODR12_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR12_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -687,7 +687,7 @@ impl<'a, const O: u8> PODR12_W<'a, O> {
 #[doc = "Field `PODR13` reader - Pmn Output Data"]
 pub type PODR13_R = crate::BitReader<PODR13_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR13_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -737,7 +737,7 @@ impl<'a, const O: u8> PODR13_W<'a, O> {
 #[doc = "Field `PODR14` reader - Pmn Output Data"]
 pub type PODR14_R = crate::BitReader<PODR14_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR14_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -787,7 +787,7 @@ impl<'a, const O: u8> PODR14_W<'a, O> {
 #[doc = "Field `PODR15` reader - Pmn Output Data"]
 pub type PODR15_R = crate::BitReader<PODR15_A>;
 #[doc = "Pmn Output Data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PODR15_A {
     #[doc = "0: Low output"]
     _0 = 0,
@@ -919,81 +919,97 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr00(&mut self) -> PODR00_W<0> {
         PODR00_W::new(self)
     }
     #[doc = "Bit 1 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr01(&mut self) -> PODR01_W<1> {
         PODR01_W::new(self)
     }
     #[doc = "Bit 2 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr02(&mut self) -> PODR02_W<2> {
         PODR02_W::new(self)
     }
     #[doc = "Bit 3 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr03(&mut self) -> PODR03_W<3> {
         PODR03_W::new(self)
     }
     #[doc = "Bit 4 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr04(&mut self) -> PODR04_W<4> {
         PODR04_W::new(self)
     }
     #[doc = "Bit 5 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr05(&mut self) -> PODR05_W<5> {
         PODR05_W::new(self)
     }
     #[doc = "Bit 6 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr06(&mut self) -> PODR06_W<6> {
         PODR06_W::new(self)
     }
     #[doc = "Bit 7 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr07(&mut self) -> PODR07_W<7> {
         PODR07_W::new(self)
     }
     #[doc = "Bit 8 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr08(&mut self) -> PODR08_W<8> {
         PODR08_W::new(self)
     }
     #[doc = "Bit 9 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr09(&mut self) -> PODR09_W<9> {
         PODR09_W::new(self)
     }
     #[doc = "Bit 10 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr10(&mut self) -> PODR10_W<10> {
         PODR10_W::new(self)
     }
     #[doc = "Bit 11 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr11(&mut self) -> PODR11_W<11> {
         PODR11_W::new(self)
     }
     #[doc = "Bit 12 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr12(&mut self) -> PODR12_W<12> {
         PODR12_W::new(self)
     }
     #[doc = "Bit 13 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr13(&mut self) -> PODR13_W<13> {
         PODR13_W::new(self)
     }
     #[doc = "Bit 14 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr14(&mut self) -> PODR14_W<14> {
         PODR14_W::new(self)
     }
     #[doc = "Bit 15 - Pmn Output Data"]
     #[inline(always)]
+    #[must_use]
     pub fn podr15(&mut self) -> PODR15_W<15> {
         PODR15_W::new(self)
     }
@@ -1016,11 +1032,10 @@ impl crate::Readable for PODR_SPEC {
 #[doc = "`write(|w| ..)` method takes [podr::W](W) writer structure"]
 impl crate::Writable for PODR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PODR to value 0"]
 impl crate::Resettable for PODR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

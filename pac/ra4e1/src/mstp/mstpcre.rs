@@ -1,0 +1,370 @@
+#[doc = "Register `MSTPCRE` reader"]
+pub struct R(crate::R<MSTPCRE_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<MSTPCRE_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<MSTPCRE_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<MSTPCRE_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `MSTPCRE` writer"]
+pub struct W(crate::W<MSTPCRE_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<MSTPCRE_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<MSTPCRE_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<MSTPCRE_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `MSTPE14` reader - Low Power Asynchronous General Purpose Timer 5 Module Stop"]
+pub type MSTPE14_R = crate::BitReader<MSTPE14_A>;
+#[doc = "Low Power Asynchronous General Purpose Timer 5 Module Stop\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum MSTPE14_A {
+    #[doc = "0: Cancel the module-stop state"]
+    _0 = 0,
+    #[doc = "1: Enter the module-stop state"]
+    _1 = 1,
+}
+impl From<MSTPE14_A> for bool {
+    #[inline(always)]
+    fn from(variant: MSTPE14_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl MSTPE14_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MSTPE14_A {
+        match self.bits {
+            false => MSTPE14_A::_0,
+            true => MSTPE14_A::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == MSTPE14_A::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == MSTPE14_A::_1
+    }
+}
+#[doc = "Field `MSTPE14` writer - Low Power Asynchronous General Purpose Timer 5 Module Stop"]
+pub type MSTPE14_W<'a, const O: u8> = crate::BitWriter<'a, u32, MSTPCRE_SPEC, MSTPE14_A, O>;
+impl<'a, const O: u8> MSTPE14_W<'a, O> {
+    #[doc = "Cancel the module-stop state"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MSTPE14_A::_0)
+    }
+    #[doc = "Enter the module-stop state"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MSTPE14_A::_1)
+    }
+}
+#[doc = "Field `MSTPE26` reader - GPT5 Module Stop"]
+pub type MSTPE26_R = crate::BitReader<MSTPE26_A>;
+#[doc = "GPT5 Module Stop\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum MSTPE26_A {
+    #[doc = "0: Cancel the module-stop state"]
+    _0 = 0,
+    #[doc = "1: Enter the module-stop state"]
+    _1 = 1,
+}
+impl From<MSTPE26_A> for bool {
+    #[inline(always)]
+    fn from(variant: MSTPE26_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl MSTPE26_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MSTPE26_A {
+        match self.bits {
+            false => MSTPE26_A::_0,
+            true => MSTPE26_A::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == MSTPE26_A::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == MSTPE26_A::_1
+    }
+}
+#[doc = "Field `MSTPE26` writer - GPT5 Module Stop"]
+pub type MSTPE26_W<'a, const O: u8> = crate::BitWriter<'a, u32, MSTPCRE_SPEC, MSTPE26_A, O>;
+impl<'a, const O: u8> MSTPE26_W<'a, O> {
+    #[doc = "Cancel the module-stop state"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MSTPE26_A::_0)
+    }
+    #[doc = "Enter the module-stop state"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MSTPE26_A::_1)
+    }
+}
+#[doc = "Field `MSTPE27` reader - GPT4 Module Stop"]
+pub type MSTPE27_R = crate::BitReader<MSTPE27_A>;
+#[doc = "GPT4 Module Stop\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum MSTPE27_A {
+    #[doc = "0: Cancel the module-stop state"]
+    _0 = 0,
+    #[doc = "1: Enter the module-stop state"]
+    _1 = 1,
+}
+impl From<MSTPE27_A> for bool {
+    #[inline(always)]
+    fn from(variant: MSTPE27_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl MSTPE27_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MSTPE27_A {
+        match self.bits {
+            false => MSTPE27_A::_0,
+            true => MSTPE27_A::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == MSTPE27_A::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == MSTPE27_A::_1
+    }
+}
+#[doc = "Field `MSTPE27` writer - GPT4 Module Stop"]
+pub type MSTPE27_W<'a, const O: u8> = crate::BitWriter<'a, u32, MSTPCRE_SPEC, MSTPE27_A, O>;
+impl<'a, const O: u8> MSTPE27_W<'a, O> {
+    #[doc = "Cancel the module-stop state"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MSTPE27_A::_0)
+    }
+    #[doc = "Enter the module-stop state"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MSTPE27_A::_1)
+    }
+}
+#[doc = "Field `MSTPE29` reader - GPT2 Module Stop"]
+pub type MSTPE29_R = crate::BitReader<MSTPE29_A>;
+#[doc = "GPT2 Module Stop\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum MSTPE29_A {
+    #[doc = "0: Cancel the module-stop state"]
+    _0 = 0,
+    #[doc = "1: Enter the module-stop state"]
+    _1 = 1,
+}
+impl From<MSTPE29_A> for bool {
+    #[inline(always)]
+    fn from(variant: MSTPE29_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl MSTPE29_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MSTPE29_A {
+        match self.bits {
+            false => MSTPE29_A::_0,
+            true => MSTPE29_A::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == MSTPE29_A::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == MSTPE29_A::_1
+    }
+}
+#[doc = "Field `MSTPE29` writer - GPT2 Module Stop"]
+pub type MSTPE29_W<'a, const O: u8> = crate::BitWriter<'a, u32, MSTPCRE_SPEC, MSTPE29_A, O>;
+impl<'a, const O: u8> MSTPE29_W<'a, O> {
+    #[doc = "Cancel the module-stop state"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MSTPE29_A::_0)
+    }
+    #[doc = "Enter the module-stop state"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MSTPE29_A::_1)
+    }
+}
+#[doc = "Field `MSTPE30` reader - GPT1 Module Stop"]
+pub type MSTPE30_R = crate::BitReader<MSTPE30_A>;
+#[doc = "GPT1 Module Stop\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum MSTPE30_A {
+    #[doc = "0: Cancel the module-stop state"]
+    _0 = 0,
+    #[doc = "1: Enter the module-stop state"]
+    _1 = 1,
+}
+impl From<MSTPE30_A> for bool {
+    #[inline(always)]
+    fn from(variant: MSTPE30_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl MSTPE30_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MSTPE30_A {
+        match self.bits {
+            false => MSTPE30_A::_0,
+            true => MSTPE30_A::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline(always)]
+    pub fn is_0(&self) -> bool {
+        *self == MSTPE30_A::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline(always)]
+    pub fn is_1(&self) -> bool {
+        *self == MSTPE30_A::_1
+    }
+}
+#[doc = "Field `MSTPE30` writer - GPT1 Module Stop"]
+pub type MSTPE30_W<'a, const O: u8> = crate::BitWriter<'a, u32, MSTPCRE_SPEC, MSTPE30_A, O>;
+impl<'a, const O: u8> MSTPE30_W<'a, O> {
+    #[doc = "Cancel the module-stop state"]
+    #[inline(always)]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MSTPE30_A::_0)
+    }
+    #[doc = "Enter the module-stop state"]
+    #[inline(always)]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MSTPE30_A::_1)
+    }
+}
+impl R {
+    #[doc = "Bit 14 - Low Power Asynchronous General Purpose Timer 5 Module Stop"]
+    #[inline(always)]
+    pub fn mstpe14(&self) -> MSTPE14_R {
+        MSTPE14_R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 26 - GPT5 Module Stop"]
+    #[inline(always)]
+    pub fn mstpe26(&self) -> MSTPE26_R {
+        MSTPE26_R::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - GPT4 Module Stop"]
+    #[inline(always)]
+    pub fn mstpe27(&self) -> MSTPE27_R {
+        MSTPE27_R::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 29 - GPT2 Module Stop"]
+    #[inline(always)]
+    pub fn mstpe29(&self) -> MSTPE29_R {
+        MSTPE29_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - GPT1 Module Stop"]
+    #[inline(always)]
+    pub fn mstpe30(&self) -> MSTPE30_R {
+        MSTPE30_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 14 - Low Power Asynchronous General Purpose Timer 5 Module Stop"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mstpe14(&mut self) -> MSTPE14_W<14> {
+        MSTPE14_W::new(self)
+    }
+    #[doc = "Bit 26 - GPT5 Module Stop"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mstpe26(&mut self) -> MSTPE26_W<26> {
+        MSTPE26_W::new(self)
+    }
+    #[doc = "Bit 27 - GPT4 Module Stop"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mstpe27(&mut self) -> MSTPE27_W<27> {
+        MSTPE27_W::new(self)
+    }
+    #[doc = "Bit 29 - GPT2 Module Stop"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mstpe29(&mut self) -> MSTPE29_W<29> {
+        MSTPE29_W::new(self)
+    }
+    #[doc = "Bit 30 - GPT1 Module Stop"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mstpe30(&mut self) -> MSTPE30_W<30> {
+        MSTPE30_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Module Stop Control Register E\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mstpcre](index.html) module"]
+pub struct MSTPCRE_SPEC;
+impl crate::RegisterSpec for MSTPCRE_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [mstpcre::R](R) reader structure"]
+impl crate::Readable for MSTPCRE_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [mstpcre::W](W) writer structure"]
+impl crate::Writable for MSTPCRE_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets MSTPCRE to value 0xffff_ffff"]
+impl crate::Resettable for MSTPCRE_SPEC {
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
+}

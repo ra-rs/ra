@@ -37,7 +37,7 @@ impl From<crate::W<CTSUCALIB_SPEC>> for W {
 #[doc = "Field `TSOD` reader - All TS Pin Control"]
 pub type TSOD_R = crate::BitReader<TSOD_A>;
 #[doc = "All TS Pin Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TSOD_A {
     #[doc = "0: All TS pins are not fixed"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> TSOD_W<'a, O> {
 #[doc = "Field `DRV` reader - Power Supply Forced Start"]
 pub type DRV_R = crate::BitReader<DRV_A>;
 #[doc = "Power Supply Forced Start\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DRV_A {
     #[doc = "0: CTSU power supply is in idle state."]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> DRV_W<'a, O> {
 #[doc = "Field `CLKSEL` reader - Observation Clock Select"]
 pub type CLKSEL_R = crate::FieldReader<u8, CLKSEL_A>;
 #[doc = "Observation Clock Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CLKSEL_A {
     #[doc = "0: Not selected (L fixed output)"]
@@ -216,7 +216,7 @@ impl<'a, const O: u8> CLKSEL_W<'a, O> {
 #[doc = "Field `SUCLKEN` reader - SUCLK Forced Oscillation Control"]
 pub type SUCLKEN_R = crate::BitReader<SUCLKEN_A>;
 #[doc = "SUCLK Forced Oscillation Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SUCLKEN_A {
     #[doc = "0: SUCLK oscillation only during measurement"]
     _0 = 0,
@@ -266,7 +266,7 @@ impl<'a, const O: u8> SUCLKEN_W<'a, O> {
 #[doc = "Field `TSOC` reader - Switched Capacitor Operation Stop"]
 pub type TSOC_R = crate::BitReader<TSOC_A>;
 #[doc = "Switched Capacitor Operation Stop\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TSOC_A {
     #[doc = "0: Operation"]
     _0 = 0,
@@ -316,7 +316,7 @@ impl<'a, const O: u8> TSOC_W<'a, O> {
 #[doc = "Field `CNTRDSEL` reader - Read Count Select of Sensor Counter"]
 pub type CNTRDSEL_R = crate::BitReader<CNTRDSEL_A>;
 #[doc = "Read Count Select of Sensor Counter\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CNTRDSEL_A {
     #[doc = "0: Read once"]
     _0 = 0,
@@ -366,7 +366,7 @@ impl<'a, const O: u8> CNTRDSEL_W<'a, O> {
 #[doc = "Field `IOC` reader - ICTSU TS Pin Fixed Output Value Set"]
 pub type IOC_R = crate::BitReader<IOC_A>;
 #[doc = "ICTSU TS Pin Fixed Output Value Set\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum IOC_A {
     #[doc = "0: Low level"]
     _0 = 0,
@@ -416,7 +416,7 @@ impl<'a, const O: u8> IOC_W<'a, O> {
 #[doc = "Field `CFCRDMD` reader - CTSU CFC Counter Read Mode Select"]
 pub type CFCRDMD_R = crate::BitReader<CFCRDMD_A>;
 #[doc = "CTSU CFC Counter Read Mode Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CFCRDMD_A {
     #[doc = "0: Except for mutual capacitance parallel measurement mode"]
     _0 = 0,
@@ -466,7 +466,7 @@ impl<'a, const O: u8> CFCRDMD_W<'a, O> {
 #[doc = "Field `DCOFF` reader - CTSU Down Converter Control"]
 pub type DCOFF_R = crate::BitReader<DCOFF_A>;
 #[doc = "CTSU Down Converter Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DCOFF_A {
     #[doc = "0: Down converter operation (TSCAP voltage generation)"]
     _0 = 0,
@@ -520,7 +520,7 @@ pub type CFCSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTSUCALIB_SPEC,
 #[doc = "Field `CFCMODE` reader - CFC Oscillator Calibration Mode"]
 pub type CFCMODE_R = crate::BitReader<CFCMODE_A>;
 #[doc = "CFC Oscillator Calibration Mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CFCMODE_A {
     #[doc = "0: CFC current measurement (normal operation)"]
     _0 = 0,
@@ -570,7 +570,7 @@ impl<'a, const O: u8> CFCMODE_W<'a, O> {
 #[doc = "Field `DACCARRY` reader - Offset Current Adjustment for Calibration"]
 pub type DACCARRY_R = crate::BitReader<DACCARRY_A>;
 #[doc = "Offset Current Adjustment for Calibration\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DACCARRY_A {
     #[doc = "0: Normal operation"]
     _0 = 0,
@@ -620,7 +620,7 @@ impl<'a, const O: u8> DACCARRY_W<'a, O> {
 #[doc = "Field `SUCARRY` reader - Current Control Oscillator Input Current Adjustment for SUCLK"]
 pub type SUCARRY_R = crate::BitReader<SUCARRY_A>;
 #[doc = "Current Control Oscillator Input Current Adjustment for SUCLK\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SUCARRY_A {
     #[doc = "0: Normal operation"]
     _0 = 0,
@@ -670,7 +670,7 @@ impl<'a, const O: u8> SUCARRY_W<'a, O> {
 #[doc = "Field `DACCLK` reader - Modulation Clock Select for Offset Current Circuits"]
 pub type DACCLK_R = crate::BitReader<DACCLK_A>;
 #[doc = "Modulation Clock Select for Offset Current Circuits\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DACCLK_A {
     #[doc = "0: Operating clock selected by TSUCRA.CLK \\[1:0\\]"]
     _0 = 0,
@@ -720,7 +720,7 @@ impl<'a, const O: u8> DACCLK_W<'a, O> {
 #[doc = "Field `CCOCLK` reader - Modulation Clock Select for Current Controlled Oscillator Input Current of SUCLK"]
 pub type CCOCLK_R = crate::BitReader<CCOCLK_A>;
 #[doc = "Modulation Clock Select for Current Controlled Oscillator Input Current of SUCLK\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCOCLK_A {
     #[doc = "0: Operating clock selected by TSUCRA.CLK \\[1:0\\]"]
     _0 = 0,
@@ -770,7 +770,7 @@ impl<'a, const O: u8> CCOCLK_W<'a, O> {
 #[doc = "Field `CCOCALIB` reader - Calibration Selection of Current Controlled Oscillator for Measurement"]
 pub type CCOCALIB_R = crate::BitReader<CCOCALIB_A>;
 #[doc = "Calibration Selection of Current Controlled Oscillator for Measurement\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCOCALIB_A {
     #[doc = "0: Normal operation"]
     _0 = 0,
@@ -820,7 +820,7 @@ impl<'a, const O: u8> CCOCALIB_W<'a, O> {
 #[doc = "Field `TXREV` reader - Transmit Pin Inverted Output"]
 pub type TXREV_R = crate::BitReader<TXREV_A>;
 #[doc = "Transmit Pin Inverted Output\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TXREV_A {
     #[doc = "0: Normal"]
     _0 = 0,
@@ -957,86 +957,103 @@ impl R {
 impl W {
     #[doc = "Bit 2 - All TS Pin Control"]
     #[inline(always)]
+    #[must_use]
     pub fn tsod(&mut self) -> TSOD_W<2> {
         TSOD_W::new(self)
     }
     #[doc = "Bit 3 - Power Supply Forced Start"]
     #[inline(always)]
+    #[must_use]
     pub fn drv(&mut self) -> DRV_W<3> {
         DRV_W::new(self)
     }
     #[doc = "Bits 4:5 - Observation Clock Select"]
     #[inline(always)]
+    #[must_use]
     pub fn clksel(&mut self) -> CLKSEL_W<4> {
         CLKSEL_W::new(self)
     }
     #[doc = "Bit 6 - SUCLK Forced Oscillation Control"]
     #[inline(always)]
+    #[must_use]
     pub fn suclken(&mut self) -> SUCLKEN_W<6> {
         SUCLKEN_W::new(self)
     }
     #[doc = "Bit 7 - Switched Capacitor Operation Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn tsoc(&mut self) -> TSOC_W<7> {
         TSOC_W::new(self)
     }
     #[doc = "Bit 8 - Read Count Select of Sensor Counter"]
     #[inline(always)]
+    #[must_use]
     pub fn cntrdsel(&mut self) -> CNTRDSEL_W<8> {
         CNTRDSEL_W::new(self)
     }
     #[doc = "Bit 9 - ICTSU TS Pin Fixed Output Value Set"]
     #[inline(always)]
+    #[must_use]
     pub fn ioc(&mut self) -> IOC_W<9> {
         IOC_W::new(self)
     }
     #[doc = "Bit 10 - CTSU CFC Counter Read Mode Select"]
     #[inline(always)]
+    #[must_use]
     pub fn cfcrdmd(&mut self) -> CFCRDMD_W<10> {
         CFCRDMD_W::new(self)
     }
     #[doc = "Bit 11 - CTSU Down Converter Control"]
     #[inline(always)]
+    #[must_use]
     pub fn dcoff(&mut self) -> DCOFF_W<11> {
         DCOFF_W::new(self)
     }
     #[doc = "Bits 16:21 - Observation CFC Clock Select"]
     #[inline(always)]
+    #[must_use]
     pub fn cfcsel(&mut self) -> CFCSEL_W<16> {
         CFCSEL_W::new(self)
     }
     #[doc = "Bit 22 - CFC Oscillator Calibration Mode"]
     #[inline(always)]
+    #[must_use]
     pub fn cfcmode(&mut self) -> CFCMODE_W<22> {
         CFCMODE_W::new(self)
     }
     #[doc = "Bit 25 - Offset Current Adjustment for Calibration"]
     #[inline(always)]
+    #[must_use]
     pub fn daccarry(&mut self) -> DACCARRY_W<25> {
         DACCARRY_W::new(self)
     }
     #[doc = "Bit 27 - Current Control Oscillator Input Current Adjustment for SUCLK"]
     #[inline(always)]
+    #[must_use]
     pub fn sucarry(&mut self) -> SUCARRY_W<27> {
         SUCARRY_W::new(self)
     }
     #[doc = "Bit 28 - Modulation Clock Select for Offset Current Circuits"]
     #[inline(always)]
+    #[must_use]
     pub fn dacclk(&mut self) -> DACCLK_W<28> {
         DACCLK_W::new(self)
     }
     #[doc = "Bit 29 - Modulation Clock Select for Current Controlled Oscillator Input Current of SUCLK"]
     #[inline(always)]
+    #[must_use]
     pub fn ccoclk(&mut self) -> CCOCLK_W<29> {
         CCOCLK_W::new(self)
     }
     #[doc = "Bit 30 - Calibration Selection of Current Controlled Oscillator for Measurement"]
     #[inline(always)]
+    #[must_use]
     pub fn ccocalib(&mut self) -> CCOCALIB_W<30> {
         CCOCALIB_W::new(self)
     }
     #[doc = "Bit 31 - Transmit Pin Inverted Output"]
     #[inline(always)]
+    #[must_use]
     pub fn txrev(&mut self) -> TXREV_W<31> {
         TXREV_W::new(self)
     }
@@ -1059,11 +1076,10 @@ impl crate::Readable for CTSUCALIB_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctsucalib::W](W) writer structure"]
 impl crate::Writable for CTSUCALIB_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTSUCALIB to value 0"]
 impl crate::Resettable for CTSUCALIB_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

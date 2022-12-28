@@ -37,7 +37,7 @@ impl From<crate::W<GTINTAD_SPEC>> for W {
 #[doc = "Field `GRP` reader - Output Disable Source Select"]
 pub type GRP_R = crate::FieldReader<u8, GRP_A>;
 #[doc = "Output Disable Source Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum GRP_A {
     #[doc = "0: Group A output disable request is selected"]
@@ -89,7 +89,7 @@ impl<'a, const O: u8> GRP_W<'a, O> {
 #[doc = "Field `GRPABH` reader - Same Time Output Level High Disable Request Enable"]
 pub type GRPABH_R = crate::BitReader<GRPABH_A>;
 #[doc = "Same Time Output Level High Disable Request Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GRPABH_A {
     #[doc = "0: Same time output level high disable request disabled"]
     _0 = 0,
@@ -139,7 +139,7 @@ impl<'a, const O: u8> GRPABH_W<'a, O> {
 #[doc = "Field `GRPABL` reader - Same Time Output Level Low Disable Request Enable"]
 pub type GRPABL_R = crate::BitReader<GRPABL_A>;
 #[doc = "Same Time Output Level Low Disable Request Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GRPABL_A {
     #[doc = "0: Same time output level low disable request disabled"]
     _0 = 0,
@@ -206,16 +206,19 @@ impl R {
 impl W {
     #[doc = "Bits 24:25 - Output Disable Source Select"]
     #[inline(always)]
+    #[must_use]
     pub fn grp(&mut self) -> GRP_W<24> {
         GRP_W::new(self)
     }
     #[doc = "Bit 29 - Same Time Output Level High Disable Request Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn grpabh(&mut self) -> GRPABH_W<29> {
         GRPABH_W::new(self)
     }
     #[doc = "Bit 30 - Same Time Output Level Low Disable Request Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn grpabl(&mut self) -> GRPABL_W<30> {
         GRPABL_W::new(self)
     }
@@ -238,11 +241,10 @@ impl crate::Readable for GTINTAD_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtintad::W](W) writer structure"]
 impl crate::Writable for GTINTAD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTINTAD to value 0"]
 impl crate::Resettable for GTINTAD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

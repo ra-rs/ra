@@ -33,64 +33,44 @@ pub struct RegisterBlock {
     pub adocdr: ADOCDR,
     #[doc = "0x1e - A/D Self-Diagnosis Data Register"]
     pub adrd: ADRD,
-    #[doc = "0x20 - A/D Data Registers 0"]
-    pub addr0: ADDR0,
-    #[doc = "0x22 - A/D Data Registers 1"]
-    pub addr1: ADDR1,
-    #[doc = "0x24 - A/D Data Registers 2"]
-    pub addr2: ADDR2,
-    #[doc = "0x26 - A/D Data Registers 3"]
-    pub addr3: ADDR3,
-    #[doc = "0x28 - A/D Data Registers 4"]
-    pub addr4: ADDR4,
-    #[doc = "0x2a - A/D Data Registers 5"]
-    pub addr5: ADDR5,
-    #[doc = "0x2c - A/D Data Registers 6"]
-    pub addr6: ADDR6,
-    #[doc = "0x2e - A/D Data Registers 7"]
-    pub addr7: ADDR7,
-    #[doc = "0x30 - A/D Data Registers 8"]
-    pub addr8: ADDR8,
-    #[doc = "0x32 - A/D Data Registers 9"]
-    pub addr9: ADDR9,
-    #[doc = "0x34 - A/D Data Registers 10"]
-    pub addr10: ADDR10,
-    _reserved26: [u8; 0x0a],
+    #[doc = "0x20..0x36 - A/D Data Registers %s"]
+    pub addr: [ADDR; 11],
+    _reserved16: [u8; 0x0a],
     #[doc = "0x40 - A/D CTSU TSCAP Voltage Data Register"]
     pub adctdr: ADCTDR,
-    #[doc = "0x42 - A/D Data Registers 17"]
+    #[doc = "0x42 - A/D Data Registers %s"]
     pub addr17: ADDR17,
-    #[doc = "0x44 - A/D Data Registers 18"]
-    pub addr18: ADDR18,
-    #[doc = "0x46 - A/D Data Registers 19"]
-    pub addr19: ADDR19,
-    #[doc = "0x48 - A/D Data Registers 20"]
-    pub addr20: ADDR20,
-    #[doc = "0x4a - A/D Data Registers 21"]
-    pub addr21: ADDR21,
-    #[doc = "0x4c - A/D Data Registers 22"]
-    pub addr22: ADDR22,
-    _reserved33: [u8; 0x2c],
+    #[doc = "0x44 - A/D Data Registers %s"]
+    pub addr18: ADDR17,
+    #[doc = "0x46 - A/D Data Registers %s"]
+    pub addr19: ADDR17,
+    #[doc = "0x48 - A/D Data Registers %s"]
+    pub addr20: ADDR17,
+    #[doc = "0x4a - A/D Data Registers %s"]
+    pub addr21: ADDR17,
+    #[doc = "0x4c - A/D Data Registers %s"]
+    pub addr22: ADDR17,
+    _reserved23: [u8; 0x2c],
     #[doc = "0x7a - A/D Disconnection Detection Control Register"]
     pub addiscr: ADDISCR,
-    _reserved34: [u8; 0x03],
+    _reserved24: [u8; 0x03],
     #[doc = "0x7e - A/D Conversion Operation Mode Select Register"]
     pub adacsr: ADACSR,
-    _reserved35: [u8; 0x01],
+    _reserved25: [u8; 0x01],
     #[doc = "0x80 - A/D Group Scan Priority Control Register"]
     pub adgspcr: ADGSPCR,
-    _reserved36: [u8; 0x02],
+    _reserved26: [u8; 0x02],
     #[doc = "0x84 - A/D Data Duplexing Register A"]
     pub addbldra: ADDBLDRA,
     #[doc = "0x86 - A/D Data Duplexing Register B"]
     pub addbldrb: ADDBLDRB,
-    _reserved38: [u8; 0x02],
+    _reserved28: [u8; 0x02],
     #[doc = "0x8a - A/D High-Potential/Low-Potential Reference Voltage Control Register"]
     pub adhvrefcnt: ADHVREFCNT,
-    _reserved39: [u8; 0x01],
+    _reserved29: [u8; 0x01],
     #[doc = "0x8c - A/D Compare Function Window A/B Status Monitor Register"]
     pub adwinmon: ADWINMON,
-    _reserved40: [u8; 0x03],
+    _reserved30: [u8; 0x03],
     #[doc = "0x90 - A/D Compare Function Control Register"]
     pub adcmpcr: ADCMPCR,
     #[doc = "0x92 - A/D Compare Function Window A Extended Input Select Register"]
@@ -113,17 +93,17 @@ pub struct RegisterBlock {
     pub adcmpsr1: ADCMPSR1,
     #[doc = "0xa4 - A/D Compare Function Window A Extended Input Channel Status Register"]
     pub adcmpser: ADCMPSER,
-    _reserved51: [u8; 0x01],
+    _reserved41: [u8; 0x01],
     #[doc = "0xa6 - A/D Compare Function Window B Channel Select Register"]
     pub adcmpbnsr: ADCMPBNSR,
-    _reserved52: [u8; 0x01],
+    _reserved42: [u8; 0x01],
     #[doc = "0xa8 - A/D Compare Function Window B Lower-Side/Upper-Side Level Setting Register"]
     pub adwinllb: ADWINLLB,
     #[doc = "0xaa - A/D Compare Function Window B Lower-Side/Upper-Side Level Setting Register"]
     pub adwinulb: ADWINULB,
     #[doc = "0xac - A/D Compare Function Window B Status Register"]
     pub adcmpbsr: ADCMPBSR,
-    _reserved55: [u8; 0x30],
+    _reserved45: [u8; 0x30],
     #[doc = "0xdd - A/D Sampling State Register"]
     pub adsstrl: ADSSTRL,
     #[doc = "0xde - A/D Sampling State Register"]
@@ -193,10 +173,16 @@ pub mod adocdr;
 pub type ADRD = crate::Reg<adrd::ADRD_SPEC>;
 #[doc = "A/D Self-Diagnosis Data Register"]
 pub mod adrd;
+#[doc = "ADDR (r) register accessor: an alias for `Reg<ADDR_SPEC>`"]
+pub type ADDR = crate::Reg<addr::ADDR_SPEC>;
+#[doc = "A/D Data Registers %s"]
+pub mod addr;
 #[doc = "ADCTDR (r) register accessor: an alias for `Reg<ADCTDR_SPEC>`"]
 pub type ADCTDR = crate::Reg<adctdr::ADCTDR_SPEC>;
 #[doc = "A/D CTSU TSCAP Voltage Data Register"]
 pub mod adctdr;
+pub use addr as addr17;
+pub use ADDR as ADDR17;
 #[doc = "ADDISCR (rw) register accessor: an alias for `Reg<ADDISCR_SPEC>`"]
 pub type ADDISCR = crate::Reg<addiscr::ADDISCR_SPEC>;
 #[doc = "A/D Disconnection Detection Control Register"]
@@ -301,71 +287,3 @@ pub mod adsstro;
 pub type ADSSTR = crate::Reg<adsstr::ADSSTR_SPEC>;
 #[doc = "A/D Sampling State Register"]
 pub mod adsstr;
-#[doc = "ADDR0 (r) register accessor: an alias for `Reg<ADDR0_SPEC>`"]
-pub type ADDR0 = crate::Reg<addr0::ADDR0_SPEC>;
-#[doc = "A/D Data Registers 0"]
-pub mod addr0;
-#[doc = "ADDR1 (r) register accessor: an alias for `Reg<ADDR1_SPEC>`"]
-pub type ADDR1 = crate::Reg<addr1::ADDR1_SPEC>;
-#[doc = "A/D Data Registers 1"]
-pub mod addr1;
-#[doc = "ADDR2 (r) register accessor: an alias for `Reg<ADDR2_SPEC>`"]
-pub type ADDR2 = crate::Reg<addr2::ADDR2_SPEC>;
-#[doc = "A/D Data Registers 2"]
-pub mod addr2;
-#[doc = "ADDR3 (r) register accessor: an alias for `Reg<ADDR3_SPEC>`"]
-pub type ADDR3 = crate::Reg<addr3::ADDR3_SPEC>;
-#[doc = "A/D Data Registers 3"]
-pub mod addr3;
-#[doc = "ADDR4 (r) register accessor: an alias for `Reg<ADDR4_SPEC>`"]
-pub type ADDR4 = crate::Reg<addr4::ADDR4_SPEC>;
-#[doc = "A/D Data Registers 4"]
-pub mod addr4;
-#[doc = "ADDR5 (r) register accessor: an alias for `Reg<ADDR5_SPEC>`"]
-pub type ADDR5 = crate::Reg<addr5::ADDR5_SPEC>;
-#[doc = "A/D Data Registers 5"]
-pub mod addr5;
-#[doc = "ADDR6 (r) register accessor: an alias for `Reg<ADDR6_SPEC>`"]
-pub type ADDR6 = crate::Reg<addr6::ADDR6_SPEC>;
-#[doc = "A/D Data Registers 6"]
-pub mod addr6;
-#[doc = "ADDR7 (r) register accessor: an alias for `Reg<ADDR7_SPEC>`"]
-pub type ADDR7 = crate::Reg<addr7::ADDR7_SPEC>;
-#[doc = "A/D Data Registers 7"]
-pub mod addr7;
-#[doc = "ADDR8 (r) register accessor: an alias for `Reg<ADDR8_SPEC>`"]
-pub type ADDR8 = crate::Reg<addr8::ADDR8_SPEC>;
-#[doc = "A/D Data Registers 8"]
-pub mod addr8;
-#[doc = "ADDR9 (r) register accessor: an alias for `Reg<ADDR9_SPEC>`"]
-pub type ADDR9 = crate::Reg<addr9::ADDR9_SPEC>;
-#[doc = "A/D Data Registers 9"]
-pub mod addr9;
-#[doc = "ADDR10 (r) register accessor: an alias for `Reg<ADDR10_SPEC>`"]
-pub type ADDR10 = crate::Reg<addr10::ADDR10_SPEC>;
-#[doc = "A/D Data Registers 10"]
-pub mod addr10;
-#[doc = "ADDR17 (r) register accessor: an alias for `Reg<ADDR17_SPEC>`"]
-pub type ADDR17 = crate::Reg<addr17::ADDR17_SPEC>;
-#[doc = "A/D Data Registers 17"]
-pub mod addr17;
-#[doc = "ADDR18 (r) register accessor: an alias for `Reg<ADDR18_SPEC>`"]
-pub type ADDR18 = crate::Reg<addr18::ADDR18_SPEC>;
-#[doc = "A/D Data Registers 18"]
-pub mod addr18;
-#[doc = "ADDR19 (r) register accessor: an alias for `Reg<ADDR19_SPEC>`"]
-pub type ADDR19 = crate::Reg<addr19::ADDR19_SPEC>;
-#[doc = "A/D Data Registers 19"]
-pub mod addr19;
-#[doc = "ADDR20 (r) register accessor: an alias for `Reg<ADDR20_SPEC>`"]
-pub type ADDR20 = crate::Reg<addr20::ADDR20_SPEC>;
-#[doc = "A/D Data Registers 20"]
-pub mod addr20;
-#[doc = "ADDR21 (r) register accessor: an alias for `Reg<ADDR21_SPEC>`"]
-pub type ADDR21 = crate::Reg<addr21::ADDR21_SPEC>;
-#[doc = "A/D Data Registers 21"]
-pub mod addr21;
-#[doc = "ADDR22 (r) register accessor: an alias for `Reg<ADDR22_SPEC>`"]
-pub type ADDR22 = crate::Reg<addr22::ADDR22_SPEC>;
-#[doc = "A/D Data Registers 22"]
-pub mod addr22;

@@ -18,7 +18,7 @@ pub type AD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DIAGST` reader - Self-Diagnosis Status"]
 pub type DIAGST_R = crate::FieldReader<u8, DIAGST_A>;
 #[doc = "Self-Diagnosis Status\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DIAGST_A {
     #[doc = "0: Self-diagnosis not executed after power-on."]
@@ -73,7 +73,7 @@ impl R {
     #[doc = "Bits 0:11 - Converted Value 11 to 0"]
     #[inline(always)]
     pub fn ad(&self) -> AD_R {
-        AD_R::new((self.bits & 0x0fff) as u16)
+        AD_R::new(self.bits & 0x0fff)
     }
     #[doc = "Bits 14:15 - Self-Diagnosis Status"]
     #[inline(always)]
@@ -92,8 +92,5 @@ impl crate::Readable for ADRD_SPEC {
 }
 #[doc = "`reset()` method sets ADRD to value 0"]
 impl crate::Resettable for ADRD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

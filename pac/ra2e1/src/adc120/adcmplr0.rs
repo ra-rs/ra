@@ -37,7 +37,7 @@ impl From<crate::W<ADCMPLR0_SPEC>> for W {
 #[doc = "Field `CMPLCHAn` reader - Compare Window A Comparison Condition Select"]
 pub type CMPLCHAN_R = crate::FieldReader<u16, CMPLCHAN_A>;
 #[doc = "Compare Window A Comparison Condition Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum CMPLCHAN_A {
     #[doc = "0: When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
@@ -97,6 +97,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Compare Window A Comparison Condition Select"]
     #[inline(always)]
+    #[must_use]
     pub fn cmplchan(&mut self) -> CMPLCHAN_W<0> {
         CMPLCHAN_W::new(self)
     }
@@ -119,11 +120,10 @@ impl crate::Readable for ADCMPLR0_SPEC {
 #[doc = "`write(|w| ..)` method takes [adcmplr0::W](W) writer structure"]
 impl crate::Writable for ADCMPLR0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADCMPLR0 to value 0"]
 impl crate::Resettable for ADCMPLR0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

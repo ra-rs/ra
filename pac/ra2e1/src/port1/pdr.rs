@@ -37,7 +37,7 @@ impl From<crate::W<PDR_SPEC>> for W {
 #[doc = "Field `PDR00` reader - Pmn Direction"]
 pub type PDR00_R = crate::BitReader<PDR00_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR00_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> PDR00_W<'a, O> {
 #[doc = "Field `PDR01` reader - Pmn Direction"]
 pub type PDR01_R = crate::BitReader<PDR01_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR01_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> PDR01_W<'a, O> {
 #[doc = "Field `PDR02` reader - Pmn Direction"]
 pub type PDR02_R = crate::BitReader<PDR02_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR02_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> PDR02_W<'a, O> {
 #[doc = "Field `PDR03` reader - Pmn Direction"]
 pub type PDR03_R = crate::BitReader<PDR03_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR03_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> PDR03_W<'a, O> {
 #[doc = "Field `PDR04` reader - Pmn Direction"]
 pub type PDR04_R = crate::BitReader<PDR04_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR04_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> PDR04_W<'a, O> {
 #[doc = "Field `PDR05` reader - Pmn Direction"]
 pub type PDR05_R = crate::BitReader<PDR05_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR05_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> PDR05_W<'a, O> {
 #[doc = "Field `PDR06` reader - Pmn Direction"]
 pub type PDR06_R = crate::BitReader<PDR06_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR06_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> PDR06_W<'a, O> {
 #[doc = "Field `PDR07` reader - Pmn Direction"]
 pub type PDR07_R = crate::BitReader<PDR07_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR07_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> PDR07_W<'a, O> {
 #[doc = "Field `PDR08` reader - Pmn Direction"]
 pub type PDR08_R = crate::BitReader<PDR08_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR08_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> PDR08_W<'a, O> {
 #[doc = "Field `PDR09` reader - Pmn Direction"]
 pub type PDR09_R = crate::BitReader<PDR09_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR09_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -537,7 +537,7 @@ impl<'a, const O: u8> PDR09_W<'a, O> {
 #[doc = "Field `PDR10` reader - Pmn Direction"]
 pub type PDR10_R = crate::BitReader<PDR10_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR10_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -587,7 +587,7 @@ impl<'a, const O: u8> PDR10_W<'a, O> {
 #[doc = "Field `PDR11` reader - Pmn Direction"]
 pub type PDR11_R = crate::BitReader<PDR11_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR11_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -637,7 +637,7 @@ impl<'a, const O: u8> PDR11_W<'a, O> {
 #[doc = "Field `PDR12` reader - Pmn Direction"]
 pub type PDR12_R = crate::BitReader<PDR12_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR12_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -687,7 +687,7 @@ impl<'a, const O: u8> PDR12_W<'a, O> {
 #[doc = "Field `PDR13` reader - Pmn Direction"]
 pub type PDR13_R = crate::BitReader<PDR13_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR13_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -737,7 +737,7 @@ impl<'a, const O: u8> PDR13_W<'a, O> {
 #[doc = "Field `PDR14` reader - Pmn Direction"]
 pub type PDR14_R = crate::BitReader<PDR14_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR14_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -787,7 +787,7 @@ impl<'a, const O: u8> PDR14_W<'a, O> {
 #[doc = "Field `PDR15` reader - Pmn Direction"]
 pub type PDR15_R = crate::BitReader<PDR15_A>;
 #[doc = "Pmn Direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PDR15_A {
     #[doc = "0: Input (functions as an input pin)"]
     _0 = 0,
@@ -919,81 +919,97 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr00(&mut self) -> PDR00_W<0> {
         PDR00_W::new(self)
     }
     #[doc = "Bit 1 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr01(&mut self) -> PDR01_W<1> {
         PDR01_W::new(self)
     }
     #[doc = "Bit 2 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr02(&mut self) -> PDR02_W<2> {
         PDR02_W::new(self)
     }
     #[doc = "Bit 3 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr03(&mut self) -> PDR03_W<3> {
         PDR03_W::new(self)
     }
     #[doc = "Bit 4 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr04(&mut self) -> PDR04_W<4> {
         PDR04_W::new(self)
     }
     #[doc = "Bit 5 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr05(&mut self) -> PDR05_W<5> {
         PDR05_W::new(self)
     }
     #[doc = "Bit 6 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr06(&mut self) -> PDR06_W<6> {
         PDR06_W::new(self)
     }
     #[doc = "Bit 7 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr07(&mut self) -> PDR07_W<7> {
         PDR07_W::new(self)
     }
     #[doc = "Bit 8 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr08(&mut self) -> PDR08_W<8> {
         PDR08_W::new(self)
     }
     #[doc = "Bit 9 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr09(&mut self) -> PDR09_W<9> {
         PDR09_W::new(self)
     }
     #[doc = "Bit 10 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr10(&mut self) -> PDR10_W<10> {
         PDR10_W::new(self)
     }
     #[doc = "Bit 11 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr11(&mut self) -> PDR11_W<11> {
         PDR11_W::new(self)
     }
     #[doc = "Bit 12 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr12(&mut self) -> PDR12_W<12> {
         PDR12_W::new(self)
     }
     #[doc = "Bit 13 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr13(&mut self) -> PDR13_W<13> {
         PDR13_W::new(self)
     }
     #[doc = "Bit 14 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr14(&mut self) -> PDR14_W<14> {
         PDR14_W::new(self)
     }
     #[doc = "Bit 15 - Pmn Direction"]
     #[inline(always)]
+    #[must_use]
     pub fn pdr15(&mut self) -> PDR15_W<15> {
         PDR15_W::new(self)
     }
@@ -1016,11 +1032,10 @@ impl crate::Readable for PDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [pdr::W](W) writer structure"]
 impl crate::Writable for PDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PDR to value 0"]
 impl crate::Resettable for PDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

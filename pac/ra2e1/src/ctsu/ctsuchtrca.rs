@@ -37,7 +37,7 @@ impl From<crate::W<CTSUCHTRCA_SPEC>> for W {
 #[doc = "Field `CHTRC00` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC00_R = crate::BitReader<CHTRC00_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC00_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> CHTRC00_W<'a, O> {
 #[doc = "Field `CHTRC02` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC02_R = crate::BitReader<CHTRC02_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC02_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> CHTRC02_W<'a, O> {
 #[doc = "Field `CHTRC04` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC04_R = crate::BitReader<CHTRC04_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC04_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> CHTRC04_W<'a, O> {
 #[doc = "Field `CHTRC05` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC05_R = crate::BitReader<CHTRC05_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC05_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> CHTRC05_W<'a, O> {
 #[doc = "Field `CHTRC06` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC06_R = crate::BitReader<CHTRC06_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC06_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> CHTRC06_W<'a, O> {
 #[doc = "Field `CHTRC07` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC07_R = crate::BitReader<CHTRC07_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC07_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> CHTRC07_W<'a, O> {
 #[doc = "Field `CHTRC08` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC08_R = crate::BitReader<CHTRC08_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC08_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> CHTRC08_W<'a, O> {
 #[doc = "Field `CHTRC09` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC09_R = crate::BitReader<CHTRC09_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC09_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> CHTRC09_W<'a, O> {
 #[doc = "Field `CHTRC10` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC10_R = crate::BitReader<CHTRC10_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC10_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -487,7 +487,7 @@ impl<'a, const O: u8> CHTRC10_W<'a, O> {
 #[doc = "Field `CHTRC11` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC11_R = crate::BitReader<CHTRC11_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC11_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -537,7 +537,7 @@ impl<'a, const O: u8> CHTRC11_W<'a, O> {
 #[doc = "Field `CHTRC12` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC12_R = crate::BitReader<CHTRC12_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC12_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -587,7 +587,7 @@ impl<'a, const O: u8> CHTRC12_W<'a, O> {
 #[doc = "Field `CHTRC13` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC13_R = crate::BitReader<CHTRC13_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC13_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -637,7 +637,7 @@ impl<'a, const O: u8> CHTRC13_W<'a, O> {
 #[doc = "Field `CHTRC14` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC14_R = crate::BitReader<CHTRC14_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC14_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -687,7 +687,7 @@ impl<'a, const O: u8> CHTRC14_W<'a, O> {
 #[doc = "Field `CHTRC15` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC15_R = crate::BitReader<CHTRC15_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC15_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -737,7 +737,7 @@ impl<'a, const O: u8> CHTRC15_W<'a, O> {
 #[doc = "Field `CHTRC16` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC16_R = crate::BitReader<CHTRC16_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC16_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -787,7 +787,7 @@ impl<'a, const O: u8> CHTRC16_W<'a, O> {
 #[doc = "Field `CHTRC17` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC17_R = crate::BitReader<CHTRC17_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC17_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -837,7 +837,7 @@ impl<'a, const O: u8> CHTRC17_W<'a, O> {
 #[doc = "Field `CHTRC18` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC18_R = crate::BitReader<CHTRC18_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC18_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -887,7 +887,7 @@ impl<'a, const O: u8> CHTRC18_W<'a, O> {
 #[doc = "Field `CHTRC21` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC21_R = crate::BitReader<CHTRC21_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC21_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -937,7 +937,7 @@ impl<'a, const O: u8> CHTRC21_W<'a, O> {
 #[doc = "Field `CHTRC22` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC22_R = crate::BitReader<CHTRC22_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC22_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -987,7 +987,7 @@ impl<'a, const O: u8> CHTRC22_W<'a, O> {
 #[doc = "Field `CHTRC23` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC23_R = crate::BitReader<CHTRC23_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC23_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -1037,7 +1037,7 @@ impl<'a, const O: u8> CHTRC23_W<'a, O> {
 #[doc = "Field `CHTRC24` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC24_R = crate::BitReader<CHTRC24_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC24_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -1087,7 +1087,7 @@ impl<'a, const O: u8> CHTRC24_W<'a, O> {
 #[doc = "Field `CHTRC25` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC25_R = crate::BitReader<CHTRC25_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC25_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -1137,7 +1137,7 @@ impl<'a, const O: u8> CHTRC25_W<'a, O> {
 #[doc = "Field `CHTRC26` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC26_R = crate::BitReader<CHTRC26_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC26_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -1187,7 +1187,7 @@ impl<'a, const O: u8> CHTRC26_W<'a, O> {
 #[doc = "Field `CHTRC27` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC27_R = crate::BitReader<CHTRC27_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC27_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -1237,7 +1237,7 @@ impl<'a, const O: u8> CHTRC27_W<'a, O> {
 #[doc = "Field `CHTRC28` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC28_R = crate::BitReader<CHTRC28_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC28_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -1287,7 +1287,7 @@ impl<'a, const O: u8> CHTRC28_W<'a, O> {
 #[doc = "Field `CHTRC30` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC30_R = crate::BitReader<CHTRC30_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC30_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -1337,7 +1337,7 @@ impl<'a, const O: u8> CHTRC30_W<'a, O> {
 #[doc = "Field `CHTRC31` reader - CTSU Channel Transmit/Receive Control A"]
 pub type CHTRC31_R = crate::BitReader<CHTRC31_A>;
 #[doc = "CTSU Channel Transmit/Receive Control A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHTRC31_A {
     #[doc = "0: Reception"]
     _0 = 0,
@@ -1524,136 +1524,163 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc00(&mut self) -> CHTRC00_W<0> {
         CHTRC00_W::new(self)
     }
     #[doc = "Bit 2 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc02(&mut self) -> CHTRC02_W<2> {
         CHTRC02_W::new(self)
     }
     #[doc = "Bit 4 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc04(&mut self) -> CHTRC04_W<4> {
         CHTRC04_W::new(self)
     }
     #[doc = "Bit 5 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc05(&mut self) -> CHTRC05_W<5> {
         CHTRC05_W::new(self)
     }
     #[doc = "Bit 6 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc06(&mut self) -> CHTRC06_W<6> {
         CHTRC06_W::new(self)
     }
     #[doc = "Bit 7 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc07(&mut self) -> CHTRC07_W<7> {
         CHTRC07_W::new(self)
     }
     #[doc = "Bit 8 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc08(&mut self) -> CHTRC08_W<8> {
         CHTRC08_W::new(self)
     }
     #[doc = "Bit 9 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc09(&mut self) -> CHTRC09_W<9> {
         CHTRC09_W::new(self)
     }
     #[doc = "Bit 10 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc10(&mut self) -> CHTRC10_W<10> {
         CHTRC10_W::new(self)
     }
     #[doc = "Bit 11 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc11(&mut self) -> CHTRC11_W<11> {
         CHTRC11_W::new(self)
     }
     #[doc = "Bit 12 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc12(&mut self) -> CHTRC12_W<12> {
         CHTRC12_W::new(self)
     }
     #[doc = "Bit 13 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc13(&mut self) -> CHTRC13_W<13> {
         CHTRC13_W::new(self)
     }
     #[doc = "Bit 14 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc14(&mut self) -> CHTRC14_W<14> {
         CHTRC14_W::new(self)
     }
     #[doc = "Bit 15 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc15(&mut self) -> CHTRC15_W<15> {
         CHTRC15_W::new(self)
     }
     #[doc = "Bit 16 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc16(&mut self) -> CHTRC16_W<16> {
         CHTRC16_W::new(self)
     }
     #[doc = "Bit 17 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc17(&mut self) -> CHTRC17_W<17> {
         CHTRC17_W::new(self)
     }
     #[doc = "Bit 18 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc18(&mut self) -> CHTRC18_W<18> {
         CHTRC18_W::new(self)
     }
     #[doc = "Bit 21 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc21(&mut self) -> CHTRC21_W<21> {
         CHTRC21_W::new(self)
     }
     #[doc = "Bit 22 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc22(&mut self) -> CHTRC22_W<22> {
         CHTRC22_W::new(self)
     }
     #[doc = "Bit 23 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc23(&mut self) -> CHTRC23_W<23> {
         CHTRC23_W::new(self)
     }
     #[doc = "Bit 24 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc24(&mut self) -> CHTRC24_W<24> {
         CHTRC24_W::new(self)
     }
     #[doc = "Bit 25 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc25(&mut self) -> CHTRC25_W<25> {
         CHTRC25_W::new(self)
     }
     #[doc = "Bit 26 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc26(&mut self) -> CHTRC26_W<26> {
         CHTRC26_W::new(self)
     }
     #[doc = "Bit 27 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc27(&mut self) -> CHTRC27_W<27> {
         CHTRC27_W::new(self)
     }
     #[doc = "Bit 28 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc28(&mut self) -> CHTRC28_W<28> {
         CHTRC28_W::new(self)
     }
     #[doc = "Bit 30 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc30(&mut self) -> CHTRC30_W<30> {
         CHTRC30_W::new(self)
     }
     #[doc = "Bit 31 - CTSU Channel Transmit/Receive Control A"]
     #[inline(always)]
+    #[must_use]
     pub fn chtrc31(&mut self) -> CHTRC31_W<31> {
         CHTRC31_W::new(self)
     }
@@ -1676,11 +1703,10 @@ impl crate::Readable for CTSUCHTRCA_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctsuchtrca::W](W) writer structure"]
 impl crate::Writable for CTSUCHTRCA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTSUCHTRCA to value 0"]
 impl crate::Resettable for CTSUCHTRCA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

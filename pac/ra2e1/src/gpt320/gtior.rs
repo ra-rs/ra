@@ -41,7 +41,7 @@ pub type GTIOA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GTIOR_SPEC, u8, 
 #[doc = "Field `OADFLT` reader - GTIOCnA Pin Output Value Setting at the Count Stop"]
 pub type OADFLT_R = crate::BitReader<OADFLT_A>;
 #[doc = "GTIOCnA Pin Output Value Setting at the Count Stop\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OADFLT_A {
     #[doc = "0: The GTIOCnA pin outputs low when counting stops"]
     _0 = 0,
@@ -91,7 +91,7 @@ impl<'a, const O: u8> OADFLT_W<'a, O> {
 #[doc = "Field `OAHLD` reader - GTIOCnA Pin Output Setting at the Start/Stop Count"]
 pub type OAHLD_R = crate::BitReader<OAHLD_A>;
 #[doc = "GTIOCnA Pin Output Setting at the Start/Stop Count\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OAHLD_A {
     #[doc = "0: The GTIOCnA pin output level at the start or stop of counting depends on the register setting"]
     _0 = 0,
@@ -141,7 +141,7 @@ impl<'a, const O: u8> OAHLD_W<'a, O> {
 #[doc = "Field `OAE` reader - GTIOCnA Pin Output Enable"]
 pub type OAE_R = crate::BitReader<OAE_A>;
 #[doc = "GTIOCnA Pin Output Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OAE_A {
     #[doc = "0: Output is disabled"]
     _0 = 0,
@@ -191,7 +191,7 @@ impl<'a, const O: u8> OAE_W<'a, O> {
 #[doc = "Field `OADF` reader - GTIOCnA Pin Disable Value Setting"]
 pub type OADF_R = crate::FieldReader<u8, OADF_A>;
 #[doc = "GTIOCnA Pin Disable Value Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum OADF_A {
     #[doc = "0: Output disable is prohibited"]
@@ -269,7 +269,7 @@ impl<'a, const O: u8> OADF_W<'a, O> {
 #[doc = "Field `NFAEN` reader - Noise Filter A Enable"]
 pub type NFAEN_R = crate::BitReader<NFAEN_A>;
 #[doc = "Noise Filter A Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NFAEN_A {
     #[doc = "0: The noise filter for the GTIOCnA pin is disabled"]
     _0 = 0,
@@ -319,7 +319,7 @@ impl<'a, const O: u8> NFAEN_W<'a, O> {
 #[doc = "Field `NFCSA` reader - Noise Filter A Sampling Clock Select"]
 pub type NFCSA_R = crate::FieldReader<u8, NFCSA_A>;
 #[doc = "Noise Filter A Sampling Clock Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum NFCSA_A {
     #[doc = "0: PCLKD/1"]
@@ -401,7 +401,7 @@ pub type GTIOB_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GTIOR_SPEC, u8, 
 #[doc = "Field `OBDFLT` reader - GTIOCnB Pin Output Value Setting at the Count Stop"]
 pub type OBDFLT_R = crate::BitReader<OBDFLT_A>;
 #[doc = "GTIOCnB Pin Output Value Setting at the Count Stop\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OBDFLT_A {
     #[doc = "0: The GTIOCnB pin outputs low when counting stops"]
     _0 = 0,
@@ -451,7 +451,7 @@ impl<'a, const O: u8> OBDFLT_W<'a, O> {
 #[doc = "Field `OBHLD` reader - GTIOCnB Pin Output Setting at the Start/Stop Count"]
 pub type OBHLD_R = crate::BitReader<OBHLD_A>;
 #[doc = "GTIOCnB Pin Output Setting at the Start/Stop Count\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OBHLD_A {
     #[doc = "0: The GTIOCnB pin output level at the start/stop of counting depends on the register setting"]
     _0 = 0,
@@ -501,7 +501,7 @@ impl<'a, const O: u8> OBHLD_W<'a, O> {
 #[doc = "Field `OBE` reader - GTIOCnB Pin Output Enable"]
 pub type OBE_R = crate::BitReader<OBE_A>;
 #[doc = "GTIOCnB Pin Output Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OBE_A {
     #[doc = "0: Output is disabled"]
     _0 = 0,
@@ -551,7 +551,7 @@ impl<'a, const O: u8> OBE_W<'a, O> {
 #[doc = "Field `OBDF` reader - GTIOCnB Pin Disable Value Setting"]
 pub type OBDF_R = crate::FieldReader<u8, OBDF_A>;
 #[doc = "GTIOCnB Pin Disable Value Setting\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum OBDF_A {
     #[doc = "0: Output disable is prohibited"]
@@ -629,7 +629,7 @@ impl<'a, const O: u8> OBDF_W<'a, O> {
 #[doc = "Field `NFBEN` reader - Noise Filter B Enable"]
 pub type NFBEN_R = crate::BitReader<NFBEN_A>;
 #[doc = "Noise Filter B Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NFBEN_A {
     #[doc = "0: The noise filter for the GTIOCnB pin is disabled"]
     _0 = 0,
@@ -679,7 +679,7 @@ impl<'a, const O: u8> NFBEN_W<'a, O> {
 #[doc = "Field `NFCSB` reader - Noise Filter B Sampling Clock Select"]
 pub type NFCSB_R = crate::FieldReader<u8, NFCSB_A>;
 #[doc = "Noise Filter B Sampling Clock Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum NFCSB_A {
     #[doc = "0: PCLKD/1"]
@@ -829,71 +829,85 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - GTIOCnA Pin Function Select"]
     #[inline(always)]
+    #[must_use]
     pub fn gtioa(&mut self) -> GTIOA_W<0> {
         GTIOA_W::new(self)
     }
     #[doc = "Bit 6 - GTIOCnA Pin Output Value Setting at the Count Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn oadflt(&mut self) -> OADFLT_W<6> {
         OADFLT_W::new(self)
     }
     #[doc = "Bit 7 - GTIOCnA Pin Output Setting at the Start/Stop Count"]
     #[inline(always)]
+    #[must_use]
     pub fn oahld(&mut self) -> OAHLD_W<7> {
         OAHLD_W::new(self)
     }
     #[doc = "Bit 8 - GTIOCnA Pin Output Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn oae(&mut self) -> OAE_W<8> {
         OAE_W::new(self)
     }
     #[doc = "Bits 9:10 - GTIOCnA Pin Disable Value Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn oadf(&mut self) -> OADF_W<9> {
         OADF_W::new(self)
     }
     #[doc = "Bit 13 - Noise Filter A Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn nfaen(&mut self) -> NFAEN_W<13> {
         NFAEN_W::new(self)
     }
     #[doc = "Bits 14:15 - Noise Filter A Sampling Clock Select"]
     #[inline(always)]
+    #[must_use]
     pub fn nfcsa(&mut self) -> NFCSA_W<14> {
         NFCSA_W::new(self)
     }
     #[doc = "Bits 16:20 - GTIOCnB Pin Function Select"]
     #[inline(always)]
+    #[must_use]
     pub fn gtiob(&mut self) -> GTIOB_W<16> {
         GTIOB_W::new(self)
     }
     #[doc = "Bit 22 - GTIOCnB Pin Output Value Setting at the Count Stop"]
     #[inline(always)]
+    #[must_use]
     pub fn obdflt(&mut self) -> OBDFLT_W<22> {
         OBDFLT_W::new(self)
     }
     #[doc = "Bit 23 - GTIOCnB Pin Output Setting at the Start/Stop Count"]
     #[inline(always)]
+    #[must_use]
     pub fn obhld(&mut self) -> OBHLD_W<23> {
         OBHLD_W::new(self)
     }
     #[doc = "Bit 24 - GTIOCnB Pin Output Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn obe(&mut self) -> OBE_W<24> {
         OBE_W::new(self)
     }
     #[doc = "Bits 25:26 - GTIOCnB Pin Disable Value Setting"]
     #[inline(always)]
+    #[must_use]
     pub fn obdf(&mut self) -> OBDF_W<25> {
         OBDF_W::new(self)
     }
     #[doc = "Bit 29 - Noise Filter B Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn nfben(&mut self) -> NFBEN_W<29> {
         NFBEN_W::new(self)
     }
     #[doc = "Bits 30:31 - Noise Filter B Sampling Clock Select"]
     #[inline(always)]
+    #[must_use]
     pub fn nfcsb(&mut self) -> NFCSB_W<30> {
         NFCSB_W::new(self)
     }
@@ -916,11 +930,10 @@ impl crate::Readable for GTIOR_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtior::W](W) writer structure"]
 impl crate::Writable for GTIOR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTIOR to value 0"]
 impl crate::Resettable for GTIOR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

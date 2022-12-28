@@ -37,7 +37,7 @@ impl From<crate::W<CTSUCHACB_SPEC>> for W {
 #[doc = "Field `CHAC32` reader - CTSU Channel Enable Control B"]
 pub type CHAC32_R = crate::BitReader<CHAC32_A>;
 #[doc = "CTSU Channel Enable Control B\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC32_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> CHAC32_W<'a, O> {
 #[doc = "Field `CHAC33` reader - CTSU Channel Enable Control B"]
 pub type CHAC33_R = crate::BitReader<CHAC33_A>;
 #[doc = "CTSU Channel Enable Control B\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC33_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> CHAC33_W<'a, O> {
 #[doc = "Field `CHAC34` reader - CTSU Channel Enable Control B"]
 pub type CHAC34_R = crate::BitReader<CHAC34_A>;
 #[doc = "CTSU Channel Enable Control B\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CHAC34_A {
     #[doc = "0: Do not measure"]
     _0 = 0,
@@ -204,16 +204,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CTSU Channel Enable Control B"]
     #[inline(always)]
+    #[must_use]
     pub fn chac32(&mut self) -> CHAC32_W<0> {
         CHAC32_W::new(self)
     }
     #[doc = "Bit 1 - CTSU Channel Enable Control B"]
     #[inline(always)]
+    #[must_use]
     pub fn chac33(&mut self) -> CHAC33_W<1> {
         CHAC33_W::new(self)
     }
     #[doc = "Bit 2 - CTSU Channel Enable Control B"]
     #[inline(always)]
+    #[must_use]
     pub fn chac34(&mut self) -> CHAC34_W<2> {
         CHAC34_W::new(self)
     }
@@ -236,11 +239,10 @@ impl crate::Readable for CTSUCHACB_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctsuchacb::W](W) writer structure"]
 impl crate::Writable for CTSUCHACB_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTSUCHACB to value 0"]
 impl crate::Resettable for CTSUCHACB_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

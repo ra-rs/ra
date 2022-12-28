@@ -37,7 +37,7 @@ impl From<crate::W<GTBER_SPEC>> for W {
 #[doc = "Field `BD0` reader - GTCCR Buffer Operation Disable"]
 pub type BD0_R = crate::BitReader<BD0_A>;
 #[doc = "GTCCR Buffer Operation Disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BD0_A {
     #[doc = "0: Buffer operation is enabled"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> BD0_W<'a, O> {
 #[doc = "Field `BD1` reader - GTPR Buffer Operation Disable"]
 pub type BD1_R = crate::BitReader<BD1_A>;
 #[doc = "GTPR Buffer Operation Disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BD1_A {
     #[doc = "0: Buffer operation is enabled"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> BD1_W<'a, O> {
 #[doc = "Field `CCRA` reader - GTCCRA Buffer Operation"]
 pub type CCRA_R = crate::FieldReader<u8, CCRA_A>;
 #[doc = "GTCCRA Buffer Operation\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CCRA_A {
     #[doc = "0: No buffer operation"]
@@ -189,7 +189,7 @@ impl<'a, const O: u8> CCRA_W<'a, O> {
 #[doc = "Field `CCRB` reader - GTCCRB Buffer Operation"]
 pub type CCRB_R = crate::FieldReader<u8, CCRB_A>;
 #[doc = "GTCCRB Buffer Operation\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CCRB_A {
     #[doc = "0: No buffer operation"]
@@ -241,7 +241,7 @@ impl<'a, const O: u8> CCRB_W<'a, O> {
 #[doc = "Field `PR` reader - GTPR Buffer Operation"]
 pub type PR_R = crate::FieldReader<u8, PR_A>;
 #[doc = "GTPR Buffer Operation\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum PR_A {
     #[doc = "0: No buffer operation"]
@@ -322,31 +322,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GTCCR Buffer Operation Disable"]
     #[inline(always)]
+    #[must_use]
     pub fn bd0(&mut self) -> BD0_W<0> {
         BD0_W::new(self)
     }
     #[doc = "Bit 1 - GTPR Buffer Operation Disable"]
     #[inline(always)]
+    #[must_use]
     pub fn bd1(&mut self) -> BD1_W<1> {
         BD1_W::new(self)
     }
     #[doc = "Bits 16:17 - GTCCRA Buffer Operation"]
     #[inline(always)]
+    #[must_use]
     pub fn ccra(&mut self) -> CCRA_W<16> {
         CCRA_W::new(self)
     }
     #[doc = "Bits 18:19 - GTCCRB Buffer Operation"]
     #[inline(always)]
+    #[must_use]
     pub fn ccrb(&mut self) -> CCRB_W<18> {
         CCRB_W::new(self)
     }
     #[doc = "Bits 20:21 - GTPR Buffer Operation"]
     #[inline(always)]
+    #[must_use]
     pub fn pr(&mut self) -> PR_W<20> {
         PR_W::new(self)
     }
     #[doc = "Bit 22 - GTCCRA and GTCCRB Forcible Buffer Operation"]
     #[inline(always)]
+    #[must_use]
     pub fn ccrswt(&mut self) -> CCRSWT_W<22> {
         CCRSWT_W::new(self)
     }
@@ -369,11 +375,10 @@ impl crate::Readable for GTBER_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtber::W](W) writer structure"]
 impl crate::Writable for GTBER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTBER to value 0"]
 impl crate::Resettable for GTBER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

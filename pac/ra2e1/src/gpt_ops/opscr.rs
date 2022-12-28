@@ -55,7 +55,7 @@ pub type W_R = crate::BitReader<bool>;
 #[doc = "Field `EN` reader - Enable-Phase Output Control"]
 pub type EN_R = crate::BitReader<EN_A>;
 #[doc = "Enable-Phase Output Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EN_A {
     #[doc = "0: Do not output (Hi-Z external pin)"]
     _0 = 0,
@@ -105,7 +105,7 @@ impl<'a, const O: u8> EN_W<'a, O> {
 #[doc = "Field `FB` reader - External Feedback Signal Enable"]
 pub type FB_R = crate::BitReader<FB_A>;
 #[doc = "External Feedback Signal Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FB_A {
     #[doc = "0: Select the external input"]
     _0 = 0,
@@ -155,7 +155,7 @@ impl<'a, const O: u8> FB_W<'a, O> {
 #[doc = "Field `P` reader - Positive-Phase Output (P) Control"]
 pub type P_R = crate::BitReader<P_A>;
 #[doc = "Positive-Phase Output (P) Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum P_A {
     #[doc = "0: Level signal output"]
     _0 = 0,
@@ -205,7 +205,7 @@ impl<'a, const O: u8> P_W<'a, O> {
 #[doc = "Field `N` reader - Negative-Phase Output (N) Control"]
 pub type N_R = crate::BitReader<N_A>;
 #[doc = "Negative-Phase Output (N) Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum N_A {
     #[doc = "0: Level signal output"]
     _0 = 0,
@@ -255,7 +255,7 @@ impl<'a, const O: u8> N_W<'a, O> {
 #[doc = "Field `INV` reader - Invert-Phase Output Control"]
 pub type INV_R = crate::BitReader<INV_A>;
 #[doc = "Invert-Phase Output Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum INV_A {
     #[doc = "0: Positive logic (active-high) output"]
     _0 = 0,
@@ -305,7 +305,7 @@ impl<'a, const O: u8> INV_W<'a, O> {
 #[doc = "Field `RV` reader - Output Phase Rotation Direction Reversal Control"]
 pub type RV_R = crate::BitReader<RV_A>;
 #[doc = "Output Phase Rotation Direction Reversal Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum RV_A {
     #[doc = "0: Positive rotation"]
     _0 = 0,
@@ -355,7 +355,7 @@ impl<'a, const O: u8> RV_W<'a, O> {
 #[doc = "Field `ALIGN` reader - Input Phase Alignment"]
 pub type ALIGN_R = crate::BitReader<ALIGN_A>;
 #[doc = "Input Phase Alignment\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ALIGN_A {
     #[doc = "0: Input phase aligned to PCLKD"]
     _0 = 0,
@@ -409,7 +409,7 @@ pub type GRP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OPSCR_SPEC, u8, u8
 #[doc = "Field `GODF` reader - Group Output Disable Function"]
 pub type GODF_R = crate::BitReader<GODF_A>;
 #[doc = "Group Output Disable Function\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GODF_A {
     #[doc = "0: This bit function is ignored"]
     _0 = 0,
@@ -459,7 +459,7 @@ impl<'a, const O: u8> GODF_W<'a, O> {
 #[doc = "Field `NFEN` reader - External Input Noise Filter Enable"]
 pub type NFEN_R = crate::BitReader<NFEN_A>;
 #[doc = "External Input Noise Filter Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NFEN_A {
     #[doc = "0: Do not use a noise filter on the external input"]
     _0 = 0,
@@ -509,7 +509,7 @@ impl<'a, const O: u8> NFEN_W<'a, O> {
 #[doc = "Field `NFCS` reader - External Input Noise Filter Clock Selection"]
 pub type NFCS_R = crate::FieldReader<u8, NFCS_A>;
 #[doc = "External Input Noise Filter Clock Selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum NFCS_A {
     #[doc = "0: PCLKD/1"]
@@ -674,71 +674,85 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn uf(&mut self) -> UF_W<0> {
         UF_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn vf(&mut self) -> VF_W<1> {
         VF_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn wf(&mut self) -> WF_W<2> {
         WF_W::new(self)
     }
     #[doc = "Bit 8 - Enable-Phase Output Control"]
     #[inline(always)]
+    #[must_use]
     pub fn en(&mut self) -> EN_W<8> {
         EN_W::new(self)
     }
     #[doc = "Bit 16 - External Feedback Signal Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn fb(&mut self) -> FB_W<16> {
         FB_W::new(self)
     }
     #[doc = "Bit 17 - Positive-Phase Output (P) Control"]
     #[inline(always)]
+    #[must_use]
     pub fn p(&mut self) -> P_W<17> {
         P_W::new(self)
     }
     #[doc = "Bit 18 - Negative-Phase Output (N) Control"]
     #[inline(always)]
+    #[must_use]
     pub fn n(&mut self) -> N_W<18> {
         N_W::new(self)
     }
     #[doc = "Bit 19 - Invert-Phase Output Control"]
     #[inline(always)]
+    #[must_use]
     pub fn inv(&mut self) -> INV_W<19> {
         INV_W::new(self)
     }
     #[doc = "Bit 20 - Output Phase Rotation Direction Reversal Control"]
     #[inline(always)]
+    #[must_use]
     pub fn rv(&mut self) -> RV_W<20> {
         RV_W::new(self)
     }
     #[doc = "Bit 21 - Input Phase Alignment"]
     #[inline(always)]
+    #[must_use]
     pub fn align(&mut self) -> ALIGN_W<21> {
         ALIGN_W::new(self)
     }
     #[doc = "Bits 24:25 - Output Disabled Source Selection"]
     #[inline(always)]
+    #[must_use]
     pub fn grp(&mut self) -> GRP_W<24> {
         GRP_W::new(self)
     }
     #[doc = "Bit 26 - Group Output Disable Function"]
     #[inline(always)]
+    #[must_use]
     pub fn godf(&mut self) -> GODF_W<26> {
         GODF_W::new(self)
     }
     #[doc = "Bit 29 - External Input Noise Filter Enable"]
     #[inline(always)]
+    #[must_use]
     pub fn nfen(&mut self) -> NFEN_W<29> {
         NFEN_W::new(self)
     }
     #[doc = "Bits 30:31 - External Input Noise Filter Clock Selection"]
     #[inline(always)]
+    #[must_use]
     pub fn nfcs(&mut self) -> NFCS_W<30> {
         NFCS_W::new(self)
     }
@@ -761,11 +775,10 @@ impl crate::Readable for OPSCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [opscr::W](W) writer structure"]
 impl crate::Writable for OPSCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OPSCR to value 0"]
 impl crate::Resettable for OPSCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

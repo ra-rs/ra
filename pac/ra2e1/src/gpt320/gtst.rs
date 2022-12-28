@@ -37,7 +37,7 @@ impl From<crate::W<GTST_SPEC>> for W {
 #[doc = "Field `TCFA` reader - Input Capture/Compare Match Flag A"]
 pub type TCFA_R = crate::BitReader<TCFA_A>;
 #[doc = "Input Capture/Compare Match Flag A\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TCFA_A {
     #[doc = "0: No input capture/compare match of GTCCRA is generated"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> TCFA_W<'a, O> {
 #[doc = "Field `TCFB` reader - Input Capture/Compare Match Flag B"]
 pub type TCFB_R = crate::BitReader<TCFB_A>;
 #[doc = "Input Capture/Compare Match Flag B\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TCFB_A {
     #[doc = "0: No input capture/compare match of GTCCRB is generated"]
     _0 = 0,
@@ -137,7 +137,7 @@ impl<'a, const O: u8> TCFB_W<'a, O> {
 #[doc = "Field `TCFC` reader - Input Compare Match Flag C"]
 pub type TCFC_R = crate::BitReader<TCFC_A>;
 #[doc = "Input Compare Match Flag C\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TCFC_A {
     #[doc = "0: No compare match of GTCCRC is generated"]
     _0 = 0,
@@ -187,7 +187,7 @@ impl<'a, const O: u8> TCFC_W<'a, O> {
 #[doc = "Field `TCFD` reader - Input Compare Match Flag D"]
 pub type TCFD_R = crate::BitReader<TCFD_A>;
 #[doc = "Input Compare Match Flag D\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TCFD_A {
     #[doc = "0: No compare match of GTCCRD is generated"]
     _0 = 0,
@@ -237,7 +237,7 @@ impl<'a, const O: u8> TCFD_W<'a, O> {
 #[doc = "Field `TCFE` reader - Input Compare Match Flag E"]
 pub type TCFE_R = crate::BitReader<TCFE_A>;
 #[doc = "Input Compare Match Flag E\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TCFE_A {
     #[doc = "0: No compare match of GTCCRE is generated"]
     _0 = 0,
@@ -287,7 +287,7 @@ impl<'a, const O: u8> TCFE_W<'a, O> {
 #[doc = "Field `TCFF` reader - Input Compare Match Flag F"]
 pub type TCFF_R = crate::BitReader<TCFF_A>;
 #[doc = "Input Compare Match Flag F\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TCFF_A {
     #[doc = "0: No compare match of GTCCRF is generated"]
     _0 = 0,
@@ -337,7 +337,7 @@ impl<'a, const O: u8> TCFF_W<'a, O> {
 #[doc = "Field `TCFPO` reader - Overflow Flag"]
 pub type TCFPO_R = crate::BitReader<TCFPO_A>;
 #[doc = "Overflow Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TCFPO_A {
     #[doc = "0: No overflow (crest) occurred"]
     _0 = 0,
@@ -387,7 +387,7 @@ impl<'a, const O: u8> TCFPO_W<'a, O> {
 #[doc = "Field `TCFPU` reader - Underflow Flag"]
 pub type TCFPU_R = crate::BitReader<TCFPU_A>;
 #[doc = "Underflow Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TCFPU_A {
     #[doc = "0: No underflow (trough) occurred"]
     _0 = 0,
@@ -437,7 +437,7 @@ impl<'a, const O: u8> TCFPU_W<'a, O> {
 #[doc = "Field `TUCF` reader - Count Direction Flag"]
 pub type TUCF_R = crate::BitReader<TUCF_A>;
 #[doc = "Count Direction Flag\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TUCF_A {
     #[doc = "0: GTCNT counter counts downward"]
     _0 = 0,
@@ -473,7 +473,7 @@ impl TUCF_R {
 #[doc = "Field `ODF` reader - Output Disable Flag"]
 pub type ODF_R = crate::BitReader<ODF_A>;
 #[doc = "Output Disable Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ODF_A {
     #[doc = "0: No output disable request is generated"]
     _0 = 0,
@@ -509,7 +509,7 @@ impl ODF_R {
 #[doc = "Field `OABHF` reader - Same Time Output Level High Flag"]
 pub type OABHF_R = crate::BitReader<OABHF_A>;
 #[doc = "Same Time Output Level High Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OABHF_A {
     #[doc = "0: GTIOCnA pin and GTIOCnB pin do not output 1 at the same time"]
     _0 = 0,
@@ -545,7 +545,7 @@ impl OABHF_R {
 #[doc = "Field `OABLF` reader - Same Time Output Level Low Flag"]
 pub type OABLF_R = crate::BitReader<OABLF_A>;
 #[doc = "Same Time Output Level Low Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OABLF_A {
     #[doc = "0: GTIOCnA pin and GTIOCnB pin do not output 0 at the same time"]
     _0 = 0,
@@ -643,41 +643,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Input Capture/Compare Match Flag A"]
     #[inline(always)]
+    #[must_use]
     pub fn tcfa(&mut self) -> TCFA_W<0> {
         TCFA_W::new(self)
     }
     #[doc = "Bit 1 - Input Capture/Compare Match Flag B"]
     #[inline(always)]
+    #[must_use]
     pub fn tcfb(&mut self) -> TCFB_W<1> {
         TCFB_W::new(self)
     }
     #[doc = "Bit 2 - Input Compare Match Flag C"]
     #[inline(always)]
+    #[must_use]
     pub fn tcfc(&mut self) -> TCFC_W<2> {
         TCFC_W::new(self)
     }
     #[doc = "Bit 3 - Input Compare Match Flag D"]
     #[inline(always)]
+    #[must_use]
     pub fn tcfd(&mut self) -> TCFD_W<3> {
         TCFD_W::new(self)
     }
     #[doc = "Bit 4 - Input Compare Match Flag E"]
     #[inline(always)]
+    #[must_use]
     pub fn tcfe(&mut self) -> TCFE_W<4> {
         TCFE_W::new(self)
     }
     #[doc = "Bit 5 - Input Compare Match Flag F"]
     #[inline(always)]
+    #[must_use]
     pub fn tcff(&mut self) -> TCFF_W<5> {
         TCFF_W::new(self)
     }
     #[doc = "Bit 6 - Overflow Flag"]
     #[inline(always)]
+    #[must_use]
     pub fn tcfpo(&mut self) -> TCFPO_W<6> {
         TCFPO_W::new(self)
     }
     #[doc = "Bit 7 - Underflow Flag"]
     #[inline(always)]
+    #[must_use]
     pub fn tcfpu(&mut self) -> TCFPU_W<7> {
         TCFPU_W::new(self)
     }
@@ -700,11 +708,10 @@ impl crate::Readable for GTST_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtst::W](W) writer structure"]
 impl crate::Writable for GTST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTST to value 0x8000"]
 impl crate::Resettable for GTST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000;
 }

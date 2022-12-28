@@ -37,7 +37,7 @@ impl From<crate::W<GTCR_SPEC>> for W {
 #[doc = "Field `CST` reader - Count Start"]
 pub type CST_R = crate::BitReader<CST_A>;
 #[doc = "Count Start\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CST_A {
     #[doc = "0: Count operation is stopped"]
     _0 = 0,
@@ -87,7 +87,7 @@ impl<'a, const O: u8> CST_W<'a, O> {
 #[doc = "Field `MD` reader - Mode Select"]
 pub type MD_R = crate::FieldReader<u8, MD_A>;
 #[doc = "Mode Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MD_A {
     #[doc = "0: Saw-wave PWM mode (single buffer or double buffer possible)"]
@@ -217,7 +217,7 @@ impl<'a, const O: u8> MD_W<'a, O> {
 #[doc = "Field `TPCS` reader - Timer Prescaler Select"]
 pub type TPCS_R = crate::FieldReader<u8, TPCS_A>;
 #[doc = "Timer Prescaler Select\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TPCS_A {
     #[doc = "0: PCLKD/1"]
@@ -338,16 +338,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Count Start"]
     #[inline(always)]
+    #[must_use]
     pub fn cst(&mut self) -> CST_W<0> {
         CST_W::new(self)
     }
     #[doc = "Bits 16:18 - Mode Select"]
     #[inline(always)]
+    #[must_use]
     pub fn md(&mut self) -> MD_W<16> {
         MD_W::new(self)
     }
     #[doc = "Bits 24:26 - Timer Prescaler Select"]
     #[inline(always)]
+    #[must_use]
     pub fn tpcs(&mut self) -> TPCS_W<24> {
         TPCS_W::new(self)
     }
@@ -370,11 +373,10 @@ impl crate::Readable for GTCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [gtcr::W](W) writer structure"]
 impl crate::Writable for GTCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GTCR to value 0"]
 impl crate::Resettable for GTCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
