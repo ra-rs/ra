@@ -10,8 +10,14 @@ portable-atomic = \"0.3\"
 optional = true
 version = \"0.6.13\"
 
+[dependencies.critical-section]
+optional = true
+version = \"1.1\"
+
 [features]
 rt = [\"cortex-m-rt/device\"]
+critical-section = [\"dep:critical-section\", \"cortex-m/critical-section-single-core\"]
+
 '
 
 # Copy SVDs to patch directory as lowercase names
