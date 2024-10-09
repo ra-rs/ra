@@ -4,7 +4,7 @@
     <vendorID>Renesas</vendorID>
     <name>R7FA2E2A7</name>
     <series>RA2</series>
-    <version>1.10.01</version>
+    <version>1.30.00</version>
     <description>Arm Cortex-M23 based Microcontroller RA2E2 device</description>
     <licenseText>This software is supplied by Renesas Electronics Corporation and is only intended for \n
 use with Renesas products. No other uses are authorized. This software is owned by \n
@@ -37,6 +37,7 @@ http://www.renesas.com/disclaimer \n
         <deviceNumInterrupts>32</deviceNumInterrupts>
     </cpu>
     <headerSystemFilename>system_RA2E2</headerSystemFilename>
+    <headerDefinitionsPrefix>R_</headerDefinitionsPrefix>
     <addressUnitBits>8</addressUnitBits>
     <width>32</width>
     <size>32</size>
@@ -13541,6 +13542,11 @@ http://www.renesas.com/disclaimer \n
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
+                <offset>0x278</offset>
+                <size>4</size>
+                <usage>registers</usage>
+            </addressBlock>
+            <addressBlock>
                 <offset>0x503</offset>
                 <size>1</size>
                 <usage>registers</usage>
@@ -13548,11 +13554,6 @@ http://www.renesas.com/disclaimer \n
             <addressBlock>
                 <offset>0x50F</offset>
                 <size>1</size>
-                <usage>registers</usage>
-            </addressBlock>
-            <addressBlock>
-                <offset>0xA78</offset>
-                <size>4</size>
                 <usage>registers</usage>
             </addressBlock>
             <registers>
@@ -18650,98 +18651,9 @@ http://www.renesas.com/disclaimer \n
                     </fields>
                 </register>
                 <register>
-                    <name>PWPR</name>
-                    <description>Write-Protect Register</description>
-                    <addressOffset>0x503</addressOffset>
-                    <size>8</size>
-                    <access>read-write</access>
-                    <resetValue>0x80</resetValue>
-                    <resetMask>0xff</resetMask>
-                    <fields>
-                        <field>
-                            <name>PFSWE</name>
-                            <description>PmnPFS Register Write Enable</description>
-                            <lsb>6</lsb>
-                            <msb>6</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>Writing to the PmnPFS register is disabled</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Writing to the PmnPFS register is enabled</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
-                            <name>B0WI</name>
-                            <description>PFSWE Bit Write Disable</description>
-                            <lsb>7</lsb>
-                            <msb>7</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>Writing to the PFSWE bit is enabled</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Writing to the PFSWE bit is disabled</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                    </fields>
-                </register>
-                <register>
-                    <name>PRWCNTR</name>
-                    <description>Port Read Wait Control Register</description>
-                    <addressOffset>0x50F</addressOffset>
-                    <size>8</size>
-                    <access>read-write</access>
-                    <resetValue>0x01</resetValue>
-                    <resetMask>0xff</resetMask>
-                    <fields>
-                        <field>
-                            <name>WAIT</name>
-                            <description>Wait Cycle Control</description>
-                            <lsb>0</lsb>
-                            <msb>1</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>00</name>
-                                    <description>Setting prohibited</description>
-                                    <value>#00</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>01</name>
-                                    <description>Insert a 1-cycle wait</description>
-                                    <value>#01</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>10</name>
-                                    <description>Insert a 2-cycle wait</description>
-                                    <value>#10</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>11</name>
-                                    <description>Insert a 3-cycle wait</description>
-                                    <value>#11</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                    </fields>
-                </register>
-                <register>
                     <name>P914PFS</name>
                     <description>Port 914 Pin Function Select Register</description>
-                    <addressOffset>0xA78</addressOffset>
+                    <addressOffset>0x278</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000000</resetValue>
@@ -18912,7 +18824,7 @@ http://www.renesas.com/disclaimer \n
                     <name>P914PFS_HA</name>
                     <description>Port 914 Pin Function Select Register</description>
                     <alternateRegister>P914PFS</alternateRegister>
-                    <addressOffset>0xA7A</addressOffset>
+                    <addressOffset>0x27A</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0x0000</resetValue>
@@ -19057,7 +18969,7 @@ http://www.renesas.com/disclaimer \n
                     <name>P914PFS_BY</name>
                     <description>Port 914 Pin Function Select Register</description>
                     <alternateRegister>P914PFS</alternateRegister>
-                    <addressOffset>0xA7B</addressOffset>
+                    <addressOffset>0x27B</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19155,6 +19067,95 @@ http://www.renesas.com/disclaimer \n
                                     <name>1</name>
                                     <description>Output NMOS open-drain</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>PWPR</name>
+                    <description>Write-Protect Register</description>
+                    <addressOffset>0x503</addressOffset>
+                    <size>8</size>
+                    <access>read-write</access>
+                    <resetValue>0x80</resetValue>
+                    <resetMask>0xff</resetMask>
+                    <fields>
+                        <field>
+                            <name>PFSWE</name>
+                            <description>PmnPFS Register Write Enable</description>
+                            <lsb>6</lsb>
+                            <msb>6</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Writing to the PmnPFS register is disabled</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Writing to the PmnPFS register is enabled</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>B0WI</name>
+                            <description>PFSWE Bit Write Disable</description>
+                            <lsb>7</lsb>
+                            <msb>7</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Writing to the PFSWE bit is enabled</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Writing to the PFSWE bit is disabled</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>PRWCNTR</name>
+                    <description>Port Read Wait Control Register</description>
+                    <addressOffset>0x50F</addressOffset>
+                    <size>8</size>
+                    <access>read-write</access>
+                    <resetValue>0x01</resetValue>
+                    <resetMask>0xff</resetMask>
+                    <fields>
+                        <field>
+                            <name>WAIT</name>
+                            <description>Wait Cycle Control</description>
+                            <lsb>0</lsb>
+                            <msb>1</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>00</name>
+                                    <description>Setting prohibited</description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>01</name>
+                                    <description>Insert a 1-cycle wait</description>
+                                    <value>#01</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>10</name>
+                                    <description>Insert a 2-cycle wait</description>
+                                    <value>#10</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>11</name>
+                                    <description>Insert a 3-cycle wait</description>
+                                    <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -19997,19 +19998,19 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>RSTIRQS</name>
-                            <description>Reset Interrupt Request Select</description>
+                            <description>WDT Behavior Selection</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Enable non-maskable interrupt request or interrupt request output</description>
+                                    <description>Interrupt</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enable reset output</description>
+                                    <description>Reset</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -20027,7 +20028,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>SLCSTP</name>
-                            <description>WDT Count Stop Control Register</description>
+                            <description>Sleep-Mode Count Stop Control Register</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -23990,7 +23991,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>00</name>
-                                    <description>VCC is selected as the high-potential reference voltage</description>
+                                    <description>VCC0 is selected as the high-potential reference voltage</description>
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -24019,7 +24020,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>VSS is selected as the low-potential reference voltage.</description>
+                                    <description>VSS0 is selected as the low-potential reference voltage.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -37732,25 +37733,6 @@ http://www.renesas.com/disclaimer \n
                             </enumeratedValues>
                         </field>
                         <field>
-                            <name>DVIBITS</name>
-                            <description>Device IBI Time-stamp</description>
-                            <lsb>15</lsb>
-                            <msb>15</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>The Master shall not time-stamp IBIs from this Device with Master Time-stamps.</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>The Master shall time-stamp IBIs for this Device with Master Time-stamps.</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
                             <name>DVDYAD</name>
                             <description>Device I3C Dynamic Address</description>
                             <lsb>16</lsb>
@@ -37876,7 +37858,7 @@ http://www.renesas.com/disclaimer \n
                             <description>Slave Device IBI Payload</description>
                             <lsb>12</lsb>
                             <msb>12</msb>
-                            <access>read-write</access>
+                            <access>read-only</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
@@ -38441,7 +38423,7 @@ http://www.renesas.com/disclaimer \n
                             <description>Protocol Error</description>
                             <lsb>5</lsb>
                             <msb>5</msb>
-                            <access>read-write</access>
+                            <access>read-only</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
@@ -38944,7 +38926,7 @@ http://www.renesas.com/disclaimer \n
                     <addressOffset>0x3CC</addressOffset>
                     <size>32</size>
                     <access>read-only</access>
-                    <resetValue>0x00000000</resetValue>
+                    <resetValue>0x0000000f</resetValue>
                     <resetMask>0xffffffff</resetMask>
                     <fields>
                         <field>
@@ -39405,7 +39387,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>TIES</name>
-                            <description>AGTWIOn Pin Input Enable</description>
+                            <description>AGTIOn Pin Input Enable</description>
                             <lsb>4</lsb>
                             <msb>4</msb>
                             <access>read-write</access>
@@ -39442,19 +39424,19 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>TOE</name>
-                            <description>AGTWOn pin Output Enable</description>
+                            <description>AGTOn pin Output Enable</description>
                             <lsb>2</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>AGTWOn pin output disabled</description>
+                                    <description>AGTOn pin output disabled</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>AGTWOn pin output enabled</description>
+                                    <description>AGTOn pin output enabled</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -39502,7 +39484,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>01</name>
-                                    <description>Event is counted during polarity period specified for AGTWEEn pin</description>
+                                    <description>Event is counted during polarity period specified for AGTEEn pin</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -39525,7 +39507,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>EEPS</name>
-                            <description>AGTWEEn Polarity Selection</description>
+                            <description>AGTEEn Polarity Selection</description>
                             <lsb>2</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
@@ -39574,38 +39556,38 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>TOEA</name>
-                            <description>AGTWOAn Pin Output Enable</description>
+                            <description>AGTOAn Pin Output Enable</description>
                             <lsb>1</lsb>
                             <msb>1</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>AGTWOAn pin output disabled</description>
+                                    <description>AGTOAn pin output disabled</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>AGTWOAn pin output enabled</description>
+                                    <description>AGTOAn pin output enabled</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
                         <field>
                             <name>TOPOLA</name>
-                            <description>AGTWOAn Pin Polarity Select</description>
+                            <description>AGTOAn Pin Polarity Select</description>
                             <lsb>2</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>AGTWOAn pin output is started on low. i.e. normal output</description>
+                                    <description>AGTOAn pin output is started on low. i.e. normal output</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>AGTWOAn pin output is started on high. i.e. inverted output</description>
+                                    <description>AGTOAn pin output is started on high. i.e. inverted output</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -39631,38 +39613,38 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>TOEB</name>
-                            <description>AGTWOBn Pin Output Enable</description>
+                            <description>AGTOBn Pin Output Enable</description>
                             <lsb>5</lsb>
                             <msb>5</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>AGTWOBn pin output disabled</description>
+                                    <description>AGTOBn pin output disabled</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>AGTWOBn pin output enabled</description>
+                                    <description>AGTOBn pin output enabled</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
                         <field>
                             <name>TOPOLB</name>
-                            <description>AGTWOBn Pin Polarity Select</description>
+                            <description>AGTOBn Pin Polarity Select</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>AGTWOBn pin output is started on low. i.e. normal output</description>
+                                    <description>AGTOBn pin output is started on low. i.e. normal output</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>AGTWOBn pin output is started on high. i.e. inverted output</description>
+                                    <description>AGTOBn pin output is started on high. i.e. inverted output</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -39802,7 +39784,7 @@ http://www.renesas.com/disclaimer \n
             </addressBlock>
             <addressBlock>
                 <offset>0x228</offset>
-                <size>4</size>
+                <size>2</size>
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
@@ -40702,10 +40684,10 @@ http://www.renesas.com/disclaimer \n
                     <name>TSCDR</name>
                     <description>Temperature Sensor Calibration Data Register</description>
                     <addressOffset>0x0228</addressOffset>
-                    <size>32</size>
+                    <size>16</size>
                     <access>read-only</access>
-                    <resetValue>0x00000000</resetValue>
-                    <resetMask>0x00000000</resetMask>
+                    <resetValue>0x0000</resetValue>
+                    <resetMask>0x0000</resetMask>
                     <fields>
                         <field>
                             <name>TSCDR</name>

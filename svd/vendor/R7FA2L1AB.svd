@@ -4,7 +4,7 @@
     <vendorID>Renesas</vendorID>
     <name>R7FA2L1AB</name>
     <series>RA2L1</series>
-    <version>1.20.00</version>
+    <version>1.40.02</version>
     <description>Arm Cortex-M23 based Microcontroller RA2L1 group</description>
     <licenseText>This software is supplied by Renesas Electronics Corporation and is only intended for \n
 use with Renesas products. No other uses are authorized. This software is owned by \n
@@ -37,6 +37,7 @@ http://www.renesas.com/disclaimer \n
         <deviceNumInterrupts>32</deviceNumInterrupts>
     </cpu>
     <headerSystemFilename>system_RA2L1</headerSystemFilename>
+    <headerDefinitionsPrefix>R_</headerDefinitionsPrefix>
     <addressUnitBits>8</addressUnitBits>
     <width>32</width>
     <size>32</size>
@@ -2417,7 +2418,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>OSTEN</name>
-                            <description>Oscillation Stop Detection Interrupt Enable</description>
+                            <description>Main Clock Oscillation Stop Detection Interrupt Enable</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-write</access>
@@ -2713,7 +2714,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>BUSSCLR</name>
-                            <description>Bus Slave Error Clear</description>
+                            <description>Bus Slave MPU Error Interrupt Status Flag Clear</description>
                             <lsb>10</lsb>
                             <msb>10</msb>
                             <access>read-write</access>
@@ -2751,7 +2752,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>SPECLR</name>
-                            <description>CPU Stack Pointer Monitor Interrupt Clear</description>
+                            <description>CPU Stack Pointer Monitor Interrupt Status Flag Clear</description>
                             <lsb>12</lsb>
                             <msb>12</msb>
                             <access>read-write</access>
@@ -2857,19 +2858,19 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>OSTST</name>
-                            <description>Oscillation Stop Detection Interrupt Status Flag</description>
+                            <description>Main Clock Oscillation Stop Detection Interrupt Status Flag</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-only</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Interrupt not requested for main oscillation stop</description>
+                                    <description>Interrupt not requested for main clock oscillation stop</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Interrupt requested for main oscillation stop</description>
+                                    <description>Interrupt requested for main clock oscillation stop</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -6310,7 +6311,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>4.5 V =&lt; VCC â¤ 5.5 V</description>
+                                    <description>4.5 V =&lt; VCC ≤ 5.5 V</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -26632,19 +26633,19 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>RSTIRQS</name>
-                            <description>Reset Interrupt Request Select</description>
+                            <description>WDT Behavior Selection</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Enable non-maskable interrupt request or interrupt request output</description>
+                                    <description>Interrupt</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enable reset output</description>
+                                    <description>Reset</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -26662,7 +26663,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>SLCSTP</name>
-                            <description>WDT Count Stop Control Register</description>
+                            <description>Sleep-Mode Count Stop Control Register</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -35467,17 +35468,17 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>001</name>
-                                    <description>2-time conversion (one addition)</description>
+                                    <description>2-time conversion (1 addition)</description>
                                     <value>#001</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>010</name>
-                                    <description>3-time conversion (two additions)</description>
+                                    <description>3-time conversion (2 additions)</description>
                                     <value>#010</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>011</name>
-                                    <description>4-time conversion (three additions)</description>
+                                    <description>4-time conversion (3 additions)</description>
                                     <value>#011</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -35560,7 +35561,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>Reference voltage Ã 1/2</description>
+                                    <description>Reference voltage × 1/2</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -36460,7 +36461,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>Self-diagnosis was executed using the reference voltage Ã 1/2.</description>
+                                    <description>Self-diagnosis was executed using the reference voltage × 1/2.</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -36738,7 +36739,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>00</name>
-                                    <description>VCC is selected as the high-potential reference voltage</description>
+                                    <description>AVCC0 is selected as the high-potential reference voltage</description>
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -36767,7 +36768,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>VSS is selected as the low-potential reference voltage.</description>
+                                    <description>AVSS0 is selected as the low-potential reference voltage.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -41836,7 +41837,7 @@ http://www.renesas.com/disclaimer \n
         <peripheral>
             <name>SCI1</name>
             <description>Serial Communication Interface 0</description>
-            <baseAddress>0x40070200</baseAddress>
+            <baseAddress>0x40070020</baseAddress>
             <addressBlock>
                 <offset>0x00</offset>
                 <size>19</size>
@@ -43457,17 +43458,17 @@ http://www.renesas.com/disclaimer \n
         <peripheral derivedFrom="SCI1">
             <name>SCI2</name>
             <description>Serial Communication Interface 0</description>
-            <baseAddress>0x40070400</baseAddress>
+            <baseAddress>0x40070040</baseAddress>
         </peripheral>
         <peripheral derivedFrom="SCI1">
             <name>SCI3</name>
             <description>Serial Communication Interface 0</description>
-            <baseAddress>0x40070600</baseAddress>
+            <baseAddress>0x40070060</baseAddress>
         </peripheral>
         <peripheral derivedFrom="SCI1">
             <name>SCI9</name>
             <description>Serial Communication Interface 0</description>
-            <baseAddress>0x40071200</baseAddress>
+            <baseAddress>0x40070120</baseAddress>
         </peripheral>
         <peripheral>
             <name>SPI0</name>
@@ -53950,7 +53951,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>VCC â¥ 2.4 V: Normal voltage operating mode VCC &lt; 2.4 V: Setting prohibited </description>
+                                    <description>VCC ≥ 2.4 V: Normal voltage operating mode VCC &lt; 2.4 V: Setting prohibited </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -53969,12 +53970,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>80 ÂµA when ATUNE2 = 0 20 ÂµA when ATUNE2 = 1 </description>
+                                    <description>80 µA when ATUNE2 = 0 20 µA when ATUNE2 = 1 </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>40 ÂµA when ATUNE2 = 0 160 ÂµA when ATUNE2 = 1 </description>
+                                    <description>40 µA when ATUNE2 = 0 160 µA when ATUNE2 = 1 </description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -54074,12 +54075,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>80 ÂµA when ATUNE1 = 0 40 ÂµA when ATUNE1 = 1 </description>
+                                    <description>80 µA when ATUNE1 = 0 40 µA when ATUNE1 = 1 </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>20 ÂµA when ATUNE1 = 0 160 ÂµA when ATUNE1 = 1 </description>
+                                    <description>20 µA when ATUNE1 = 0 160 µA when ATUNE1 = 1 </description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -54093,7 +54094,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>00</name>
-                                    <description>2.5 ÂµA constant current load</description>
+                                    <description>2.5 µA constant current load</description>
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -54103,7 +54104,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>20 ÂµA constant current load and overcurrent detector disabled</description>
+                                    <description>20 µA constant current load and overcurrent detector disabled</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -54256,6 +54257,16 @@ http://www.renesas.com/disclaimer \n
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
+                </register>
+                <register>
+                    <name>CTSUCRAH</name>
+                    <description>CTSU Control Register A</description>
+                    <alternateRegister>CTSUCRA</alternateRegister>
+                    <addressOffset>0x02</addressOffset>
+                    <size>16</size>
+                    <access>read-write</access>
+                    <resetValue>0x0000</resetValue>
+                    <resetMask>0xffff</resetMask>
                 </register>
                 <register>
                     <name>CTSUCR2</name>
@@ -58629,7 +58640,7 @@ http://www.renesas.com/disclaimer \n
             </addressBlock>
             <addressBlock>
                 <offset>0x228</offset>
-                <size>4</size>
+                <size>2</size>
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
@@ -59534,10 +59545,10 @@ http://www.renesas.com/disclaimer \n
                     <name>TSCDR</name>
                     <description>Temperature Sensor Calibration Data Register</description>
                     <addressOffset>0x0228</addressOffset>
-                    <size>32</size>
+                    <size>16</size>
                     <access>read-only</access>
-                    <resetValue>0x00000000</resetValue>
-                    <resetMask>0x00000000</resetMask>
+                    <resetValue>0x0000</resetValue>
+                    <resetMask>0x0000</resetMask>
                     <fields>
                         <field>
                             <name>TSCDR</name>
@@ -59598,28 +59609,28 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>TRESULT0</name>
-                            <description>The coefficient of variation for the 7.5 kâ¦ reference load resistance is stored.</description>
+                            <description>The coefficient of variation for the 7.5 kΩ reference load resistance is stored.</description>
                             <lsb>0</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
                         </field>
                         <field>
                             <name>TRESULT1</name>
-                            <description>The coefficient of variation for the 15 kâ¦ reference load resistance is stored.</description>
+                            <description>The coefficient of variation for the 15 kΩ reference load resistance is stored.</description>
                             <lsb>8</lsb>
                             <msb>15</msb>
                             <access>read-write</access>
                         </field>
                         <field>
                             <name>TRESULT2</name>
-                            <description>The coefficient of variation for the 30 kâ¦ reference load resistance is stored.</description>
+                            <description>The coefficient of variation for the 30 kΩ reference load resistance is stored.</description>
                             <lsb>16</lsb>
                             <msb>23</msb>
                             <access>read-write</access>
                         </field>
                         <field>
                             <name>TRESULT3</name>
-                            <description>The coefficient of variation for the 60 kâ¦ reference load resistance is stored.</description>
+                            <description>The coefficient of variation for the 60 kΩ reference load resistance is stored.</description>
                             <lsb>24</lsb>
                             <msb>31</msb>
                             <access>read-write</access>

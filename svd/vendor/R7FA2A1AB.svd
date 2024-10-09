@@ -3,11 +3,11 @@
     <vendor>Renesas</vendor>
     <vendorID>Renesas</vendorID>
     <name>R7FA2A1AB</name>
-    <series>RA6</series>
+    <series>RA2</series>
     <version>1.1</version>
     <description>ARM 32-bit Cortex-M23 Microcontroller based device, CPU clock up to 48MHz, etc.</description>
     <cpu>
-        <name>other</name>
+        <name>CM23</name>
         <revision>r1p0</revision>
         <endian>little</endian>
         <mpuPresent>true</mpuPresent>

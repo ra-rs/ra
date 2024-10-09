@@ -4,7 +4,7 @@
     <vendorID>Renesas</vendorID>
     <name>R7FA4E10D</name>
     <series>RA4E1</series>
-    <version>1.10.00</version>
+    <version>1.10.01</version>
     <description>Arm Cortex-M33 based Microcontroller RA4E1 group</description>
     <licenseText>This software is supplied by Renesas Electronics Corporation and is only intended for \n
 use with Renesas products. No other uses are authorized. This software is owned by \n
@@ -66897,12 +66897,12 @@ http://www.renesas.com/disclaimer \n
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
-                <offset>0x38</offset>
+                <offset>0x36</offset>
                 <size>6</size>
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
-                <offset>0x42</offset>
+                <offset>0x40</offset>
                 <size>2</size>
                 <usage>registers</usage>
             </addressBlock>
@@ -66962,7 +66962,7 @@ http://www.renesas.com/disclaimer \n
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
-                <offset>0xEC</offset>
+                <offset>0xEB</offset>
                 <size>3</size>
                 <usage>registers</usage>
             </addressBlock>
@@ -68104,7 +68104,7 @@ http://www.renesas.com/disclaimer \n
                     <dimIndex>11-13</dimIndex>
                     <name>ADDR%s</name>
                     <description>A/D Data Registers %s</description>
-                    <addressOffset>0x038</addressOffset>
+                    <addressOffset>0x036</addressOffset>
                     <size>16</size>
                     <access>read-only</access>
                     <resetValue>0x0000</resetValue>
@@ -68122,7 +68122,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ADDR16</name>
                     <description>A/D Data Registers 16</description>
-                    <addressOffset>0x042</addressOffset>
+                    <addressOffset>0x040</addressOffset>
                     <size>16</size>
                     <access>read-only</access>
                     <resetValue>0x0000</resetValue>
@@ -69425,7 +69425,7 @@ http://www.renesas.com/disclaimer \n
                     <dimIndex>11-13</dimIndex>
                     <name>ADSSTR%s</name>
                     <description>A/D Sampling State Register</description>
-                    <addressOffset>0x0EC</addressOffset>
+                    <addressOffset>0x0EB</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x0b</resetValue>
