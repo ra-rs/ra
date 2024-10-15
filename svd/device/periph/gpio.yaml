@@ -1,0 +1,410 @@
+"PORT[0-1]":
+    _delete:
+        "PCNTR*"
+        
+    PODR:
+        _delete:
+            "PODR"
+            
+        _add:
+            PODR15:
+                bitOffset: 15
+                bitWidth: 1
+            PODR14:
+                bitOffset: 14
+                bitWidth: 1
+            PODR13:
+                bitOffset: 13
+                bitWidth: 1
+            PODR12:
+                bitOffset: 12
+                bitWidth: 1
+            PODR11:
+                bitOffset: 11
+                bitWidth: 1
+            PODR10:
+                bitOffset: 10
+                bitWidth: 1
+            PODR9:
+                bitOffset: 9
+                bitWidth: 1
+            PODR8:
+                bitOffset: 8
+                bitWidth: 1
+            PODR7:
+                bitOffset: 7
+                bitWidth: 1
+            PODR6:
+                bitOffset: 6
+                bitWidth: 1
+            PODR5:
+                bitOffset: 5
+                bitWidth: 1
+            PODR4:
+                bitOffset: 4
+                bitWidth: 1
+            PODR3:
+                bitOffset: 3
+                bitWidth: 1
+            PODR2:
+                bitOffset: 2
+                bitWidth: 1
+            PODR1:
+                bitOffset: 1
+                bitWidth: 1
+            PODR0:
+                bitOffset: 0
+                bitWidth: 1
+                
+        PODR*:
+            Input: [0, "functions as an input pin"]
+            Output: [1, "functions as an output pin"]
+                
+    PDR:
+        _delete:
+            "PDR"
+            
+        _add:
+            PDR15:
+                bitOffset: 15
+                bitWidth: 1
+            PDR14:
+                bitOffset: 14
+                bitWidth: 1
+            PDR13:
+                bitOffset: 13
+                bitWidth: 1
+            PDR12:
+                bitOffset: 12
+                bitWidth: 1
+            PDR11:
+                bitOffset: 11
+                bitWidth: 1
+            PDR10:
+                bitOffset: 10
+                bitWidth: 1
+            PDR9:
+                bitOffset: 9
+                bitWidth: 1
+            PDR8:
+                bitOffset: 8
+                bitWidth: 1
+            PDR7:
+                bitOffset: 7
+                bitWidth: 1
+            PDR6:
+                bitOffset: 6
+                bitWidth: 1
+            PDR5:
+                bitOffset: 5
+                bitWidth: 1
+            PDR4:
+                bitOffset: 4
+                bitWidth: 1
+            PDR3:
+                bitOffset: 3
+                bitWidth: 1
+            PDR2:
+                bitOffset: 2
+                bitWidth: 1
+            PDR1:
+                bitOffset: 1
+                bitWidth: 1
+            PDR0:
+                bitOffset: 0
+                bitWidth: 1
+        
+        PDR*:
+            Low: [0, "Low output"]
+            High: [1, "High output"]
+            
+    PIDR:
+        _delete:
+            "PIDR"
+        
+        _add:
+            PIDR15:
+                bitOffset: 15
+                bitWidth: 1
+            PIDR14:
+                bitOffset: 14
+                bitWidth: 1
+            PIDR13:
+                bitOffset: 13
+                bitWidth: 1
+            PIDR12:
+                bitOffset: 12
+                bitWidth: 1
+            PIDR11:
+                bitOffset: 11
+                bitWidth: 1
+            PIDR10:
+                bitOffset: 10
+                bitWidth: 1
+            PIDR9:
+                bitOffset: 9
+                bitWidth: 1
+            PIDR8:
+                bitOffset: 8
+                bitWidth: 1
+            PIDR7:
+                bitOffset: 7
+                bitWidth: 1
+            PIDR6:
+                bitOffset: 6
+                bitWidth: 1
+            PIDR5:
+                bitOffset: 5
+                bitWidth: 1
+            PIDR4:
+                bitOffset: 4
+                bitWidth: 1
+            PIDR3:
+                bitOffset: 3
+                bitWidth: 1
+            PIDR2:
+                bitOffset: 2
+                bitWidth: 1
+            PIDR1:
+                bitOffset: 1
+                bitWidth: 1
+            PIDR0:
+                bitOffset: 0
+                bitWidth: 1
+                
+        PIDR*:
+            Low: [0, "Low Level"]
+            High: [1, "High level"]
+    
+    PORR:
+        _delete:
+            "PORR"
+            
+        _add:
+            PORR15:
+                bitOffset: 15
+                bitWidth: 1
+            PORR14:
+                bitOffset: 14
+                bitWidth: 1
+            PORR13:
+                bitOffset: 13
+                bitWidth: 1
+            PORR12:
+                bitOffset: 12
+                bitWidth: 1
+            PORR11:
+                bitOffset: 11
+                bitWidth: 1
+            PORR10:
+                bitOffset: 10
+                bitWidth: 1
+            PORR9:
+                bitOffset: 9
+                bitWidth: 1
+            PORR8:
+                bitOffset: 8
+                bitWidth: 1
+            PORR7:
+                bitOffset: 7
+                bitWidth: 1
+            PORR6:
+                bitOffset: 6
+                bitWidth: 1
+            PORR5:
+                bitOffset: 5
+                bitWidth: 1
+            PORR4:
+                bitOffset: 4
+                bitWidth: 1
+            PORR3:
+                bitOffset: 3
+                bitWidth: 1
+            PORR2:
+                bitOffset: 2
+                bitWidth: 1
+            PORR1:
+                bitOffset: 1
+                bitWidth: 1
+            PORR0:
+                bitOffset: 0
+                bitWidth: 1
+                
+        PORR*:
+            _write:
+                Reset: [1, "Resets the corresponding output bit"]
+                
+    POSR:
+        _delete:
+            "POSR"
+            
+        _add:
+            POSR15:
+                bitOffset: 15
+                bitWidth: 1
+            POSR14:
+                bitOffset: 14
+                bitWidth: 1
+            POSR13:
+                bitOffset: 13
+                bitWidth: 1
+            POSR12:
+                bitOffset: 12
+                bitWidth: 1
+            POSR11:
+                bitOffset: 11
+                bitWidth: 1
+            POSR10:
+                bitOffset: 10
+                bitWidth: 1
+            POSR9:
+                bitOffset: 9
+                bitWidth: 1
+            POSR8:
+                bitOffset: 8
+                bitWidth: 1
+            POSR7:
+                bitOffset: 7
+                bitWidth: 1
+            POSR6:
+                bitOffset: 6
+                bitWidth: 1
+            POSR5:
+                bitOffset: 5
+                bitWidth: 1
+            POSR4:
+                bitOffset: 4
+                bitWidth: 1
+            POSR3:
+                bitOffset: 3
+                bitWidth: 1
+            POSR2:
+                bitOffset: 2
+                bitWidth: 1
+            POSR1:
+                bitOffset: 1
+                bitWidth: 1
+            POSR0:
+                bitOffset: 0
+                bitWidth: 1
+                
+        POSR*:
+            _write:
+                Set: [1, "Sets the corresponding output bit"]
+        
+"PORT1":
+    EORR:
+        _delete:
+            "EORR"
+            
+        _add:
+            EORR15:
+                bitOffset: 15
+                bitWidth: 1
+            EORR14:
+                bitOffset: 14
+                bitWidth: 1
+            EORR13:
+                bitOffset: 13
+                bitWidth: 1
+            EORR12:
+                bitOffset: 12
+                bitWidth: 1
+            EORR11:
+                bitOffset: 11
+                bitWidth: 1
+            EORR10:
+                bitOffset: 10
+                bitWidth: 1
+            EORR9:
+                bitOffset: 9
+                bitWidth: 1
+            EORR8:
+                bitOffset: 8
+                bitWidth: 1
+            EORR7:
+                bitOffset: 7
+                bitWidth: 1
+            EORR6:
+                bitOffset: 6
+                bitWidth: 1
+            EORR5:
+                bitOffset: 5
+                bitWidth: 1
+            EORR4:
+                bitOffset: 4
+                bitWidth: 1
+            EORR3:
+                bitOffset: 3
+                bitWidth: 1
+            EORR2:
+                bitOffset: 2
+                bitWidth: 1
+            EORR1:
+                bitOffset: 1
+                bitWidth: 1
+            EORR0:
+                bitOffset: 0
+                bitWidth: 1
+        
+        EORR*:
+            NA: [0, "No affect on output"]
+            Low: [1, "Low output"]
+            
+    EOSR:
+        _delete:
+            "EOSR"
+            
+        _add:
+            EOSR15:
+                bitOffset: 15
+                bitWidth: 1
+            EOSR14:
+                bitOffset: 14
+                bitWidth: 1
+            EOSR13:
+                bitOffset: 13
+                bitWidth: 1
+            EOSR12:
+                bitOffset: 12
+                bitWidth: 1
+            EOSR11:
+                bitOffset: 11
+                bitWidth: 1
+            EOSR10:
+                bitOffset: 10
+                bitWidth: 1
+            EOSR9:
+                bitOffset: 9
+                bitWidth: 1
+            EOSR8:
+                bitOffset: 8
+                bitWidth: 1
+            EOSR7:
+                bitOffset: 7
+                bitWidth: 1
+            EOSR6:
+                bitOffset: 6
+                bitWidth: 1
+            EOSR5:
+                bitOffset: 5
+                bitWidth: 1
+            EOSR4:
+                bitOffset: 4
+                bitWidth: 1
+            EOSR3:
+                bitOffset: 3
+                bitWidth: 1
+            EOSR2:
+                bitOffset: 2
+                bitWidth: 1
+            EOSR1:
+                bitOffset: 1
+                bitWidth: 1
+            EOSR0:
+                bitOffset: 0
+                bitWidth: 1
+        
+        EOSR*:
+            NA: [0, "No affect on output"]
+            High: [1, "High output"]
