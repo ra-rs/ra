@@ -4,7 +4,7 @@
     <vendorID>Renesas</vendorID>
     <name>R7FA2L1AB</name>
     <series>RA2L1</series>
-    <version>1.40.02</version>
+    <version>1.50.00</version>
     <description>Arm Cortex-M23 based Microcontroller RA2L1 group</description>
     <licenseText>This software is supplied by Renesas Electronics Corporation and is only intended for \n
 use with Renesas products. No other uses are authorized. This software is owned by \n
@@ -4317,7 +4317,7 @@ http://www.renesas.com/disclaimer \n
                     <addressOffset>0x04C</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
-                    <resetValue>0x00</resetValue>
+                    <resetValue>0x40</resetValue>
                     <resetMask>0xff</resetMask>
                     <fields>
                         <field>
@@ -41143,6 +41143,13 @@ http://www.renesas.com/disclaimer \n
                     <resetMask>0xff</resetMask>
                     <fields>
                         <field>
+                            <name>TDAT</name>
+                            <description>Serial transmit data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>write-only</access>
+                        </field>
+                        <field>
                             <name>MPBT</name>
                             <description>Multi-Processor Transfer Bit Flag</description>
                             <lsb>1</lsb>
@@ -41343,6 +41350,13 @@ http://www.renesas.com/disclaimer \n
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
                     <fields>
+                        <field>
+                            <name>RDAT</name>
+                            <description>Serial receive data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-only</access>
+                        </field>
                         <field>
                             <name>MPB</name>
                             <description>Multi-Processor Bit Flag</description>
@@ -41840,7 +41854,12 @@ http://www.renesas.com/disclaimer \n
             <baseAddress>0x40070020</baseAddress>
             <addressBlock>
                 <offset>0x00</offset>
-                <size>19</size>
+                <size>20</size>
+                <usage>registers</usage>
+            </addressBlock>
+            <addressBlock>
+                <offset>0x1A</offset>
+                <size>3</size>
                 <usage>registers</usage>
             </addressBlock>
             <registers>
@@ -43452,6 +43471,174 @@ http://www.renesas.com/disclaimer \n
                     <access>read-write</access>
                     <resetValue>0xff</resetValue>
                     <resetMask>0xff</resetMask>
+                </register>
+                <register>
+                    <name>DCCR</name>
+                    <description>Data Compare Match Control Register</description>
+                    <addressOffset>0x13</addressOffset>
+                    <size>8</size>
+                    <access>read-write</access>
+                    <resetValue>0x40</resetValue>
+                    <resetMask>0xff</resetMask>
+                    <fields>
+                        <field>
+                            <name>DCMF</name>
+                            <description>Data Compare Match Flag</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Not matched</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Matched</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>DPER</name>
+                            <description>Data Compare Match Parity Error Flag</description>
+                            <lsb>3</lsb>
+                            <msb>3</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>No parity error occurred</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Parity error occurred</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>DFER</name>
+                            <description>Data Compare Match Framing Error Flag</description>
+                            <lsb>4</lsb>
+                            <msb>4</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>No framing error occurred</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Framing error occurred</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>IDSEL</name>
+                            <description>ID Frame Select</description>
+                            <lsb>6</lsb>
+                            <msb>6</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Always compare data regardless of the MPB bit value</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Only compare data when MPB bit = 1 (ID frame)</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>DCME</name>
+                            <description>Data Compare Match Enable</description>
+                            <lsb>7</lsb>
+                            <msb>7</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Disable address match function</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Enable address match function</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>CDR</name>
+                    <description>Compare Match Data Register</description>
+                    <addressOffset>0x1A</addressOffset>
+                    <size>16</size>
+                    <access>read-write</access>
+                    <resetValue>0x0000</resetValue>
+                    <resetMask>0xffff</resetMask>
+                    <fields>
+                        <field>
+                            <name>CMPD</name>
+                            <description>Compare Match Data</description>
+                            <lsb>0</lsb>
+                            <msb>8</msb>
+                            <access>read-write</access>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>SPTR</name>
+                    <description>Serial Port Register</description>
+                    <addressOffset>0x1C</addressOffset>
+                    <size>8</size>
+                    <access>read-write</access>
+                    <resetValue>0x03</resetValue>
+                    <resetMask>0xff</resetMask>
+                    <fields>
+                        <field>
+                            <name>RXDMON</name>
+                            <description>Serial Input Data Monitor</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-only</access>
+                        </field>
+                        <field>
+                            <name>SPB2DT</name>
+                            <description>Serial Port Break Data Select</description>
+                            <lsb>1</lsb>
+                            <msb>1</msb>
+                            <access>read-write</access>
+                        </field>
+                        <field>
+                            <name>SPB2IO</name>
+                            <description>Serial Port Break I/O</description>
+                            <lsb>2</lsb>
+                            <msb>2</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Do not output value of SPB2DT bit on TXDn pin</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Output value of SPB2DT bit on TXDn pin</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                    </fields>
                 </register>
             </registers>
         </peripheral>

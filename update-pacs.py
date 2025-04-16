@@ -9,13 +9,13 @@ deps = '''
 [dependencies]
 critical-section = { version = "1.1", optional = true }
 cortex-m = "0.7"
-cortex-m-rt = { version = "0.6", optional = true }
-vcell = "0.1"
-portable-atomic = { version = "0.3", default-features = false, optional = true }
+cortex-m-rt = { version = "0.7.5", optional = true }
+vcell = "0.1.3"
+portable-atomic = { version = "1.11.0"}
 
 [features]
 rt = ["cortex-m-rt/device"]
-atomics = ["portable-atomic"]
+critical-section = ["dep:critical-section"]
 '''
 
 # Define manifest template

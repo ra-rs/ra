@@ -1,0 +1,94 @@
+
+[package]
+name = "ra4t1"
+version = "0.3.0"
+edition = "2024"
+description = "Peripheral Access Crate (PAC) for R7FA4T1."
+authors = ["Nathan Larsen <n8tlarsen@gmail.com>", "Addison Heavner <addisonheavner@gmail.com>", "Tri Nguyen <trongtribk06@gmail.com>"]
+keywords = ["ra4t1", "ra", "arm", "cortex-m", "renesas"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ra-rs/ra"
+documentation = "https://docs.rs/crate/ra4t1-pac/latest"
+categories = ["embedded", "hardware-support", "no-std"]
+readme = "README.md"
+
+[package.metadata.docs.rs]
+features = ["all-peripherals", "critical-section", "rt"]
+
+[dependencies]
+critical-section = { version = "1.1", optional = true }
+cortex-m = "0.7"
+cortex-m-rt = { version = "0.7.5", optional = true }
+vcell = "0.1.3"
+portable-atomic = { version = "1.11.0"}
+
+[features]
+
+rt = ["cortex-m-rt/device"]
+critical-section = ["dep:critical-section"]
+
+acmphs0 = []
+acmphs1 = []
+acmphs2 = []
+adc120 = []
+agtw0 = []
+agtw1 = []
+bus = []
+cac = []
+cache = []
+canfd_b = []
+cpscu = []
+crc = []
+dac12 = []
+dbg = []
+dma = []
+dmac0 = []
+dmac1 = []
+dmac2 = []
+dmac3 = []
+dmac4 = []
+dmac5 = []
+dmac6 = []
+dmac7 = []
+doc = []
+dtc = []
+eccmb = []
+elc = []
+faci = []
+fcache = []
+flad = []
+gpt16e0 = []
+gpt16e1 = []
+gpt16e2 = []
+gpt16e3 = []
+gpt16e4 = []
+gpt16e5 = []
+gpt_ops = []
+i3c = []
+icu = []
+iwdt = []
+mstp = []
+pfs = []
+poeg = []
+port0 = []
+port1 = []
+port2 = []
+port3 = []
+port4 = []
+port5 = []
+port8 = []
+pscu = []
+rmpu = []
+rtc = []
+sci0 = []
+sci9 = []
+spi0 = []
+spi1 = []
+sram = []
+sysc = []
+tfu = []
+tsd = []
+tsn = []
+tzf = []
+wdt = []
+all-peripherals = ["acmphs0", "acmphs1", "acmphs2", "adc120", "agtw0", "agtw1", "bus", "cac", "cache", "canfd_b", "cpscu", "crc", "dac12", "dbg", "dma", "dmac0", "dmac1", "dmac2", "dmac3", "dmac4", "dmac5", "dmac6", "dmac7", "doc", "dtc", "eccmb", "elc", "faci", "fcache", "flad", "gpt16e0", "gpt16e1", "gpt16e2", "gpt16e3", "gpt16e4", "gpt16e5", "gpt_ops", "i3c", "icu", "iwdt", "mstp", "pfs", "poeg", "port0", "port1", "port2", "port3", "port4", "port5", "port8", "pscu", "rmpu", "rtc", "sci0", "sci9", "spi0", "spi1", "sram", "sysc", "tfu", "tsd", "tsn", "tzf", "wdt"]

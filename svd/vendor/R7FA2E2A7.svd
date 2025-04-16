@@ -4,7 +4,7 @@
     <vendorID>Renesas</vendorID>
     <name>R7FA2E2A7</name>
     <series>RA2</series>
-    <version>1.30.00</version>
+    <version>1.40.00</version>
     <description>Arm Cortex-M23 based Microcontroller RA2E2 device</description>
     <licenseText>This software is supplied by Renesas Electronics Corporation and is only intended for \n
 use with Renesas products. No other uses are authorized. This software is owned by \n
@@ -3633,7 +3633,7 @@ http://www.renesas.com/disclaimer \n
                     <addressOffset>0x04C</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
-                    <resetValue>0x00</resetValue>
+                    <resetValue>0x40</resetValue>
                     <resetMask>0xff</resetMask>
                     <fields>
                         <field>

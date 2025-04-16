@@ -13260,10 +13260,17 @@
                     <fields>
                         <field>
                             <name>SWIRQS</name>
-                            <description>Generates an interrupt for the other CPU subsystem. (the value of the internal register automatically becomes 0). Writing 0 is ignored.</description>
+                            <description>Generates an interrupt for the other CPU subsystem.</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>(the value of the internal register automatically becomes 0). Writing 0 is ignored.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
                         </field>
                         <field>
                             <name>Reserved</name>
@@ -13285,10 +13292,17 @@
                     <fields>
                         <field>
                             <name>SWIRQNS</name>
-                            <description>Generates an interrupt for the other CPU subsystem. (the value of the internal register automatically becomes 0). Writing 0 is ignored.</description>
+                            <description>Generates an interrupt for the other CPU subsystem.</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>(the value of the internal register automatically becomes 0). Writing 0 is ignored.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
                         </field>
                         <field>
                             <name>Reserved</name>
@@ -17670,63 +17684,11 @@
                             </enumeratedValues>
                         </field>
                         <field>
-                            <name>CPUCK1</name>
-                            <description>CPU1 Clock (CPUCLK1) Select</description>
+                            <name>Reserved</name>
+                            <description>These bits are read as 0. The write value should be 0.</description>
                             <lsb>4</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0000</name>
-                                    <description>/1 (value after reset)</description>
-                                    <value>#0000</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>0001</name>
-                                    <description>/2</description>
-                                    <value>#0001</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>0010</name>
-                                    <description>/4</description>
-                                    <value>#0010</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>0011</name>
-                                    <description>/8</description>
-                                    <value>#0011</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>0100</name>
-                                    <description>/16</description>
-                                    <value>#0100</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>0101</name>
-                                    <description>/32</description>
-                                    <value>#0101</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>0110</name>
-                                    <description>/64</description>
-                                    <value>#0110</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1000</name>
-                                    <description>/3</description>
-                                    <value>#1000</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1001</name>
-                                    <description>/6</description>
-                                    <value>#1001</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1010</name>
-                                    <description>/12</description>
-                                    <value>#1010</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
                         </field>
                     </fields>
                 </register>
@@ -21820,29 +21782,8 @@
                             <name>Reserved</name>
                             <description>These bits are read as 00. The write value should be 00.</description>
                             <lsb>18</lsb>
-                            <msb>19</msb>
-                            <access>read-write</access>
-                        </field>
-                        <field>
-                            <name>CLU1RF</name>
-                            <description>CPU1 Lockup Reset Detect FlagNOTE: Writable only to clear the flag. Confirm the value is 1 and then write 0.</description>
-                            <lsb>20</lsb>
                             <msb>20</msb>
                             <access>read-write</access>
-                            <modifiedWriteValues>zeroToClear</modifiedWriteValues>
-                            <readAction>modify</readAction>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>CPU1 Lockup reset not detected.</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>CPU1 Lockup reset detected.</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
                         </field>
                         <field>
                             <name>LM1RF</name>
@@ -27282,55 +27223,10 @@
                     <fields>
                         <field>
                             <name>Reserved</name>
-                            <description>This bit is read as 0. The write value should be 0.</description>
+                            <description>These bits are read as 0. The write value should be 0.</description>
                             <lsb>0</lsb>
-                            <msb>0</msb>
-                            <access>read-write</access>
-                        </field>
-                        <field>
-                            <name>WDT1MASK</name>
-                            <description>CPU1 Watchdog timer Reset Mask</description>
-                            <lsb>1</lsb>
-                            <msb>1</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>Reset occurrence is enabled.</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Reset occurrence is disabled.</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
-                            <name>Reserved</name>
-                            <description>These bits are read as 00. The write value should be 00.</description>
-                            <lsb>2</lsb>
-                            <msb>3</msb>
-                            <access>read-write</access>
-                        </field>
-                        <field>
-                            <name>CLUP1MASK</name>
-                            <description>CPU1 Lockup Reset Mask</description>
-                            <lsb>4</lsb>
                             <msb>4</msb>
                             <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>Reset occurrence is enabled.</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Reset occurrence is disabled.</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
                         </field>
                         <field>
                             <name>LM1MASK</name>
@@ -27948,6 +27844,11 @@
                                     <name>0</name>
                                     <description>VCC Voltage drop detection disable</description>
                                     <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>Controlled by the power on reset of VCC</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
@@ -111810,7 +111711,7 @@
                     <dim>8</dim>
                     <dimIncrement>0x010</dimIncrement>
                     <dimIndex>0-7</dimIndex>
-                    <name>SQCH1DSC%sDR_H</name>
+                    <name>SQCH1DSCmDR_H</name>
                     <description>Sequence Channel 1 Descriptor-%s D Register</description>
                     <alternateRegister>SQCH1DSC%sDR</alternateRegister>
                     <addressOffset>0x80E</addressOffset>
@@ -126789,8 +126690,13 @@
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Dedicated setting to simultaneously use CTS / RTS function with 2 pins at the same time</description>
+                                    <description>Dedicated setting to simultaneously use CTS / RTS function with 2 pins</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>at the same time</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -127002,23 +126908,43 @@
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>001</name>
-                                    <description>The on-chip baud rate generator clock divided by 1 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 1 is used </description>
                                     <value>#001</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>010</name>
-                                    <description>The on-chip baud rate generator clock divided by 2 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 2 is used </description>
                                     <value>#010</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>011</name>
-                                    <description>The on-chip baud rate generator clock divided by 4 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 4 is used </description>
                                     <value>#011</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>100</name>
-                                    <description>The on-chip baud rate generator clock divided by 8 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 8 is used </description>
                                     <value>#100</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>others</name>
@@ -127104,8 +127030,13 @@
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Dedicated setting to simultaneously use CTS / RTS function with 2 pins at the same time</description>
+                                    <description>Dedicated setting to simultaneously use CTS / RTS function with 2 pins</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>at the same time</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -127295,8 +127226,13 @@
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Dedicated setting to simultaneously use CTS / RTS function with 2 pins at the same time</description>
+                                    <description>Dedicated setting to simultaneously use CTS / RTS function with 2 pins</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>at the same time</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -127530,23 +127466,43 @@
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>001</name>
-                                    <description>The on-chip baud rate generator clock divided by 1 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 1 is used </description>
                                     <value>#001</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>010</name>
-                                    <description>The on-chip baud rate generator clock divided by 2 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 2 is used </description>
                                     <value>#010</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>011</name>
-                                    <description>The on-chip baud rate generator clock divided by 4 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 4 is used </description>
                                     <value>#011</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>100</name>
-                                    <description>The on-chip baud rate generator clock divided by 8 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 8 is used </description>
                                     <value>#100</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>others</name>
@@ -127676,23 +127632,43 @@
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>001</name>
-                                    <description>The on-chip baud rate generator clock divided by 1 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 1 is used </description>
                                     <value>#001</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>010</name>
-                                    <description>The on-chip baud rate generator clock divided by 2 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 2 is used </description>
                                     <value>#010</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>011</name>
-                                    <description>The on-chip baud rate generator clock divided by 4 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 4 is used </description>
                                     <value>#011</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>100</name>
-                                    <description>The on-chip baud rate generator clock divided by 8 is used with the noise filter.</description>
+                                    <description>The on-chip baud rate generator clock divided by 8 is used </description>
                                     <value>#100</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>with the noise filter.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>others</name>
@@ -127805,14 +127781,14 @@
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
-                                    <name>0</name>
-                                    <description>Clock cycles for 1-bit period is decided with combination between CCR2.BGDM and CCR2.ABCS.</description>
-                                    <value>#0</value>
+                                    <name />
+                                    <description>and ABCS. </description>
+                                    <value>#</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Baud rate is 4 base clock cycles for 1-bit period and the clock of a double frequency is output from the baud rate generator.</description>
-                                    <value>#1</value>
+                                    <name />
+                                    <description>frequency is output from the baud rate generator.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -127970,14 +127946,14 @@
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
-                                    <name>0</name>
-                                    <description>Clock cycles for 1-bit period is decided with combination between CCR2.BGDM and CCR2.ABCS.</description>
-                                    <value>#0</value>
+                                    <name />
+                                    <description>and ABCS. </description>
+                                    <value>#</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Baud rate is 4 base clock cycles for 1-bit period and the clock of a double frequency is output from the baud rate generator.</description>
-                                    <value>#1</value>
+                                    <name />
+                                    <description>frequency is output from the baud rate generator.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -128066,14 +128042,14 @@
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
-                                    <name>0</name>
-                                    <description>Clock cycles for 1-bit period is decided with combination between CCR2.BGDM and CCR2.ABCS.</description>
-                                    <value>#0</value>
+                                    <name />
+                                    <description>and ABCS. </description>
+                                    <value>#</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Baud rate is 4 base clock cycles for 1-bit period and the clock of a double frequency is output from the baud rate generator.</description>
-                                    <value>#1</value>
+                                    <name />
+                                    <description>frequency is output from the baud rate generator.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -128412,13 +128388,23 @@
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>TDR contents are transmitted to TSR as they are. RSR contents are stored to RDR as they are.</description>
+                                    <description>TDR contents are transmitted to TSR as they are. </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>RSR contents are stored to RDR as they are.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>1</name>
-                                    <description>TDR contents are inverted before being transmitted to TSR. RSR contents are inverted and stored to RDR.</description>
+                                    <description>TDR contents are inverted before being transmitted to TSR.</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>RSR contents are inverted and stored to RDR.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -128586,18 +128572,83 @@
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>The SCKn pin is available for use as an I/O port in accord with the I/O </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>port settings.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>01</name>
                                     <description>On-chip baud rate generator</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>10</name>
-                                    <description>External clock</description>
+                                    <name />
+                                    <description>The clock with the same frequency as the bit rate is output from the </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>SCKn pin.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>• The clock with a frequency 16 times the bit rate should be input from </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>the SCKn pin. (when CCR2.ABCS bit is “0”) Input a clock signal with </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>a frequency 8 times the bit rate when the CCR2.ABCS bit is “1”.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>• The TMR clock can be used. The SCKn pin is available for use as an </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>I/O port in accord with the I/O port settings when the TMR clock is used.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>00</name>
+                                    <description>On-chip baud rate generator The SCKn pin functions as I/O port.</description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>00</name>
+                                    <description>Output disabled (The SCKn pin is available for use as an I/O port </description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>in accord with the I/O port settings.)</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>01</name>
+                                    <description>Clock output</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>11</name>
-                                    <description>External clock</description>
+                                    <name>00</name>
+                                    <description>Output fixed low</description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>10</name>
+                                    <description>Output fixed high</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -128812,13 +128863,23 @@
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>TDR contents are transmitted to TSR as they are. RSR contents are stored to RDR as they are.</description>
+                                    <description>TDR contents are transmitted to TSR as they are. </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>RSR contents are stored to RDR as they are.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>1</name>
-                                    <description>TDR contents are inverted before being transmitted to TSR. RSR contents are inverted and stored to RDR.</description>
+                                    <description>TDR contents are inverted before being transmitted to TSR.</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>RSR contents are inverted and stored to RDR.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -129010,13 +129071,23 @@
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>TDR contents are transmitted to TSR as they are. RSR contents are stored to RDR as they are.</description>
+                                    <description>TDR contents are transmitted to TSR as they are. </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>RSR contents are stored to RDR as they are.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>1</name>
-                                    <description>TDR contents are inverted before being transmitted to TSR. RSR contents are inverted and stored to RDR.</description>
+                                    <description>TDR contents are inverted before being transmitted to TSR.</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>RSR contents are inverted and stored to RDR.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -129195,18 +129266,83 @@
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>The SCKn pin is available for use as an I/O port in accord with the I/O </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>port settings.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>01</name>
                                     <description>On-chip baud rate generator</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>10</name>
-                                    <description>External clock</description>
+                                    <name />
+                                    <description>The clock with the same frequency as the bit rate is output from the </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>SCKn pin.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>• The clock with a frequency 16 times the bit rate should be input from </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>the SCKn pin. (when CCR2.ABCS bit is “0”) Input a clock signal with </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>a frequency 8 times the bit rate when the CCR2.ABCS bit is “1”.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>• The TMR clock can be used. The SCKn pin is available for use as an </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>I/O port in accord with the I/O port settings when the TMR clock is used.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>00</name>
+                                    <description>On-chip baud rate generator The SCKn pin functions as I/O port.</description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>00</name>
+                                    <description>Output disabled (The SCKn pin is available for use as an I/O port </description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>in accord with the I/O port settings.)</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>01</name>
+                                    <description>Clock output</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>11</name>
-                                    <description>External clock</description>
+                                    <name>00</name>
+                                    <description>Output fixed low</description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>10</name>
+                                    <description>Output fixed high</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -129430,18 +129566,83 @@
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>The SCKn pin is available for use as an I/O port in accord with the I/O </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>port settings.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>01</name>
                                     <description>On-chip baud rate generator</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>10</name>
-                                    <description>External clock</description>
+                                    <name />
+                                    <description>The clock with the same frequency as the bit rate is output from the </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>SCKn pin.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>• The clock with a frequency 16 times the bit rate should be input from </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>the SCKn pin. (when CCR2.ABCS bit is “0”) Input a clock signal with </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>a frequency 8 times the bit rate when the CCR2.ABCS bit is “1”.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>• The TMR clock can be used. The SCKn pin is available for use as an </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>I/O port in accord with the I/O port settings when the TMR clock is used.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>00</name>
+                                    <description>On-chip baud rate generator The SCKn pin functions as I/O port.</description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>00</name>
+                                    <description>Output disabled (The SCKn pin is available for use as an I/O port </description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>in accord with the I/O port settings.)</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>01</name>
+                                    <description>Clock output</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>11</name>
-                                    <description>External clock</description>
+                                    <name>00</name>
+                                    <description>Output fixed low</description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>10</name>
+                                    <description>Output fixed high</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -129653,13 +129854,23 @@
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Expand the low period by adjustment of the rising edge of TxD waveform(when CCR1.TINV is 0).</description>
+                                    <description>Expand the low period by adjustment of the rising edge of TxD </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>waveform(when CCR1.TINV is 0).</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>1</name>
-                                    <description>Expand the high period by adjustment of the falling edge of TxD waveform(when CCR1.TINV is 0.)</description>
+                                    <description>Expand the high period by adjustment of the falling edge of TxD</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>waveform(when CCR1.TINV is 0.)</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -129895,13 +130106,23 @@
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Expand the low period by adjustment of the rising edge of TxD waveform(when CCR1.TINV is 0).</description>
+                                    <description>Expand the low period by adjustment of the rising edge of TxD </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>waveform(when CCR1.TINV is 0).</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>1</name>
-                                    <description>Expand the high period by adjustment of the falling edge of TxD waveform(when CCR1.TINV is 0.)</description>
+                                    <description>Expand the high period by adjustment of the falling edge of TxD</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>waveform(when CCR1.TINV is 0.)</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -130038,13 +130259,23 @@
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Expand the low period by adjustment of the rising edge of TxD waveform(when CCR1.TINV is 0).</description>
+                                    <description>Expand the low period by adjustment of the rising edge of TxD </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>waveform(when CCR1.TINV is 0).</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>1</name>
-                                    <description>Expand the high period by adjustment of the falling edge of TxD waveform(when CCR1.TINV is 0.)</description>
+                                    <description>Expand the high period by adjustment of the falling edge of TxD</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>waveform(when CCR1.TINV is 0.)</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -130237,8 +130468,13 @@
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>others</name>
-                                    <description> (IICDL-1 ) to IIDCDL cycles. </description>
+                                    <description>（IICDL-1 ) to IIDCDL cycles. </description>
                                     <isDefault>true</isDefault>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>The delay is in the clock cycles from the on-chip baud rate generator.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -130474,8 +130710,13 @@
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>others</name>
-                                    <description> (IICDL-1 ) to IIDCDL cycles. </description>
+                                    <description>（IICDL-1 ) to IIDCDL cycles. </description>
                                     <isDefault>true</isDefault>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>The delay is in the clock cycles from the on-chip baud rate generator.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -130582,8 +130823,13 @@
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>others</name>
-                                    <description>( IICDL-1 ) to IIDCDL cycles. </description>
+                                    <description>（IICDL-1 ) to IIDCDL cycles. </description>
                                     <isDefault>true</isDefault>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>The delay is in the clock cycles from the on-chip baud rate generator.</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -145334,6 +145580,11 @@
                                     <description>Outputs an extra SCL clock cycle.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>(The EXCYC bit is cleared automatically after one clock cycle is output.)</description>
+                                    <value>#</value>
+                                </enumeratedValue>
                             </enumeratedValues>
                         </field>
                         <field>
@@ -145558,6 +145809,11 @@
                                     <description>Outputs an extra SCL clock cycle.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>(The EXCYC bit is cleared automatically after one clock cycle is output.)</description>
+                                    <value>#</value>
+                                </enumeratedValue>
                             </enumeratedValues>
                         </field>
                         <field>
@@ -145775,6 +146031,11 @@
                                     <description>Outputs an extra SCL clock cycle.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>(The EXCYC bit is cleared automatically after one clock cycle is output.)</description>
+                                    <value>#</value>
+                                </enumeratedValue>
                             </enumeratedValues>
                         </field>
                         <field>
@@ -145927,6 +146188,43 @@
                             <lsb>0</lsb>
                             <msb>3</msb>
                             <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0000</name>
+                                    <description>Noise of up to one I3Cφ cycle is filtered out (single-stage filter).</description>
+                                    <value>#0000</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0001</name>
+                                    <description>Noise of up to two I3Cφ cycles is filtered out (2-stage filter).</description>
+                                    <value>#0001</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0010</name>
+                                    <description>Noise of up to three I3Cφ cycles is filtered out (3-stage filter).</description>
+                                    <value>#0010</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0011</name>
+                                    <description>Noise of up to four I3Cφ cycles is filtered out (4-stage filter).</description>
+                                    <value>#0011</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0100</name>
+                                    <description>Noise of up to five I3Cφ cycles is filtered out (5-stage filter).</description>
+                                    <value>#0100</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>……. </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1111</name>
+                                    <description>Noise of up to sixteen I3Cφ cycles is filtered out (16-stage filter).</description>
+                                    <value>#1111</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
                         </field>
                         <field>
                             <name>DNFE</name>
@@ -145992,6 +146290,43 @@
                             <lsb>0</lsb>
                             <msb>3</msb>
                             <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0000</name>
+                                    <description>Noise of up to one I3Cφ cycle is filtered out (single-stage filter).</description>
+                                    <value>#0000</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0001</name>
+                                    <description>Noise of up to two I3Cφ cycles is filtered out (2-stage filter).</description>
+                                    <value>#0001</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0010</name>
+                                    <description>Noise of up to three I3Cφ cycles is filtered out (3-stage filter).</description>
+                                    <value>#0010</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0011</name>
+                                    <description>Noise of up to four I3Cφ cycles is filtered out (4-stage filter).</description>
+                                    <value>#0011</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0100</name>
+                                    <description>Noise of up to five I3Cφ cycles is filtered out (5-stage filter).</description>
+                                    <value>#0100</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>……. </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1111</name>
+                                    <description>Noise of up to sixteen I3Cφ cycles is filtered out (16-stage filter).</description>
+                                    <value>#1111</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
                         </field>
                         <field>
                             <name>DNFE</name>
@@ -146050,6 +146385,43 @@
                             <lsb>0</lsb>
                             <msb>3</msb>
                             <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0000</name>
+                                    <description>Noise of up to one I3Cφ cycle is filtered out (single-stage filter).</description>
+                                    <value>#0000</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0001</name>
+                                    <description>Noise of up to two I3Cφ cycles is filtered out (2-stage filter).</description>
+                                    <value>#0001</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0010</name>
+                                    <description>Noise of up to three I3Cφ cycles is filtered out (3-stage filter).</description>
+                                    <value>#0010</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0011</name>
+                                    <description>Noise of up to four I3Cφ cycles is filtered out (4-stage filter).</description>
+                                    <value>#0011</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0100</name>
+                                    <description>Noise of up to five I3Cφ cycles is filtered out (5-stage filter).</description>
+                                    <value>#0100</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>……. </description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1111</name>
+                                    <description>Noise of up to sixteen I3Cφ cycles is filtered out (16-stage filter).</description>
+                                    <value>#1111</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
                         </field>
                         <field>
                             <name>DNFE</name>
@@ -167144,14 +167516,29 @@
                                     <value>0x00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>This value removes all I3C Devices from Test Mode.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>0x01</name>
                                     <description>Vendor Test Mode</description>
                                     <value>0x01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>reserved</name>
-                                    <description>0x02 – 0xFF : MIPI Reserved</description>
+                                    <name />
+                                    <description>This value indicates that I3C Devices shall return a random 32bit value in the Provisional ID during the Dynamic Address Assignment procedure.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0x02</name>
+                                    <description>– 0xFF : MIPI Reserved</description>
                                     <value>0x02</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>Reserved for future use by the MIPI Alliance</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -167186,14 +167573,29 @@
                                     <value>0x00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>This value removes all I3C Devices from Test Mode.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>0x01</name>
                                     <description>Vendor Test Mode</description>
                                     <value>0x01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>This value indicates that I3C Devices shall return a random 32bit value in the Provisional ID during the Dynamic Address Assignment procedure.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>0x02</name>
-                                    <description>0x02 – 0xFF : MIPI Reserved</description>
+                                    <description>– 0xFF : MIPI Reserved</description>
                                     <value>0x02</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>Reserved for future use by the MIPI Alliance</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -167228,14 +167630,29 @@
                                     <value>0x00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>This value removes all I3C Devices from Test Mode.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>0x01</name>
                                     <description>Vendor Test Mode</description>
                                     <value>0x01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>This value indicates that I3C Devices shall return a random 32bit value in the Provisional ID during the Dynamic Address Assignment procedure.</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>0x02</name>
-                                    <description>0x02 – 0xFF : MIPI Reserved</description>
+                                    <description>– 0xFF : MIPI Reserved</description>
                                     <value>0x02</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>Reserved for future use by the MIPI Alliance</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -167814,9 +168231,19 @@
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>(GETMXDS Format 1: Without Turnaround)</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>1</name>
                                     <description>Enables transmission of the Maximum Read Turnaround Time.</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>(GETMXDS Format 2: With Turnaround)</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -167912,9 +168339,19 @@
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>(GETMXDS Format 1: Without Turnaround)</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>1</name>
                                     <description>Enables transmission of the Maximum Read Turnaround Time.</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>(GETMXDS Format 2: With Turnaround)</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -167967,9 +168404,19 @@
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
+                                    <name />
+                                    <description>(GETMXDS Format 1: Without Turnaround)</description>
+                                    <value>#</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
                                     <name>1</name>
                                     <description>Enables transmission of the Maximum Read Turnaround Time.</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name />
+                                    <description>(GETMXDS Format 2: With Turnaround)</description>
+                                    <value>#</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>

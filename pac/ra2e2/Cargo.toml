@@ -1,27 +1,67 @@
 
 [package]
 name = "ra2e2"
-description = "Peripheral access API for RA2E2 microcontrollers (generated using svd2rust)"
-version = "0.2.1"
-authors = [
-    "Nathan Larsen <n8tlarsen@gmail.com>",
-    "Addison Heavner <addisonheavner@gmail.com>",
-    "Tri Nguyen <trongtribk06@gmail.com>",
-]
-keywords = ["no-std", "arm", "cortex-m", "ra4", "ra", "renesas"]
-categories = ["embedded", "hardware-support", "no-std"]
+version = "0.3.0"
+edition = "2024"
+description = "Peripheral Access Crate (PAC) for R7FA2E2."
+authors = ["Nathan Larsen <n8tlarsen@gmail.com>", "Addison Heavner <addisonheavner@gmail.com>", "Tri Nguyen <trongtribk06@gmail.com>"]
+keywords = ["ra2e2", "ra", "arm", "cortex-m", "renesas"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/ra-rs/ra"
+documentation = "https://docs.rs/crate/ra2e2-pac/latest"
+categories = ["embedded", "hardware-support", "no-std"]
 readme = "README.md"
-edition = "2021"
+
+[package.metadata.docs.rs]
+features = ["all-peripherals", "critical-section", "rt"]
 
 [dependencies]
 critical-section = { version = "1.1", optional = true }
 cortex-m = "0.7"
 cortex-m-rt = { version = "0.7.5", optional = true }
 vcell = "0.1.3"
-portable-atomic = { version = "1.11.0" }
+portable-atomic = { version = "1.11.0"}
 
 [features]
+
 rt = ["cortex-m-rt/device"]
 critical-section = ["dep:critical-section"]
+
+adc120 = []
+agtw0 = []
+agtw1 = []
+bus = []
+cac = []
+crc = []
+dbg = []
+doc = []
+dtc = []
+elc = []
+flcn = []
+gpt164 = []
+gpt165 = []
+gpt166 = []
+gpt167 = []
+gpt168 = []
+gpt169 = []
+gpt_ops = []
+i3c = []
+icu = []
+iwdt = []
+kint = []
+mstp = []
+pfs = []
+poeg = []
+port0 = []
+port1 = []
+port2 = []
+port3 = []
+port4 = []
+port9 = []
+rmpu = []
+sci9 = []
+spi0 = []
+sram = []
+sysc = []
+wdt = []
+all-peripherals = ["adc120", "agtw0", "agtw1", "bus", "cac", "crc", "dbg", "doc", "dtc", "elc", "flcn", "gpt164", "gpt165", "gpt166", "gpt167", "gpt168", "gpt169", "gpt_ops", "i3c", "icu", "iwdt", "kint", "mstp", "pfs", "poeg", "port0", "port1", "port2", "port3", "port4", "port9", "rmpu", "sci9", "spi0", "sram", "sysc", "wdt"]

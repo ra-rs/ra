@@ -1,0 +1,59 @@
+
+[package]
+name = "ra0e1"
+version = "0.3.0"
+edition = "2024"
+description = "Peripheral Access Crate (PAC) for R7FA0E1."
+authors = ["Nathan Larsen <n8tlarsen@gmail.com>", "Addison Heavner <addisonheavner@gmail.com>", "Tri Nguyen <trongtribk06@gmail.com>"]
+keywords = ["ra0e1", "ra", "arm", "cortex-m", "renesas"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ra-rs/ra"
+documentation = "https://docs.rs/crate/ra0e1-pac/latest"
+categories = ["embedded", "hardware-support", "no-std"]
+readme = "README.md"
+
+[package.metadata.docs.rs]
+features = ["all-peripherals", "critical-section", "rt"]
+
+[dependencies]
+critical-section = { version = "1.1", optional = true }
+cortex-m = "0.7"
+cortex-m-rt = { version = "0.7.5", optional = true }
+vcell = "0.1.3"
+portable-atomic = { version = "1.11.0"}
+
+[features]
+
+rt = ["cortex-m-rt/device"]
+critical-section = ["dep:critical-section"]
+
+adc_d = []
+bus = []
+crc = []
+dbg = []
+dtc = []
+elc = []
+flcn = []
+icu = []
+iica = []
+iwdt = []
+mstp = []
+pclbuz = []
+pfs_a = []
+porga = []
+port0 = []
+port1 = []
+port2 = []
+port3 = []
+port4 = []
+port9 = []
+rtc_c = []
+sau0 = []
+sau1 = []
+sram = []
+sysc = []
+tau = []
+tml32 = []
+trng = []
+uarta = []
+all-peripherals = ["adc_d", "bus", "crc", "dbg", "dtc", "elc", "flcn", "icu", "iica", "iwdt", "mstp", "pclbuz", "pfs_a", "porga", "port0", "port1", "port2", "port3", "port4", "port9", "rtc_c", "sau0", "sau1", "sram", "sysc", "tau", "tml32", "trng", "uarta"]

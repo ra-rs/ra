@@ -4,7 +4,7 @@
     <vendorID>Renesas</vendorID>
     <name>R7FA4E2B9</name>
     <series>RA4</series>
-    <version>1.20.00</version>
+    <version>1.30.00</version>
     <description>Arm Cortex-M33 based Microcontroller RA4E2 group</description>
     <licenseText>This software is supplied by Renesas Electronics Corporation and is only intended for \n
 use with Renesas products. No other uses are authorized. This software is owned by \n
@@ -7878,12 +7878,7 @@ http://www.renesas.com/disclaimer \n
             </addressBlock>
             <addressBlock>
                 <offset>0x36</offset>
-                <size>1</size>
-                <usage>registers</usage>
-            </addressBlock>
-            <addressBlock>
-                <offset>0x38</offset>
-                <size>5</size>
+                <size>7</size>
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
@@ -8579,6 +8574,46 @@ http://www.renesas.com/disclaimer \n
                                     <name>1</name>
                                     <description>Stop the HOCO clock</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>HOCOCR2</name>
+                    <description>High-Speed On-Chip Oscillator Control Register 2</description>
+                    <addressOffset>0x037</addressOffset>
+                    <size>8</size>
+                    <access>read-write</access>
+                    <resetValue>0x00</resetValue>
+                    <resetMask>0xfc</resetMask>
+                    <fields>
+                        <field>
+                            <name>HCFRQ0</name>
+                            <description>HOCO Frequency Setting 0</description>
+                            <lsb>0</lsb>
+                            <msb>1</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>00</name>
+                                    <description>16 MHz</description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>01</name>
+                                    <description>18 MHz</description>
+                                    <value>#01</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>10</name>
+                                    <description>20 MHz</description>
+                                    <value>#10</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>11</name>
+                                    <description>Setting prohibited</description>
+                                    <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -34176,7 +34211,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>SLCSTP</name>
-                            <description>Sleep-Mode Count Stop Control Register</description>
+                            <description>Sleep-Mode Count Stop Control</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -36584,6 +36619,15 @@ http://www.renesas.com/disclaimer \n
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
+                    <fields>
+                        <field>
+                            <name>FIFOPORT</name>
+                            <description>FIFO Port</description>
+                            <lsb>0</lsb>
+                            <msb>7</msb>
+                            <access>read-write</access>
+                        </field>
+                    </fields>
                 </register>
                 <register>
                     <name>CFIFOSEL</name>
@@ -38232,7 +38276,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>ATA1</description>
+                                    <description>DATA1</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -39327,12 +39371,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Delay of 1 cycle of SSIBCK between SSILRCK/SSIFS and SSITXD0/SSIRXD0/SSIDATA0</description>
+                                    <description>Delay of 1 cycle of SSIBCK0 between SSILRCK0/SSIFS0 and SSITXD0/SSIRXD0/SSIDATA0</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>No delay between SSILRCK/SSIFS and SSITXD0/SSIRXD0/SSIDATA0</description>
+                                    <description>No delay between SSILRCK0/SSIFS0 and SSITXD0/SSIRXD0/SSIDATA0</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -39403,12 +39447,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>The initial value is at a high level. The start trigger for a frame is synchronized with a falling edge of SSILRCK/SSIFS. </description>
+                                    <description>The initial value is at a high level. The start trigger for a frame is synchronized with a falling edge of SSILRCK0/SSIFS0. </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>The initial value is at a low level. The start trigger for a frame is synchronized with a rising edge of SSILRCK/SSIFS. </description>
+                                    <description>The initial value is at a low level. The start trigger for a frame is synchronized with a rising edge of SSILRCK0/SSIFS0. </description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -39422,12 +39466,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>SSILRCK/SSIFS and SSITXD0/SSIRXD0/SSIDATA0 change at a falling edge (SSILRCK/SSIFS and SSIRXD0/SSIDATA0 are sampled at a rising edge of SSIBCK).</description>
+                                    <description>SSILRCK0/SSIFS0 and SSITXD0/SSIRXD0/SSIDATA0 change at a falling edge (SSILRCK0/SSIFS0 and SSIRXD0/SSIDATA0 are sampled at a rising edge of SSIBCK0).</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>SSILRCK/SSIFS and SSITXD0/SSIRXD0/SSIDATA0 change at a rising edge (SSILRCK/SSIFS and SSIRXD0/SSIDATA0 are sampled at a falling edge of SSIBCK).</description>
+                                    <description>SSILRCK0/SSIFS0 and SSITXD0/SSIRXD0/SSIDATA0 change at a rising edge (SSILRCK0/SSIFS0 and SSIRXD0/SSIDATA0 are sampled at a falling edge of SSIBCK0).</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -39884,7 +39928,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>AUCKE</name>
-                            <description>AUDIO_MCK Enable in Mastermode Communication</description>
+                            <description>AUDIO_MCK Enable in Master-mode Communication</description>
                             <lsb>31</lsb>
                             <msb>31</msb>
                             <access>read-write</access>
@@ -39933,7 +39977,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>RDC</name>
-                            <description>Number of Receive FIFO Data Indication Flag</description>
+                            <description>Receive Data Count</description>
                             <lsb>8</lsb>
                             <msb>13</msb>
                             <access>read-only</access>
@@ -39959,7 +40003,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>TDC</name>
-                            <description>Number of Transmit FIFO Data Indication Flag</description>
+                            <description>Transmit Data Count</description>
                             <lsb>24</lsb>
                             <msb>29</msb>
                             <access>read-only</access>
@@ -40068,12 +40112,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Always outputs BCK to the SSIBCK pin</description>
+                                    <description>Always outputs BCK to the SSIBCK0 pin</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Automatically controls output of BCK to the SSIBCK pin</description>
+                                    <description>Automatically controls output of BCK to the SSIBCK0 pin</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -43458,7 +43502,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>100</name>
-                                    <description>FIFO Depth = 32 essages</description>
+                                    <description>FIFO Depth = 32 messages</description>
                                     <value>#100</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -55465,6 +55509,13 @@ http://www.renesas.com/disclaimer \n
                     <resetMask>0xff</resetMask>
                     <fields>
                         <field>
+                            <name>TDAT</name>
+                            <description>Serial transmit data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>write-only</access>
+                        </field>
+                        <field>
                             <name>MPBT</name>
                             <description>Multi-Processor Transfer Bit Flag</description>
                             <lsb>1</lsb>
@@ -55722,6 +55773,13 @@ http://www.renesas.com/disclaimer \n
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
                     <fields>
+                        <field>
+                            <name>RDAT</name>
+                            <description>Serial receive data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-only</access>
+                        </field>
                         <field>
                             <name>MPB</name>
                             <description>Multi-Processor Bit Flag</description>
@@ -75869,7 +75927,7 @@ http://www.renesas.com/disclaimer \n
                     <dimIncrement>0x2</dimIncrement>
                     <dimIndex>0-1</dimIndex>
                     <name>ADCMPDR%s</name>
-                    <description>A/D Compare Function Window A Lower-Side/Upper-Side Level Setting Register</description>
+                    <description>A/D Compare Function Window A Lower-Side/Upper-Side Level Setting Register %s</description>
                     <addressOffset>0x09C</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
@@ -76594,7 +76652,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>ADWINLLB</name>
-                    <description>A/D Compare Function Window B Lower-Side/Upper-Side Level Setting Register</description>
+                    <description>A/D Compare Function Window B Lower-Side/Upper-Side Level Setting Register L</description>
                     <addressOffset>0x0A8</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
@@ -76603,7 +76661,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>ADWINULB</name>
-                    <description>A/D Compare Function Window B Lower-Side/Upper-Side Level Setting Register</description>
+                    <description>A/D Compare Function Window B Lower-Side/Upper-Side Level Setting Register U</description>
                     <addressOffset>0x0AA</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
@@ -76904,7 +76962,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Disable analog output of channel 0 (DA0) </description>
+                                    <description>Disable D/A conversion and analog output of channel 0 (DA0) </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>

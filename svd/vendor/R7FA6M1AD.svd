@@ -68689,6 +68689,24 @@ Note: CTSUCHAC1[0] corresponds to TS08 and CTSUCHAC1[4] corresponds to TS12. </d
                     </fields>
                 </register>
                 <register>
+                    <name>CTSUCHTRC0</name>
+                    <description>CTSU Channel Transmit/Receive Control Register 0</description>
+                    <addressOffset>0x0B</addressOffset>
+                    <size>8</size>
+                    <access>read-write</access>
+                    <resetValue>0x00</resetValue>
+                    <resetMask>0xFF</resetMask>
+                    <fields>
+                        <field>
+                            <name>Reserved</name>
+                            <description>This bit is read as 0. The write value should be 0.</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-write</access>
+                        </field>
+                    </fields>
+                </register>
+                <register>
                     <name>CTSUCHTRC1</name>
                     <description>CTSU Channel Transmit/Receive Control Register 1</description>
                     <addressOffset>0x0C</addressOffset>

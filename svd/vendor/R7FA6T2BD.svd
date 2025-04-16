@@ -4,7 +4,7 @@
     <vendorID>Renesas</vendorID>
     <name>R7FA6T2BD</name>
     <series>RA6</series>
-    <version>1.30.01</version>
+    <version>1.40.00</version>
     <description>Arm Cortex-M33 based Microcontroller RA6T2 group</description>
     <licenseText>This software is supplied by Renesas Electronics Corporation and is only intended for \n
 use with Renesas products. No other uses are authorized. This software is owned by \n
@@ -37,6 +37,7 @@ http://www.renesas.com/disclaimer \n
         <deviceNumInterrupts>96</deviceNumInterrupts>
     </cpu>
     <headerSystemFilename>system_RA6</headerSystemFilename>
+    <headerDefinitionsPrefix>R_</headerDefinitionsPrefix>
     <addressUnitBits>8</addressUnitBits>
     <width>32</width>
     <size>32</size>
@@ -3308,7 +3309,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>OSTEN</name>
-                            <description>Oscillation Stop Detection Interrupt Enable</description>
+                            <description>Main Clock Oscillation Stop Detection Interrupt Enable</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-write</access>
@@ -3744,19 +3745,19 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>OSTST</name>
-                            <description>Oscillation Stop Detection Interrupt Status Flag</description>
+                            <description>Main Clock Oscillation Stop Detection Interrupt Status Flag</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-only</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Interrupt not requested for main oscillation stop</description>
+                                    <description>Interrupt not requested for main clock oscillation stop</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Interrupt requested for main oscillation stop</description>
+                                    <description>Interrupt requested for main clock oscillation stop</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -7867,12 +7868,7 @@ http://www.renesas.com/disclaimer \n
             </addressBlock>
             <addressBlock>
                 <offset>0x36</offset>
-                <size>1</size>
-                <usage>registers</usage>
-            </addressBlock>
-            <addressBlock>
-                <offset>0x38</offset>
-                <size>1</size>
+                <size>3</size>
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
@@ -8602,6 +8598,46 @@ http://www.renesas.com/disclaimer \n
                                     <name>1</name>
                                     <description>Stop the HOCO clock</description>
                                     <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>HOCOCR2</name>
+                    <description>High-Speed On-Chip Oscillator Control Register 2</description>
+                    <addressOffset>0x037</addressOffset>
+                    <size>8</size>
+                    <access>read-write</access>
+                    <resetValue>0x00</resetValue>
+                    <resetMask>0xfc</resetMask>
+                    <fields>
+                        <field>
+                            <name>HCFRQ0</name>
+                            <description>HOCO Frequency Setting 0</description>
+                            <lsb>0</lsb>
+                            <msb>1</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>00</name>
+                                    <description>16 MHz</description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>01</name>
+                                    <description>18 MHz</description>
+                                    <value>#01</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>10</name>
+                                    <description>20 MHz</description>
+                                    <value>#10</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>11</name>
+                                    <description>Setting prohibited</description>
+                                    <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -56534,19 +56570,19 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>RSTIRQS</name>
-                            <description>Reset Interrupt Request Select</description>
+                            <description>WDT Behavior Selection</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Enable non-maskable interrupt request or interrupt request output</description>
+                                    <description>Interrupt</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enable reset output</description>
+                                    <description>Reset</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -56564,7 +56600,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>SLCSTP</name>
-                            <description>WDT Count Stop Control Register</description>
+                            <description>Sleep-Mode Count Stop Control Register</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -60085,7 +60121,7 @@ http://www.renesas.com/disclaimer \n
             </registers>
         </peripheral>
         <peripheral>
-            <name>CANFD_B</name>
+            <name>CANFD</name>
             <description>CANFD Module Control</description>
             <baseAddress>0x400B0000</baseAddress>
             <addressBlock>
@@ -61965,7 +62001,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>100</name>
-                                    <description>FIFO Depth = 32 essages</description>
+                                    <description>FIFO Depth = 32 messages</description>
                                     <value>#100</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -72365,25 +72401,6 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
-                        <field>
-                            <name>DOPCIE</name>
-                            <description>Data Operation Circuit Interrupt Enable</description>
-                            <lsb>7</lsb>
-                            <msb>7</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>Disables interrupts from the data operation circuit.</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Enables interrupts from the data operation circuit.</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
                     </fields>
                 </register>
                 <register>
@@ -72469,7 +72486,17 @@ http://www.renesas.com/disclaimer \n
             <baseAddress>0x40118000</baseAddress>
             <addressBlock>
                 <offset>0x00</offset>
-                <size>29</size>
+                <size>4</size>
+                <usage>registers</usage>
+            </addressBlock>
+            <addressBlock>
+                <offset>0x04</offset>
+                <size>4</size>
+                <usage>registers</usage>
+            </addressBlock>
+            <addressBlock>
+                <offset>0x08</offset>
+                <size>21</size>
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
@@ -72597,6 +72624,39 @@ http://www.renesas.com/disclaimer \n
                     </fields>
                 </register>
                 <register>
+                    <name>RDR_BY</name>
+                    <description>Receive Data Register</description>
+                    <alternateRegister>RDR</alternateRegister>
+                    <addressOffset>0x00</addressOffset>
+                    <size>8</size>
+                    <access>read-only</access>
+                    <resetValue>0x00</resetValue>
+                    <resetMask>0xff</resetMask>
+                    <fields>
+                        <field>
+                            <name>ORER</name>
+                            <description>Overrun Error flag</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-only</access>
+                        </field>
+                        <field>
+                            <name>PER</name>
+                            <description>Parity error flag</description>
+                            <lsb>3</lsb>
+                            <msb>3</msb>
+                            <access>read-only</access>
+                        </field>
+                        <field>
+                            <name>FER</name>
+                            <description>Framing error flag</description>
+                            <lsb>4</lsb>
+                            <msb>4</msb>
+                            <access>read-only</access>
+                        </field>
+                    </fields>
+                </register>
+                <register>
                     <name>TDR</name>
                     <description>Transmit Data Register</description>
                     <addressOffset>0x04</addressOffset>
@@ -72636,6 +72696,73 @@ http://www.renesas.com/disclaimer \n
                             <description>Transmit SYNC data</description>
                             <lsb>12</lsb>
                             <msb>12</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>The Start Bit is transmitted as DATA SYNC.</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>The Start Bit is transmitted as COMMAND SYNC.</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>TDRLL</name>
+                    <description>Transmit Data Register</description>
+                    <alternateRegister>TDR</alternateRegister>
+                    <addressOffset>0x04</addressOffset>
+                    <size>16</size>
+                    <access>read-write</access>
+                    <resetValue>0xffff</resetValue>
+                    <resetMask>0xffff</resetMask>
+                </register>
+                <register>
+                    <name>TDRLH</name>
+                    <description>Transmit Data Register</description>
+                    <alternateRegister>TDR</alternateRegister>
+                    <addressOffset>0x05</addressOffset>
+                    <size>16</size>
+                    <access>read-write</access>
+                    <resetValue>0xffff</resetValue>
+                    <resetMask>0xffff</resetMask>
+                    <fields>
+                        <field>
+                            <name>TDAT</name>
+                            <description>Serial transmit data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-write</access>
+                        </field>
+                        <field>
+                            <name>MPBT</name>
+                            <description>Multi-processor transfer bit flag</description>
+                            <lsb>1</lsb>
+                            <msb>1</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Data transmission cycles</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>ID transmission cycles</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>TSYNC</name>
+                            <description>Transmit SYNC data</description>
+                            <lsb>4</lsb>
+                            <msb>4</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
@@ -100610,9 +100737,9 @@ http://www.renesas.com/disclaimer \n
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>01</name>
+                                    <name>11</name>
                                     <description>Setting prohibited</description>
-                                    <value>#01</value>
+                                    <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>

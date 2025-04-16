@@ -4,7 +4,7 @@
     <vendorID>Renesas</vendorID>
     <name>R7FA6E10F</name>
     <series>RA6</series>
-    <version>1.10.02</version>
+    <version>1.20.00</version>
     <description>Arm Cortex-M33 based Microcontroller RA6E1 group</description>
     <licenseText>This software is supplied by Renesas Electronics Corporation and is only intended for \n
 use with Renesas products. No other uses are authorized. This software is owned by \n
@@ -896,7 +896,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Disable writes to the protectedregisters</description>
+                                    <description>Disable writes to the protected registers</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -1686,7 +1686,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Transfer is not stopped by completion of specified total number of transfer operations. (free-running)</description>
+                                    <description>Transfer is not stopped by completion of specified total number of transfer operations (free-running).</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -1700,22 +1700,22 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>00</name>
-                                    <description>The destination is specified as the repeat area or block area</description>
+                                    <description>The destination is specified as the repeat area or block area.</description>
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>01</name>
-                                    <description>The source is specified as the repeat area or block area</description>
+                                    <description>The source is specified as the repeat area or block area.</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>The repeat area or block area is not specified</description>
+                                    <description>The repeat area or block area is not specified.</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>Setting prohibited</description>
+                                    <description>Setting prohibited.</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -1769,12 +1769,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Disables an interrupt request for an extended repeat area overflow on the destination address</description>
+                                    <description>Disables an interrupt request for an extended repeat area overflow on the destination address.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enables an interrupt request for an extended repeat area overflow on the destination address</description>
+                                    <description>Enables an interrupt request for an extended repeat area overflow on the destination address.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -1788,12 +1788,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Disables an interrupt request for an extended repeat area overflow on the source address</description>
+                                    <description>Disables an interrupt request for an extended repeat area overflow on the source address.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enables an interrupt request for an extended repeat area overflow on the source address</description>
+                                    <description>Enables an interrupt request for an extended repeat area overflow on the source address.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -1807,12 +1807,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Disables the repeat size end interrupt request</description>
+                                    <description>Disables the repeat size end interrupt request.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enables the repeat size end interrupt request</description>
+                                    <description>Enables the repeat size end interrupt request.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -1826,12 +1826,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Disables the transfer escape end interrupt request</description>
+                                    <description>Disables the transfer escape end interrupt request.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enables the transfer escape end interrupt request</description>
+                                    <description>Enables the transfer escape end interrupt request.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -1845,12 +1845,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Disables the transfer end interrupt request</description>
+                                    <description>Disables the transfer end interrupt request.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enables the transfer end interrupt request</description>
+                                    <description>Enables the transfer end interrupt request.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -1882,12 +1882,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Only reloading</description>
+                                    <description>Only reloading.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Add index after reloading</description>
+                                    <description>Add index after reloading.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -1901,22 +1901,22 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>00</name>
-                                    <description>Destination address is fixed</description>
+                                    <description>Destination address is fixed.</description>
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>01</name>
-                                    <description>Offset addition</description>
+                                    <description>Offset addition.</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>Destination address is incremented</description>
+                                    <description>Destination address is incremented.</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>Destination address is decremented</description>
+                                    <description>Destination address is decremented.</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -1937,12 +1937,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Only reloading</description>
+                                    <description>Only reloading.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Add index after reloading</description>
+                                    <description>Add index after reloading.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -1956,22 +1956,22 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>00</name>
-                                    <description>Source address is fixed</description>
+                                    <description>Source address is fixed.</description>
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>01</name>
-                                    <description>Offset addition</description>
+                                    <description>Offset addition.</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>Source address is incremented</description>
+                                    <description>Source address is incremented.</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>Source address is decremented</description>
+                                    <description>Source address is decremented.</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -2005,12 +2005,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Disables DMA transfer</description>
+                                    <description>Disables DMA transfer.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enables DMA transfer</description>
+                                    <description>Enables DMA transfer.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -2035,12 +2035,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>DMA transfer is not requested</description>
+                                    <description>DMA transfer is not requested.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>DMA transfer is requested</description>
+                                    <description>DMA transfer is requested.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -2054,12 +2054,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>SWREQ bit is cleared after DMA transfer is started by software</description>
+                                    <description>SWREQ bit is cleared after DMA transfer is started by software.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>SWREQ bit is not cleared after DMA transfer is started by software</description>
+                                    <description>SWREQ bit is not cleared after DMA transfer is started by software.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -2084,12 +2084,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>A transfer escape end interrupt has not been generated</description>
+                                    <description>A transfer escape end interrupt has not been generated.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>A transfer escape end interrupt has been generated</description>
+                                    <description>A transfer escape end interrupt has been generated.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -2103,12 +2103,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>A transfer end interrupt has not been generated</description>
+                                    <description>A transfer end interrupt has not been generated.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>A transfer end interrupt has been generated</description>
+                                    <description>A transfer end interrupt has been generated.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -2122,12 +2122,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>DMAC is in the idle state</description>
+                                    <description>DMAC is in the idle state.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>DMAC is operating</description>
+                                    <description>DMAC is operating.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -2188,14 +2188,14 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>DMDBSL</name>
-                            <description>Functions as data transfer counter in repeat-block transfer mode</description>
+                            <description>Functions as data transfer counter in repeat-block transfer mode.</description>
                             <lsb>0</lsb>
                             <msb>15</msb>
                             <access>read-write</access>
                         </field>
                         <field>
                             <name>DMDBSH</name>
-                            <description>Specifies the repeat-area size in repeat-block transfer mode</description>
+                            <description>Specifies the repeat-area size in repeat-block transfer mode.</description>
                             <lsb>16</lsb>
                             <msb>31</msb>
                             <access>read-write</access>
@@ -2272,12 +2272,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>DMAC activation is disabled</description>
+                                    <description>DMAC activation is disabled.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>DMAC activation is enabled</description>
+                                    <description>DMAC activation is enabled.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -2309,12 +2309,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>secure channel</description>
+                                    <description>Secure channel</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>non-secure channel</description>
+                                    <description>Non-secure channel</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -2434,12 +2434,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>DTC module stopped</description>
+                                    <description>DTC module stopped.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>DTC module started</description>
+                                    <description>DTC module started.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -2471,12 +2471,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>DTC transfer operation is not in progress</description>
+                                    <description>DTC transfer operation is not in progress.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>DTC transfer operation is in progress</description>
+                                    <description>DTC transfer operation is in progress.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -3115,7 +3115,7 @@ http://www.renesas.com/disclaimer \n
                     <dimIncrement>0x1</dimIncrement>
                     <dimIndex>0-15</dimIndex>
                     <name>IRQCR%s</name>
-                    <description>IRQ Control Register</description>
+                    <description>IRQ Control Register %s</description>
                     <addressOffset>0x000</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -3366,7 +3366,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>OSTEN</name>
-                            <description>Oscillation Stop Detection Interrupt Enable</description>
+                            <description>Main Clock Oscillation Stop Detection Interrupt Enable</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-write</access>
@@ -3423,7 +3423,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>BUSMEN</name>
-                            <description>MPU Bus Master Error Interrupt Enable</description>
+                            <description>Bus Master MPU Error Interrupt Enable</description>
                             <lsb>11</lsb>
                             <msb>11</msb>
                             <access>read-write</access>
@@ -3489,7 +3489,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>IWDTCLR</name>
-                            <description>IWDT Underflow/Refresh Error Status Flag Clear</description>
+                            <description>IWDT Underflow/Refresh Error Interrupt Status Flag Clear</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
@@ -3508,7 +3508,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>WDTCLR</name>
-                            <description>WDT Underflow/Refresh Error Status Flag Clear</description>
+                            <description>WDT Underflow/Refresh Error Interrupt Status Flag Clear</description>
                             <lsb>1</lsb>
                             <msb>1</msb>
                             <access>read-write</access>
@@ -3584,7 +3584,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>NMICLR</name>
-                            <description>NMI Status Flag Clear</description>
+                            <description>NMI Pin Interrupt Status Flag Clear</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -3603,7 +3603,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>RPECLR</name>
-                            <description>SRAM Parity Error Clear</description>
+                            <description>SRAM Parity Error Interrupt Status Flag Clear</description>
                             <lsb>8</lsb>
                             <msb>8</msb>
                             <access>read-write</access>
@@ -3622,7 +3622,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>BUSMCLR</name>
-                            <description>Bus Master Error Clear</description>
+                            <description>Bus Master MPU Error Interrupt Status Flag Clear</description>
                             <lsb>11</lsb>
                             <msb>11</msb>
                             <access>read-write</access>
@@ -3688,7 +3688,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>IWDTST</name>
-                            <description>IWDT Underflow/Refresh Error Status Flag</description>
+                            <description>IWDT Underflow/Refresh Error Interrupt Status Flag</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-only</access>
@@ -3707,7 +3707,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>WDTST</name>
-                            <description>WDT Underflow/Refresh Error Status Flag</description>
+                            <description>WDT Underflow/Refresh Error Interrupt Status Flag</description>
                             <lsb>1</lsb>
                             <msb>1</msb>
                             <access>read-only</access>
@@ -3764,26 +3764,26 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>OSTST</name>
-                            <description>Oscillation Stop Detection Interrupt Status Flag</description>
+                            <description>Main Clock Oscillation Stop Detection Interrupt Status Flag</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-only</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Interrupt not requested for main oscillation stop</description>
+                                    <description>Interrupt not requested for main clock oscillation stop</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Interrupt requested for main oscillation stop</description>
+                                    <description>Interrupt requested for main clock oscillation stop</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
                         <field>
                             <name>NMIST</name>
-                            <description>NMI Status Flag</description>
+                            <description>NMI Pin Interrupt Status Flag</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-only</access>
@@ -3821,7 +3821,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>BUSMST</name>
-                            <description>MPU Bus Master Error Interrupt Status Flag</description>
+                            <description>Bus Master MPU Error Interrupt Status Flag</description>
                             <lsb>11</lsb>
                             <msb>11</msb>
                             <access>read-only</access>
@@ -7865,12 +7865,7 @@ http://www.renesas.com/disclaimer \n
             </addressBlock>
             <addressBlock>
                 <offset>0x36</offset>
-                <size>1</size>
-                <usage>registers</usage>
-            </addressBlock>
-            <addressBlock>
-                <offset>0x38</offset>
-                <size>5</size>
+                <size>7</size>
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
@@ -8626,6 +8621,46 @@ http://www.renesas.com/disclaimer \n
                     </fields>
                 </register>
                 <register>
+                    <name>HOCOCR2</name>
+                    <description>High-Speed On-Chip Oscillator Control Register 2</description>
+                    <addressOffset>0x037</addressOffset>
+                    <size>8</size>
+                    <access>read-write</access>
+                    <resetValue>0x00</resetValue>
+                    <resetMask>0xfc</resetMask>
+                    <fields>
+                        <field>
+                            <name>HCFRQ0</name>
+                            <description>HOCO Frequency Setting 0</description>
+                            <lsb>0</lsb>
+                            <msb>1</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>00</name>
+                                    <description>16 MHz</description>
+                                    <value>#00</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>01</name>
+                                    <description>18 MHz</description>
+                                    <value>#01</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>10</name>
+                                    <description>20 MHz</description>
+                                    <value>#10</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>11</name>
+                                    <description>Setting prohibited</description>
+                                    <value>#11</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                    </fields>
+                </register>
+                <register>
                     <name>MOCOCR</name>
                     <description>Middle-Speed On-Chip Oscillator Control Register</description>
                     <addressOffset>0x038</addressOffset>
@@ -8657,7 +8692,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>FLLCR1</name>
-                    <description>FLL Control Register1</description>
+                    <description>FLL Control Register 1</description>
                     <addressOffset>0x039</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -8687,7 +8722,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>FLLCR2</name>
-                    <description>FLL Control Register2</description>
+                    <description>FLL Control Register 2</description>
                     <addressOffset>0x03A</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
@@ -8808,7 +8843,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>000</name>
-                                    <description>HOCO(value after reset)</description>
+                                    <description>HOCO (value after reset)</description>
                                     <value>#000</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -10326,7 +10361,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>LVD1CR1</name>
-                    <description>Voltage Monitor 1 Circuit Control Register</description>
+                    <description>Voltage Monitor 1 Circuit Control Register 1</description>
                     <addressOffset>0x0E0</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -11205,7 +11240,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPFSAR</name>
-                    <description>Deep Standby Interrupt Factor Security Attribution Register</description>
+                    <description>Deep Software Standby Interrupt Factor Security Attribution Register</description>
                     <addressOffset>0x3E0</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
@@ -11214,7 +11249,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>DPFSA00</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 0</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 0</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
@@ -11233,7 +11268,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA01</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 1</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 1</description>
                             <lsb>1</lsb>
                             <msb>1</msb>
                             <access>read-write</access>
@@ -11252,7 +11287,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA04</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
                             <lsb>4</lsb>
                             <msb>4</msb>
                             <access>read-write</access>
@@ -11271,7 +11306,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA05</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
                             <lsb>5</lsb>
                             <msb>5</msb>
                             <access>read-write</access>
@@ -11290,7 +11325,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA06</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-write</access>
@@ -11309,7 +11344,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA07</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -11328,7 +11363,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA08</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
                             <lsb>8</lsb>
                             <msb>8</msb>
                             <access>read-write</access>
@@ -11347,7 +11382,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA09</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
                             <lsb>9</lsb>
                             <msb>9</msb>
                             <access>read-write</access>
@@ -11366,7 +11401,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA10</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
                             <lsb>10</lsb>
                             <msb>10</msb>
                             <access>read-write</access>
@@ -11385,7 +11420,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA11</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
                             <lsb>11</lsb>
                             <msb>11</msb>
                             <access>read-write</access>
@@ -11404,7 +11439,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA12</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit n (n = 4 to 12)</description>
                             <lsb>12</lsb>
                             <msb>12</msb>
                             <access>read-write</access>
@@ -11423,7 +11458,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA14</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 14</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 14</description>
                             <lsb>14</lsb>
                             <msb>14</msb>
                             <access>read-write</access>
@@ -11442,7 +11477,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA15</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 15</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 15</description>
                             <lsb>15</lsb>
                             <msb>15</msb>
                             <access>read-write</access>
@@ -11461,7 +11496,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA16</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 16</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 16</description>
                             <lsb>16</lsb>
                             <msb>16</msb>
                             <access>read-write</access>
@@ -11480,7 +11515,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA17</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 17</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 17</description>
                             <lsb>17</lsb>
                             <msb>17</msb>
                             <access>read-write</access>
@@ -11499,7 +11534,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA18</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 18</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 18</description>
                             <lsb>18</lsb>
                             <msb>18</msb>
                             <access>read-write</access>
@@ -11518,7 +11553,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA19</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 19</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 19</description>
                             <lsb>19</lsb>
                             <msb>19</msb>
                             <access>read-write</access>
@@ -11537,7 +11572,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA20</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 20</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 20</description>
                             <lsb>20</lsb>
                             <msb>20</msb>
                             <access>read-write</access>
@@ -11556,7 +11591,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA24</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 24</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 24</description>
                             <lsb>24</lsb>
                             <msb>24</msb>
                             <access>read-write</access>
@@ -11575,7 +11610,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA26</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 26</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 26</description>
                             <lsb>26</lsb>
                             <msb>26</msb>
                             <access>read-write</access>
@@ -11594,7 +11629,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPFSA27</name>
-                            <description>Deep Standby Interrupt Factor Security Attribute bit 27</description>
+                            <description>Deep Software Standby Interrupt Factor Security Attribute bit 27</description>
                             <lsb>27</lsb>
                             <msb>27</msb>
                             <access>read-write</access>
@@ -11708,7 +11743,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSBYCR</name>
-                    <description>Deep Standby Control Register</description>
+                    <description>Deep Software Standby Control Register</description>
                     <addressOffset>0x400</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -11746,7 +11781,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>IOKEEP</name>
-                            <description>I/O Port Rentention</description>
+                            <description>I/O Port Retention</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-write</access>
@@ -11786,7 +11821,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSWCR</name>
-                    <description>Deep Standby Wait Control Register</description>
+                    <description>Deep Software Standby Wait Control Register</description>
                     <addressOffset>0x401</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -11821,7 +11856,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIER0</name>
-                    <description>Deep Standby Interrupt Enable Register 0</description>
+                    <description>Deep Software Standby Interrupt Enable Register 0</description>
                     <addressOffset>0x402</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -11946,7 +11981,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIER1</name>
-                    <description>Deep Standby Interrupt Enable Register 1</description>
+                    <description>Deep Software Standby Interrupt Enable Register 1</description>
                     <addressOffset>0x403</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -12090,7 +12125,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIER2</name>
-                    <description>Deep Standby Interrupt Enable Register 2</description>
+                    <description>Deep Software Standby Interrupt Enable Register 2</description>
                     <addressOffset>0x404</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -12099,7 +12134,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>DLVD1IE</name>
-                            <description>LVD1 Deep Standby Cancel Signal Enable</description>
+                            <description>LVD1 Deep Software Standby Cancel Signal Enable</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
@@ -12118,7 +12153,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DLVD2IE</name>
-                            <description>LVD2 Deep Standby Cancel Signal Enable</description>
+                            <description>LVD2 Deep Software Standby Cancel Signal Enable</description>
                             <lsb>1</lsb>
                             <msb>1</msb>
                             <access>read-write</access>
@@ -12137,7 +12172,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DRTCIIE</name>
-                            <description>RTC Interval interrupt Deep Standby Cancel Signal Enable</description>
+                            <description>RTC Interval interrupt Deep Software Standby Cancel Signal Enable</description>
                             <lsb>2</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
@@ -12156,7 +12191,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DRTCAIE</name>
-                            <description>RTC Alarm interrupt Deep Standby Cancel Signal Enable</description>
+                            <description>RTC Alarm interrupt Deep Software Standby Cancel Signal Enable</description>
                             <lsb>3</lsb>
                             <msb>3</msb>
                             <access>read-write</access>
@@ -12196,7 +12231,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIER3</name>
-                    <description>Deep Standby Interrupt Enable Register 3</description>
+                    <description>Deep Software Standby Interrupt Enable Register 3</description>
                     <addressOffset>0x405</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -12205,57 +12240,57 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>DUSBFS0IE</name>
-                            <description>USBFS0 Suspend/Resume Deep Standby Cancel Signal Enable</description>
+                            <description>USBFS0 Suspend/Resume Deep Software Standby Cancel Signal Enable</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Cancelling deep standby mode is disabled</description>
+                                    <description>Cancelling Deep Software Standby mode is disabled</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Cancelling deep standby mode is enabled</description>
+                                    <description>Cancelling Deep Software Standby mode is enabled</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
                         <field>
                             <name>DAGT1IE</name>
-                            <description>AGT1 Underflow Deep Standby Cancel Signal Enable</description>
+                            <description>AGT1 Underflow Deep Software Standby Cancel Signal Enable</description>
                             <lsb>2</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Cancelling deep standby mode is disabled</description>
+                                    <description>Cancelling Deep Software Standby mode is disabled</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Cancelling deep standby mode is enabled</description>
+                                    <description>Cancelling Deep Software Standby mode is enabled</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
                         <field>
                             <name>DAGT3IE</name>
-                            <description>AGT3 Underflow Deep Standby Cancel Signal Enable</description>
+                            <description>AGT3 Underflow Deep Software Standby Cancel Signal Enable</description>
                             <lsb>3</lsb>
                             <msb>3</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Cancelling deep standby mode is disabled</description>
+                                    <description>Cancelling Deep Software Standby mode is disabled</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Cancelling deep standby mode is enabled</description>
+                                    <description>Cancelling Deep Software Standby mode is enabled</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -12264,7 +12299,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIFR0</name>
-                    <description>Deep Standby Interrupt Flag Register 0</description>
+                    <description>Deep Software Standby Interrupt Flag Register 0</description>
                     <addressOffset>0x406</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -12273,7 +12308,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>DIRQ0F</name>
-                            <description>IRQ0-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ0-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
@@ -12292,7 +12327,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ1F</name>
-                            <description>IRQ1-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ1-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>1</lsb>
                             <msb>1</msb>
                             <access>read-write</access>
@@ -12311,7 +12346,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ4F</name>
-                            <description>IRQ4-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ4-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>4</lsb>
                             <msb>4</msb>
                             <access>read-write</access>
@@ -12330,7 +12365,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ5F</name>
-                            <description>IRQ5-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ5-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>5</lsb>
                             <msb>5</msb>
                             <access>read-write</access>
@@ -12349,7 +12384,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ6F</name>
-                            <description>IRQ6-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ6-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-write</access>
@@ -12368,7 +12403,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ7F</name>
-                            <description>IRQ7-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ7-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -12389,7 +12424,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIFR1</name>
-                    <description>Deep Standby Interrupt Flag Register 1</description>
+                    <description>Deep Software Standby Interrupt Flag Register 1</description>
                     <addressOffset>0x407</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -12398,7 +12433,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>DIRQ8F</name>
-                            <description>IRQ8-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ8-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
@@ -12417,7 +12452,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ9F</name>
-                            <description>IRQ9-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ9-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>1</lsb>
                             <msb>1</msb>
                             <access>read-write</access>
@@ -12436,7 +12471,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ10F</name>
-                            <description>IRQ10-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ10-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>2</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
@@ -12455,7 +12490,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ11F</name>
-                            <description>IRQ11-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ11-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>3</lsb>
                             <msb>3</msb>
                             <access>read-write</access>
@@ -12474,7 +12509,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ12F</name>
-                            <description>IRQ12-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ12-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>4</lsb>
                             <msb>4</msb>
                             <access>read-write</access>
@@ -12493,7 +12528,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ14F</name>
-                            <description>IRQ14-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ14-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-write</access>
@@ -12512,7 +12547,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DIRQ15F</name>
-                            <description>IRQ15-DS Pin Deep Standby Cancel Flag</description>
+                            <description>IRQ15-DS Pin Deep Software Standby Cancel Flag</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -12533,7 +12568,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIFR2</name>
-                    <description>Deep Standby Interrupt Flag Register 2</description>
+                    <description>Deep Software Standby Interrupt Flag Register 2</description>
                     <addressOffset>0x408</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -12542,7 +12577,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>DLVD1IF</name>
-                            <description>LVD1 Deep Standby Cancel Flag</description>
+                            <description>LVD1 Deep Software Standby Cancel Flag</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
@@ -12561,7 +12596,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DLVD2IF</name>
-                            <description>LVD2 Deep Standby Cancel Flag</description>
+                            <description>LVD2 Deep Software Standby Cancel Flag</description>
                             <lsb>1</lsb>
                             <msb>1</msb>
                             <access>read-write</access>
@@ -12580,7 +12615,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DRTCIIF</name>
-                            <description>RTC Interval Interrupt Deep Standby Cancel Flag</description>
+                            <description>RTC Interval Interrupt Deep Software Standby Cancel Flag</description>
                             <lsb>2</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
@@ -12599,7 +12634,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DRTCAIF</name>
-                            <description>RTC Alarm Interrupt Deep Standby Cancel Flag</description>
+                            <description>RTC Alarm Interrupt Deep Software Standby Cancel Flag</description>
                             <lsb>3</lsb>
                             <msb>3</msb>
                             <access>read-write</access>
@@ -12618,7 +12653,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DNMIF</name>
-                            <description>NMI Pin Deep Standby Cancel Flag</description>
+                            <description>NMI Pin Deep Software Standby Cancel Flag</description>
                             <lsb>4</lsb>
                             <msb>4</msb>
                             <access>read-write</access>
@@ -12639,7 +12674,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIFR3</name>
-                    <description>Deep Standby Interrupt Flag Register 3</description>
+                    <description>Deep Software Standby Interrupt Flag Register 3</description>
                     <addressOffset>0x409</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -12648,7 +12683,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>DUSBFS0IF</name>
-                            <description>USBFS0 Suspend/Resume Deep Standby Cancel Flag</description>
+                            <description>USBFS0 Suspend/Resume Deep Software Standby Cancel Flag</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
@@ -12667,7 +12702,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DAGT1IF</name>
-                            <description>AGT1 Underflow Deep Standby Cancel Flag</description>
+                            <description>AGT1 Underflow Deep Software Standby Cancel Flag</description>
                             <lsb>2</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
@@ -12686,7 +12721,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DAGT3IF</name>
-                            <description>AGT3 Underflow Deep Standby Cancel Flag</description>
+                            <description>AGT3 Underflow Deep Software Standby Cancel Flag</description>
                             <lsb>3</lsb>
                             <msb>3</msb>
                             <access>read-write</access>
@@ -12707,7 +12742,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIEGR0</name>
-                    <description>Deep Standby Interrupt Edge Register 0</description>
+                    <description>Deep Software Standby Interrupt Edge Register 0</description>
                     <addressOffset>0x40A</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -12832,7 +12867,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIEGR1</name>
-                    <description>Deep Standby Interrupt Edge Register 1</description>
+                    <description>Deep Software Standby Interrupt Edge Register 1</description>
                     <addressOffset>0x40B</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -12976,7 +13011,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>DPSIEGR2</name>
-                    <description>Deep Standby Interrupt Edge Register 2</description>
+                    <description>Deep Software Standby Interrupt Edge Register 2</description>
                     <addressOffset>0x40C</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -13178,7 +13213,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DPSRSTF</name>
-                            <description>Deep Software Standby Reset Flag</description>
+                            <description>Deep Software Standby Reset Detect Flag</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -13344,17 +13379,17 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0x11</name>
-                                    <description>2.99 V (Vdet1_11)</description>
+                                    <description>2.99 V (Vdet1_1)</description>
                                     <value>0x11</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x12</name>
-                                    <description>2.92 V (Vdet1_12)</description>
+                                    <description>2.92 V (Vdet1_2)</description>
                                     <value>0x12</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x13</name>
-                                    <description>2.85 V (Vdet1_13)</description>
+                                    <description>2.85 V (Vdet1_3)</description>
                                     <value>0x13</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -13403,17 +13438,17 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>101</name>
-                                    <description>2.99 V (Vdet2_5)</description>
+                                    <description>2.99 V (Vdet2_1)</description>
                                     <value>#101</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>110</name>
-                                    <description>2.92 V (Vdet2_6)</description>
+                                    <description>2.92 V (Vdet2_2)</description>
                                     <value>#110</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>111</name>
-                                    <description>2.85 V (Vdet2_7)</description>
+                                    <description>2.85 V (Vdet2_3)</description>
                                     <value>#111</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -32148,7 +32183,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>The RADJ.ADJ[5:0] setting value is adjusted from the coun tvalue of the prescaler every 10 seconds.</description>
+                                    <description>The RADJ.ADJ[5:0] setting value is adjusted from the count value of the prescaler every 10 seconds.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -32293,7 +32328,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Add or subtract RADJ.ADJ [5:0] bits from prescaler countvalue every 8 seconds.</description>
+                                    <description>Add or subtract RADJ.ADJ [5:0] bits from prescaler count value every 8 seconds.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -33075,19 +33110,19 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>RSTIRQS</name>
-                            <description>Reset Interrupt Request Select</description>
+                            <description>WDT Behavior Selection</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Enable non-maskable interrupt request or interrupt request output</description>
+                                    <description>Interrupt</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enable reset output</description>
+                                    <description>Reset</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -33105,7 +33140,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>SLCSTP</name>
-                            <description>WDT Count Stop Control Register</description>
+                            <description>Sleep-Mode Count Stop Control</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -35974,6 +36009,15 @@ http://www.renesas.com/disclaimer \n
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
+                    <fields>
+                        <field>
+                            <name>FIFOPORT</name>
+                            <description>FIFO Port</description>
+                            <lsb>0</lsb>
+                            <msb>7</msb>
+                            <access>read-write</access>
+                        </field>
+                    </fields>
                 </register>
                 <register>
                     <dim>2</dim>
@@ -36008,6 +36052,15 @@ http://www.renesas.com/disclaimer \n
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
+                    <fields>
+                        <field>
+                            <name>FIFOPORT</name>
+                            <description>FIFO Port</description>
+                            <lsb>0</lsb>
+                            <msb>7</msb>
+                            <access>read-write</access>
+                        </field>
+                    </fields>
                 </register>
                 <register>
                     <name>CFIFOSEL</name>
@@ -41127,7 +41180,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>SDD0MON</name>
-                            <description>SDHI_D0 Pin Status Flag</description>
+                            <description>SDnDAT0 Pin Status Flag</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-only</access>
@@ -41805,77 +41858,77 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0x0</name>
-                                    <description>SDHI clock × 213</description>
+                                    <description>SD/MMC clock × 213</description>
                                     <value>0x0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x1</name>
-                                    <description>SDHI clock × 214</description>
+                                    <description>SD/MMC clock × 214</description>
                                     <value>0x1</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x2</name>
-                                    <description>SDHI clock × 215</description>
+                                    <description>SD/MMC clock × 215</description>
                                     <value>0x2</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x3</name>
-                                    <description>SDHI clock × 216</description>
+                                    <description>SD/MMC clock × 216</description>
                                     <value>0x3</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x4</name>
-                                    <description>SDHI clock × 217</description>
+                                    <description>SD/MMC clock × 217</description>
                                     <value>0x4</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x5</name>
-                                    <description>SDHI clock × 218</description>
+                                    <description>SD/MMC clock × 218</description>
                                     <value>0x5</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x6</name>
-                                    <description>SDHI clock × 219</description>
+                                    <description>SD/MMC clock × 219</description>
                                     <value>0x6</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x7</name>
-                                    <description>SDHI clock × 220</description>
+                                    <description>SD/MMC clock × 220</description>
                                     <value>0x7</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x8</name>
-                                    <description>SDHI clock × 221</description>
+                                    <description>SD/MMC clock × 221</description>
                                     <value>0x8</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x9</name>
-                                    <description>SDHI clock × 222</description>
+                                    <description>SD/MMC clock × 222</description>
                                     <value>0x9</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0xA</name>
-                                    <description>SDHI clock × 223</description>
+                                    <description>SD/MMC clock × 223</description>
                                     <value>0xa</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0xB</name>
-                                    <description>SDHI clock × 224</description>
+                                    <description>SD/MMC clock × 224</description>
                                     <value>0xb</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0xC</name>
-                                    <description>SDHI clock × 225</description>
+                                    <description>SD/MMC clock × 225</description>
                                     <value>0xc</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0xD</name>
-                                    <description>SDHI clock × 226</description>
+                                    <description>SD/MMC clock × 226</description>
                                     <value>0xd</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0xE</name>
-                                    <description>SDHI clock × 227</description>
+                                    <description>SD/MMC clock × 227</description>
                                     <value>0xe</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -42754,12 +42807,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Delay of 1 cycle of SSIBCK between SSILRCK/SSIFS and SSITXD0/SSIRXD0/SSIDATA0</description>
+                                    <description>Delay of 1 cycle of SSIBCK0 between SSILRCK0/SSIFS0 and SSITXD0/SSIRXD0/SSIDATA0</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>No delay between SSILRCK/SSIFS and SSITXD0/SSIRXD0/SSIDATA0</description>
+                                    <description>No delay between SSILRCK0/SSIFS0 and SSITXD0/SSIRXD0/SSIDATA0</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -42830,12 +42883,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>The initial value is at a high level. The start trigger for a frame is synchronized with a falling edge of SSILRCK/SSIFS. </description>
+                                    <description>The initial value is at a high level. The start trigger for a frame is synchronized with a falling edge of SSILRCK0/SSIFS0. </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>The initial value is at a low level. The start trigger for a frame is synchronized with a rising edge of SSILRCK/SSIFS. </description>
+                                    <description>The initial value is at a low level. The start trigger for a frame is synchronized with a rising edge of SSILRCK0/SSIFS0. </description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -42849,12 +42902,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>SSILRCK/SSIFS and SSITXD0/SSIRXD0/SSIDATA0 change at a falling edge (SSILRCK/SSIFS and SSIRXD0/SSIDATA0 are sampled at a rising edge of SSIBCK).</description>
+                                    <description>SSILRCK0/SSIFS0 and SSITXD0/SSIRXD0/SSIDATA0 change at a falling edge (SSILRCK0/SSIFS0 and SSIRXD0/SSIDATA0 are sampled at a rising edge of SSIBCK0).</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>SSILRCK/SSIFS and SSITXD0/SSIRXD0/SSIDATA0 change at a rising edge (SSILRCK/SSIFS and SSIRXD0/SSIDATA0 are sampled at a falling edge of SSIBCK).</description>
+                                    <description>SSILRCK0/SSIFS0 and SSITXD0/SSIRXD0/SSIDATA0 change at a rising edge (SSILRCK0/SSIFS0 and SSIRXD0/SSIDATA0 are sampled at a falling edge of SSIBCK0).</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -43311,7 +43364,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>AUCKE</name>
-                            <description>AUDIO_MCK Enable in Mastermode Communication</description>
+                            <description>AUDIO_MCK Enable in Master-mode Communication</description>
                             <lsb>31</lsb>
                             <msb>31</msb>
                             <access>read-write</access>
@@ -43360,7 +43413,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>RDC</name>
-                            <description>Number of Receive FIFO Data Indication Flag</description>
+                            <description>Receive Data Count</description>
                             <lsb>8</lsb>
                             <msb>13</msb>
                             <access>read-only</access>
@@ -43386,7 +43439,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>TDC</name>
-                            <description>Number of Transmit FIFO Data Indication Flag</description>
+                            <description>Transmit Data Count</description>
                             <lsb>24</lsb>
                             <msb>29</msb>
                             <access>read-only</access>
@@ -43495,12 +43548,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Always outputs BCK to the SSIBCK pin</description>
+                                    <description>Always outputs BCK to the SSIBCK0 pin</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Automatically controls output of BCK to the SSIBCK pin</description>
+                                    <description>Automatically controls output of BCK to the SSIBCK0 pin</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -44971,7 +45024,7 @@ http://www.renesas.com/disclaimer \n
                     <dimIncrement>0x02</dimIncrement>
                     <dimIndex>0-2</dimIndex>
                     <name>SARL%s</name>
-                    <description>Slave Address Register Ly</description>
+                    <description>Slave Address Register L %s</description>
                     <addressOffset>0x0A</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -44999,7 +45052,7 @@ http://www.renesas.com/disclaimer \n
                     <dimIncrement>0x02</dimIncrement>
                     <dimIndex>0-2</dimIndex>
                     <name>SARU%s</name>
-                    <description>Slave Address Register Uy</description>
+                    <description>Slave Address Register U %s</description>
                     <addressOffset>0x0B</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
@@ -55774,6 +55827,13 @@ http://www.renesas.com/disclaimer \n
                     <resetMask>0xff</resetMask>
                     <fields>
                         <field>
+                            <name>TDAT</name>
+                            <description>Serial transmit data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>write-only</access>
+                        </field>
+                        <field>
                             <name>MPBT</name>
                             <description>Multi-Processor Transfer Bit Flag</description>
                             <lsb>1</lsb>
@@ -55974,6 +56034,13 @@ http://www.renesas.com/disclaimer \n
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
                     <fields>
+                        <field>
+                            <name>RDAT</name>
+                            <description>Serial receive data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-only</access>
+                        </field>
                         <field>
                             <name>MPB</name>
                             <description>Multi-Processor Bit Flag</description>
@@ -57503,7 +57570,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>SSR_MANC</name>
-                    <description> Serial Status Register for Manchester Mode (SCMR.SMIF = 0, and MMR.MANEN = 1)</description>
+                    <description>Serial Status Register for Manchester Mode (SCMR.SMIF = 0, and MMR.MANEN = 1)</description>
                     <alternateRegister>SSR</alternateRegister>
                     <addressOffset>0x04</addressOffset>
                     <size>8</size>
@@ -58461,6 +58528,13 @@ http://www.renesas.com/disclaimer \n
                     <resetMask>0xff</resetMask>
                     <fields>
                         <field>
+                            <name>TDAT</name>
+                            <description>Serial transmit data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>write-only</access>
+                        </field>
+                        <field>
                             <name>MPBT</name>
                             <description>Multi-Processor Transfer Bit Flag</description>
                             <lsb>1</lsb>
@@ -58661,6 +58735,13 @@ http://www.renesas.com/disclaimer \n
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
                     <fields>
+                        <field>
+                            <name>RDAT</name>
+                            <description>Serial receive data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-only</access>
+                        </field>
                         <field>
                             <name>MPB</name>
                             <description>Multi-Processor Bit Flag</description>
@@ -60582,7 +60663,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>SSR_MANC</name>
-                    <description> Serial Status Register for Manchester Mode (SCMR.SMIF = 0, and MMR.MANEN = 1)</description>
+                    <description>Serial Status Register for Manchester Mode (SCMR.SMIF = 0, and MMR.MANEN = 1)</description>
                     <alternateRegister>SSR</alternateRegister>
                     <addressOffset>0x04</addressOffset>
                     <size>8</size>
@@ -61703,6 +61784,13 @@ http://www.renesas.com/disclaimer \n
                     <resetMask>0xff</resetMask>
                     <fields>
                         <field>
+                            <name>TDAT</name>
+                            <description>Serial transmit data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>write-only</access>
+                        </field>
+                        <field>
                             <name>MPBT</name>
                             <description>Multi-Processor Transfer Bit Flag</description>
                             <lsb>1</lsb>
@@ -61903,6 +61991,13 @@ http://www.renesas.com/disclaimer \n
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
                     <fields>
+                        <field>
+                            <name>RDAT</name>
+                            <description>Serial receive data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-only</access>
+                        </field>
                         <field>
                             <name>MPB</name>
                             <description>Multi-Processor Bit Flag</description>
@@ -65048,7 +65143,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>SSR_MANC</name>
-                    <description> Serial Status Register for Manchester Mode (SCMR.SMIF = 0, and MMR.MANEN = 1)</description>
+                    <description>Serial Status Register for Manchester Mode (SCMR.SMIF = 0, and MMR.MANEN = 1)</description>
                     <alternateRegister>SSR</alternateRegister>
                     <addressOffset>0x04</addressOffset>
                     <size>8</size>
@@ -66226,6 +66321,13 @@ http://www.renesas.com/disclaimer \n
                     <resetMask>0xff</resetMask>
                     <fields>
                         <field>
+                            <name>TDAT</name>
+                            <description>Serial transmit data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>write-only</access>
+                        </field>
+                        <field>
                             <name>MPBT</name>
                             <description>Multi-Processor Transfer Bit Flag</description>
                             <lsb>1</lsb>
@@ -66483,6 +66585,13 @@ http://www.renesas.com/disclaimer \n
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
                     <fields>
+                        <field>
+                            <name>RDAT</name>
+                            <description>Serial receive data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-only</access>
+                        </field>
                         <field>
                             <name>MPB</name>
                             <description>Multi-Processor Bit Flag</description>
@@ -69012,7 +69121,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>CENDIE</name>
-                            <description>RSPI Communication End Interrupt Enable</description>
+                            <description>SPI Communication End Interrupt Enable</description>
                             <lsb>4</lsb>
                             <msb>4</msb>
                             <access>read-write</access>
@@ -81820,17 +81929,17 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>001</name>
-                                    <description>2-time conversion (one addition)</description>
+                                    <description>2-time conversion (1 addition)</description>
                                     <value>#001</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>010</name>
-                                    <description>3-time conversion (two additions)</description>
+                                    <description>3-time conversion (2 additions)</description>
                                     <value>#010</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>011</name>
-                                    <description>4-time conversion (three additions)</description>
+                                    <description>4-time conversion (3 additions)</description>
                                     <value>#011</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -83892,12 +84001,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Disable analog output of channel 0 (DA0) </description>
+                                    <description>Disable D/A conversion and analog output of channel 0 (DA0) </description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Enable D/A conversion of channel 0 (DA0) </description>
+                                    <description>Enable D/A conversion and analog output of channel 0 (DA0) </description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -84507,7 +84616,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>The flash sequencer is in a state other than those corresponding to the value 1</description>
+                                    <description>The flash sequencer is not in the programming suspension processing state or programming suspended state</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -84526,7 +84635,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>The flash sequencer is in a state other than those corresponding to the value 1</description>
+                                    <description>The flash sequencer is not in the erasure suspension processing state or the erasure suspended state</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -84674,7 +84783,7 @@ http://www.renesas.com/disclaimer \n
                             <description>Security Error</description>
                             <lsb>21</lsb>
                             <msb>21</msb>
-                            <access>read-write</access>
+                            <access>read-only</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
@@ -85330,7 +85439,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>SFMSW</name>
-                            <description>Minimum high-level width select for QSSL signal</description>
+                            <description>Minimum High-level Width Select for QSSL Signal</description>
                             <lsb>0</lsb>
                             <msb>3</msb>
                             <access>read-write</access>
@@ -85637,7 +85746,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>SFMDTY</name>
-                            <description>Duty ratio correction function select for the QSPCLK signal when devided by an odd number</description>
+                            <description>Duty ratio correction function select for the QSPCLK signal when divided by an odd number</description>
                             <lsb>5</lsb>
                             <msb>5</msb>
                             <access>read-write</access>

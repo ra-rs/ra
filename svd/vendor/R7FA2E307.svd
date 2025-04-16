@@ -4,7 +4,7 @@
     <vendorID>Renesas</vendorID>
     <name>R7FA2E307</name>
     <series>RA2</series>
-    <version>1.10.00</version>
+    <version>1.20.00</version>
     <description>Arm Cortex-M23 based Microcontroller RA2E1 device</description>
     <licenseText>This software is supplied by Renesas Electronics Corporation and is only intended for \n
 use with Renesas products. No other uses are authorized. This software is owned by \n
@@ -3822,7 +3822,7 @@ http://www.renesas.com/disclaimer \n
                     <addressOffset>0x04C</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
-                    <resetValue>0x00</resetValue>
+                    <resetValue>0x40</resetValue>
                     <resetMask>0xff</resetMask>
                     <fields>
                         <field>
@@ -4937,7 +4937,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>00</name>
-                                    <description>When VCC&gt;= Vdet2 (rise) is detected</description>
+                                    <description>When VCC &gt;= Vdet2 (rise) is detected</description>
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -5020,7 +5020,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>VCC&gt;= Vdet2 or MON is disabled</description>
+                                    <description>VCC &gt;= Vdet2 or MON is disabled</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -31646,6 +31646,13 @@ http://www.renesas.com/disclaimer \n
                     <resetMask>0xff</resetMask>
                     <fields>
                         <field>
+                            <name>TDAT</name>
+                            <description>Serial transmit data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>write-only</access>
+                        </field>
+                        <field>
                             <name>MPBT</name>
                             <description>Multi-Processor Transfer Bit Flag</description>
                             <lsb>1</lsb>
@@ -31846,6 +31853,13 @@ http://www.renesas.com/disclaimer \n
                     <resetValue>0x00</resetValue>
                     <resetMask>0xff</resetMask>
                     <fields>
+                        <field>
+                            <name>RDAT</name>
+                            <description>Serial receive data</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-only</access>
+                        </field>
                         <field>
                             <name>MPB</name>
                             <description>Multi-Processor Bit Flag</description>
@@ -32306,6 +32320,18 @@ http://www.renesas.com/disclaimer \n
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-only</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>RXDn terminal is the low level </description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>RXDn terminal is the high level </description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
                         </field>
                         <field>
                             <name>SPB2DT</name>
@@ -32313,6 +32339,18 @@ http://www.renesas.com/disclaimer \n
                             <lsb>1</lsb>
                             <msb>1</msb>
                             <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Low level is output in TXDn terminal </description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>High level is output in TXDn terminal </description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
                         </field>
                         <field>
                             <name>SPB2IO</name>
@@ -32343,7 +32381,12 @@ http://www.renesas.com/disclaimer \n
             <baseAddress>0x40070020</baseAddress>
             <addressBlock>
                 <offset>0x00</offset>
-                <size>19</size>
+                <size>20</size>
+                <usage>registers</usage>
+            </addressBlock>
+            <addressBlock>
+                <offset>0x1A</offset>
+                <size>3</size>
                 <usage>registers</usage>
             </addressBlock>
             <registers>
@@ -33955,6 +33998,198 @@ http://www.renesas.com/disclaimer \n
                     <access>read-write</access>
                     <resetValue>0xff</resetValue>
                     <resetMask>0xff</resetMask>
+                </register>
+                <register>
+                    <name>DCCR</name>
+                    <description>Data Compare Match Control Register</description>
+                    <addressOffset>0x13</addressOffset>
+                    <size>8</size>
+                    <access>read-write</access>
+                    <resetValue>0x40</resetValue>
+                    <resetMask>0xff</resetMask>
+                    <fields>
+                        <field>
+                            <name>DCMF</name>
+                            <description>Data Compare Match Flag</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Not matched</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Matched</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>DPER</name>
+                            <description>Data Compare Match Parity Error Flag</description>
+                            <lsb>3</lsb>
+                            <msb>3</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>No parity error occurred</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Parity error occurred</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>DFER</name>
+                            <description>Data Compare Match Framing Error Flag</description>
+                            <lsb>4</lsb>
+                            <msb>4</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>No framing error occurred</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Framing error occurred</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>IDSEL</name>
+                            <description>ID Frame Select</description>
+                            <lsb>6</lsb>
+                            <msb>6</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Always compare data regardless of the MPB bit value</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Only compare data when MPB bit = 1 (ID frame)</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>DCME</name>
+                            <description>Data Compare Match Enable</description>
+                            <lsb>7</lsb>
+                            <msb>7</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Disable address match function</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Enable address match function</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>CDR</name>
+                    <description>Compare Match Data Register</description>
+                    <addressOffset>0x1A</addressOffset>
+                    <size>16</size>
+                    <access>read-write</access>
+                    <resetValue>0x0000</resetValue>
+                    <resetMask>0xffff</resetMask>
+                    <fields>
+                        <field>
+                            <name>CMPD</name>
+                            <description>Compare Match Data</description>
+                            <lsb>0</lsb>
+                            <msb>8</msb>
+                            <access>read-write</access>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>SPTR</name>
+                    <description>Serial Port Register</description>
+                    <addressOffset>0x1C</addressOffset>
+                    <size>8</size>
+                    <access>read-write</access>
+                    <resetValue>0x03</resetValue>
+                    <resetMask>0xff</resetMask>
+                    <fields>
+                        <field>
+                            <name>RXDMON</name>
+                            <description>Serial Input Data Monitor</description>
+                            <lsb>0</lsb>
+                            <msb>0</msb>
+                            <access>read-only</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>RXDn terminal is the low level </description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>RXDn terminal is the high level </description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>SPB2DT</name>
+                            <description>Serial Port Break Data Select</description>
+                            <lsb>1</lsb>
+                            <msb>1</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Low level is output in TXDn terminal </description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>High level is output in TXDn terminal </description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                        <field>
+                            <name>SPB2IO</name>
+                            <description>Serial Port Break I/O</description>
+                            <lsb>2</lsb>
+                            <msb>2</msb>
+                            <access>read-write</access>
+                            <enumeratedValues>
+                                <enumeratedValue>
+                                    <name>0</name>
+                                    <description>Do not output value of SPB2DT bit on TXDn pin</description>
+                                    <value>#0</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>1</name>
+                                    <description>Output value of SPB2DT bit on TXDn pin</description>
+                                    <value>#1</value>
+                                </enumeratedValue>
+                            </enumeratedValues>
+                        </field>
+                    </fields>
                 </register>
             </registers>
         </peripheral>
@@ -38309,39 +38544,44 @@ http://www.renesas.com/disclaimer \n
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
-                                    <name>000</name>
+                                    <name>0x0</name>
                                     <description>PCLKD/1 </description>
-                                    <value>#000</value>
+                                    <value>0x0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>001</name>
+                                    <name>0x1</name>
                                     <description>PCLKD/4 </description>
-                                    <value>#001</value>
+                                    <value>0x1</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>010</name>
+                                    <name>0x2</name>
                                     <description>PCLKD/16 </description>
-                                    <value>#010</value>
+                                    <value>0x2</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>011</name>
+                                    <name>0x3</name>
                                     <description>PCLKD/64 </description>
-                                    <value>#011</value>
+                                    <value>0x3</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>100</name>
+                                    <name>0x4</name>
                                     <description>PCLKD/256 </description>
-                                    <value>#100</value>
+                                    <value>0x4</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>101</name>
+                                    <name>0x5</name>
                                     <description>PCLKD/1024 </description>
-                                    <value>#101</value>
+                                    <value>0x5</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>Others</name>
-                                    <description>Setting prohibited </description>
-                                    <isDefault>true</isDefault>
+                                    <name>0x6</name>
+                                    <description>Setting prohibited</description>
+                                    <value>0x6</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0x7</name>
+                                    <description>Setting prohibited</description>
+                                    <value>0x7</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -38456,7 +38696,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>The function selected by the GTIOA[3:2] bits is applied to the compare match output value which is masked after release from the 0 or 100% duty-cycle setting. </description>
+                                    <description>The function selected by the GTIOA[3:2] bits is applied to the compare match output value which is masked after release from the 0 or 100% duty-cycle setting.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -38850,9 +39090,14 @@ http://www.renesas.com/disclaimer \n
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>Others</name>
+                                    <name>10</name>
                                     <description>Setting prohibited</description>
-                                    <isDefault>true</isDefault>
+                                    <value>#10</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>11</name>
+                                    <description>Setting prohibited</description>
+                                    <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -39123,7 +39368,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>No simultaneous generation of 0 both for the GTIOCA and GTIOCB pins has occurred. </description>
+                                    <description>No simultaneous generation of 0 both for the GTIOCA and GTIOCB pins has occurred.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -42392,39 +42637,44 @@ http://www.renesas.com/disclaimer \n
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
-                                    <name>000</name>
+                                    <name>0x0</name>
                                     <description>PCLKD/1 </description>
-                                    <value>#000</value>
+                                    <value>0x0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>001</name>
+                                    <name>0x1</name>
                                     <description>PCLKD/4 </description>
-                                    <value>#001</value>
+                                    <value>0x1</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>010</name>
+                                    <name>0x2</name>
                                     <description>PCLKD/16 </description>
-                                    <value>#010</value>
+                                    <value>0x2</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>011</name>
+                                    <name>0x3</name>
                                     <description>PCLKD/64 </description>
-                                    <value>#011</value>
+                                    <value>0x3</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>100</name>
+                                    <name>0x4</name>
                                     <description>PCLKD/256 </description>
-                                    <value>#100</value>
+                                    <value>0x4</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>101</name>
+                                    <name>0x5</name>
                                     <description>PCLKD/1024 </description>
-                                    <value>#101</value>
+                                    <value>0x5</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>Others</name>
-                                    <description>Setting prohibited </description>
-                                    <isDefault>true</isDefault>
+                                    <name>0x6</name>
+                                    <description>Setting prohibited</description>
+                                    <value>0x6</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>0x7</name>
+                                    <description>Setting prohibited</description>
+                                    <value>0x7</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -42539,7 +42789,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>The function selected by the GTIOA[3:2] bits is applied to the compare match output value which is masked after release from the 0 or 100% duty-cycle setting. </description>
+                                    <description>The function selected by the GTIOA[3:2] bits is applied to the compare match output value which is masked after release from the 0 or 100% duty-cycle setting.</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -42933,9 +43183,14 @@ http://www.renesas.com/disclaimer \n
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
-                                    <name>Others</name>
+                                    <name>10</name>
                                     <description>Setting prohibited</description>
-                                    <isDefault>true</isDefault>
+                                    <value>#10</value>
+                                </enumeratedValue>
+                                <enumeratedValue>
+                                    <name>11</name>
+                                    <description>Setting prohibited</description>
+                                    <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
@@ -43206,7 +43461,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>No simultaneous generation of 0 both for the GTIOCA and GTIOCB pins has occurred. </description>
+                                    <description>No simultaneous generation of 0 both for the GTIOCA and GTIOCB pins has occurred.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>

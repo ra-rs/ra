@@ -4,7 +4,7 @@
     <vendorID>Renesas</vendorID>
     <name>R7FA0E107</name>
     <series>RA0</series>
-    <version>0.60.04</version>
+    <version>1.10.00</version>
     <description>Arm Cortex-M23 based Microcontroller RA0E1 device</description>
     <licenseText>This software is supplied by Renesas Electronics Corporation and is only intended for \n
 use with Renesas products. No other uses are authorized. This software is owned by \n
@@ -64,7 +64,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>PARIOAD</name>
                     <description>SRAM Parity Error Operation After Detection Register</description>
-                    <addressOffset>0x00</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -94,7 +94,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>SRAMPRCR</name>
                     <description>SRAM Protection Register</description>
-                    <addressOffset>0x04</addressOffset>
+                    <addressOffset>0x0004</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -379,7 +379,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DTCCR</name>
                     <description>DTC Control Register</description>
-                    <addressOffset>0x00</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x08</resetValue>
@@ -409,7 +409,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DTCVBR</name>
                     <description>DTC Vector Base Register</description>
-                    <addressOffset>0x04</addressOffset>
+                    <addressOffset>0x0004</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000000</resetValue>
@@ -418,7 +418,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DTCST</name>
                     <description>DTC Module Start Register</description>
-                    <addressOffset>0x0C</addressOffset>
+                    <addressOffset>0x000C</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -448,7 +448,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DTCSTS</name>
                     <description>DTC Status Register</description>
-                    <addressOffset>0x0E</addressOffset>
+                    <addressOffset>0x000E</addressOffset>
                     <size>16</size>
                     <access>read-only</access>
                     <resetValue>0x0000</resetValue>
@@ -861,7 +861,7 @@ http://www.renesas.com/disclaimer \n
             <registers>
                 <register>
                     <dim>6</dim>
-                    <dimIncrement>0x1</dimIncrement>
+                    <dimIncrement>0x01</dimIncrement>
                     <dimIndex>0-5</dimIndex>
                     <name>IRQCR%s</name>
                     <description>IRQ Control Register %s</description>
@@ -905,7 +905,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>NMICR</name>
                     <description>NMI Pin Interrupt Control Register</description>
-                    <addressOffset>0x100</addressOffset>
+                    <addressOffset>0x0100</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -935,7 +935,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>NMIER</name>
                     <description>Non-maskable Interrupt Enable Register</description>
-                    <addressOffset>0x120</addressOffset>
+                    <addressOffset>0x0120</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0x0000</resetValue>
@@ -1022,7 +1022,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>NMICLR</name>
                     <description>Non-maskable Interrupt Status Clear Register</description>
-                    <addressOffset>0x130</addressOffset>
+                    <addressOffset>0x0130</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0x0000</resetValue>
@@ -1109,7 +1109,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>NMISR</name>
                     <description>Non-maskable Interrupt Status Register</description>
-                    <addressOffset>0x140</addressOffset>
+                    <addressOffset>0x0140</addressOffset>
                     <size>16</size>
                     <access>read-only</access>
                     <resetValue>0x0000</resetValue>
@@ -1196,7 +1196,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DTCENST0</name>
                     <description>DTC Enable Status Register 0</description>
-                    <addressOffset>0x300</addressOffset>
+                    <addressOffset>0x0300</addressOffset>
                     <size>32</size>
                     <access>read-only</access>
                     <resetValue>0x00000000</resetValue>
@@ -1587,7 +1587,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DTCENST1</name>
                     <description>DTC Enable Status Register 1</description>
-                    <addressOffset>0x304</addressOffset>
+                    <addressOffset>0x0304</addressOffset>
                     <size>32</size>
                     <access>read-only</access>
                     <resetValue>0x00000000</resetValue>
@@ -1769,7 +1769,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DTCENSET0</name>
                     <description>DTC Enable Set Register 0</description>
-                    <addressOffset>0x310</addressOffset>
+                    <addressOffset>0x0310</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000000</resetValue>
@@ -2160,7 +2160,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DTCENSET1</name>
                     <description>DTC Enable Set Register 1</description>
-                    <addressOffset>0x314</addressOffset>
+                    <addressOffset>0x0314</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000000</resetValue>
@@ -2342,7 +2342,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DTCENCLR0</name>
                     <description>DTC Enable Clear Register 0</description>
-                    <addressOffset>0x320</addressOffset>
+                    <addressOffset>0x0320</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000000</resetValue>
@@ -2733,7 +2733,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DTCENCLR1</name>
                     <description>DTC Enable Clear Register 1</description>
-                    <addressOffset>0x324</addressOffset>
+                    <addressOffset>0x0324</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000000</resetValue>
@@ -2915,7 +2915,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>INTFLAG0</name>
                     <description>Interrupt Request Flag Monitor Register 0</description>
-                    <addressOffset>0x330</addressOffset>
+                    <addressOffset>0x0330</addressOffset>
                     <size>32</size>
                     <access>read-only</access>
                     <resetValue>0x00000000</resetValue>
@@ -3496,7 +3496,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>INTFLAG1</name>
                     <description>Interrupt Request Flag Monitor Register 1</description>
-                    <addressOffset>0x334</addressOffset>
+                    <addressOffset>0x0334</addressOffset>
                     <size>32</size>
                     <access>read-only</access>
                     <resetValue>0x00000000</resetValue>
@@ -3697,7 +3697,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>SBYEDCR0</name>
                     <description>Software Standby/Snooze End Control Register 0</description>
-                    <addressOffset>0x340</addressOffset>
+                    <addressOffset>0x0340</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000000</resetValue>
@@ -3968,7 +3968,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>SBYEDCR1</name>
                     <description>Software Standby/Snooze End Control Register 1</description>
-                    <addressOffset>0x344</addressOffset>
+                    <addressOffset>0x0344</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000000</resetValue>
@@ -4091,7 +4091,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DBGSTR</name>
                     <description>Debug Status Register</description>
-                    <addressOffset>0x00</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>32</size>
                     <access>read-only</access>
                     <resetValue>0x00000000</resetValue>
@@ -4106,12 +4106,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>OCD is not requesting debug power up</description>
+                                    <description>OCD emulator is not requesting debug power up</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>OCD is requesting debug power up</description>
+                                    <description>OCD emulator is requesting debug power up</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -4140,7 +4140,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DBGSTOPCR</name>
                     <description>Debug Stop Control Register</description>
-                    <addressOffset>0x10</addressOffset>
+                    <addressOffset>0x0010</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000003</resetValue>
@@ -4167,38 +4167,37 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>DBGSTOP_TIM</name>
-                            <description>Mask Bit for RTC, TAU Reset/Interrupt</description>
                             <lsb>14</lsb>
                             <msb>14</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Enable RTC, TAU reset/interrupt</description>
+                                    <description>Enable RTC, TAU, TML32 reset/interrupt</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Mask RTC, TAU reset/interrupt</description>
+                                    <description>Mask RTC, TAU, TML32 reset/interrupt</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
                         <field>
                             <name>DBGSTOP_SIR</name>
-                            <description>Mask Bit for SAU, IICA, PORT_IRQ0-5 Reset/Interrupt</description>
+                            <description>Mask Bit for SAU, IICA, UARTA, PORT_IRQ0-5 Reset/Interrupt in the OCD brake mode. In the OCD break mode, the reset/interrupt is masked and each operation is stopped.</description>
                             <lsb>15</lsb>
                             <msb>15</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Enable SAU, IICA, PORT_IRQ0-5 reset/interrupt</description>
+                                    <description>Enable SAU, IICA, UARTA, PORT_IRQ0 to 5 reset/interrupt</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Mask SAU, IICA, PORT_IRQ0-5 reset/interrupt</description>
+                                    <description>Mask SAU, IICA, UARTA, PORT_IRQ0 to 5 reset/interrupt</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -4325,14 +4324,14 @@ http://www.renesas.com/disclaimer \n
             </addressBlock>
             <addressBlock>
                 <offset>0xC02</offset>
-                <size>3</size>
+                <size>2</size>
                 <usage>registers</usage>
             </addressBlock>
             <registers>
                 <register>
                     <name>CMC</name>
                     <description>Clock Operation Mode Control Register</description>
-                    <addressOffset>0x800</addressOffset>
+                    <addressOffset>0x0800</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -4414,7 +4413,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Input port mode</description>
+                                    <description>Port mode</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -4453,7 +4452,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>SOMRG</name>
                     <description>Sub-clock Oscillator Margin Check Register</description>
-                    <addressOffset>0x803</addressOffset>
+                    <addressOffset>0x0803</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -4493,7 +4492,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>MIOTRM</name>
                     <description>Middle-speed On-chip Oscillator Trimming Register</description>
-                    <addressOffset>0x804</addressOffset>
+                    <addressOffset>0x0804</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x90</resetValue>
@@ -4511,7 +4510,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>LIOTRM</name>
                     <description>Low-speed On-chip Oscillator Trimming Register</description>
-                    <addressOffset>0x805</addressOffset>
+                    <addressOffset>0x0805</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x80</resetValue>
@@ -4529,7 +4528,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>HOCOCR</name>
                     <description>High-speed On-chip Oscillator Control Register</description>
-                    <addressOffset>0x808</addressOffset>
+                    <addressOffset>0x0808</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -4559,7 +4558,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>MOCOCR</name>
                     <description>Middle-speed On-chip Oscillator Control Register</description>
-                    <addressOffset>0x809</addressOffset>
+                    <addressOffset>0x0809</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x01</resetValue>
@@ -4589,7 +4588,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>LOCOCR</name>
                     <description>Low-speed On-chip Oscillator Control Register</description>
-                    <addressOffset>0x80A</addressOffset>
+                    <addressOffset>0x080A</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x01</resetValue>
@@ -4619,7 +4618,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>MOSCCR</name>
                     <description>Main Clock Oscillator Control Register</description>
-                    <addressOffset>0x80B</addressOffset>
+                    <addressOffset>0x080B</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x01</resetValue>
@@ -4649,7 +4648,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>SOSCCR</name>
                     <description>Sub-clock Oscillator Control Register</description>
-                    <addressOffset>0x80C</addressOffset>
+                    <addressOffset>0x080C</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x01</resetValue>
@@ -4679,7 +4678,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>OSTC</name>
                     <description>Oscillation Stabilization Time Counter Status Register</description>
-                    <addressOffset>0x810</addressOffset>
+                    <addressOffset>0x0810</addressOffset>
                     <size>8</size>
                     <access>read-only</access>
                     <resetValue>0x00</resetValue>
@@ -4744,7 +4743,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>OSTS</name>
                     <description>Oscillation Stabilization Time Select Register</description>
-                    <addressOffset>0x811</addressOffset>
+                    <addressOffset>0x0811</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x07</resetValue>
@@ -4804,7 +4803,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>OSCSF</name>
                     <description>Oscillation Stabilization Flag Register</description>
-                    <addressOffset>0x812</addressOffset>
+                    <addressOffset>0x0812</addressOffset>
                     <size>8</size>
                     <access>read-only</access>
                     <resetValue>0x01</resetValue>
@@ -4834,7 +4833,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>HOCODIV</name>
                     <description>High-speed On-chip Oscillator Frequency Select Register</description>
-                    <addressOffset>0x818</addressOffset>
+                    <addressOffset>0x0818</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x03</resetValue>
@@ -4889,7 +4888,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>MOCODIV</name>
                     <description>Middle-speed On-chip Oscillator Frequency Select Register</description>
-                    <addressOffset>0x819</addressOffset>
+                    <addressOffset>0x0819</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -4928,8 +4927,8 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>MOSCDIV</name>
-                    <description>Main System Clock Division Register</description>
-                    <addressOffset>0x81A</addressOffset>
+                    <description>MOSC Clock Division Register</description>
+                    <addressOffset>0x081A</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -4937,7 +4936,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>DIV</name>
-                            <description>Selection Division Ratio for the Main System Clock</description>
+                            <description>Selection Division Ratio for the MOSC Clock</description>
                             <lsb>0</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
@@ -4979,7 +4978,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>FOCOSCR</name>
                     <description>FOCO Clock Source Control Register</description>
-                    <addressOffset>0x820</addressOffset>
+                    <addressOffset>0x0820</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -5028,7 +5027,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>FMAINSCR</name>
                     <description>FMAIN Clock Source Control Register</description>
-                    <addressOffset>0x821</addressOffset>
+                    <addressOffset>0x0821</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -5077,7 +5076,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>FSUBSCR</name>
                     <description>FSUB Clock Source Control Register</description>
-                    <addressOffset>0x822</addressOffset>
+                    <addressOffset>0x0822</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -5107,7 +5106,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ICLKSCR</name>
                     <description>ICLK Clock Source Control Register</description>
-                    <addressOffset>0x823</addressOffset>
+                    <addressOffset>0x0823</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -5156,7 +5155,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>OSMC</name>
                     <description>Subsystem Clock Supply Mode Control Register</description>
-                    <addressOffset>0x824</addressOffset>
+                    <addressOffset>0x0824</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -5164,7 +5163,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>WUTMMCK0</name>
-                            <description>Selection of the Operating Clock for the Realtime Clock, 32-bit Interval Timer, Serial Interfaces UARTA0</description>
+                            <description>Selection of the Operating clock source for the Realtime Clock, 32-bit Interval Timer, Serial Interface UARTA</description>
                             <lsb>4</lsb>
                             <msb>4</msb>
                             <access>read-write</access>
@@ -5185,8 +5184,8 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>RESF</name>
-                    <description>Reset Control Flag Register</description>
-                    <addressOffset>0x830</addressOffset>
+                    <description>Reset Status Flag Register</description>
+                    <addressOffset>0x0830</addressOffset>
                     <size>8</size>
                     <access>read-only</access>
                     <resetValue>0x00</resetValue>
@@ -5273,7 +5272,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>PORSR</name>
                     <description>Power-On Reset Status Register</description>
-                    <addressOffset>0x831</addressOffset>
+                    <addressOffset>0x0831</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -5303,7 +5302,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>LVD1CR</name>
                     <description>Voltage Monitor 1 Circuit Control Register</description>
-                    <addressOffset>0x840</addressOffset>
+                    <addressOffset>0x0840</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x19</resetValue>
@@ -5475,7 +5474,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>LVD1MKR</name>
                     <description>Voltage Monitor 1 Circuit Mask Register</description>
-                    <addressOffset>0x841</addressOffset>
+                    <addressOffset>0x0841</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -5505,7 +5504,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>LVD1SR</name>
                     <description>Voltage Monitor 1 Circuit Status Register</description>
-                    <addressOffset>0x843</addressOffset>
+                    <addressOffset>0x0843</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x02</resetValue>
@@ -5554,7 +5553,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>SBYCR</name>
                     <description>Standby Control Register</description>
-                    <addressOffset>0x860</addressOffset>
+                    <addressOffset>0x0860</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0x0000</resetValue>
@@ -5581,7 +5580,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>FWKUP</name>
-                            <description>Setting for Starting the High-speed On-chip Oscillator at the Times of Release from Software Standby Mode and of Transitions to Snooze Mode</description>
+                            <description>Setting for Starting the High-speed On-chip Oscillator at the times of release from Software Standby Mode and of Transitions to Snooze Mode</description>
                             <lsb>8</lsb>
                             <msb>8</msb>
                             <access>read-write</access>
@@ -5641,7 +5640,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>PSMCR</name>
                     <description>Power Save Memory Control Register</description>
-                    <addressOffset>0x862</addressOffset>
+                    <addressOffset>0x0862</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -5681,7 +5680,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>SYOCDCR</name>
                     <description>System Control OCD Control Register</description>
-                    <addressOffset>0x863</addressOffset>
+                    <addressOffset>0x0863</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -5711,7 +5710,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>PRCR</name>
                     <description>Protect Register</description>
-                    <addressOffset>0x8FE</addressOffset>
+                    <addressOffset>0x08FE</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0x0000</resetValue>
@@ -5786,7 +5785,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>MSTPCRA</name>
                     <description>Module Stop Control Register A</description>
-                    <addressOffset>0xC02</addressOffset>
+                    <addressOffset>0x0C02</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0xffbf</resetValue>
@@ -5813,74 +5812,6 @@ http://www.renesas.com/disclaimer \n
                         </field>
                     </fields>
                 </register>
-                <register>
-                    <name>LPOPT</name>
-                    <description>Lower Power Operation Control Register</description>
-                    <addressOffset>0xC04</addressOffset>
-                    <size>8</size>
-                    <access>read-write</access>
-                    <resetValue>0x00</resetValue>
-                    <resetMask>0xff</resetMask>
-                    <fields>
-                        <field>
-                            <name>DCLKDIS</name>
-                            <description>Debug Clock Disable Control</description>
-                            <lsb>1</lsb>
-                            <msb>2</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>00</name>
-                                    <description>Debug clock does not stop</description>
-                                    <value>#00</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>Others</name>
-                                    <description>Debug clock stops (valid only when LPOPT.LPOPTEN = 1)</description>
-                                    <isDefault>true</isDefault>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
-                            <name>BPFCLKDIS</name>
-                            <description>BPF Clock Disable Control</description>
-                            <lsb>3</lsb>
-                            <msb>3</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>Flash register R/W clock operates as normal</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Flash register R/W clock stops.</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
-                            <name>LPOPTEN</name>
-                            <description>Lower Power Operation Enable</description>
-                            <lsb>7</lsb>
-                            <msb>7</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>All lower power counter measure disable</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>All lower power counter measure enable</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                    </fields>
-                </register>
             </registers>
         </peripheral>
         <peripheral>
@@ -5898,7 +5829,7 @@ http://www.renesas.com/disclaimer \n
                 <usage>registers</usage>
             </addressBlock>
             <addressBlock>
-                <offset>0x6C</offset>
+                <offset>0x1C</offset>
                 <size>24</size>
                 <usage>registers</usage>
             </addressBlock>
@@ -5906,7 +5837,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ELCR</name>
                     <description>Event Link Controller Register</description>
-                    <addressOffset>0x00</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -5935,11 +5866,11 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <dim>2</dim>
-                    <dimIncrement>0x02</dimIncrement>
+                    <dimIncrement>0x2</dimIncrement>
                     <dimIndex>0-1</dimIndex>
                     <name>ELSEGR%s</name>
                     <description>Event Link Software Event Generation Register %s</description>
-                    <addressOffset>0x02</addressOffset>
+                    <addressOffset>0x0002</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x80</resetValue>
@@ -6006,11 +5937,11 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <dim>6</dim>
-                    <dimIncrement>0x04</dimIncrement>
+                    <dimIncrement>0x4</dimIncrement>
                     <dimIndex>23-28</dimIndex>
                     <name>ELSR%s</name>
                     <description>Event Link Setting Register %s</description>
-                    <addressOffset>0x6C</addressOffset>
+                    <addressOffset>0x001C</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0x0000</resetValue>
@@ -6045,7 +5976,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>IWDTRR</name>
                     <description>IWDT Refresh Register</description>
-                    <addressOffset>0x00</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0xff</resetValue>
@@ -6054,7 +5985,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>IWDTSR</name>
                     <description>IWDT Status Register</description>
-                    <addressOffset>0x04</addressOffset>
+                    <addressOffset>0x0004</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0x0000</resetValue>
@@ -6122,7 +6053,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>MSTPCRB</name>
                     <description>Module Stop Control Register B</description>
-                    <addressOffset>0x000</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0xffffffff</resetValue>
@@ -6209,7 +6140,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>MSTPCRC</name>
                     <description>Module Stop Control Register C</description>
-                    <addressOffset>0x004</addressOffset>
+                    <addressOffset>0x0004</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0xffffffff</resetValue>
@@ -6277,7 +6208,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>MSTPCRD</name>
                     <description>Module Stop Control Register D</description>
-                    <addressOffset>0x008</addressOffset>
+                    <addressOffset>0x0008</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0xffffffff</resetValue>
@@ -6386,7 +6317,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>CRCCR0</name>
                     <description>CRC Control Register 0</description>
-                    <addressOffset>0x00</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -6440,7 +6371,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>CRCDIR</name>
                     <description>CRC Data Input Register</description>
-                    <addressOffset>0x04</addressOffset>
+                    <addressOffset>0x0004</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000000</resetValue>
@@ -6450,7 +6381,7 @@ http://www.renesas.com/disclaimer \n
                     <name>CRCDIR_BY</name>
                     <description>CRC Data Input Register</description>
                     <alternateRegister>CRCDIR</alternateRegister>
-                    <addressOffset>0x04</addressOffset>
+                    <addressOffset>0x0004</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -6459,7 +6390,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>CRCDOR</name>
                     <description>CRC Data Output Register</description>
-                    <addressOffset>0x08</addressOffset>
+                    <addressOffset>0x0008</addressOffset>
                     <size>32</size>
                     <access>read-write</access>
                     <resetValue>0x00000000</resetValue>
@@ -6469,7 +6400,7 @@ http://www.renesas.com/disclaimer \n
                     <name>CRCDOR_HA</name>
                     <description>CRC Data Output Register</description>
                     <alternateRegister>CRCDOR</alternateRegister>
-                    <addressOffset>0x08</addressOffset>
+                    <addressOffset>0x0008</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0x0000</resetValue>
@@ -9174,25 +9105,6 @@ http://www.renesas.com/disclaimer \n
                     <resetMask>0xffff</resetMask>
                     <fields>
                         <field>
-                            <name>EORR00</name>
-                            <description>P200 Event Output Reset</description>
-                            <lsb>0</lsb>
-                            <msb>0</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>No effect on output</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Low output</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
                             <name>EORR01</name>
                             <description>P201 Event Output Reset</description>
                             <lsb>1</lsb>
@@ -9306,44 +9218,6 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                             </enumeratedValues>
                         </field>
-                        <field>
-                            <name>EORR14</name>
-                            <description>P214 Event Output Reset</description>
-                            <lsb>14</lsb>
-                            <msb>14</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>No effect on output</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Low output</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
-                            <name>EORR15</name>
-                            <description>P215 Event Output Reset</description>
-                            <lsb>15</lsb>
-                            <msb>15</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>No effect on output</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Low output</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
                     </fields>
                 </register>
                 <register>
@@ -9355,25 +9229,6 @@ http://www.renesas.com/disclaimer \n
                     <resetValue>0x0000</resetValue>
                     <resetMask>0xffff</resetMask>
                     <fields>
-                        <field>
-                            <name>EOSR00</name>
-                            <description>P200 Event Output Set</description>
-                            <lsb>0</lsb>
-                            <msb>0</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>No effect on output</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>High output</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
                         <field>
                             <name>EOSR01</name>
                             <description>P201 Event Output Set</description>
@@ -9474,44 +9329,6 @@ http://www.renesas.com/disclaimer \n
                             <description>P213 Event Output Set</description>
                             <lsb>13</lsb>
                             <msb>13</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>No effect on output</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>High output</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
-                            <name>EOSR14</name>
-                            <description>P214 Event Output Set</description>
-                            <lsb>14</lsb>
-                            <msb>14</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>No effect on output</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>High output</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
-                            <name>EOSR15</name>
-                            <description>P215 Event Output Set</description>
-                            <lsb>15</lsb>
-                            <msb>15</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
@@ -11448,7 +11265,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>P200PFS_A</name>
                     <description>Port 200 Pin Function Select Register</description>
-                    <addressOffset>0x040</addressOffset>
+                    <addressOffset>0x0040</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0x0000</resetValue>
@@ -12424,7 +12241,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <dim>2</dim>
-                    <dimIncrement>0x0002</dimIncrement>
+                    <dimIncrement>0x2</dimIncrement>
                     <dimIndex>13-14</dimIndex>
                     <name>P9%sPFS_A</name>
                     <description>Port 9%s Pin Function Select Register</description>
@@ -12462,12 +12279,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Low output</description>
+                                    <description>Low level</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>High output</description>
+                                    <description>High level</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -12601,7 +12418,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>SNFEN00</name>
-                            <description>Use of Noise Filter of RxD0 Pin</description>
+                            <description>Use of Noise Filter of RXD0 Pin</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
@@ -12620,7 +12437,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>SNFEN10</name>
-                            <description>Use of Noise Filter of RxD1 Pin</description>
+                            <description>Use of Noise Filter of RXD1 Pin</description>
                             <lsb>2</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
@@ -12639,7 +12456,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>SNFEN20</name>
-                            <description>Use of Noise Filter of RxD2 Pin</description>
+                            <description>Use of Noise Filter of RXD2 Pin</description>
                             <lsb>4</lsb>
                             <msb>4</msb>
                             <access>read-write</access>
@@ -12676,12 +12493,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Turns the noise filter off.</description>
+                                    <description>Turns the noise filter off</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Turns the noise filter on.</description>
+                                    <description>Turns the noise filter on</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -12695,12 +12512,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Turns the noise filter off.</description>
+                                    <description>Turns the noise filter off</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Turns the noise filter on.</description>
+                                    <description>Turns the noise filter on</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -12714,12 +12531,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Turns the noise filter off.</description>
+                                    <description>Turns the noise filter off</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Turns the noise filter on.</description>
+                                    <description>Turns the noise filter on</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -12733,12 +12550,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Turns the noise filter off.</description>
+                                    <description>Turns the noise filter off</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Turns the noise filter on.</description>
+                                    <description>Turns the noise filter on</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -12752,12 +12569,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Turns the noise filter off.</description>
+                                    <description>Turns the noise filter off</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Turns the noise filter on.</description>
+                                    <description>Turns the noise filter on</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -12771,12 +12588,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Turns the noise filter off.</description>
+                                    <description>Turns the noise filter off</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Turns the noise filter on.</description>
+                                    <description>Turns the noise filter on</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -12790,12 +12607,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Turns the noise filter off.</description>
+                                    <description>Turns the noise filter off</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Turns the noise filter on.</description>
+                                    <description>Turns the noise filter on</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -12809,12 +12626,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Turns the noise filter off.</description>
+                                    <description>Turns the noise filter off</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Turns the noise filter on.</description>
+                                    <description>Turns the noise filter on</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -13001,7 +12818,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Inputs the states of the RxD0 pin of serial array unit UART0 to the reception shift register.</description>
+                                    <description>Inputs the states of the RXD0 pin of serial array unit UART0 to the reception shift register.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -13020,7 +12837,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Inputs the states of the RxD1 pin of serial array unit UART1 to the reception shift register.</description>
+                                    <description>Inputs the states of the RXD1 pin of serial array unit UART1 to the reception shift register.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -13039,7 +12856,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Inputs the states of the RxD2 pin of serial array unit UART2 to the reception shift register.</description>
+                                    <description>Inputs the states of the RXD2 pin of serial array unit UART2 to the reception shift register.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -13058,7 +12875,7 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Inputs the states of the RxDA0 pin of serial interface UARTA0 to the reception shift register.</description>
+                                    <description>Inputs the states of the RXDA0 pin of serial interface UARTA0 to the reception shift register.</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -13108,7 +12925,7 @@ http://www.renesas.com/disclaimer \n
                     <fields>
                         <field>
                             <name>ADCE</name>
-                            <description>A/D Voltage Comparator Operation Control</description>
+                            <description>A/D voltage comparator operation control</description>
                             <lsb>0</lsb>
                             <msb>0</msb>
                             <access>read-write</access>
@@ -13127,29 +12944,29 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>LV</name>
-                            <description>Select Operation Voltage Mode</description>
+                            <description>Select Operation voltage mode</description>
                             <lsb>1</lsb>
                             <msb>2</msb>
                             <access>read-write</access>
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>00</name>
-                                    <description>Normal 1 mode</description>
+                                    <description>Normal mode 1</description>
                                     <value>#00</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>01</name>
-                                    <description>Normal 2 mode</description>
+                                    <description>Normal mode 2</description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>Low voltage 1 mode</description>
+                                    <description>Low voltage mode 1</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>Low voltage 2 mode</description>
+                                    <description>Low voltage mode 2</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -13200,7 +13017,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>ADMD</name>
-                            <description>Specification of the A/D Conversion Channel Selection Mode</description>
+                            <description>Specification of the A/D conversion channel selection mode</description>
                             <lsb>6</lsb>
                             <msb>6</msb>
                             <access>read-write</access>
@@ -13219,7 +13036,7 @@ http://www.renesas.com/disclaimer \n
                         </field>
                         <field>
                             <name>ADCS</name>
-                            <description>A/D Conversion Operation Control</description>
+                            <description>A/D conversion operation control</description>
                             <lsb>7</lsb>
                             <msb>7</msb>
                             <access>read-write</access>
@@ -13303,7 +13120,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>011</name>
-                                    <description>32-bit interval timer interrupt signal (ADITL0 (= TML32_ITL0))</description>
+                                    <description>32-bit interval timer event signal (ADITL0 (= TML32_ITL0))</description>
                                     <value>#011</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -13384,7 +13201,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>ADCR</name>
-                    <description>12-bit or 10-bit A/D Conversion Result Register </description>
+                    <description>12-bit or 10-bit A/D Conversion Result Register</description>
                     <addressOffset>0x0006</addressOffset>
                     <size>16</size>
                     <access>read-only</access>
@@ -13393,7 +13210,7 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>ADCRH</name>
-                    <description>8-bit A/D Conversion Result Register </description>
+                    <description>8-bit A/D Conversion Result Register</description>
                     <addressOffset>0x0007</addressOffset>
                     <size>8</size>
                     <access>read-only</access>
@@ -13468,7 +13285,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>The interrupt signal (ADC12_ADI) is output when the ADCRn register ≤ the ADLL register (AREA 2) or the ADUL register &lt; the ADCRn register (AREA 3).</description>
+                                    <description>The interrupt signal (ADC12_ADI) is output when the ADCRn register &lt; the ADLL register (AREA 2) or the ADUL register &lt; the ADCRn register (AREA 3).</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -13680,7 +13497,7 @@ http://www.renesas.com/disclaimer \n
             <registers>
                 <register>
                     <dim>4</dim>
-                    <dimIncrement>0x02</dimIncrement>
+                    <dimIncrement>0x2</dimIncrement>
                     <dimIndex>0-3</dimIndex>
                     <name>SDR0%s</name>
                     <description>Serial Data Register 0%s</description>
@@ -14349,7 +14166,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Buffer empty interrupt</description>
+                                    <description>Buffer empty interrupt (Occurs when data is transferred from the SDRmn register to the shift register.)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -14446,7 +14263,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Buffer empty interrupt</description>
+                                    <description>Buffer empty interrupt (Occurs when data is transferred from the SDRmn register to the shift register.)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -14513,7 +14330,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Valid edge of the RxDq pin (selected for UART reception)</description>
+                                    <description>Valid edge of the RXDq pin (selected for UART reception)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -14581,7 +14398,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Buffer empty interrupt</description>
+                                    <description>Buffer empty interrupt (Occurs when data is transferred from the SDRmn register to the shift register.)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -14678,7 +14495,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Buffer empty interrupt</description>
+                                    <description>Buffer empty interrupt (Occurs when data is transferred from the SDRmn register to the shift register.)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -14745,7 +14562,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Valid edge of the RxDq pin (selected for UART reception)</description>
+                                    <description>Valid edge of the RXDq pin (selected for UART reception)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -14988,17 +14805,17 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>01</name>
-                                    <description>9-bit data length (stored in bits 0 to 8 of the SDRm1 register) (settable in UART mode only) </description>
+                                    <description>9-bit data length (stored in the DAT[8:0] bits of the SDRm1 register) (settable in UART mode only) </description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>7-bit data length (stored in bits 0 to 6 of the SDRm1 register)</description>
+                                    <description>7-bit data length (stored in the DAT[6:0] bits of the SDRm1 register)</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>8-bit data length (stored in bits 0 to 7 of the SDRm1 register)</description>
+                                    <description>8-bit data length (stored in the DAT[7:0] bits of the SDRm1 register)</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -15167,12 +14984,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>7-bit data length (stored in bits 0 to 6 of the SDR02 register)</description>
+                                    <description>7-bit data length (stored in the DAT[6:0] bits of the SDR02 register)</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>8-bit data length (stored in bits 0 to 7 of the SDR02 register)</description>
+                                    <description>8-bit data length (stored in the DAT[7:0] bits of the SDR02 register)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -15332,12 +15149,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>7-bit data length (stored in bits 0 to 6 of the SDR03 register)</description>
+                                    <description>7-bit data length (stored in the DAT[6:0] bits of the SDR03 register)</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>8-bit data length (stored in bits 0 to 7 of the SDR03 register)</description>
+                                    <description>8-bit data length (stored in the DAT[7:0] bits of the SDR03 register)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -15988,7 +15805,7 @@ http://www.renesas.com/disclaimer \n
             <registers>
                 <register>
                     <dim>2</dim>
-                    <dimIncrement>0x02</dimIncrement>
+                    <dimIncrement>0x2</dimIncrement>
                     <dimIndex>0-1</dimIndex>
                     <name>SDR1%s</name>
                     <description>Serial Data Register 1%s</description>
@@ -16347,7 +16164,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Buffer empty interrupt</description>
+                                    <description>Buffer empty interrupt (Occurs when data is transferred from the SDRmn register to the shift register.)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -16444,7 +16261,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Buffer empty interrupt</description>
+                                    <description>Buffer empty interrupt (Occurs when data is transferred from the SDRmn register to the shift register.)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -16511,7 +16328,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Valid edge of the RxDq pin (selected for UART reception)</description>
+                                    <description>Valid edge of the RXDq pin (selected for UART reception)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -16754,17 +16571,17 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>01</name>
-                                    <description>9-bit data length (stored in bits 0 to 8 of the SDRm1 register) (settable in UART mode only) </description>
+                                    <description>9-bit data length (stored in the DAT[8:0] bits of the SDRm1 register) (settable in UART mode only) </description>
                                     <value>#01</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>7-bit data length (stored in bits 0 to 6 of the SDRm1 register)</description>
+                                    <description>7-bit data length (stored in the DAT[6:0] bits of the SDRm1 register)</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>8-bit data length (stored in bits 0 to 7 of the SDRm1 register)</description>
+                                    <description>8-bit data length (stored in the DAT[7:0] bits of the SDRm1 register)</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -17200,7 +17017,7 @@ http://www.renesas.com/disclaimer \n
                     <addressOffset>0x0128</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
-                    <resetValue>0x0f0f</resetValue>
+                    <resetValue>0x0303</resetValue>
                     <resetMask>0xffff</resetMask>
                     <fields>
                         <field>
@@ -17576,7 +17393,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Valid edge of input signal input from the TI0n pin. In the case of unit 0: In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
+                                    <description>Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -17605,7 +17422,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>Operation clock CKm03 set by timer clock select register 0 (TPS0)</description>
+                                    <description>Operation clock CK03 set by timer clock select register 0 (TPS0)</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -17950,7 +17767,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Valid edge of input signal input from the TI0n pin. In the case of unit 0: In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
+                                    <description>Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -17979,7 +17796,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>Operation clock CKm03 set by timer clock select register 0 (TPS0)</description>
+                                    <description>Operation clock CK03 set by timer clock select register 0 (TPS0)</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -18324,7 +18141,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Valid edge of input signal input from the TI0n pin. In the case of unit 0: In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
+                                    <description>Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -18353,7 +18170,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>Operation clock CKm03 set by timer clock select register 0 (TPS0)</description>
+                                    <description>Operation clock CK03 set by timer clock select register 0 (TPS0)</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -18492,7 +18309,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Valid edge of input signal input from the TI0n pin. In the case of unit 0: In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
+                                    <description>Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -18521,7 +18338,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>Operation clock CKm03 set by timer clock select register 0 (TPS0)</description>
+                                    <description>Operation clock CK03 set by timer clock select register 0 (TPS0)</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -18679,7 +18496,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Valid edge of input signal input from the TI0n pin. In the case of unit 0: In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
+                                    <description>Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -18708,7 +18525,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>Operation clock CKm03 set by timer clock select register 0 (TPS0)</description>
+                                    <description>Operation clock CK03 set by timer clock select register 0 (TPS0)</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -18847,7 +18664,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Valid edge of input signal input from the TI0n pin. In the case of unit 0: In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
+                                    <description>Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -18876,7 +18693,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>11</name>
-                                    <description>Operation clock CKm03 set by timer clock select register 0 (TPS0)</description>
+                                    <description>Operation clock CK03 set by timer clock select register 0 (TPS0)</description>
                                     <value>#11</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -19502,7 +19319,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>SEC</name>
                     <description>Second Count Register</description>
-                    <addressOffset>0x00</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19527,7 +19344,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>MIN</name>
                     <description>Minute Count Register</description>
-                    <addressOffset>0x01</addressOffset>
+                    <addressOffset>0x0001</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19552,7 +19369,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>HOUR</name>
                     <description>Hour Count Register</description>
-                    <addressOffset>0x02</addressOffset>
+                    <addressOffset>0x0002</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19577,7 +19394,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>WEEK</name>
                     <description>Day-of-Week Count Register</description>
-                    <addressOffset>0x03</addressOffset>
+                    <addressOffset>0x0003</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19637,7 +19454,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>DAY</name>
                     <description>Day Count Register</description>
-                    <addressOffset>0x04</addressOffset>
+                    <addressOffset>0x0004</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19662,7 +19479,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>MONTH</name>
                     <description>Month Count Register</description>
-                    <addressOffset>0x05</addressOffset>
+                    <addressOffset>0x0005</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19687,7 +19504,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>YEAR</name>
                     <description>Year Count Register</description>
-                    <addressOffset>0x06</addressOffset>
+                    <addressOffset>0x0006</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19712,7 +19529,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>SUBCUD</name>
                     <description>Time Error Correction Register</description>
-                    <addressOffset>0x07</addressOffset>
+                    <addressOffset>0x0007</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19768,7 +19585,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ALARMWM</name>
                     <description>Alarm Minute Register</description>
-                    <addressOffset>0x08</addressOffset>
+                    <addressOffset>0x0008</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19793,7 +19610,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ALARMWH</name>
                     <description>Alarm Hour Register</description>
-                    <addressOffset>0x09</addressOffset>
+                    <addressOffset>0x0009</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19818,7 +19635,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ALARMWW</name>
                     <description>Alarm Day-of-Week Register</description>
-                    <addressOffset>0x0A</addressOffset>
+                    <addressOffset>0x000A</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -19962,7 +19779,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>RTCC0</name>
                     <description>Realtime Clock Control Register 0</description>
-                    <addressOffset>0x0B</addressOffset>
+                    <addressOffset>0x000B</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -20093,7 +19910,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>RTCC1</name>
                     <description>Realtime Clock Control Register 1</description>
-                    <addressOffset>0x0C</addressOffset>
+                    <addressOffset>0x000C</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -20392,12 +20209,12 @@ http://www.renesas.com/disclaimer \n
                             <enumeratedValues>
                                 <enumeratedValue>
                                     <name>0</name>
-                                    <description>Slave device status or communication standby status</description>
+                                    <description>Slave mode status or communication standby status</description>
                                     <value>#0</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Master device communication status</description>
+                                    <description>Master mode communication status</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -20514,7 +20331,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>Stop condition is generated (termination of master device transfer)</description>
+                                    <description>Stop condition is generated (End of transfer as master device)</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -20533,7 +20350,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>When bus is released (in standby state, when IICF0.IICBSY = 0): If this bit is set to 1, a start condition is generated (startup as the master). When a third party is communicating: When communication reservation function is enabled (IICF0.IICRSV = 0)Functions as the start condition reservation flag. When set to 1, automatically generates a start condition after the bus is released.When communication reservation function is disabled (IICF0.IICRSV = 1)Even if this bit is set to 1, the STT bit is cleared and the STT clear flag (IICF0.STCF) is set to 1. No start condition is generated.In the clock stretch state (for a master device): Generates a restart condition after release from the clock stretch state. </description>
+                                    <description>When bus is released (in communication standby status, when IICF0.IICBSY = 0): If this bit is set to 1, a start condition is generated (startup as the master mode). When a third party is communicating: When communication reservation function is enabled (IICF0.IICRSV = 0)Functions as the start condition reservation flag. When set to 1, automatically generates a start condition after the bus is released.When communication reservation function is disabled (IICF0.IICRSV = 1)Even if this bit is set to 1, the STT bit is cleared and the STT clear flag (IICF0.STCF) is set to 1. No start condition is generated.In the clock stretch state (for a master device): Generates a restart condition after release from the clock stretch state. </description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -20628,7 +20445,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>1</name>
-                                    <description>IICA exits from the current communications and sets standby mode. This setting is automatically cleared to 0 after being executed. Its uses include cases in which a locally irrelevant extension code has been received. The SCLA0 and SDAA0 lines are set to high impedance. The following flags of IICA control register 00 (IICCTL00) and the IICA status register 0 (IICS0) are cleared to 0. IICCTL00.STTIICCTL00.SPTIICS0.MSTSIICS0.EXCIICS0.COIIICS0.TRCIICS0.ACKDIICS0.STD</description>
+                                    <description>IICA exits from the current communications and sets communication standby status. This setting is automatically cleared to 0 after being executed. Its uses include cases in which a locally irrelevant extension code has been received. The SCLA0 and SDAA0 lines are set to high impedance. The following flags of IICA control register 00 (IICCTL00) and the IICA status register 0 (IICS0) are cleared to 0. IICCTL00.STTIICCTL00.SPTIICS0.MSTSIICS0.EXCIICS0.COIIICS0.TRCIICS0.ACKDIICS0.STD</description>
                                     <value>#1</value>
                                 </enumeratedValue>
                             </enumeratedValues>
@@ -21337,7 +21154,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>0x8</name>
-                                    <description>LOCO/SOSC</description>
+                                    <description>FSXP</description>
                                     <value>0x8</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -21396,7 +21213,7 @@ http://www.renesas.com/disclaimer \n
                     <dimIndex>0-1</dimIndex>
                     <name>ITLCMP0%s</name>
                     <description>Interval Timer Compare Registers 0%s</description>
-                    <addressOffset>0x00</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>16</size>
                     <access>read-write</access>
                     <resetValue>0xffff</resetValue>
@@ -21409,7 +21226,7 @@ http://www.renesas.com/disclaimer \n
                     <name>ITLCMP0%s_L</name>
                     <description>Interval Timer Compare Registers 0%s</description>
                     <alternateRegister>ITLCMP0%s</alternateRegister>
-                    <addressOffset>0x00</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0xff</resetValue>
@@ -21422,7 +21239,7 @@ http://www.renesas.com/disclaimer \n
                     <name>ITLCMP0%s_H</name>
                     <description>Interval Timer Compare Registers 0%s</description>
                     <alternateRegister>ITLCMP0%s</alternateRegister>
-                    <addressOffset>0x01</addressOffset>
+                    <addressOffset>0x0001</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0xff</resetValue>
@@ -21431,7 +21248,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ITLCAP00</name>
                     <description>Interval Timer Capture Register 00</description>
-                    <addressOffset>0x04</addressOffset>
+                    <addressOffset>0x0004</addressOffset>
                     <size>16</size>
                     <access>read-only</access>
                     <resetValue>0x0000</resetValue>
@@ -21440,7 +21257,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ITLCTL0</name>
                     <description>Interval Timer Control Register</description>
-                    <addressOffset>0x06</addressOffset>
+                    <addressOffset>0x0006</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -21556,7 +21373,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ITLCSEL0</name>
                     <description>Interval Timer Clock Select Register 0</description>
-                    <addressOffset>0x07</addressOffset>
+                    <addressOffset>0x0007</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -21591,7 +21408,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>100</name>
-                                    <description>LOCO/SOSC</description>
+                                    <description>FSXP</description>
                                     <value>#100</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -21635,7 +21452,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>100</name>
-                                    <description>LOCO/SOSC</description>
+                                    <description>FSXP</description>
                                     <value>#100</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -21655,7 +21472,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ITLFDIV00</name>
                     <description>Interval Timer Frequency Division Register 0</description>
-                    <addressOffset>0x08</addressOffset>
+                    <addressOffset>0x0008</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -21764,7 +21581,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ITLFDIV01</name>
                     <description>Interval Timer Frequency Division Register 1</description>
-                    <addressOffset>0x09</addressOffset>
+                    <addressOffset>0x0009</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -21873,7 +21690,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ITLCC0</name>
                     <description>Interval Timer Capture Control Register 0</description>
-                    <addressOffset>0x0A</addressOffset>
+                    <addressOffset>0x000A</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -21898,7 +21715,7 @@ http://www.renesas.com/disclaimer \n
                                 </enumeratedValue>
                                 <enumeratedValue>
                                     <name>10</name>
-                                    <description>LOCO/SOSC (rising edge)</description>
+                                    <description>FSXP (rising edge)</description>
                                     <value>#10</value>
                                 </enumeratedValue>
                                 <enumeratedValue>
@@ -22008,7 +21825,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ITLS0</name>
                     <description>Interval Timer Status Register</description>
-                    <addressOffset>0x0B</addressOffset>
+                    <addressOffset>0x000B</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -22114,7 +21931,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>ITLMKF0</name>
                     <description>Interval Timer Match Detection Mask Register</description>
-                    <addressOffset>0x0C</addressOffset>
+                    <addressOffset>0x000C</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -22232,7 +22049,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>CKS0</name>
                     <description>Clock Out Control Register 0</description>
-                    <addressOffset>0x001</addressOffset>
+                    <addressOffset>0x0001</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -22347,7 +22164,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>TRNGSDR</name>
                     <description>TRNG Seed Data Register</description>
-                    <addressOffset>0x00</addressOffset>
+                    <addressOffset>0x0000</addressOffset>
                     <size>8</size>
                     <access>read-only</access>
                     <resetValue>0x00</resetValue>
@@ -22356,7 +22173,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>TRNGSCR0</name>
                     <description>TRNG Seed Command Register 0</description>
-                    <addressOffset>0x02</addressOffset>
+                    <addressOffset>0x0002</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -22412,7 +22229,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>TRNGSCR1</name>
                     <description>TRNG Seed Command Register 1</description>
-                    <addressOffset>0x03</addressOffset>
+                    <addressOffset>0x0003</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -22995,12 +22812,12 @@ http://www.renesas.com/disclaimer \n
                 </register>
                 <register>
                     <name>FSCMR</name>
-                    <description>Flash Start-up Setting Monitor Register</description>
+                    <description>Flash Startup Setting Monitor Register</description>
                     <addressOffset>0x01C0</addressOffset>
                     <size>16</size>
                     <access>read-only</access>
                     <resetValue>0x0000</resetValue>
-                    <resetMask>0xb8ff</resetMask>
+                    <resetMask>0xbeff</resetMask>
                     <fields>
                         <field>
                             <name>SASMF</name>
@@ -23049,7 +22866,7 @@ http://www.renesas.com/disclaimer \n
                     <size>16</size>
                     <access>read-only</access>
                     <resetValue>0x0000</resetValue>
-                    <resetMask>0xf800</resetMask>
+                    <resetMask>0x7800</resetMask>
                     <fields>
                         <field>
                             <name>FAWS</name>
@@ -23074,7 +22891,7 @@ http://www.renesas.com/disclaimer \n
                     <size>16</size>
                     <access>read-only</access>
                     <resetValue>0x0000</resetValue>
-                    <resetMask>0xf800</resetMask>
+                    <resetMask>0x7800</resetMask>
                     <fields>
                         <field>
                             <name>FAWE</name>
@@ -23348,7 +23165,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>HIOTRM</name>
                     <description>High-speed On-chip Oscillator Trimming Register</description>
-                    <addressOffset>0x200</addressOffset>
+                    <addressOffset>0x0200</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
@@ -23366,7 +23183,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>FLMODE</name>
                     <description>Flash Operating Mode Control Register</description>
-                    <addressOffset>0x20A</addressOffset>
+                    <addressOffset>0x020A</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x80</resetValue>
@@ -23406,7 +23223,7 @@ http://www.renesas.com/disclaimer \n
                 <register>
                     <name>FLMWRP</name>
                     <description>Flash Operating Mode Protect Register</description>
-                    <addressOffset>0x20B</addressOffset>
+                    <addressOffset>0x020B</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>
