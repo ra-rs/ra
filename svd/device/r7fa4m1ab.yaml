@@ -1,1 +1,4 @@
 _svd: "../patch/r7fa4m1ab.svd"
+
+_include:
+    - "periph/gpio.yaml"
